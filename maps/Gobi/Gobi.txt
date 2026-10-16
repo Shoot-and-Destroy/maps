@@ -1,0 +1,6 @@
+name = 'Gobi'
+version = '1.2'
+author = 'Lostmotel'
+extensions = {
+     'water_damage' : 5
+}

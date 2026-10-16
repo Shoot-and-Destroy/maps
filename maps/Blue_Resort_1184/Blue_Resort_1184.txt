@@ -1,0 +1,11 @@
+name = 'Blue Resort'
+version = '2.0'
+author = 'Danke'
+description = ('Conversion of the map from Bomberman64')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (229, 213, 46),
+     'arena_green_spawn' : (202, 277, 52),
+     'arena_gates': ((200, 279, 52), (224, 211, 45))
+ } 

@@ -1,0 +1,47 @@
+name = 'Bikini Bottom'
+version = '1.0'
+author = 'X-DE'
+description = 'Remake of the Halo Combat Evolved map Blood Gulch'
+extensions = { 'water_damage' : 100 }
+
+
+# scripting
+
+from random import randrange, choice
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from commands import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (145, 265, 52)
+    if entity_id == BLUE_BASE:
+        return (145, 265, 52)
+    if entity_id == GREEN_FLAG:
+        return (381, 252, 52)
+    if entity_id == GREEN_BASE:
+        return (381, 252, 52)
+
+spawn_locations_blue = [
+    (168, 276, 52),
+    (163, 249, 52),
+    (150, 253, 52),
+    (146, 272, 52),
+    (160, 281, 52)
+]
+
+spawn_locations_green = [
+    (374, 233, 52),
+    (362, 247, 52),
+    (357, 264, 52),
+    (378, 266, 52),
+    (367, 272, 52)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+	x, y, z = choice(spawn_locations_blue)
+	return x, y, z
+    if connection.team is connection.protocol.green_team:
+	x, y, z = choice(spawn_locations_green)
+	return x, y, z

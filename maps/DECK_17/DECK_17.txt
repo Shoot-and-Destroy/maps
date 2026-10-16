@@ -1,0 +1,7 @@
+name = 'DECK 17'
+
+version = '1.0'
+
+author = 'SERIOUS_SIM'
+
+description = ("In a polluted sea, an island stands. It's a tall hill, with docks on both side. In the hill hides a large underground storage facility, now dismissed for years. The whole place is infected and crumbling apart, and flesh and bones won't last long in this acid water. The domination over the enemy encampment will go through both underground and on-ground battlefields, and various strategies shall prevail as the place gets more and more destoyed.")

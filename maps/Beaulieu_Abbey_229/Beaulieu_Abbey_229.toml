@@ -1,0 +1,15 @@
+[map]
+author = "Serious_Sim"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 101
+
+[spawnpoints]
+team1 = { start = [415, 167, 52], end = [415, 167, 52] }
+team2 = { start = [328, 288, 55], end = [328, 288, 55] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[406, 199, 51], [400, 187, 53], [389, 178, 53], [353, 178, 53], [324, 299, 55], [341, 299, 53], [330, 277, 53], [321, 258, 55], [350, 167, 50], [412, 200, 54]]

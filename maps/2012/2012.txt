@@ -1,0 +1,7 @@
+name = '2012'
+
+version = '1.0'
+
+author = 'Dany0'
+
+description = 'Happy 2012! Done 1 and a half hours before 2012!'

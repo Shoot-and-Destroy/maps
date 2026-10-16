@@ -1,0 +1,9 @@
+[map]
+author = "100best"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [217, 217, 46], end = [226, 285, 46] }
+team2 = { start = [284, 228, 46], end = [292, 290, 46] }

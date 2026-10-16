@@ -1,0 +1,5 @@
+name = 'Animus'
+version = '1.8'
+author = 'Kiwaka, Silnius'
+description = 'map By Kiwaka, Silnius'
+extensions = { 'water_damage' : 5}

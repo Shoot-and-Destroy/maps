@@ -1,0 +1,25 @@
+name = 'CheckerArenas'
+version = '1.0'
+author = 'Dany0 and Supercool'
+description = 'Words can not describe the checker awesomeness!!!'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (240, 317, 52)
+    if entity_id == GREEN_FLAG:
+        return (241, 194, 52)
+    if entity_id == BLUE_BASE:
+        return (284, 304, 51)
+    if entity_id == GREEN_BASE:
+        return (284, 207, 51)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        return (random.randrange(327,332), random.randrange(188,190), random.choice(((46),(58))))
+    if connection.team is connection.protocol.blue_team:
+        return (random.randrange(327,332), random.randrange(321,323), random.choice(((46),(58))))

@@ -1,0 +1,10 @@
+name = 'Clock Town arena'
+version = '1.0'
+author = 'Serious_Sim'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (263,175,50),
+     'arena_green_spawn' : (257,338,55),
+     'arena_gates': ((263,183,50), (258,331,55)),
+     'water_damage' : 2
+ }

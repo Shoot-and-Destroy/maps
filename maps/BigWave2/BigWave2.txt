@@ -1,0 +1,40 @@
+name = 'BigWave2'
+version = '1.0'
+author = 'Lostmotel'
+extensions = {
+     'water_damage' : 100,
+     'user_blocks_only' : True
+}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+
+spawn_locations_blue = [
+(108, 297),
+(108, 277),
+(108, 255),
+(108, 236),
+(108, 213)
+]
+
+spawn_locations_green = [
+
+(402, 213),
+(402, 237),
+(402, 256),
+(402, 275),
+(402, 298)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+

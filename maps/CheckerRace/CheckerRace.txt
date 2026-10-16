@@ -1,0 +1,18 @@
+name = 'CheckerRace'
+version = '1.0'
+author = 'Dany0'
+description = 'First race track in AoS!'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+     return (1, 1, 1)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        return (288,250,46)
+    if connection.team is connection.protocol.blue_team:
+        return (216,262,49)

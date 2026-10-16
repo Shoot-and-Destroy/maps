@@ -1,0 +1,35 @@
+name = 'christmas'
+version = '1.0'
+author = 'Team R3S and co- Massilia - Goneskill'
+description = ('Team R3S et BP')
+protected = ['D4','D5', 'E4', 'E5']
+extensions = {
+         'water_damage' : 10
+}
+# scripting
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (79, 237, 59)
+      
+    if entity_id == BLUE_BASE:
+        return (79, 237, 59)
+      
+    if entity_id == GREEN_FLAG:
+        return (432, 274, 59)
+
+    if entity_id == GREEN_BASE:
+        return (432, 274, 59)
+
+def get_spawn_location(connection):
+ 
+    if connection.team is connection.protocol.blue_team:
+        # sets a static spawn for just the blue team, but you could use "green_team" too.
+        return (79, 237, 59)
+
+    if connection.team is connection.protocol.green_team:
+        # sets a static spawn for just the green team, but you could use "blue_team" too.
+        return (432, 274, 59)

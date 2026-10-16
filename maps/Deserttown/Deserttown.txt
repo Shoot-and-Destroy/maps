@@ -1,0 +1,13 @@
+name = 'Deserttown'
+version = '1.1'
+author = 'Gibbs3333'
+description = ''
+cap_limit = 10
+extensions = {
+     'boundary_damage' : {'left' : 215, 'right' : 296, 'top' : 215, 'bottom' : 296, 'damage': 100}, 
+     'arena': True,
+     'arena_blue_spawn' : ((218, 218, 46)),
+     'arena_green_spawn' : ((293, 293, 46)),
+     'arena_gates' : ((288, 290, 54), (288, 290, 52), (223, 221, 52), (223, 221, 54), (289, 290, 45), (222, 221, 45))
+   
+ }

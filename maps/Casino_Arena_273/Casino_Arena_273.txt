@@ -1,0 +1,15 @@
+name = 'Casino Arena'
+version = '1.0'
+author = '[TSB]Eddie and the [TSB]Clan, Heraclese4, {LDR}Steve, tech assist MoJoBucketheaD'
+description = ('Casino shootout')
+cap_limit = 8
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (196, 255, 59),
+     'arena_green_spawn' : (292, 268, 48),
+     'arena_gates' : ((288, 268, 48), (292, 264, 48), (200, 255, 58))
+      
+
+
+}

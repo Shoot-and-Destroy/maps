@@ -1,0 +1,13 @@
+[map]
+author = "Terrorist"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [29, 301, 21], end = [29, 301, 21] }
+team2 = { start = [89, 301, 21], end = [89, 301, 21] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[31, 299, 20], [87, 303, 20]]

@@ -1,0 +1,11 @@
+name = 'Beaulieu Abbey'
+version = '1'
+author = 'Serious_Sim'
+description = ('Innacurate remake of a french abbey. For Arena mode.')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (415, 167, 52),
+     'arena_green_spawn' : (328, 288, 55),
+     'arena_gates': ((406, 199, 51), (400, 187, 53), (389, 178, 53), (353, 178, 53), (324, 299, 55), (341, 299, 53), (330, 277, 53), (321, 258, 55), (350, 167, 50), (412, 200, 54)),
+     'water_damage' : 101
+ }

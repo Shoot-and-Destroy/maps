@@ -1,0 +1,9 @@
+[map]
+author = "ilrak, phalanx, kmsi"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [208, 450, 53], end = [396, 450, 53] }
+team2 = { start = [208, 61, 53], end = [396, 61, 53] }

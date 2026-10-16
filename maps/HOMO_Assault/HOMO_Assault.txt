@@ -1,0 +1,19 @@
+name = 'HOMO Assault'
+version = '1.0'
+author = 'Lostmotel'
+
+extensions = {
+     'water_damage' : 5}
+
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(211, 259)
+        return (211, 259, z)
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(305, 259)
+        return (305, 259, z)

@@ -1,0 +1,9 @@
+name = 'Badezimmer Parkour'
+author = '{SC}-Cart-Pig-'
+version = '1.0'
+extensions = {
+    'water_damage' : 100,
+    'parkour_start' : (7, 207, 51),
+    'parkour_end' : (501, 205, 57),
+    'parkour_checkpoints' : [()]
+}

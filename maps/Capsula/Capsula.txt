@@ -1,0 +1,5 @@
+name = 'Capsula'
+version = '1.0'
+author = 'Sajt'
+description = 'The Map is like onectf'
+

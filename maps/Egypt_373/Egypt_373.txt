@@ -1,0 +1,13 @@
+name = 'Egypt'
+version = '1.0'
+author = 'Tank'
+description = ('Desert map with a pyramid at the end')
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_green_spawn' : (398, 465, 62),
+'push_green_cp' : (286, 55, 55),
+'push_blue_spawn' : (186, 467, 62),
+'push_blue_cp' : (271, 55, 55),
+'water_damage' : 100
+}

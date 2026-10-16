@@ -1,0 +1,11 @@
+[map]
+author = "Sasquatch"
+fog_color = [250, 200, 100]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 5
+
+[spawnpoints]
+team1 = { start = [211, 207, 56], end = [252, 265, 61] }
+team2 = { start = [240, 238, 52], end = [304, 303, 61] }

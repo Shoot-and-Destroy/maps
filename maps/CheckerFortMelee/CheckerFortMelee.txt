@@ -1,0 +1,29 @@
+name = 'CheckerFortMelee'
+version = '1.0'
+author = 'Dany0 and Supercool'
+description = 'Checker fort carnage!'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (256, 255, 53)
+    if entity_id == GREEN_FLAG:
+        return (255, 256, 53)
+    if entity_id == BLUE_BASE:
+        return (277, 244, 54)
+    if entity_id == GREEN_BASE:
+        return (233, 247, 54)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(230,238)
+        y = random.randrange(245,248)
+        return (x, y, connection.protocol.map.get_z(x, y))
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(273,281)
+        y = random.randrange(242,245)
+        return (x, y, connection.protocol.map.get_z(x, y))

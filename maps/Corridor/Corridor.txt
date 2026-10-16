@@ -1,0 +1,5 @@
+name = 'Corridor'
+version = '1.2'
+author = 'Lincent'
+description = ('Its a corridor to pain.')
+#Added Dirt and 2 caverns.

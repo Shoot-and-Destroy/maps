@@ -1,0 +1,13 @@
+name = 'Castlewars'
+version = '1.0'
+author = 'BIG JIM, Ki11aWi11, Heracles4'
+description = ('Based off Ki11aWi11s museumarena map turned into a castle community')
+cap_limit = 5
+extensions = {
+     'boundary_damage' : {'left' : 189, 'right' : 349, 'top' : 168, 'bottom' : 267, 'damage': 100},
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (199, 238, 50),
+     'arena_green_spawn' : (340, 217, 51),
+     'arena_gates' : ((331, 223, 51), (331, 212, 51), (331, 213, 51), (197, 241, 47), (199, 234, 49), (204, 239, 48), (204, 237, 48))
+}

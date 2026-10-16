@@ -1,0 +1,13 @@
+name = 'Facingworlds'
+version = '1.3'
+author = 'Kaprekar'
+description = ('A remake of the classic Facing Worlds map from Unreal Tournament')
+fog = (30, 30, 30)
+
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (190, 257, 53),
+     'arena_green_spawn' : (321, 257, 53),
+     'arena_gates': ((323, 257, 52), (188, 255, 52))
+}

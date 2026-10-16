@@ -1,0 +1,4 @@
+name = 'Cavernous'
+version = '0.5'
+author = 'Sneakers'
+description = ('Rolling hills, trees, and massive caverns')

@@ -1,0 +1,4 @@
+name = 'Hallpoint'
+version = '1.0'
+author = 'izzy & Danke'
+description = "Hybrid #1"

@@ -1,0 +1,17 @@
+name = 'Clock Town'
+version = '2.0'
+author = 'Sasquatch'
+description = ('A much better version of Termina. This time to Scale!')
+cap_limit = 5
+extensions = {
+    'water_damage' : 10,
+    'arena': True,
+    'arena_blue_spawn' : ((210, 257, 58)),
+    'arena_green_spawn' : ((304, 257, 58)),
+    'arena_gates': ((214, 257, 58),(301, 258, 58)),
+    'team_namecolor' : True,
+      'blue_team_name' : 'Orange',
+      'blue_team_color' : (255, 165, 35),  
+      'green_team_name' : 'Yellow',
+      'green_team_color' : (255 , 255, 30)
+   }

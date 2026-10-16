@@ -1,0 +1,50 @@
+name = "1Target_inf"
+version = '1.0'
+author = 'onigiri'
+fog = (240, 240,240)
+
+
+
+extensions = { 'water_damage' : 25 }
+# script
+from pyspades.server import ServerConnection
+from pyspades.constants import *
+import random
+
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 0, 0, 63)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 429, 259, 59)
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 168, 256, 22)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 187, 256, 50)
+
+
+spawn_locations_blue = [
+    ( 158, 281, 50),( 186, 274, 50),( 158, 243, 50),( 144, 263, 50),
+]
+
+spawn_locations_green = [
+    ( 304, 167, 59),( 320, 348, 59),( 378, 289, 59),( 391, 325, 39),
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 0 # magic numbers
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        # allows spawning lower if the ground is destroyed
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

@@ -1,0 +1,6 @@
+name = 'Greencoast'
+version = '1.0'
+author = 'Articsledder'
+extensions = {
+     'water_damage' : 1,
+     'babel' : True }

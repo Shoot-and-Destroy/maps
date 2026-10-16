@@ -1,0 +1,10 @@
+name = 'Autumn Arena'
+version = '1.0'
+author = 'Lostmotel'
+fog = (180, 180, 180)
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (123, 258, 59),
+     'arena_green_spawn' : (387, 259, 59),
+     'arena_gates': ((126, 258, 60), (384, 259, 60))
+ }

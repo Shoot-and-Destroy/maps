@@ -1,0 +1,11 @@
+name = 'DropTennis'
+version = '1.0'
+author = 'Danke'
+description = 'Watch your step, stay alive!'
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (242,255,12),
+     'arena_green_spawn' : (269,254,12),
+     'arena_gates': ((247,260,13), (263,260,13))
+ } 

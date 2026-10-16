@@ -1,0 +1,4 @@
+name = 'Cemetery'
+version = '1.5'
+author = 'Tank'
+description = ("A grave yard in the north and a large house in the south. It should be good for all sort of gameplay")

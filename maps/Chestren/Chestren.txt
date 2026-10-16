@@ -1,0 +1,6 @@
+name = 'Chestren'
+author = 'Danke and Ki11aWi11'
+version = '1.2'
+extensions = {
+     'babel' : True
+}

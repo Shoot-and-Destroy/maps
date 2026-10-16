@@ -1,0 +1,11 @@
+name = 'Grassy-topo-land'
+author = 'Lostmotel, tunnel models by Jojoe'
+version = '1.0'
+extensions = { 
+'boundary_damage' : {
+'left' : 71, 
+'right' : 440, 
+'top' : 163, 
+'bottom' : 335, 
+'damage': 1}
+}

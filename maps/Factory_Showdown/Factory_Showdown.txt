@@ -1,0 +1,4 @@
+name = 'Factory Showdown'
+version = '1.0'
+author = 'Jdrew'
+description = 'This is what happens when factories fight'

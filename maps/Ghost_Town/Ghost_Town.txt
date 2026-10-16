@@ -1,0 +1,4 @@
+name = 'Ghost Town'
+version = '1.0'
+author = 'Serious_Sim'
+description = ("This city was abandonned after a nuclear incident involving a reactor from the nearby plant contaminated the entire zone. Years later, the level of radiations is variable and can still quickly rise depending of the weather, but that doesn't prevent rebel stalkers and government's military to fight over the remnants of this once lively city.")

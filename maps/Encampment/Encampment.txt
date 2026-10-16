@@ -1,0 +1,4 @@
+name = 'Encampment'
+version = '1.0'
+author = 'TheGrandmaster/DenyerNTR'
+description = ('A competitive map, for 1vs1 to 6vs6')

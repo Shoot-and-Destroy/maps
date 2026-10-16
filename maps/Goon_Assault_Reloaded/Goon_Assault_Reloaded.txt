@@ -1,0 +1,4 @@
+name = 'Goon Assault Reloaded'
+version = '1.0'
+author = 'bobbotheclown'
+description = 'Inspired on a map made by a random guy at goon haven.'

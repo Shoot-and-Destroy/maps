@@ -1,0 +1,5 @@
+name = 'Desert Caverns'
+version = '0.5'
+author = 'Sneakers'
+description = ('Desert with large cavern systems.'
+               )

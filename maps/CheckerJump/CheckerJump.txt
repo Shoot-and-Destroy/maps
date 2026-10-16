@@ -1,0 +1,41 @@
+version = '1.0'
+author = 'Dany0'
+description = 'Amazing jumpmap for race mode!'
+extensions = { 'water_damage' : 256}
+modes = ("race", "melee")
+RACE_START = [(255, 232, 50, "any")] #x, y, z, team("any" or "green" or "blue")
+RACE_FINISH = [(362, 319, 9, "green"), (353, 380, 40, "blue")] #x, y, z, team("green" or "blue")
+RACE_CHECKPOINTS = [(262, 267, 50, None, 0), #red 
+					(255, 267, 50, None, 0), #blu
+					(249, 267, 50, None, 0), #grn
+					(273, 301, 50, None, 6), #red
+                    (277, 314, 53, None, 1), #red
+                    (269, 336, 43, None, 1), #red
+					(255, 301, 50, None, 4), #blu
+					(237, 301, 50, None, 1), #grn
+					(237, 335, 50, None, 1), #grn
+					(244, 361, 49, "telegren", 1), #grn
+					(255, 361, 50, None, 4), #blu
+					(273, 361, 50, None, 6), #red
+					(264, 397, 50, None, 5), #none
+					(300, 398, 50, "double_jump", 5),#none
+					(353, 379, 40, "triple_jump", 10)
+                    ]#x, y, z, powerup("double_jump","fly","telegren"), difficulty(1 - easiest/tutorial, 4 - medium, 6 - hard, 10 - secret)
+RACE_TELEPORTERS = {(237, 391, 50) : (255, 232, 50)}
+GRENADE_FOUNTAINS = [(355, 319, 9)]
+GRENADE_TRAPS = [(264, 397, 50)]
+MAP_MESSAGES = { "WELCOME TO CHECKERJUMP" : (255, 232, 50, False),
+		 "MAP AND SCRIPT BY DANY0" : (255, 250, 50, False),
+		 "HARD COURSE, GOOD LUCK! IT'S HARD!" : (262, 266, 50, False),
+		 "MEDIUM COURSE, GOOD LUCK! IT'S CHALLENGING!" : (255, 267, 50, False),
+		 "YOU'RE NOW PLAYING THE TUTORIAL" : (249, 267, 50, False),
+		 "THANKS FOR COMPLETING THE TUTORIAL" : (237, 381, 50, False),
+		 "THE TUTORIAL DOES NOT AWARD SCORE" : (237, 391, 50, True)}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+     return (1, 1, 1)
+

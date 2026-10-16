@@ -1,0 +1,11 @@
+[map]
+author = "Lostmotel"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [88, 216, 0], end = [119, 268, 0] }
+team2 = { start = [390, 217, 0], end = [422, 277, 0] }

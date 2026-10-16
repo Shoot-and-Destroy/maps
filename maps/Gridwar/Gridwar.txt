@@ -1,0 +1,4 @@
+name = 'Gridwar'
+version = '1.1'
+author = 'Danke'
+description = ('gridgridgridgrid')

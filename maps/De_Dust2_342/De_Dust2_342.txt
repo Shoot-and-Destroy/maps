@@ -1,0 +1,11 @@
+name = 'De_Dust2'
+version = '1.0'
+author = 'SIMOX'
+description = ('Your description here. ')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (235, 310, 58),
+     'arena_green_spawn' : (275, 180, 49),
+     'arena_gates': ((268, 183, 47), (268, 184, 48), (283, 182, 46), (283, 182, 48), (236, 304, 54), (235, 304, 56), (232, 304, 55), (268, 179, 47), (283, 180, 47)),
+     'water_damage' : 100
+ }

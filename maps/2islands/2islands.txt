@@ -1,0 +1,64 @@
+name = '2islands'
+
+version = '1.0'
+
+author = 'Sample'
+
+description = '2 little islands'
+
+
+
+
+# script
+
+from pyspades.constants import *
+
+from pyspades.server import ServerConnection
+
+import random
+
+
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+
+        return (355, 264, 48)
+
+    if entity_id == GREEN_FLAG:
+
+        return (166, 240, 51)
+
+    if entity_id == BLUE_BASE:
+
+        return (352, 239, 55)
+
+    if entity_id == GREEN_BASE:
+
+        return (168, 258, 47)
+
+
+
+spawn_locations_blue = [
+    (349, 237, 53),
+    (348, 246, 50)
+]
+
+spawn_locations_green = [
+    (162, 237, 53),
+    (159, 248, 58)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 2.4 # magic numbers
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        # allows spawning lower if the ground is destroyed
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

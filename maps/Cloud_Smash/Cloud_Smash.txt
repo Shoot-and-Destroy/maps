@@ -1,0 +1,57 @@
+name = 'Cloud Smash'
+version = '1.0'
+author = 'Lostmotel'
+extensions = {
+     'water_damage' : 100,
+     'user_blocks_only' : True
+}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(127, 258)
+        return (127, 258, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(102, 243)
+        return (102, 243, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(413, 239)
+        return (413, 239, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(386, 256)
+        return (386, 256, z)
+
+spawn_locations_blue = [
+(88, 241),
+(100, 259),
+(112, 268),
+(117, 256),
+(118, 244),
+(119, 229),
+(113, 216)
+]
+
+spawn_locations_green = [
+
+(397, 217),
+(409, 230),
+(422, 243),
+(396, 244),
+(392, 263),
+(390, 277),
+(414, 267)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+

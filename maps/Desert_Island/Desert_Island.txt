@@ -1,0 +1,47 @@
+name = 'Desert Island'
+version = '1.0'
+author = 'Kuma'
+
+# script
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (470, 209, 61)
+    if entity_id == BLUE_FLAG:
+        return (76, 212, 61)
+    if entity_id == GREEN_BASE:
+        return (443, 235, 58)
+    if entity_id == BLUE_BASE:
+        return (97, 198, 60)
+
+spawn_locations_blue = [
+
+(176, 211),
+(191, 179),
+(199, 206),
+(264, 194)
+
+]
+
+spawn_locations_green = [
+
+(451, 331),
+(482, 307),
+(133, 352),
+(169, 413)
+
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)#Modification
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z

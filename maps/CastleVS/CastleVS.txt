@@ -1,0 +1,4 @@
+name = 'CastleVS'
+version = '0.9'
+author = 'Dany0'
+description = ('Another MC map... Except it\'s hollow. Maybe someone VERY bored can finish it to be playable.')

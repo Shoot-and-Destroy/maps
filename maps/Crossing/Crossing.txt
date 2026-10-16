@@ -1,0 +1,4 @@
+name = 'Crossing'
+version = '1.0'
+author = 'AqwertyBqwerty'
+description = 'My first custom map inspired by Bridge Wars and Crossfire.'

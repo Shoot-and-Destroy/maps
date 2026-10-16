@@ -1,0 +1,4 @@
+name = 'Grand Canyon'
+version = '0.5'
+author = 'wikku'
+description = 'Part of The Grand Canyon in voxels'

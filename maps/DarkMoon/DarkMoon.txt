@@ -1,0 +1,4 @@
+name = 'DarkMoon'
+version = '1.0'
+author = 'heracles4'
+description = 'The dark side of the moon'

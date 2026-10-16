@@ -1,0 +1,27 @@
+version = '1.0'
+author = 'Dany0'
+description = 'First jumpmap for race mode!'
+extensions = { 'water_damage' : 200}
+modes = ("race", "melee")
+RACE_START = [(313, 234, 46, "any")]
+RACE_FINISH = [(225, 260, 31, "green"), (225, 259, 31, "blue")]
+RACE_CHECKPOINTS = [(299, 234, 50),
+					(286, 234, 50),
+					(260, 254, 50),
+					(238, 255, 50),
+					(207, 262, 40)]
+MAP_MESSAGES = { "WELCOME TO CHECKERJUMP_A" : (313, 234, 46, False)}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+     return (1, 1, 1)
+
+
+
+
+
+
+

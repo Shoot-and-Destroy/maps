@@ -1,0 +1,4 @@
+name = 'Colloseum'
+version = '1.0'
+author = 'TheGrandmaster'
+description = ('Small-ish island map with a colloseum in the centre.')

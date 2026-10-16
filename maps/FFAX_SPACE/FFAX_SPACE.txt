@@ -1,0 +1,13 @@
+name = 'FFAX SPACE'
+version = '1.0'
+author = 'Danke'
+description = 'Another map for a gamemode idk why are you reading this again'
+extensions = {
+    'ffax_intels' : [(214, 50, 59), (442, 40, 3), (478, 252, 23), (466, 436, 23), (152, 495, 57), (20, 353, 59), (60, 178, 34), (167, 24, 59), (316, 477, 6)],
+    'ffax_safezone' : (188, 188, 322, 322),
+    'ffax_squadwarp' : (196, 196, 316, 316),
+    'ffax_bluespawn' : (212, 212, 300, 300),
+    'ffax_teles' : [(112, 44, 241, 209),(369, 74, 271, 209),(418, 312, 271, 242),(310, 411, 271, 272),(118, 440, 241, 272),(50, 213, 241, 242)],
+    'ffax_fog' : (10, 0 , 20),
+    'ffax_nukefog' : (90, 128 , 0)
+}

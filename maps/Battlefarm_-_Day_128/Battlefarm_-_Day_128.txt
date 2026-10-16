@@ -1,0 +1,6 @@
+name = 'Battlefarm - Day 128'
+version = '1.0'
+author = 'Silnius'
+description = ('Remake of battlefarm map, made firstly by Gibbs3333')
+extensions = { 'water_damage' : 15 }
+

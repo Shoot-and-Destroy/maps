@@ -1,0 +1,53 @@
+name = 'Airsoft 1'
+version = '1.1'
+author = 'notgaNjah'
+description = ('Based on an airsoft indoor map. NO NADES ALLOWED')
+extensions = {
+     'water_damage' : 100
+}
+
+fog = (20, 20, 20)
+
+protected = ['D3', 'D4', 'D5', 'D6', 'E3', 'E4', 'E5', 'E6']
+
+import random
+from pyspades.constants import *
+from twisted.internet.reactor import callLater
+
+def steal_nades(connection):
+    connection.grenades = 0
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        x = 0
+        y = 0
+        z = team.protocol.map.get_z(x,y)
+        return (x,y,z)
+    if entity_id == BLUE_BASE:
+        x = 0
+        y = 0
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if entity_id == GREEN_FLAG:
+        x = 511
+        y = 511
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if entity_id == GREEN_BASE:
+        x = 511
+        y = 511
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_spawn_location(connection):
+    callLater(0.1, steal_nades, connection)
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(239, 278)
+        y = random.randrange(176, 187)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(239, 278)
+        y = random.randrange(324, 335)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)

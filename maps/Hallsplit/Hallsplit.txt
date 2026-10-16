@@ -1,0 +1,3 @@
+name = 'Hallsplit'
+version = '1.0'
+author = 'mintoyatsu'

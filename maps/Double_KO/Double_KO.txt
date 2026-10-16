@@ -1,0 +1,4 @@
+name = 'Double KO'
+version = '1.0'
+author = 'Ug'
+description = 'Battle over the fallen bodies of giants.'

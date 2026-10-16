@@ -1,0 +1,4 @@
+name = 'Canli'
+version = '1.0'
+author = 'Lincent'
+description = ('L acqua scorre attraverso.')

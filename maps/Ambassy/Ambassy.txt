@@ -1,0 +1,12 @@
+name = 'Ambassy'
+version = '1.0'
+author = 'Dany0'
+description = 'Tweaked by izzy for Arena mode'
+cap_limit = 4
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (180, 173, 60),
+     'arena_green_spawn' : (307, 320, 60),
+     'arena_gates': ((180, 178, 60), (307, 314, 60)),
+     'water_damage' : 100
+ }

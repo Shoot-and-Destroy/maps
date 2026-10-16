@@ -1,0 +1,9 @@
+[map]
+author = "Rocky/tGM"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [164, 5, 0], end = [281, 39, 0] }
+team2 = { start = [379, 315, 0], end = [401, 335, 0] }
