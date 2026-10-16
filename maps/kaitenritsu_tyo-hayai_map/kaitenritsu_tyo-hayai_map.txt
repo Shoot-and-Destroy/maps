@@ -1,0 +1,13 @@
+name = 'kaitenritsu_tyo-hayai_map'
+version = '1.0'
+author = 'vippei'
+description = ''
+
+fog = (256, 256, 256)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (264,376,59),
+     'arena_green_spawn' : (310,330,59),
+     'arena_gates': ((266,374,59),(308,332,59)),
+}

@@ -1,0 +1,4 @@
+name = "run_like_hell"
+version = '1.0'
+author = 'onigiri'
+

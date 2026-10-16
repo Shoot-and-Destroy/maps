@@ -1,0 +1,18 @@
+name = 'urbanturv'
+version = '1.0'
+author = 'Danke'
+
+
+BLUE_RECT = ( 111, 209, 153, 285) 
+GREEN_RECT = ( 358, 226, 400, 302)
+
+
+extensions = { 
+'boundary_damage' : {'left' : 70, 'right' : 440, 'top' : 167, 'bottom' : 343, 'damage': 5}
+}
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)

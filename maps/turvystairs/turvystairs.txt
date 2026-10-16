@@ -1,0 +1,11 @@
+name = 'turvystairs'
+version = '1.0'
+author = 'Danke'
+description = ('Wait, where am I?')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (228, 252, 20),
+     'arena_green_spawn' : (283, 259, 20),
+     'arena_gates': ((232, 256, 20), (287, 255, 20))
+ } 

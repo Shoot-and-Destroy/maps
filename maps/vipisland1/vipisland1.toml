@@ -1,0 +1,9 @@
+[map]
+author = "v"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [172, 248, 58], end = [183, 279, 59] }
+team2 = { start = [312, 250, 58], end = [325, 283, 59] }

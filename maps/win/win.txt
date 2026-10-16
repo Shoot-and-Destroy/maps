@@ -1,0 +1,4 @@
+name = "win"
+version = '1.0'
+author = 'vippei'
+fog = (150, 155, 155)

@@ -1,0 +1,25 @@
+name = 'plainPoint'
+version = '1.0'
+author = 'andr3w'
+description = "A more realistic pinpoint"
+extensions = { 'water_damage' : 25}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (random.randrange(50,90), random.randrange(180,330), 60)
+    if entity_id == GREEN_FLAG:
+        return (random.randrange(422,462), random.randrange(180,330), 60)
+    if entity_id == BLUE_BASE:
+        return (50, 256, 60)
+    if entity_id == GREEN_BASE:
+        return (462, 256, 60)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return (random.randrange(50,90), random.randrange(226,286), 60)
+    if connection.team is connection.protocol.green_team:
+        return (random.randrange(422,462), random.randrange(226,286), 60)

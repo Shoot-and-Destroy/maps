@@ -1,0 +1,4 @@
+name = "shigaichi4"
+version = '1.0'
+author = 'onigiri'
+

@@ -1,0 +1,5 @@
+name = 'standoff'
+version = '1.0'
+author = 'TheGrandmaster'
+description = 'A larger island map, suitable for most sizes.'
+extensions = {'water_damage' : 5}

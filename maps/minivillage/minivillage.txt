@@ -1,0 +1,10 @@
+name = 'minivillage'
+version = '1.0'
+author = 'Dany0'
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((184, 242, 55)),
+    'arena_green_spawn' : ((248, 285, 39)),
+    'arena_gates': ((194, 232, 53), (194, 238, 53), (194, 243, 53), (194, 248, 53), (246, 281, 40), 
+     (248, 281, 40), (250, 281, 40), (256, 281, 40), (254, 285, 41)) }

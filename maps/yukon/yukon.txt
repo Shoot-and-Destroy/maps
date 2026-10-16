@@ -1,0 +1,9 @@
+name = 'yukon'
+version = '1.0'
+author = 'Lostmotel, urr, Nope - -'
+description = 'urr is best igloo builder - -'
+fog = (25, 35, 35)
+extensions = { 
+'water_damage' : 10,
+'heavens_color' : (255, 255, 255, 255),
+'babel' : True }

@@ -1,0 +1,29 @@
+name = 'incredibles'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool The Incredibles'
+
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (462, 287, 53)
+    if entity_id == GREEN_FLAG:
+        return (149, 200, 58)
+    if entity_id == BLUE_BASE:
+        return (439, 300, 23)
+    if entity_id == GREEN_BASE:
+        return (148, 240, 31)
+	
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+	bx = random.randrange(409,439)
+	by = random.randrange(283,300)
+        return (bx, by, 23)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(136,148)
+	gy = random.randrange(228,240)
+	return (gx, gy, 31)

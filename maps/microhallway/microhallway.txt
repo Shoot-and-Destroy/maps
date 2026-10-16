@@ -1,0 +1,19 @@
+name = 'microhallway'
+version = '1.0'
+author = 'izzy, modified by Danke'
+description = 'very small hallway'
+
+
+BLUE_RECT = ( 232, 252, 239, 259) 
+GREEN_RECT = ( 272, 252, 279, 259)
+
+
+extensions = { 
+'boundary_damage' : {'left' : 224, 'right' : 287, 'top' : 224, 'bottom' : 287, 'damage': 50}
+}
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)

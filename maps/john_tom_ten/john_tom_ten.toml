@@ -1,0 +1,11 @@
+[map]
+author = "JohnVIP & T0M"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [129, 208, 57], end = [148, 302, 62] }
+team2 = { start = [361, 207, 57], end = [378, 292, 62] }

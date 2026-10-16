@@ -1,0 +1,16 @@
+name = 'planeCrash'
+version = '1.0'
+author = 'Dany0,Ki11aWi11,Serious_Sim'
+description = ("Epic arena optimized Capitol mod.")
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (228,74,21),
+     'arena_green_spawn' : (52,156,25),
+     'arena_gates': ((58,157,25),(199,97,50)),
+     'water_damage' : 250,
+     'boundary_damage' : {'left' : 1,
+                                    'right' : 256,
+                                    'top' : 64,
+                                    'bottom' : 256,
+                                    'damage': 25 }
+ }

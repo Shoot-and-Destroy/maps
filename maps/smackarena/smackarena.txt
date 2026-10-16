@@ -1,0 +1,10 @@
+name = 'smackarena'
+version = '1.0'
+author = 'jojoestinky'
+description = 'Smackarena'
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((157, 198, 38)),
+    'arena_green_spawn' : ((164, 355, 38)),
+   'arena_gates' : ((153, 198, 39), (161, 354, 39), (168, 357, 39), (167, 360, 39), (167, 349, 39)) }

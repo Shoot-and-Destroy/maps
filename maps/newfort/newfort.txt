@@ -1,0 +1,11 @@
+name = 'newfort'
+version = '1'
+author = 'JoJoe Stinky'
+description = ('2 new forts, lots of trees.'
+               'Lovely stroll on the island')
+extensions = { 'boundary_damage' : {'left' : 32,
+                                    'right' : 480,
+                                    'top' : 160,
+                                    'bottom' : 352,
+                                    'damage': 1 },
+               'babel' : True }

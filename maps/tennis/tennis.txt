@@ -1,0 +1,39 @@
+name = 'tennis'
+version = '1.0'
+author = 'izzy'
+description = 'Throw grenades over the net!'
+extensions = { 'boundary_damage' : {'left' : 212, 'right' : 300, 'top' : 235, 'bottom' : 276, 'damage': 5} }
+# begin script
+from pyspades.constants import *
+import random
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x=212
+        y=255
+        z=61
+        x2=212
+        y2=235
+        z2=61
+        x3=212
+        y3=275
+        z3=61
+        x4, y4, z4 = random.choice([(x,y,z),(x2,y2,z2),(x3,y3,z3)])
+        return (x4, y4, z4)
+    if connection.team is connection.protocol.green_team:
+        x=299
+        y=255
+        z=61
+        x2=299
+        y2=235
+        z2=61
+        x3=299
+        y3=275
+        z3=61
+        x4, y4, z4 = random.choice([(x,y,z),(x2,y2,z2),(x3,y3,z3)])
+        return (x4, y4, z4)
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_BASE:
+        return (232, 255, 61)
+    if entity_id == GREEN_BASE:
+        return (279, 255, 61)
+

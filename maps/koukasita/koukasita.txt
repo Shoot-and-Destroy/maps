@@ -1,0 +1,13 @@
+name = "koukasita"
+version = '1.4'
+author = 'onigiri'
+fog = (0, 0, 0)
+extensions = { 'water_damage' : 100 }
+
+extensions = { 
+     'arena': True,
+     'arena_blue_spawns' :((226,432,59), (264,416,59)),
+     'arena_green_spawns' :((278,276,57),(243,280,54)),
+     'arena_gates': (( 263, 414, 57) ,(227,429,58),(246,278,53), ( 275, 277, 55))
+ }
+

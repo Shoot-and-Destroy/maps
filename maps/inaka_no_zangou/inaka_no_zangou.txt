@@ -1,0 +1,13 @@
+name = "inaka_no_zangou"
+version = '1.0'
+author = 'onigiri'
+
+
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ((208,283,58)),
+     'arena_green_spawn' : ((296,222,58)),
+     'arena_gates': ((205,285,55),(299,220,56)),
+
+}

@@ -1,0 +1,4 @@
+name = 'octagon
+version = '1.0'
+author = 'Pavanz'
+description = 'AN AMAZING SHAPE THAT HAS EIGHT FANTASTIC SIDES AND EIGHT AWESOME ANGLES'

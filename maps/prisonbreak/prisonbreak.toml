@@ -1,0 +1,15 @@
+[map]
+author = "MoJo and miniholk"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [239, 234, 54], end = [239, 234, 54] }
+team2 = { start = [107, 342, 59], end = [107, 342, 59] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[234, 212, 59], [235, 225, 54], [132, 324, 59], [107, 340, 59], [103, 340, 59], [99, 340, 59], [95, 340, 59], [85, 342, 59], [85, 338, 59], [85, 334, 59], [85, 330, 59], [85, 326, 59], [85, 322, 59], [85, 318, 59], [85, 314, 59], [85, 310, 59], [85, 306, 59], [85, 302, 59], [85, 298, 59], [81, 310, 59]]

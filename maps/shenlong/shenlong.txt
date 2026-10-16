@@ -1,0 +1,15 @@
+name = 'shenlong'
+version = '1.1'
+author = 'Onek'
+description = ("Push map by Onek.")
+fog = (157, 234, 254)
+
+extensions = {
+'push': True,
+'push_spawn_range' : 4,
+'push_blue_spawn' : (192, 503, 53),
+'push_blue_cp' : (242, 138, 41),
+'push_green_spawn' : (319, 503, 53),
+'push_green_cp' : (296, 138, 41),
+'water_damage' : 100
+}

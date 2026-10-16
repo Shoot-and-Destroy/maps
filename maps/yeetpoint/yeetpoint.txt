@@ -1,0 +1,10 @@
+name = 'yeetpoint'
+version = '1'
+author = 'IC clan'
+description = ('A map with a nice colorful gradient built by IC clan.')
+
+extensions = {
+
+}
+
+fog = (128, 128, 255)

@@ -1,0 +1,26 @@
+name = 'pinline'
+version = '1.0'
+author = 'izzy/danke'
+
+extensions = { 
+'water_damage' : 100
+}
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		x=70
+		y=256
+		return (x,y,connection.protocol.map.get_z(x,y)-1)
+	elif connection.team is connection.protocol.green_team:
+		x=440
+		y=256
+		return (x,y,connection.protocol.map.get_z(x,y)-1)
+		
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (440, 256, 63)
+	if entity_id == BLUE_BASE:
+		return (70, 256, 63)

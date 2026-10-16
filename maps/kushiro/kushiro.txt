@@ -1,0 +1,4 @@
+name = "kushiro"
+version = '1.0'
+author = 'vippei'
+fog = (230, 230, 230)

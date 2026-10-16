@@ -1,0 +1,5 @@
+name = 'maple'
+version = '1.0'
+author = 'Sasquatch'
+description = ('A peaceful countryside, on a compact island.')
+fog = (130, 150, 140)

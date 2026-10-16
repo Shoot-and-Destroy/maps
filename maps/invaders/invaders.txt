@@ -1,0 +1,15 @@
+name = "invaders"
+version = '1.0'
+author = 'onigiri'
+
+description = 'coooooooool!!!'
+
+fog = (0, 0, 0)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((268,206,60),(315,206,60)),
+     'arena_green_spawns' : ((331,291,25),(300,291,25),(268,291,25)),
+     'arena_gates': ((265,293,20),(297,293,20),(329,293,20),(263,203,58),(308,203,58)),
+'water_damage' : 200,
+ }

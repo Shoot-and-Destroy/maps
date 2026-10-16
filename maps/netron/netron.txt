@@ -1,0 +1,5 @@
+name = 'netron'
+version = '1.0'
+author = 'sgt.kartoschka'
+description = ('a neon colored map with 4 giant cubes lined up in the middle of the map')
+fog = (0, 0, 0)

@@ -1,0 +1,4 @@
+name = 'shanghai'
+version = '1.0'
+author = 'Jdrew'
+description = 'remake of the famous BF4 map'

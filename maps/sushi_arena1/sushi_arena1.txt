@@ -1,0 +1,14 @@
+name = 'sushi_arena1'
+version = '1.1'
+author = 'engawa'
+description = '(^_^)v'
+
+fog = (256, 256, 256)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((239,273,51),(273,239,51)),
+     'arena_green_spawns' : ((273,273,51),(239,239,51)),
+     'arena_gates': ((241,271,53), (271,241,53),(271,271,53),(241,241,53)),
+     'water_damage' : 200,
+ }

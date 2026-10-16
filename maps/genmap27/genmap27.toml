@@ -1,0 +1,9 @@
+[map]
+author = "genmap27"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
