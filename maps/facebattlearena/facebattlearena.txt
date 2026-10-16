@@ -1,0 +1,12 @@
+name = 'facebattlearena'
+version = '1.0'
+author = 'Dany0'
+description = ('MC mashup and lots of other stuff. Have fun!'
+               'Arenafied by izzy')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (81,225,60),
+     'arena_green_spawn' : (385,308,60),
+     'arena_gates': ((84,228,60),(382,305,60)),
+     'water_damage' : 100
+ }

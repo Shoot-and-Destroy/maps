@@ -1,0 +1,13 @@
+[map]
+author = "onigiri"
+fog_color = [50, 50, 50]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [211, 272, 60], end = [211, 272, 60] }
+team2 = { start = [276, 272, 60], end = [276, 272, 60] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[217, 272, 60], [269, 272, 59]]

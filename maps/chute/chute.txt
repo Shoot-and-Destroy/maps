@@ -1,0 +1,9 @@
+name = 'chute'
+version = '1.0'
+author = 'JoJoe Stinky'
+description = ('Ultimate town battle')
+extensions = { 'boundary_damage' : {'left' : 64,
+                                    'right' : 448,
+                                    'top' : 128,
+                                    'bottom' : 384,
+                                    'damage': 20 } }

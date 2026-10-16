@@ -1,0 +1,6 @@
+name = 'TRB'
+version = '1.1'
+author = '[C.H]Winston_'
+extensions = {
+     'babel' : True
+}

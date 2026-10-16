@@ -1,0 +1,10 @@
+name = 'crossfire2'
+version = '2.1'
+author = 'TheGrandmaster'
+description = 'Battle round isle, with thanks to <@>'
+extensions = { 'boundary_damage' : {'left' : 32,
+                                    'right' : 480,
+                                    'top' : 118,
+                                    'bottom' : 394,
+                                    'damage': 5 },
+               'babel' : True }

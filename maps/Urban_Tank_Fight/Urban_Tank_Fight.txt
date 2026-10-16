@@ -1,0 +1,4 @@
+name = 'Urban Tank Fight'
+version = '4.2'
+author = 'Buffet_of_Lies'
+description = ('An urban WW2 battlefield w/ tanks and an airfield.')

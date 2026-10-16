@@ -1,0 +1,11 @@
+name = 'Small Battle Island 2'
+version = '2.0'
+author = 'Bradley'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (178, 165, 60),
+     'arena_green_spawn' : (290, 277, 60),
+     'arena_gates': ((185, 161, 58), (288, 270, 58)),
+     'water_damage' : 100
+ }
+ 

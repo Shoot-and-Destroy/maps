@@ -1,0 +1,13 @@
+[map]
+author = "Danke-o"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [361, 262, 53], end = [361, 262, 53] }
+team2 = { start = [164, 262, 50], end = [164, 262, 50] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[160, 258, 47], [365, 257, 49]]

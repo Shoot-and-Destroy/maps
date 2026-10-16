@@ -1,0 +1,11 @@
+name = 'facebattle'
+version = '1.0'
+author = 'Dany0'
+description = 'MC mashup and lots of other cool stuff. Have fun!'
+fog = (30, 20, 10)
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (139,249,58),
+     'arena_green_spawn' : (327,284,58),
+     'arena_gates': ((141,251,58), (325,282,58))}

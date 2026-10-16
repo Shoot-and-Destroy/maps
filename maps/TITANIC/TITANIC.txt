@@ -1,0 +1,4 @@
+name = 'TITANIC'
+version = '1.0'
+author = 'Buffet_of_Lies, Serious_Sim, Nestoflo'
+description = 'A Night To Remember'

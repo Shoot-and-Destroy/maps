@@ -1,0 +1,4 @@
+name = 'WhiteBeach'
+version = '1.0'
+author = 'Someone(and Dany0)'
+description = ('Some MC terrain. Looks awesome.')

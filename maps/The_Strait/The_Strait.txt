@@ -1,0 +1,12 @@
+name = 'The Strait'
+version = '1.0'
+author = 'STRIKE081'
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (167,322, 57),
+'push_blue_cp' : (367, 303, 40),
+'push_green_spawn' : (172,218, 56),
+'push_green_cp' : (367, 220, 40),
+'water_damage' : 100
+}

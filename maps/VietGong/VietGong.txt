@@ -1,0 +1,7 @@
+name = 'VietGong'
+version = '1.2'
+author = 'Gibbs3333'
+description = ('Epic remake of Pinpoint')
+extensions = {
+         'water_damage' : 3
+}

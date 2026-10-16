@@ -1,0 +1,6 @@
+author = 'ivanTT'
+desc = 'More shooting, less building.'
+version = '1.0'
+extensions = {
+     'water_damage' : 100
+}

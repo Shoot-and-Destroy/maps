@@ -1,0 +1,62 @@
+name = 'Tortuga'
+version = '1.0'
+author = 'Lostmotel'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(256, 257)
+        return (256, 257, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(256, 274)
+        return (256, 274, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(477, 220)
+        return (484, 285, z)
+
+spawn_locations_blue = [
+(224, 222),
+(224, 291),
+(286, 291),
+(286, 222),
+(256, 221),
+(223, 258),
+(225, 292),
+(287, 257),
+(236, 257),
+(275, 257),
+(277, 235),
+(234, 278),
+(277, 278),
+(234, 235)
+]
+
+spawn_locations_green = [
+
+(31, 256),
+(26, 279),
+(33, 238),
+(30, 263),
+(21, 255),
+
+(479, 256),
+(484, 279),
+(477, 238),
+(480, 263),
+(31, 255)
+
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+

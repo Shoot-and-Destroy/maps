@@ -1,0 +1,9 @@
+name = 'Swag 2'
+version = '1.1'
+author = 'Lostmotel'
+fog = (44, 25, 0)
+extensions = {
+     'water_damage' : 50,
+'heavens_color' : (20, 20, 20, 255),
+     'babel' : True
+}

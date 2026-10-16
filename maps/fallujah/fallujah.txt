@@ -1,0 +1,29 @@
+name = 'fallujah'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Fallujah'
+# extensions = {'water_damage':100}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (365, 282, 60)
+    if entity_id == GREEN_FLAG:
+        return (358, 277, 60)
+    if entity_id == BLUE_BASE:
+        return (277, 298, 56)
+    if entity_id == GREEN_BASE:
+        return (449, 298, 55)
+	
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+	bx = random.randrange(274,281)
+	by = random.randrange(212,341)
+        return (bx, by, 56)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(441,452)
+	gy = random.randrange(205,329)
+	return (gx, gy, 55)

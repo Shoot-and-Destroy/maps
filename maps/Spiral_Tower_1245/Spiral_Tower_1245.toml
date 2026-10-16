@@ -1,0 +1,15 @@
+[map]
+author = "KomradeColor and Infogulch"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [243, 248, 34], end = [243, 248, 34] }
+team2 = { start = [265, 241, 61], end = [265, 241, 61] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[235, 242, 34], [267, 237, 58]]

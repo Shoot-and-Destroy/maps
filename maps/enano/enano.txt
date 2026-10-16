@@ -1,0 +1,11 @@
+name = 'enano'
+version = '1.0'
+author = 'vives'
+cap_limit = 6
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (172, 213, 53),
+     'arena_green_spawn' : (316, 228, 53),
+     'arena_gates': ((172, 214, 55), (170, 214, 51), (320, 228, 53)),
+     'water_damage' : 100
+ }

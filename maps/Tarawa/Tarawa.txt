@@ -1,0 +1,11 @@
+name = 'Tarawa'
+version = '1.0'
+author = 'Articsledder'
+description = ('An island based map with several civilian buildings and palm tree forests')
+fog = (128, 232, 255)
+extensions = {
+'blue_spawn': [(87, 136)], #Spawns blues at 0, 0
+'blue_spawn_offset': 64, #Blues can spawn a maximum of 64 blocks from 0, 0
+'green_spawn':[(435, 305)], #Greens have two spawns which they can randomly spawn at. Second one will force players to spawn at height 20
+'green_spawn_offset': 64, #Greens can spawn a maximum of 64 blocks from 0, 0
+}

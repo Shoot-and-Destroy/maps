@@ -1,0 +1,7 @@
+name = 'Turtle Soup'
+version = '1.0'
+author = 'Lostmotel'
+fog = (150, 150, 160)
+extensions = {'boundary_damage' : {'left' : 0, 'right' : 512, 'top' : 94, 'bottom' : 416, 'damage': 5},
+'heavens_color' : (60, 90, 120, 255),
+'babel' : True }

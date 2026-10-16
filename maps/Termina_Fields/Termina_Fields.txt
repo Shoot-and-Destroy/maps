@@ -1,0 +1,5 @@
+name = 'Termina Fields'
+version = '2'
+author = 'Serious_Sim'
+description = ('CTF/INF map for Ace of Spades Classic inspired by the Termina Fields area from the classic game Majora's Mask.')
+extensions = { 'water_damage' : 0 }

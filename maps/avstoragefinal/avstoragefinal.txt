@@ -1,0 +1,12 @@
+name = 'avstoragefinal'
+version = 'final'
+author = 'AVuKYI2R3'
+description = 'Final version of my map storage. Thicker walls to prevent wall spading. Less camping oriented to prevent the game from running out of time before there is a winning team. And more fixes.'
+cap_limit = 8
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : ((233, 266, 57)),
+    'arena_green_spawn' : ((289, 245, 57)),
+    'arena_gates': ((236, 267, 57),(286, 244, 57),)
+}

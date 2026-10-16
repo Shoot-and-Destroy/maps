@@ -1,0 +1,15 @@
+[map]
+author = "Sasquatch"
+fog_color = [0, 0, 0]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 25
+
+[spawnpoints]
+team1 = { start = [140, 238, 30], end = [140, 238, 30] }
+team2 = { start = [373, 238, 30], end = [373, 238, 30] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[145, 232, 32], [143, 245, 32], [370, 245, 32], [368, 232, 32]]

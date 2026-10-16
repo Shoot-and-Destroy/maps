@@ -1,0 +1,12 @@
+name = 'Titanic Arena'
+version = '1.0'
+author = 'Serious Mapping'
+description = ('Titanic by Serious Mapping. '
+               'Buffet_of_Lies, Serious_Sim, and NestoFlo')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (253, 172, 46),
+     'arena_green_spawn' : (256, 354, 46),
+     'arena_gates': ((254, 177, 45), (257, 350, 45)),
+     'water_damage' : 100
+ }

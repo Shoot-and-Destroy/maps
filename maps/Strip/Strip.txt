@@ -1,0 +1,4 @@
+name = 'In Loving memory of someone I never let play. '
+version = 'Strip 1.0'
+author = 'God I miss you Jacob Bonham'
+description = 'Map made by a bully, who always cut his brother short. JoJoe Stinky.'

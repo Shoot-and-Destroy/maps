@@ -1,0 +1,11 @@
+name = 'Spiral Tower'
+version = '1.0'
+author = 'KomradeColor and Infogulch'
+description = "This is a spiral tower."
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (243,248,34),
+     'arena_green_spawn' : (265,241,61),
+     'arena_gates': ((235,242,34), (267,237,58))
+  }

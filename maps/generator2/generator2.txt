@@ -1,0 +1,10 @@
+name = 'generator2'
+version = '1.1'
+author = 'Serious_Sim'
+description = ("Second generator-themed map for the arena mode, this sort of powerplant thing could maybe have existed in some alternative futuristic reality.")
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (193,268,51),
+     'arena_green_spawn' : (342,268,51),
+     'arena_gates': ((330,270,52),(330,268,52),(330,267,52),(330,267,50),(205,268,52),(205,269,52),(205,267,52),(205,267,50),(330,269,52),(205,270,52))
+}

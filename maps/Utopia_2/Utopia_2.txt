@@ -1,0 +1,7 @@
+name = 'Utopia 2'
+version = '1.0'
+author = 'Lostmotel'
+extensions = {
+'heavens_color' : (220, 255, 100, 255),
+     'water_damage' : 5
+}

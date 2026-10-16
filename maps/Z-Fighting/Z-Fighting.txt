@@ -1,0 +1,17 @@
+name = 'Z-Fighting'
+author = 'Cajun Style'
+version = '0.3ag'
+description = ('Z-shaped push 3D.')
+extensions = {
+'push': True,
+'push_spawn_range' : 4,
+'push_blue_spawn' : (145, 370, 58),
+'push_blue_cp' : (158, 449, 4),
+'push_green_spawn' : (238, 370, 58),
+'push_green_cp' : (225, 449, 4),
+'water_damage' : 100,
+'user_blocks_only' : True,
+'boundary_damage' : {'left' : 127, 'right' : 257, 'top' : 0, 'bottom' : 450, 'damage': 100}
+}
+fog = (255, 192, 127)
+protected = ['B6','B7','B8','C8','D8','E6','E7','E8']

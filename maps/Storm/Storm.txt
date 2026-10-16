@@ -1,0 +1,12 @@
+name = 'Storm'
+version = '0.1'
+author = 'Lincent'
+description = ('The forecast is rain, acid rain.')
+
+extensions = {
+     'water_damage' : 100,
+      'arena': True,
+     'arena_blue_spawn' : (224, 235, 18),
+     'arena_green_spawn' : (326, 179, 48),
+     'arena_gates': ((323, 176, 47), (227, 239, 16))
+ }

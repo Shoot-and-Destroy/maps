@@ -1,0 +1,13 @@
+name = 'Zealot'
+version = '1.0'
+author = 'DiscipLe'
+description = 'A map originally found in the game Halo: Reach.'
+fog = (58, 10, 80)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((290, 236, 42),),
+     'arena_green_spawns' : ((220, 236, 42),),
+     'arena_gates' : ((223, 235, 43), (287, 236, 43)),
+     'water_damage' : 50
+}                     

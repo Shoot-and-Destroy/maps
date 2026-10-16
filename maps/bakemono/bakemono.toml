@@ -1,0 +1,11 @@
+[map]
+author = "onigiri"
+fog_color = [135, 77, 67]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 15
+
+[spawnpoints]
+team1 = { start = [179, 189, 51], end = [203, 247, 59] }
+team2 = { start = [282, 192, 49], end = [302, 251, 59] }

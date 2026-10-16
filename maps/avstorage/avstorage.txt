@@ -1,0 +1,11 @@
+name = 'avstorage'
+version = '1.0'
+author = 'AVuKY'
+description = 'A Storage area full of boxes.'
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : (236, 263, 57),
+    'arena_green_spawn' : (275, 248, 57),
+    'arena_gates': ((239, 263, 58), (272, 248, 58))
+}

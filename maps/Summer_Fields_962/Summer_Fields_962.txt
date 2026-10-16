@@ -1,0 +1,8 @@
+name = 'Summer Fields'
+version = '1.0'
+author = 'Influx'
+description = ('Rolling fields divided by a road ')
+extensions = {
+'right_mortars' : [(451, 134, 32), (482, 299, 32)],
+'left_mortars' : [(29,347,35), (50, 141, 34)]
+}

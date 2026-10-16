@@ -1,0 +1,51 @@
+name = 'Snowblind'
+version = '1.0'
+author = 'Deucebag'
+description = ('A blatant bastardization of the Tribes 2 map Snowblind.')
+extensions = { 'water_damage' : 0 }
+fog = (170, 170, 170)
+
+# scripting
+
+import random
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from commands import say
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        # puts only the blue flag in the blue base
+        #z = team.protocol.map.get_z(109, 274)
+        return (265, 436, 29)
+    if entity_id == BLUE_BASE:
+        # puts only the blue flag in the blue base
+        #z = team.protocol.map.get_z(113, 315)
+        return (265, 436, 29)
+    if entity_id == GREEN_FLAG:
+        # puts only the green flag in the green base
+        #z = team.protocol.map.get_z(392, 306)
+        return (194, 81, 39)
+    if entity_id == GREEN_BASE:
+        # puts only the green flag in the green base
+        #z = team.protocol.map.get_z(408, 330)
+        return (194, 81, 39)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = ServerConnection.get_spawn_location(connection)
+        r = random.randrange(1, 2)
+        #spawn AT base
+        if r == 1:
+            return (268, 436, 29)
+        #spawn IN base
+        elif r == 2:
+            return (261, 436, 29)
+    if connection.team is connection.protocol.green_team:
+        x, y, z = ServerConnection.get_spawn_location(connection)
+        r = random.randrange(1, 2)
+        #spawn AT base
+        if r == 1:
+            return (198, 80, 35)
+        #spawn IN base
+        elif r == 2:
+            return (191, 80, 35)

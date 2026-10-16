@@ -1,0 +1,11 @@
+name = 'avsandtown'
+version = '1.0'
+author = 'AVuKYI2R3'
+description = '04/03/13'
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : ((218, 207, 59)),
+    'arena_green_spawn' : ((283, 280, 59)),
+    'arena_gates': ((222, 211, 60),(279, 276, 60),)
+}

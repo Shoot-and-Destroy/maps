@@ -1,0 +1,9 @@
+[map]
+author = "kmsi"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [218, 147, 53], end = [293, 147, 53] }
+team2 = { start = [201, 359, 53], end = [310, 359, 53] }

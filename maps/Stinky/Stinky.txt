@@ -1,0 +1,7 @@
+name = 'Stinky'
+version = '1.0'
+author = 'Lostmotel'
+fog = (255, 230, 160)
+extensions = {
+     'water_damage' : 5
+}

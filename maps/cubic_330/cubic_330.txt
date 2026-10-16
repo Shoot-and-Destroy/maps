@@ -1,0 +1,8 @@
+name = 'cubic'
+version = '1.0'
+author = 'Sasquatch'
+description = ('Square mounds, square trees, square people')
+extensions = {
+     
+     'water_damage' : 5
+ }

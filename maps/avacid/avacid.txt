@@ -1,0 +1,11 @@
+name = 'avacid'
+version = '1.0'
+author = 'AVuKYI2R3'
+description = 'A classic styled arena map with an acid pit.'
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((222, 255, 56)),
+    'arena_green_spawn' : ((289, 256, 56)),
+    'arena_gates': ((230, 252, 41),(281, 258, 41))
+}

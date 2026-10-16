@@ -1,0 +1,17 @@
+name = 'citywar'
+version = '1.0'
+author = 'andr3w'
+description = 'gg'
+cap_limit = 5
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (329, 255, 52),
+     'arena_green_spawn' : (179, 255, 52),
+'arena_gates': ((337, 256, 53), (172, 255, 53)),
+     'water_damage' : 100,
+     'team_namecolor' : True,
+      'blue_team_name' : 'Blue',
+      'blue_team_color' : (0, 255, 210),  
+      'green_team_name' : 'Green',
+      'green_team_color' : (0 , 163, 0)
+ }

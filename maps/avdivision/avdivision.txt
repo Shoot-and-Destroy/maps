@@ -1,0 +1,11 @@
+name = 'avdivision'
+version = '1.0'
+author = 'AVuKYI2R3'
+description = '07/03/13'
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : ((222, 255, 56)),
+    'arena_green_spawn' : ((289, 256, 56)),
+    'arena_gates': ((227, 258, 51),(227, 258, 56),(284, 253, 51),(284, 253, 56),)
+}

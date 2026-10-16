@@ -1,0 +1,14 @@
+name = "colosseum"
+version = '1.0'
+author = 'onigiri'
+
+description = 'bokoboko ni siteyare!'
+
+fog = (50, 50, 50)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ((211,272,60)),
+     'arena_green_spawn' : ((276,272,60)),
+     'arena_gates': ((217,272,60),(269,272,59)),
+ }

@@ -1,0 +1,12 @@
+name = 'Volcano Islands'
+author = 'Kuma'
+version = '1.0'
+extensions = {
+'push' : True,
+'push_spawn_range' : 3,
+'push_green_spawn' : (302, 475, 59),
+'push_green_cp' : (281, 46, 44),
+'push_blue_spawn' : (205, 475, 59),
+'push_blue_cp' : (230, 46, 44),
+'water_damage' : 100
+}

@@ -1,0 +1,14 @@
+name = 'Swamp Lands'
+version = '1.0'
+author = 'v^3'
+description = ('Chain of islands, the middle island is an "x" shape and is shared by the both teams')
+fog = (12, 64, 32)
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (458, 351, 58),
+'push_blue_cp' : (91, 258, 54),
+'push_green_spawn' : (458, 258, 59),
+'push_green_cp' : (91, 329, 57),
+'water_damage' : 100
+}

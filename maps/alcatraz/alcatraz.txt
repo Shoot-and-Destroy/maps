@@ -1,0 +1,12 @@
+name = 'alcatraz'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'arenafied by izzy'
+extensions = {
+     'boundary_damage' : {'left' : 192, 'right' : 323, 'top' : 190, 'bottom' : 321, 'damage': 100},
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (197, 256, 55),
+     'arena_green_spawn' : (318, 256, 55),
+     'arena_gates' : ((197, 251, 56), (197, 261, 56), (318, 261, 56), (318, 251, 56))
+}

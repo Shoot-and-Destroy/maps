@@ -1,0 +1,22 @@
+name = 'Tortuga'
+version = '1.0'
+author = 'Lostmotel'
+
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(140, 256)
+        return (140, 256, z)
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(370, 256)
+        return (370, 256, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(78, 197)
+        return (78, 197, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(432, 197)
+        return (432, 197, z)

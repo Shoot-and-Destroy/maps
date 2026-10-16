@@ -1,0 +1,28 @@
+name = 'egypt'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Egypt'
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (163, 258, 54)
+    if entity_id == GREEN_FLAG:
+        return (348, 303, 54)
+    if entity_id == BLUE_BASE:
+        return (78, 282, 52)
+    if entity_id == GREEN_BASE:
+        return (449, 281, 42)
+	
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+	bx = random.randrange(78,102)
+	by = random.randrange(230,282)
+        return (bx, by, 52)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(435,462)
+	gy = random.randrange(250,267)
+	return (gx, gy, 42)

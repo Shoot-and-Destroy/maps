@@ -1,0 +1,13 @@
+name = 'Swamparena'
+version = '1.2'
+author = 'Lostmotel'
+description = ''
+cap_limit = 5
+extensions = {
+     'boundary_damage' : {'left' : 192, 'right' : 316, 'top' : 192, 'bottom' : 318, 'damage' : 100},
+     'arena': True,
+     'arena_blue_spawn' : (301, 199, 61),
+     'arena_green_spawn' : (254, 305, 61),
+ 'arena_gates': ((250, 304, 61), (301, 202, 61))
+     
+ }

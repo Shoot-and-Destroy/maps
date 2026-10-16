@@ -1,0 +1,5 @@
+name = 'city'
+version = '1.0'
+author = 'Sasquatch'
+description = ('A trip of doomed monster appetizers.')
+fog = (200, 150, 100)

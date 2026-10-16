@@ -1,0 +1,32 @@
+name = 'Tradeoff Islands'
+version = '1.0'
+author = 'ei8htx & mile'
+description = 'Try relaxing for a bit. There are piranhas in the water btw'
+extensions = { 
+	'water_damage' : 100,
+	'babel' : True, 
+	'heavens_type' : 'bighole',
+	'glow_enabled' : True
+}
+
+fog = (120, 200, 250)
+
+AREA = (108, 246, 384, 266,) #blue x1, both y1, green x1, both y2
+WIDTH = 20
+BLUE_RECT =  (AREA[0], AREA[1], AREA[0]+WIDTH, AREA[3]) #x1, y1, x2, y2
+GREEN_RECT = (AREA[2], AREA[1], AREA[2]+WIDTH, AREA[3])
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		return connection.protocol.get_random_location(True, BLUE_RECT)
+	elif connection.team is connection.protocol.green_team:
+		return connection.protocol.get_random_location(True, GREEN_RECT)
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (256+138, 256, team.protocol.map.get_z(256+138, 256))
+	if entity_id == BLUE_BASE:
+		return (256-138, 256, team.protocol.map.get_z(256-138, 256))		

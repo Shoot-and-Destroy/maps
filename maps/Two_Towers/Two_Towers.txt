@@ -1,0 +1,11 @@
+name = 'Two Towers'
+version = '1.0'
+author = 'Bradley'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (242, 214, 28),
+     'arena_green_spawn' : (154, 204, 48),
+     'arena_gates': ((159, 204, 47), (238, 213, 27)),
+     'water_damage' : 100
+ }
+ 

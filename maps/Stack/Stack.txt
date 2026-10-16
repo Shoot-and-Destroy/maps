@@ -1,0 +1,6 @@
+name = 'Stack'
+version = '1.0'
+author = 'JojoeStinky'
+description = ''
+extensions = {
+     'tow' : True}

@@ -1,0 +1,11 @@
+name = "array_arena"
+version = '1.0'
+author = 'ONIGIRI'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (143,262,52),
+     'arena_green_spawn' : (332,153,43),
+     'arena_gates': ((336,157,41),(147,266,50)),
+     'water_damage' : 110
+ }

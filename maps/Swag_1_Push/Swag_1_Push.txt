@@ -1,0 +1,14 @@
+name = 'Swag 1 Push'
+version = '1.0'
+author = 'Lostmotel'
+
+extensions = {
+'push': True,
+'push_spawn_range' : 6,
+'push_blue_spawn' : (76,346, 56),
+'push_blue_cp' : (420, 239, 47),
+'push_green_spawn' : (76, 165, 56),
+'push_green_cp' : (420, 259, 47),
+'water_damage' : 100,
+
+ }

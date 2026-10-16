@@ -1,0 +1,11 @@
+name = 'avstoragebig'
+version = '2.0'
+author = 'AVuKYI2R3'
+description = 'Storage in double size with hidden passages.'
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((296, 241, 46)),
+    'arena_green_spawn' : ((217, 272, 46)),
+    'arena_gates': ((224, 269, 48),(290, 239, 48))
+}

@@ -1,0 +1,12 @@
+name = 'avsmallfortress'
+version = '1.0'
+author = 'AVuKY'
+description = 'A Small Fortress.'
+cap_limit = 12
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : (247, 256, 57),
+    'arena_green_spawn' : (286, 243, 56),
+    'arena_gates': ((250, 256, 58), (283, 243, 57))
+}

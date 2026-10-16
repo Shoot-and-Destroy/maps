@@ -1,0 +1,12 @@
+name = 'Town Arena'
+version = '1.0'
+author = 'IISOD}M.Shadow'
+description = ('An everyday life in an everyday town')
+cap_limit = 5
+extensions = {
+     'boundary_damage' : {'left' : 343, 'right' : 511, 'top' : 118, 'bottom' : 288, 'damage': 100},
+     'arena': True,
+     'arena_blue_spawn' : (495, 162, 51),
+     'arena_green_spawn' : (369, 241, 51),
+     'arena_gates' : ((364, 239, 51), (492, 164, 51), (498, 161, 51))
+}
