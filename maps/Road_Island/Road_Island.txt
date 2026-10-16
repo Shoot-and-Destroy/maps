@@ -1,0 +1,8 @@
+name = 'Road Island'
+version = '1.0'
+author = 'Lostmotel'
+fog = (20, 30, 50)
+extensions = {
+     'water_damage' : 1,
+     'babel' : True
+}

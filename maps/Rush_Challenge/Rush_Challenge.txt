@@ -1,0 +1,11 @@
+name = 'Rush Challenge'
+version = '1.0'
+author = 'iSkyte'
+description = ('From the game Operation7 now voxelized for AoS')
+fog = (112, 163, 204)
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (256, 294, 56),
+     'arena_green_spawn' : (255, 217, 56),
+     'arena_gates' : ((248, 219, 56), (263, 292, 56)) 
+}

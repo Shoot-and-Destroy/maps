@@ -1,0 +1,7 @@
+name = 'Invasion'
+version = '1.0'
+author = 'Lostmotel'
+extensions = {
+'right_mortars' : ((427, 88, 59), (0, 0, 0)),
+'left_mortars' :  ((81, 427, 59), (512, 512, 0))
+}

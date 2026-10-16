@@ -1,0 +1,52 @@
+name = 'Inferno'
+version = '2.0'
+author = 'Sasquatch'
+description = ('A not sucky version of Hell')
+extensions = { 'water_damage' : 100 }
+
+from random import randrange, choice
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from commands import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (11, 388, 61)
+    if entity_id == BLUE_BASE:
+        return (11, 179, 61)
+    if entity_id == GREEN_FLAG:
+        return (498, 388, 62)
+    if entity_id == GREEN_BASE:
+        return (498, 168, 62)
+
+spawn_locations_blue = [
+    (11, 388, 61),
+    (11, 179, 61),
+    (3, 179, 54),
+    (11, 235, 61),
+    (3, 235, 54),
+    (12, 335, 61),
+    (3, 336,54),
+    (2, 348, 56)
+]
+
+spawn_locations_green = [
+    (498, 388, 62),
+    (498, 168, 62),
+    (509, 168, 55),
+    (497, 221, 61),
+    (508, 221, 55),
+    (497, 270, 61),
+    (507, 270, 55),
+    (508, 388, 55)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+	x, y, z = choice(spawn_locations_blue)
+	return x, y, z
+    if connection.team is connection.protocol.green_team:
+	x, y, z = choice(spawn_locations_green)
+	return x, y, z
+
+fog = (70, 10, 5)

@@ -1,0 +1,8 @@
+name = 'Quadpoint'
+version = '1.0'
+author = 'Danko and izzy'
+description = "4 team maps based on izzy's pinpoint"
+extensions = {
+    'water_damage' : 1
+}
+

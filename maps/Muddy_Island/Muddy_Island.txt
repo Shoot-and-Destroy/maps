@@ -1,0 +1,4 @@
+name = "Muddy Island"
+version = "1.0"
+author = "[DI]Dwin"
+description = "This map is supposed to be a swamp, even if that does not look like it too much..."

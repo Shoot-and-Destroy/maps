@@ -1,0 +1,85 @@
+name = 'Lost Valley v2'
+version = '2.3'
+author = 'Serious_Sim'
+description = ('For CTF and TDM mode.')
+extensions = {
+    'water_damage' : 25,
+ }
+
+protected = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B7', 'B8', 'C1', 'C2', 'C7', 'C8', 'D1', 'D4', 'D5', 'D8', 'E1', 'E4', 'E5', 'E8', 'F1', 'F2', 'F7', 'F8', 'G1', 'G2', 'G7', 'G8', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'H7', 'H8']
+
+
+from random import randrange, choice
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from commands import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(133, 260)
+        return (379, 261, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(171, 260)
+        return (339, 260, z)
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(379, 261)
+        return (133, 260, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(339, 260)
+        return (171, 260, z)
+
+spawn_locations_blue = [
+    (364, 242),
+    (342, 269),
+    (352, 295),
+    (355, 285),
+    (408, 224),
+    (344, 224),
+    (409, 257),
+    (408, 276),
+    (396, 287),
+    (401, 281),
+    (401, 247),
+    (352, 299),
+    (399, 235),
+    (393, 233),
+    (360, 234),
+    (355, 240),
+    (342, 252),
+    (393, 302),
+    (365, 276),
+    (393, 278),
+    (393, 244)
+]
+
+spawn_locations_green = [
+    (118, 273),
+    (108, 242),
+    (102, 244),
+    (105, 275),
+    (167, 252),
+    (157, 238),
+    (106, 295),
+    (162, 301),
+    (159, 295),
+    (170, 266),
+    (150, 233),
+    (111, 224),
+    (109, 277),
+    (111, 310),
+    (162, 298),
+    (150, 287),
+    (118, 242),
+    (148, 245),
+    (147, 276)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z

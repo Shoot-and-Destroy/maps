@@ -1,0 +1,4 @@
+name = 'Oil Town'
+version = '1.0'
+author = 'Lelue'
+description = 'An old town near the coast, connected to oil tanks, a tanker, sailing ships, oil pumps'

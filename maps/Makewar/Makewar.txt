@@ -1,0 +1,4 @@
+name = 'Makewar'
+version = '1.0'
+author = 'Big Sb'
+description = ('A grayish blue map filled with cliffs and open areas.')

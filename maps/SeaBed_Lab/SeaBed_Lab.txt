@@ -1,0 +1,11 @@
+name = 'SeaBed Lab'
+version = '1.0'
+author = 'Serious_Sim'
+description = ('Low detail mirrored small arena map.')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (235, 279, 54),
+     'arena_green_spawn' : (247, 179, 57),
+     'arena_gates': ((242, 271, 52), (243, 182, 56)),
+     'water_damage' : 100
+ }

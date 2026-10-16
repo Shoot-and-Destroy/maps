@@ -1,0 +1,15 @@
+[map]
+author = "Tank"
+fog_color = [100, 50, 50]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [326, 218, 62], end = [326, 218, 62] }
+team2 = { start = [192, 163, 57], end = [192, 163, 57] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[322, 217, 59], [192, 166, 55], [198, 161, 55], [200, 176, 55]]

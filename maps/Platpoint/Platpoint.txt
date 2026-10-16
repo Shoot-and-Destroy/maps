@@ -1,0 +1,4 @@
+name = 'Platpoint'
+version = '2.0'
+author = 'izzy & Danke'
+description = "Some stuff thrown on izzy's pinpoint map"

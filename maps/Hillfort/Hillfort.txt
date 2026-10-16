@@ -1,0 +1,48 @@
+name = 'Hillfort'
+version = '1.0'
+author = 'tGM/helpers'
+description = 'A big hill with a fortress on top, a large INF map'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(64, 257)
+        return (64, 257, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z (42, 257)
+        return (42, 257, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(350, 229)
+        return (350, 229, z)
+
+spawn_locations_green = [
+    	(224, 264),
+    	(319, 212),
+    	(340, 199),
+    	(335, 212),
+    	(354, 252),
+    	(343, 272)
+]
+
+spawn_locations_blue = [
+    	(42, 257),
+    	(45, 281),
+    	(45, 257),
+    	(46, 232),
+    	(38, 289),
+    	(97, 289),
+	(96, 224)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+	x, y = choice(spawn_locations_green)
+	z = connection.protocol.map.get_z(x, y)
+	return x, y, z
+    if connection.team is connection.protocol.blue_team:
+	x, y = choice(spawn_locations_blue)
+	z = connection.protocol.map.get_z(x, y)
+	return x, y, z

@@ -1,0 +1,14 @@
+﻿## GENERATED WITH BLOCKMAN2D v0.2.5.0
+name = 'IV-Push'
+version = '1.0'
+author = 'FaultCheck'
+description = 'We Need Push, Stat!'
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (179, 483, 1),
+'push_blue_cp' : (238, 113, 1),
+'push_green_spawn' : (329, 482, 1),
+'push_green_cp' : (268, 113, 1),
+'water_damage' : 100
+}

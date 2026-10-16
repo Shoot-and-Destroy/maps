@@ -1,0 +1,30 @@
+name = 'SkullFort'
+version = '1.0'
+author = 'JoJoe Stinky CC 2013'
+description = 'Meatloaf is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License'
+extensions = {
+     'water_damage' : 0
+}
+
+# script
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (437, 237, 33)
+    if entity_id == BLUE_FLAG:
+        return (75, 238, 33)
+    if entity_id == GREEN_BASE:
+        return (437, 280, 33)
+    if entity_id == BLUE_BASE:
+        return (75, 281, 33)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+       x, y, z = ServerConnection.get_spawn_location(connection)
+       return ServerConnection.set_location_safe(connection, (375, 255, 60))
+    if connection.team is connection.protocol.green_team:
+       x, y, z = ServerConnection.get_spawn_location(connection)
+       return ServerConnection.set_location_safe(connection, (108, 255, 60))

@@ -1,0 +1,9 @@
+name = 'Oasis'
+version = '1.0'
+author = 'Influx'
+description = ('A desert map centred around a small village,' 
+' with a mosque and river running through. With mortars')
+extensions = {
+'right_mortars' : [(470, 110, 58), (481, 196, 58), (474, 339, 59)],
+'left_mortars' : [(44,446,59), (33, 349, 58), (61, 135, 58)]
+}

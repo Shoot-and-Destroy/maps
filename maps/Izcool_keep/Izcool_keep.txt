@@ -1,0 +1,4 @@
+name = 'Izcool keep'
+version = '1.0'
+author = 'JoJoe-Stinky AKA Jason Bonham Alii3D.com'
+description = 'More Fortress fun.'

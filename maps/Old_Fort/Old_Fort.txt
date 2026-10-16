@@ -1,0 +1,11 @@
+name = 'Old Fort'
+version = '1'
+author = 'JoJoe Stinky AKA Jason Bonham alii3d.com'
+description = ('2 old forts, lots of trees.'
+               'Lovely stroll on the island')
+extensions = { 'boundary_damage' : {'left' : 1,
+                                    'right' : 510,
+                                    'top' : 127,
+                                    'bottom' : 384,
+                                    'damage': 5 },
+               'babel' : True }

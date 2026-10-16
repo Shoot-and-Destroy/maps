@@ -1,0 +1,4 @@
+name = 'Remus'
+version = '1.0'
+author = 'Yourself'
+description = ('A classical city inspired by Roman civilization and engineering.')

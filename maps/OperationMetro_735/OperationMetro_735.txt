@@ -1,0 +1,32 @@
+name = 'OperationMetro'
+version = '1.1'
+author = 'Gibbs3333'
+description = ('Team R3S')
+protected = ['A4', 'A5', 'B4', 'B5', 'C4', 'C5', 'D2', 'D3', 'D4', 'D5', 'E2', 'E3', 'E4', 'E5', 'F4', 'F5', 'G4', 'G5', 'H4', 'H5']
+# scripting
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (256, 171, 41)
+      
+    if entity_id == BLUE_BASE:
+        return (255, 141, 40)
+      
+    if entity_id == GREEN_FLAG:
+        return (178, 255, 54)
+
+    if entity_id == GREEN_BASE:
+        return (255, 288, 54)
+
+def get_spawn_location(connection):
+ 
+    if connection.team is connection.protocol.blue_team:
+        # sets a static spawn for just the blue team, but you could use "green_team" too.
+        return (258, 102, 21)
+
+    if connection.team is connection.protocol.green_team:
+        # sets a static spawn for just the green team, but you could use "blue_team" too.
+        return (270, 300, 54)

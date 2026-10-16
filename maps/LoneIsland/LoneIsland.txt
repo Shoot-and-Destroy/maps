@@ -1,0 +1,59 @@
+name = 'LoneIsland'
+version = '1.0'
+author = 'cuulli'
+description = 'Small island map for 1vs1 - 3vs3.'
+extensions = { 'water_damage' : 39 }
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(168, 243)
+        return (168, 243, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(186, 280)
+        return (186, 280, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(358, 281)
+        return (358, 281, z)
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(344, 214)
+        return (344, 214, z)
+
+spawn_locations_blue = [
+(168, 243),
+(175, 216),
+(162, 222),
+(170, 262),
+(169, 289),
+(183, 297),
+(186, 280)
+
+
+]
+
+spawn_locations_green = [
+
+(372, 244),
+(370, 268),
+(358, 281),
+(350, 266),
+(351, 243),
+(365, 226),
+(344, 214),
+(356, 201)
+
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+

@@ -1,0 +1,19 @@
+name = 'Mashesswood Island'
+version = '1.0'
+author = 'Serious_Sim'
+description = ('Barren snowy island hosting a military base along with an extensive underground complex.')
+extensions = { 'water_damage' : 3 }
+
+# Mashesswood Island is located beyond the artic circle
+# and hosts a secret NATO base used for top secret nuclear weapons
+# research and development. 13 hours ago, the NATO command center 
+# lost contact with the base and received a message from a 
+# terrorist organisation known as the 'BLUE TEAM' claiming that
+# they took control of Mashesswood facilities along with several nuclear 
+# warheads. Little is yet known about their launch capabilities. 
+# Instead of sending one man onto a solo snealing mission -wich
+# would be completely ludicrous- NATO is sending today's best task
+# force, the 'GREEN TEAM', to assess the situation and deal with 
+# the terrorists. Use of lethal force has been authorised, as the 
+# primary objective is to secure the intel and prevent a nuclear 
+# strike at any cost.

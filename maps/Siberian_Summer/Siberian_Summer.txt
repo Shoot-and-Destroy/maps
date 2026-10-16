@@ -1,0 +1,5 @@
+name = 'Siberian Summer'
+version = '0.5'
+author = 'Sneakers'
+description = ('Light forest with rolling hills.'
+               )

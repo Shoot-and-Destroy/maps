@@ -1,0 +1,5 @@
+name = 'Pinch'
+version = '1.0'
+author = 'Jdrew'
+description = 'A mix between pinpoint and goon assault'
+

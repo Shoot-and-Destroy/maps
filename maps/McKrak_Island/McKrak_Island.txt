@@ -1,0 +1,61 @@
+name = 'McKrak Island'
+version = '1.0'
+author = 'JoJoe Stinky CC 2013'
+description = 'McKrak Island'
+
+# script
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (217, 243, 36)
+    if entity_id == BLUE_FLAG:
+        return (293, 242, 36)
+    if entity_id == GREEN_BASE:
+        return (198, 239, 34)
+    if entity_id == BLUE_BASE:
+        return (306, 240, 32)
+
+spawn_locations_blue = [
+
+(336, 229),
+(329, 233),
+(329, 242),
+(341, 220),
+(341, 276),
+(341, 270),
+(341, 241),
+(341, 250),
+(341, 260),
+(366, 277),
+(336, 252)
+
+]
+
+spawn_locations_green = [
+
+(176, 250),
+(176, 260),
+(164, 250),
+(164, 240),
+(164, 260),
+(157, 255),
+(157, 240),
+(157, 260),
+(165, 255),
+(165, 216),
+(176, 240)
+
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z

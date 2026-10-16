@@ -1,0 +1,5 @@
+name = 'Serpentine'
+version = '1.0'
+author = 'Ace'
+cap_limit = 6
+description = ''

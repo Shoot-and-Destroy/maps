@@ -1,0 +1,9 @@
+[map]
+author = "JoJoe Stinky CC 2013"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [329, 220, 0], end = [366, 277, 0] }
+team2 = { start = [157, 216, 0], end = [176, 260, 0] }

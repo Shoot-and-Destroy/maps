@@ -1,0 +1,50 @@
+name = "KUNE KUNE tobe!"
+version = '1.0'
+author = 'onigiri'
+description = 'fly!'
+
+fog = (0, 0, 0)
+
+
+# script
+from pyspades.server import ServerConnection
+from pyspades.constants import *
+import random
+
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 255, 256, 11)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 383, 256, 41)
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 255, 256, 11)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 127, 256, 41)
+
+
+spawn_locations_blue = [
+    ( 107, 270, 53),( 147, 278, 53),( 107, 278, 53),
+]
+
+spawn_locations_green = [
+   ( 377, 234, 48), ( 382, 196, 56),( 392, 222, 56),( 377, 234, 48),
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 0 # magic numbers
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        # allows spawning lower if the ground is destroyed
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

@@ -1,0 +1,11 @@
+[map]
+author = "massilia"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 50
+
+[spawnpoints]
+team1 = { start = [249, 120, 51], end = [249, 120, 51] }
+team2 = { start = [249, 279, 59], end = [249, 279, 59] }

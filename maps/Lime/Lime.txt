@@ -1,0 +1,41 @@
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        return (255,255,0)
+
+    if entity_id == BLUE_BASE:
+        return (166, 266, 55)
+
+    if entity_id == GREEN_FLAG:
+        return (255,255,0)
+
+    if entity_id == GREEN_BASE:
+        return (345, 224, 55)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(146, 184)
+        y = random.randrange(193, 218)
+        z = connection.protocol.map.get_z(x,y) - 2
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(328, 365)
+        y = random.randrange(290, 319)
+        z = connection.protocol.map.get_z(x,y) - 2
+        return (x, y, z)
+
+name = 'Lime'
+version = '1.0'
+author = 'Lostmotel'
+extensions = { 
+'water_damage' : 20,
+'babel' : True, 
+'unbound' : True,
+'heavens_color' : (165, 200, 100, 100)
+}

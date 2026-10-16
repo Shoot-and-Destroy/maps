@@ -1,0 +1,132 @@
+name = 'Skull Island'
+version = '1.3'
+author = 'hompy'
+description = ('warning: squid hazard')
+arena = (256 - 64, 256 - 64, 256 + 64, 256 + 64)
+boss = True
+
+from itertools import product
+from twisted.internet.reactor import callLater
+from pyspades.constants import *
+from pyspades.server import grenade_packet, block_action, set_color
+from pyspades.world import Grenade
+from pyspades.common import Vertex3, make_color
+
+SPAWN_RECT = (265, 282, 304, 293)
+CHEST_AABB = (261, 202, 60, 3, 2, 2)
+ORB_AABB = (209, 243, 53, 2, 2, 2)
+ORB_COLOR = make_color(255, 0, 0)
+NAG_INTERVAL = 18.0
+KRAKEN_SPAWN = (256, 128)
+
+def aabb(x, y, z, i, j, k, w, d, h):
+    return not (x < i or x > i + w or y < j or y > j + d or z < k or z > k + h)
+
+def prism(x, y, z, w, d, h):
+    return product(xrange(x, x + w), xrange(y, y + d), xrange(z, z + h))
+
+def set_block_color(protocol, color):
+    set_color.value = color
+    set_color.player_id = 32
+    protocol.send_contained(set_color, save = True)
+
+def remove_block(protocol, x, y, z, user = False):
+    if z >= 63:
+        return False
+    if not protocol.map.remove_point(x, y, z, user):
+        return False
+    block_action.value = DESTROY_BLOCK
+    block_action.player_id = 32
+    block_action.x = x
+    block_action.y = y
+    block_action.z = z
+    protocol.send_contained(block_action, save = True)
+    return True
+
+def build_block(protocol, x, y, z, color, force = False):
+    if x < 0 or y < 0 or z < 0 or x >= 512 or y >= 512 or z >= 62:
+        return False
+    if force:
+        remove_block(protocol, x, y, z)
+    if not protocol.map.get_solid(x, y, z):
+        protocol.map.set_point_unsafe_int(x, y, z, color)
+        block_action.value = BUILD_BLOCK
+        block_action.player_id = 32
+        block_action.x = x
+        block_action.y = y
+        block_action.z = z
+        protocol.send_contained(block_action, save = True)
+        return True
+    return False
+
+def create_explosion_effect(protocol, position):
+    protocol.world.create_object(Grenade, 0.0, position, None, 
+        Vertex3(), None)
+    grenade_packet.value = 0.0
+    grenade_packet.player_id = 32
+    grenade_packet.position = position.get()
+    grenade_packet.velocity = (0.0, 0.0, 0.0)
+    protocol.send_contained(grenade_packet)
+
+chest_active = True
+orb_active = True
+
+def chest_nag(protocol):
+    protocol.send_chat('*** Under the X lies a buried treasure... open it, '
+        'and the monster shall rise', global_message = None)
+    protocol.nag_call = callLater(NAG_INTERVAL, chest_nag, protocol)
+
+def challenge_nag(protocol):
+    protocol.send_chat('*** Not challenging enough? Another treasure remains '
+        'hidden in the rocky islands...', global_message = None)
+    protocol.nag_call = callLater(NAG_INTERVAL, challenge_nag, protocol)
+
+def cancel_nag(protocol):
+    if protocol.nag_call:
+        protocol.nag_call.cancel()
+        protocol.nag_call = None
+
+def get_spawn_location(connection):
+    return connection.protocol.get_random_location(True, SPAWN_RECT)
+
+def on_map_change(protocol, map):
+    chest_nag(protocol)
+
+def on_map_leave(protocol):
+    cancel_nag(protocol)
+
+def victory(caller = None):
+    challenge_nag(caller.protocol)
+
+def on_block_destroy(connection, x, y, z, mode):
+    global chest_active, orb_active
+    protocol = connection.protocol
+    kraken = getattr(protocol, 'boss', None)
+    boss_ready = getattr(protocol, 'boss_ready', False)
+    if chest_active and aabb(x, y, z, *CHEST_AABB):
+        if kraken is None and mode == SPADE_DESTROY:
+            chest_active = False
+            cancel_nag(protocol)
+            create_explosion_effect(protocol, connection.world_object.position)
+            if boss_ready:
+                x, y, = KRAKEN_SPAWN
+                protocol.start_kraken(x, y, finally_call = victory)
+        else:
+            return False
+    if aabb(x, y, z, *ORB_AABB):
+        if kraken is None and orb_active:
+            chest_active = orb_active = False
+            cancel_nag(protocol)
+            set_block_color(protocol, ORB_COLOR)
+            for u, v, w in prism(*ORB_AABB):
+                build_block(protocol, u, v, w, ORB_COLOR, True)
+            if boss_ready:
+                x, y = KRAKEN_SPAWN
+                protocol.start_kraken(x, y, hardcore = True)
+        return False
+
+def is_indestructable(protocol, x, y, z):
+    if chest_active and aabb(x, y, z, *CHEST_AABB):
+        return True
+    if orb_active and aabb(x, y, z, *ORB_AABB):
+        return True

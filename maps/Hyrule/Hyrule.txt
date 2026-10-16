@@ -1,0 +1,4 @@
+name = 'Hyrule'
+version = '1.0'
+author = 'Sasquatch'
+description = 'Just Hyrule map (literally).'

@@ -1,0 +1,15 @@
+## GENERATED WITH BLOCKMAN2D v0.2.5.0
+name = 'Orbit - Push'
+version = '1.0'
+author = 'FaultCheck'
+description = 'Ace of Space'
+fog = (0, 0, 0)
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (157,138, 56),
+'push_blue_cp' : (276, 371, 56),
+'push_green_spawn' : (362,138, 56),
+'push_green_cp' : (243, 371, 56),
+'water_damage' : 100
+}

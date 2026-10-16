@@ -1,0 +1,11 @@
+[map]
+author = "Serious_Sim"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 25
+
+[spawnpoints]
+team1 = { start = [342, 224, 0], end = [409, 302, 0] }
+team2 = { start = [102, 224, 0], end = [170, 310, 0] }

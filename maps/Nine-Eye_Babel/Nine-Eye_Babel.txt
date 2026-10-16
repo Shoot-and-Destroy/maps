@@ -1,0 +1,31 @@
+name = 'Nine-Eye Babel'
+version = '1.0'
+author = 'ei8htx'
+description = ('A Babel variant of my first map')
+extensions = { 
+	'water_damage' : 1,
+	'babel' : True, 
+	'heavens_color' : (255, 215, 130, 255)
+}
+
+fog = (150, 240, 255)
+
+AREA = (145, 225, 335, 285,) #blue x1, both y1, green x1, both y2
+WIDTH = 30
+BLUE_RECT =  (AREA[0], AREA[1], AREA[0]+WIDTH, AREA[3]) #x1, y1, x2, y2
+GREEN_RECT = (AREA[2], AREA[1], AREA[2]+WIDTH, AREA[3])
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		return connection.protocol.get_random_location(True, BLUE_RECT)
+	elif connection.team is connection.protocol.green_team:
+		return connection.protocol.get_random_location(True, GREEN_RECT)
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (256+126, 256, team.protocol.map.get_z(256+126, 256))
+	if entity_id == BLUE_BASE:
+		return (256-126, 256, team.protocol.map.get_z(256-126, 256))		

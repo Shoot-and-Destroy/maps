@@ -1,0 +1,12 @@
+name = 'Lost Valley v2 - arena'
+version = '2.3'
+author = 'Serious_Sim'
+description = ("Jungle Warfare. For the arena mode.")
+cap_limit = 5
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (134, 291, 56),
+     'arena_green_spawn' : (370, 290, 56),
+     'arena_gates': ((134, 301, 55),(370, 301, 55))
+}
+

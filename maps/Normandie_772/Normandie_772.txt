@@ -1,0 +1,9 @@
+name = 'Normandie'
+version = '1.5'
+author = 'Influx'
+description = ('A map designed around the fighting in Norman towns,' 
+'following the D-Day landings. With mortars.')
+extensions = {
+'right_mortars' : [(508, 350, 56), (506, 297, 56), (482, 240, 53)],
+'left_mortars' : [(11,318,56), (23, 293, 54), (10, 394, 52)]
+}

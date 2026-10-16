@@ -1,0 +1,11 @@
+name = 'Hijacked'
+version = '1.0'
+author = 'massilia'
+description = ('Hijacked from Black Ops 2')
+extensions = {
+     
+     'arena_blue_spawn' : (231, 249, 56),
+     'arena_green_spawn' : (388, 250, 50),
+     'arena_gates': ((381, 254, 49), (380, 245, 49), (229, 255, 55)),
+     'water_damage' : 100
+ }

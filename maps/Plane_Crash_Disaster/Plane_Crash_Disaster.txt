@@ -1,0 +1,4 @@
+name = 'WTForest'
+version = '1.0'
+author = 'Buffet of Lies'
+description = 'A plane crash on a river in a lovely forest w/ bonus anti-zombie fortresses & rainbows!'

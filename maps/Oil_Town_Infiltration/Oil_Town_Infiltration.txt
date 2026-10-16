@@ -1,0 +1,45 @@
+name = 'Oil Town Infiltration'
+version = '1.0'
+author = 'Lelue'
+description = 'Oil Town modified for Aloha Infiltration by 8x'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(255, 113)
+        return (255, 113, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z (255, 88)
+        return (255, 88, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(256, 385)
+        return (256, 374, z)
+
+spawn_locations_green = [
+    	(269, 374),
+    	(229, 374),
+    	(265, 374),
+    	(305, 374),
+    	(200, 374)    	
+]
+
+spawn_locations_blue = [
+        (290, 87),
+    	(220, 87),
+    	(207, 71),
+    	(286, 72)
+
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+	x, y = choice(spawn_locations_green)
+	z = connection.protocol.map.get_z(x, y)
+	return x, y, z
+    if connection.team is connection.protocol.blue_team:
+	x, y = choice(spawn_locations_blue)
+	z = connection.protocol.map.get_z(x, y)
+	return x, y, z

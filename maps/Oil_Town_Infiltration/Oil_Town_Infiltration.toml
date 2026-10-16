@@ -1,0 +1,9 @@
+[map]
+author = "Lelue"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [207, 71, 0], end = [290, 87, 0] }
+team2 = { start = [200, 374, 0], end = [305, 374, 0] }

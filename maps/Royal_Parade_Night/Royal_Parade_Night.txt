@@ -1,0 +1,7 @@
+name = 'Royal Parade Night'
+version = '1.0'
+author = 'Bradley & Mile'
+description = 'courtesy of Sauerkraut.'
+extensions = { 'water_damage' : 2 }
+
+fog = (30, 50, 70)

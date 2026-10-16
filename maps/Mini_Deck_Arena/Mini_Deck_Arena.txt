@@ -1,0 +1,12 @@
+name = 'Mini Deck Arena'
+version = '1.2'
+author = 'Serious_Sim.'
+description = ('Modified by AVuKY. This is the all-time classic Unreal Tournament 2004 for AoS Arena mode. '
+               'Tweaked by Danke')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (291, 222, 37),
+     'arena_green_spawn' : (195, 266, 41),
+     'arena_gates': ((284, 227, 37), (199, 266, 42)),
+     'water_damage' : 100
+}

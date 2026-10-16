@@ -1,0 +1,7 @@
+name = 'LostMore'
+version = '1.0'
+author = 'JoJoe Stinky CC 2013'
+description = 'Lostmore motel is a private getaway for the ultra rich. This is Import beer VS Champaign.'
+extensions = {
+     'water_damage' : 1
+}

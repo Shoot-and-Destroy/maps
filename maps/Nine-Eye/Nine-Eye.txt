@@ -1,0 +1,29 @@
+name = 'Nine-Eye'
+version = '1.0'
+author = 'ei8htx'
+description = ('Build bridges, control the towers')
+extensions = { 'water_damage' : 25,
+                }
+
+# Scripting
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:        
+        z = team.protocol.map.get_z(125, 256)
+        return (125, 256, z)
+
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(170, 256)
+        return (170, 256, z)
+
+    if entity_id == GREEN_BASE:        
+        z = team.protocol.map.get_z(387, 256)
+        return (387, 256, z)
+
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(342, 256)
+        return (342, 256, z)

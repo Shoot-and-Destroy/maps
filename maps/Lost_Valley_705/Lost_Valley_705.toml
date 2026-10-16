@@ -1,0 +1,9 @@
+[map]
+author = "Serious_Sim"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [239, 212, 0], end = [285, 268, 0] }
+team2 = { start = [16, 226, 0], end = [495, 296, 0] }

@@ -1,0 +1,5 @@
+name = 'MAZELAND'
+version = '1.0'
+author = 'Buffet of Lies'
+description = 'Map by Buffet_of_Lies for AoS'
+extensions = { 'water_damage' : 13 }

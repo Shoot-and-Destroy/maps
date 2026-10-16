@@ -1,0 +1,11 @@
+name = 'M_christmas'
+version = '2.0'
+author = 'por MegaStar MoDeR'
+description = ('feliz navidad u merry christmas')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (273, 276, 59),
+     'arena_green_spawn' : (236, 237, 59),
+     'arena_gates': ((240, 237, 59), (269, 276, 59)),
+     'water_damage' : 100 
+}

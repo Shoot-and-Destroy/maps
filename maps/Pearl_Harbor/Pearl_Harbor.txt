@@ -1,0 +1,4 @@
+name = 'Pearl Harbor'
+version = '1.0'
+author = 'Lostmotel'
+

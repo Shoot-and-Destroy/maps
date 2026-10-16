@@ -1,0 +1,7 @@
+name = 'Leaves'
+version = '1.3'
+author = 'Lostmotel'
+extensions = {'boundary_damage' : {'left' : 32, 'right' : 480, 'top' : 128, 'bottom' : 385, 'damage': 5},
+	      'babel' : True, 
+              'heavens_color' : (255, 255, 255, 100)}
+

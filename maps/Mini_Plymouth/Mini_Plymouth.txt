@@ -1,0 +1,15 @@
+name = 'Mini Plymouth'
+version = '1.0'
+author = 'Bradley'
+
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (150, 420, 1),
+'push_blue_cp' : (273, 23, 1),
+'push_blue_build_area' : (137, 48, 242, 432),
+'push_green_spawn' : (361, 421, 1),
+'push_green_cp' : (238, 23, 1),
+'push_green_build_area' : (269, 48, 374, 432),
+'water_damage' : 100
+}

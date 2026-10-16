@@ -1,0 +1,5 @@
+name = 'Ice Caverns'
+version = '0.5'
+author = 'Sneakers'
+description = ('Ice world with cavern system and central river.'
+               )

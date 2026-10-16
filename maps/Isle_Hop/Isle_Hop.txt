@@ -1,0 +1,14 @@
+name = 'Isle Hop'
+version = '0.2'
+author = 'danhezee made with BlockMan2D'
+description = ('The test map for the push gamemode')
+fog = (0, 25, 50)
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (91, 276, 59),
+'push_blue_cp' : (411, 224, 59),
+'push_green_spawn' : (83, 183, 59),
+'push_green_cp' : (414, 248, 59),
+'water_damage' : 100
+}

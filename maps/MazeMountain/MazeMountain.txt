@@ -1,0 +1,7 @@
+name = 'MazeMountain'
+version = '1.0'
+author = 'Danke'
+description = 'A maze, a mountain'
+extensions = {
+     'babel' : True
+}

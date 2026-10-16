@@ -1,0 +1,12 @@
+name = 'Prison'
+version = '1.0'
+author = 'Tank'
+description = ('A prison. Green are the inmates and blue are the guards.')
+fog = (100, 50, 50)
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (326, 218, 62),
+     'arena_green_spawn' : (192, 163, 57),
+     'arena_gates': ((322, 217, 59), (192, 166, 55), (198, 161, 55), (200, 176, 55))
+ } 

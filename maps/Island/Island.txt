@@ -1,0 +1,5 @@
+name = 'Island'
+version = '1.0'
+author = 'izzy'
+description = 'A long, narrow island surrounded by some boats and tiny islands'
+extensions = {'water_damage' : 100}

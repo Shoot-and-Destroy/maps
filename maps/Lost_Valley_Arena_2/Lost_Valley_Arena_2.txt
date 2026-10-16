@@ -1,0 +1,12 @@
+name = 'Lost Valley Arena 2'
+version = '2.0'
+author = 'Serious_Sim'
+cap_limit = 4
+description = ('This arena map takes place in a long time forgotten valley where ancient temples were used for evil rituals.')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (134, 295, 52),
+     'arena_green_spawn' : (370, 294, 52),
+  'arena_gates': ((134, 298, 55), (370, 297, 55)),
+     'water_damage' : 200
+ }

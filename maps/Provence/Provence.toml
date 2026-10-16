@@ -1,0 +1,13 @@
+[map]
+author = "anal*Style"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [305, 230, 53], end = [305, 230, 53] }
+team2 = { start = [198, 238, 54], end = [198, 238, 54] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[298, 232, 53], [193, 265, 53]]

@@ -1,0 +1,11 @@
+name = 'India2013'
+version = '0.91'
+author = 'Dany0'
+fog = (35, 35, 35)
+description = ('Dany0 made a map again! Close-quarters with the same layout as india. /fog 35 35 35 recommended!')
+extensions = {
+    'arena': True,
+    'arena_blue_spawns' : ((203, 261, 52), (203, 262, 52)),
+    'arena_green_spawns' : ((292, 269, 52), (292, 272, 52)),
+    'arena_gates': ((210, 268, 53), (210, 274, 53), (287, 255, 53))
+}

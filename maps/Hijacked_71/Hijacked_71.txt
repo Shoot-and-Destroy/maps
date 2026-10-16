@@ -1,0 +1,35 @@
+name = 'Hijacked'
+version = '1.0'
+author = 'massilia'
+description = ('Hijacked from Black Ops 2')
+protected = ['B4','B5','C4','C5','D4','D5', 'E4', 'E5']
+extensions = {
+         'water_damage' : 50
+}
+# scripting
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (249, 117, 47)
+      
+    if entity_id == BLUE_BASE:
+        return (249, 124, 47)
+      
+    if entity_id == GREEN_FLAG:
+        return (249, 282, 57)
+
+    if entity_id == GREEN_BASE:
+        return (249, 276, 59)
+
+def get_spawn_location(connection):
+ 
+    if connection.team is connection.protocol.blue_team:
+        # sets a static spawn for just the blue team, but you could use "green_team" too.
+        return (249, 120, 51)
+
+    if connection.team is connection.protocol.green_team:
+        # sets a static spawn for just the green team, but you could use "blue_team" too.
+        return (249, 279, 59)

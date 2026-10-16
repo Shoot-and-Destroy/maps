@@ -1,0 +1,23 @@
+name = 'Nether'
+version = '1.0'
+author = 'v^3 & Silnius'
+description = 'A group of caves with islands floating in lava'
+fog = (56, 0, 0)
+extensions = {
+     'boundary_damage' : {
+          'left' : 12,
+          'right' : 437,
+          'top' : 206,
+          'bottom' : 289,
+          'sky' : 54,
+          'ground' : 64,
+          'damage': 100
+     },
+     'push': True,
+     'push_spawn_range' : 5,
+     'push_blue_spawn' : (24, 218, 61),
+     'push_blue_cp' : (418, 246, 62),
+     'push_green_spawn' : (23, 273, 61),
+     'push_green_cp' : (418, 235, 62),
+     'water_damage' : 100
+}

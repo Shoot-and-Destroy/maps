@@ -1,0 +1,7 @@
+name = 'LittleAssault'
+version = '1.0'
+author = 'Gibbs3333'
+description = ('Have fun')
+extensions = {
+         'water_damage' : 10
+}

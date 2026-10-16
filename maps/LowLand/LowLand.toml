@@ -1,0 +1,9 @@
+[map]
+author = "tGM/helpers"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [235, 231, 0], end = [276, 280, 0] }
+team2 = { start = [49, 68, 0], end = [451, 462, 0] }

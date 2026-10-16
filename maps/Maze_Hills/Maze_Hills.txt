@@ -1,0 +1,8 @@
+name = 'Maze Hills'
+version = '1.0'
+author = 'Danke'
+description = 'a maze, some hills'
+extensions = { 'water_damage' : 1,
+               'babel' : True }
+
+

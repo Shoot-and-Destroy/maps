@@ -1,0 +1,4 @@
+name = 'Mountain Wars'
+version = '1.0'
+author = 'LinktersHD'
+description = 'Fight your opponents in the mountains'

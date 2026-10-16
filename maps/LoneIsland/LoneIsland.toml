@@ -1,0 +1,11 @@
+[map]
+author = "cuulli"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 39
+
+[spawnpoints]
+team1 = { start = [162, 216, 0], end = [186, 297, 0] }
+team2 = { start = [344, 201, 0], end = [372, 281, 0] }

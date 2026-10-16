@@ -1,0 +1,11 @@
+name = 'LynxDown'
+version = '1.0'
+author = 'Galaxy'
+description = 'Occupy LPH "Dokdo"'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (259, 223, 13),
+     'arena_green_spawn' : (172, 225, 61),
+     'arena_gates': ((257, 224, 12), (184, 229, 60), (184, 229, 58)),
+     'water_damage' : 100
+ }

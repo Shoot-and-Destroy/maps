@@ -1,0 +1,9 @@
+[map]
+author = "Deucebag and SLoW"
+fog_color = [110, 130, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [97, 273, 28], end = [120, 318, 31] }
+team2 = { start = [408, 175, 27], end = [444, 230, 30] }

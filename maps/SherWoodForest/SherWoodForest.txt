@@ -1,0 +1,11 @@
+name = 'SherWoodForest'
+version = '1.0'
+author = 'Med-Shadow, BIG JIM, and MoJoBucketheaD'
+description = ('2 castles dueling in Sherwood forest')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (480, 267, 51),
+     'arena_green_spawn' : (318, 247, 51),
+     'arena_gates' : ((477, 265, 50), (321, 248, 50))
+}

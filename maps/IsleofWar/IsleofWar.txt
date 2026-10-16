@@ -1,0 +1,4 @@
+name = 'IsleofWar'
+version = '2.0'
+author = 'TheGrandmaster'
+description = ('An island warscene, made for 6vs6 clan-matches or less.')

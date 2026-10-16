@@ -1,0 +1,14 @@
+name = 'Lost Islands'
+version = '1.0'
+author = 'v^3'
+description = ('Chain of sand bars in the middle of the ocean')
+fog = (0, 25, 50)
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (88, 277, 57),
+'push_blue_cp' : (412, 244, 59),
+'push_green_spawn' : (90, 187, 57),
+'push_green_cp' : (412, 211, 59),
+'water_damage' : 100
+}

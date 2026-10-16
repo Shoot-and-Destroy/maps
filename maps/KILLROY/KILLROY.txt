@@ -1,0 +1,4 @@
+name = 'KILLROY'
+version = '1.0'
+author = 'JoJoe Stinky'
+description = ('Killroy was here.')

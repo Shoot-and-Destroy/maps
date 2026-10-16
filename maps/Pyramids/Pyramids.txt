@@ -1,0 +1,5 @@
+name = 'Pyramids'
+version = '0.5'
+author = 'Sneakers'
+description = ('Central pyramid structures with initial protective walls for spawns.'
+               )

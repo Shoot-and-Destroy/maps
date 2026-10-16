@@ -1,0 +1,15 @@
+name = 'Neo-Tokyo'
+version = '2.0'
+author = 'Danke'
+description = 'Neo-Tokyo is about to E.X.P.L.O.D.E.'
+fog = (10, 20, 20)
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (208,203,20),
+     'arena_green_spawn' : (302,304,16),
+     'arena_gates': ((211,202,20), (306,307,16))
+ }
+
+
+

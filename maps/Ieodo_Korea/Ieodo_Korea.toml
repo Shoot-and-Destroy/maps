@@ -1,0 +1,9 @@
+[map]
+author = "kmsi, Aeigis"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [353, 280, 56], end = [355, 282, 63] }
+team2 = { start = [173, 282, 56], end = [175, 285, 63] }
