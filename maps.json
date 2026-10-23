@@ -1710,8 +1710,7 @@
    "de_dust2_1200.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -1726,8 +1725,7 @@
    "de_dust2_1199.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -1742,10 +1740,7 @@
    "de_nuke.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -1775,8 +1770,7 @@
    "cs_office.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -1791,8 +1785,7 @@
    "cs_militia.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -1807,8 +1800,7 @@
    "cs_havana.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -1823,9 +1815,7 @@
    "cs_assault.vxl"
   ],
   "modes": [
-   "ctf",
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -1840,8 +1830,7 @@
    "cs_1337_assault.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10694,8 +10683,7 @@
    "De_Dust2_342.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10743,10 +10731,7 @@
    "de_dust.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10761,8 +10746,7 @@
    "de_aztec.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10861,8 +10845,7 @@
    "de_dust2_328.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10877,8 +10860,7 @@
    "csitaly.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -13853,6 +13835,21 @@
    "ngctf",
    "ctf",
    "zombie"
+  ]
+ },
+ {
+  "id": null,
+  "name": "de_train",
+  "folder": "de_train",
+  "author": "MegaStar",
+  "source": "https://github.com/piqueserver/arena/tree/master/maps",
+  "files": [
+   "de_train.toml",
+   "de_train.txt",
+   "de_train.vxl"
+  ],
+  "modes": [
+   "arena"
   ]
  }
 ]

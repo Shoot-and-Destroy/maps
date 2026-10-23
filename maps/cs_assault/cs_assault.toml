@@ -1,5 +1,5 @@
 [map]
-modes = ["ctf", "arena", "zombie"]
+modes = ["arena"]
 author = "Danke-o"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]

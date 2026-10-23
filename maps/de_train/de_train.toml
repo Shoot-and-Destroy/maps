@@ -1,0 +1,16 @@
+[map]
+modes = ["arena"]
+author = "MegaStar"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [165, 186, 55], end = [165, 186, 55] }
+team2 = { start = [325, 315, 59], end = [325, 315, 59] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[176, 193, 55], [332, 304, 59], [336, 330, 59], [324, 301, 59]]
