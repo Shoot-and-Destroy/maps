@@ -51,7 +51,7 @@ The tags are measured, not guessed: the server played each map alone with
 bots really played it there (fights and intel pickups in CTF, rounds that end
 with zombies). Arena and Babel come from the map's own `.txt`, as its author
 made it. A Babel map is tagged `babel` only, since its platform in the sky
-means nothing in another mode, and an open sea earns no mode. The game reads
+means nothing in another mode, a Counter-Strike map (`cs_*`, `de_*`) is tagged `arena` only, and an open sea earns no mode. The game reads
 the tags: the zombie mode accepts a map tagged `zombie`, and the Play with
 bots screen offers a map under the modes it carries.
 
@@ -59,7 +59,7 @@ bots screen offers a map under the modes it carries.
 
 Each map belongs to its author, named in its `.txt` (`author = ...`) and in
 `maps.json`, and comes from the aos.party archive, run by the Ace of Spades
-community; every entry in `maps.json` links to its aos.party page. Nothing
+community; every entry in `maps.json` links to its source page (aos.party, or for `de_train` the [piqueserver arena](https://github.com/piqueserver/arena) repository). Nothing
 here is ours but the `.toml` files and the index.
 
 If you made one of these maps and want it credited differently or taken
