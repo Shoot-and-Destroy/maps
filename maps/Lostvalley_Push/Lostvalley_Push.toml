@@ -1,4 +1,5 @@
 [map]
+modes = ["zombie"]
 author = "Serious_Sim"
 fog_color = [60, 150, 100]
 map_size = [512, 512, 64]

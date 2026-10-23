@@ -1,4 +1,5 @@
 [map]
+modes = ["arena"]
 author = "IC-BGELB5 :3 and IC-VierEck."
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]

@@ -1,4 +1,5 @@
 [map]
+modes = ["arena"]
 author = "Dany0"
 fog_color = [30, 20, 10]
 map_size = [512, 512, 64]

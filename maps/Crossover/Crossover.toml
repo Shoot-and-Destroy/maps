@@ -1,4 +1,5 @@
 [map]
+modes = ["arena", "zombie"]
 author = "DiscipLe"
 fog_color = [186, 220, 224]
 map_size = [512, 512, 64]

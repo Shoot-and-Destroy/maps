@@ -1,4 +1,5 @@
 [map]
+modes = ["zombie"]
 author = "v^3 & Silnius"
 fog_color = [56, 0, 0]
 map_size = [512, 512, 64]

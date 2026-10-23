@@ -1,4 +1,5 @@
 [map]
+modes = ["zombie"]
 author = "FaultCheck"
 fog_color = [0, 0, 0]
 map_size = [512, 512, 64]

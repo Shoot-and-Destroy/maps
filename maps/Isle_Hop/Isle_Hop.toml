@@ -1,4 +1,5 @@
 [map]
+modes = []
 author = "danhezee made with BlockMan2D"
 fog_color = [0, 25, 50]
 map_size = [512, 512, 64]

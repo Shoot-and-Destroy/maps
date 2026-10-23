@@ -1,4 +1,5 @@
 [map]
+modes = ["ngctf", "ctf", "zombie"]
 author = "Bradley & Mile"
 fog_color = [30, 50, 70]
 map_size = [512, 512, 64]

@@ -1,4 +1,5 @@
 [map]
+modes = ["babel"]
 author = "underwear - -"
 fog_color = [255, 230, 180]
 map_size = [512, 512, 64]

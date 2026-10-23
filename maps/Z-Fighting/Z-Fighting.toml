@@ -1,4 +1,5 @@
 [map]
+modes = ["zombie"]
 author = "Cajun Style"
 fog_color = [255, 192, 127]
 map_size = [512, 512, 64]

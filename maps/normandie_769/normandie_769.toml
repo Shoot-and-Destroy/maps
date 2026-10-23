@@ -1,4 +1,5 @@
 [map]
+modes = []
 author = "Influx"
 fog_color = [240, 240, 240]
 map_size = [512, 512, 64]

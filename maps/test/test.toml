@@ -1,4 +1,5 @@
 [map]
+modes = []
 author = "onigiri"
 fog_color = [255, 94, 25]
 map_size = [512, 512, 64]

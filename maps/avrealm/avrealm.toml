@@ -1,4 +1,5 @@
 [map]
+modes = ["ctf", "arena", "zombie"]
 author = "AVuKYI2R3, Reki(G8, a few nice Idea)"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]

@@ -1,4 +1,5 @@
 [map]
+modes = ["arena"]
 author = "iSkyte"
 fog_color = [112, 163, 204]
 map_size = [512, 512, 64]

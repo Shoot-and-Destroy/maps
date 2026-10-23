@@ -1,4 +1,5 @@
 [map]
+modes = []
 author = "IAmYourFriend"
 fog_color = [0, 148, 255]
 map_size = [512, 512, 64]

@@ -1,4 +1,5 @@
 [map]
+modes = ["arena", "zombie"]
 author = "->B.O.B.<-,Diaspora*,AlexeyPozn,KillerCookie,Isaac,Mittgfu,Dany0"
 fog_color = [24, 24, 24]
 map_size = [512, 512, 64]

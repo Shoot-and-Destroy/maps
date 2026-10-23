@@ -1,4 +1,5 @@
 [map]
+modes = ["babel"]
 author = "ei8htx"
 fog_color = [150, 255, 240]
 map_size = [512, 512, 64]

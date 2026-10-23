@@ -1,4 +1,5 @@
 [map]
+modes = ["zombie"]
 author = "Sasquatch"
 fog_color = [70, 10, 5]
 map_size = [512, 512, 64]
