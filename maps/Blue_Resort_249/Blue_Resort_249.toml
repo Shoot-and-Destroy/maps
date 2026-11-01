@@ -1,5 +1,5 @@
 [map]
-modes = ["arena", "zombie"]
+modes = ["koth", "arena"]
 author = "Danke"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -14,3 +14,40 @@ team2 = { start = [345, 244, 17], end = [345, 244, 17] }
 [arena]
 # seed cells of the gates the round start opens (pyspades arena_gates)
 gates = [[251, 285, 46], [250, 285, 46], [249, 285, 46], [248, 285, 46], [247, 285, 46], [246, 285, 46], [245, 285, 46], [244, 285, 46], [243, 285, 46], [243, 284, 46], [243, 283, 46], [243, 282, 46], [243, 281, 46], [243, 280, 46], [243, 279, 46], [244, 279, 46], [245, 279, 46], [246, 279, 46], [247, 279, 46], [248, 279, 46], [249, 279, 46], [250, 279, 46], [251, 279, 46], [348, 242, 17], [348, 243, 17], [348, 244, 17], [348, 245, 17], [348, 246, 17], [348, 247, 17], [347, 247, 17], [346, 247, 17], [345, 247, 17], [344, 247, 17], [343, 247, 17], [342, 242, 17], [342, 243, 17], [342, 244, 17], [342, 245, 17], [342, 246, 17], [342, 247, 17], [342, 242, 19], [342, 243, 19], [342, 244, 19], [342, 245, 19], [342, 246, 19], [348, 242, 19], [348, 243, 19], [348, 244, 19], [348, 245, 19], [348, 246, 19], [348, 247, 19]]
+
+[map.fitness]
+land = 0.036
+area_land = 0.541
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.089
+fight_kills = 128.0
+objective = 0
+failed = ["objective"]
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.098
+fight_kills = 180.5
+objective = 12
+failed = []
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.254
+fight_kills = 253.0
+objective = 2
+failed = ["map_deaths", "objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.5
+map_deaths = 0.214
+fight_kills = 132.5
+objective = 10
+failed = ["land"]

@@ -1,5 +1,5 @@
 [map]
-modes = ["ctf", "arena", "zombie"]
+modes = ["arena"]
 author = "Serious Mapping"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -14,3 +14,40 @@ team2 = { start = [256, 354, 46], end = [256, 354, 46] }
 [arena]
 # seed cells of the gates the round start opens (pyspades arena_gates)
 gates = [[254, 177, 45], [257, 350, 45]]
+
+[map.fitness]
+land = 0.139
+area_land = 0.502
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.635
+fight_kills = 87.5
+objective = 0
+failed = ["map_deaths", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.245
+fight_kills = 180.5
+objective = 1
+failed = ["objective"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.922
+fight_kills = 10.0
+objective = 3
+failed = ["map_deaths", "fight_kills", "objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.65
+map_deaths = 0.574
+fight_kills = 33.0
+objective = 2
+failed = ["land", "map_deaths", "objective"]

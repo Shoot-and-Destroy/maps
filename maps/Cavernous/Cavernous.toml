@@ -1,5 +1,5 @@
 [map]
-modes = ["ngctf", "ctf", "zombie"]
+modes = ["koth", "tc", "zombie"]
 author = "Sneakers"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [48, 191, 0], end = [112, 321, 0] }
 team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 1.0
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.173
+fight_kills = 81.5
+objective = 4
+failed = ["map_deaths"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.092
+fight_kills = 54.5
+objective = 1
+failed = ["objective"]
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.147
+fight_kills = 72.5
+objective = 6
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.13
+fight_kills = 103.5
+objective = 17
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.109
+fight_kills = 65.5
+objective = 3
+failed = []

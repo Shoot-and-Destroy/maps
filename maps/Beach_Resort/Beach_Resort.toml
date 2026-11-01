@@ -1,5 +1,5 @@
 [map]
-modes = ["zombie"]
+modes = []
 author = "Builders on *Sauerkraut"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [48, 191, 0], end = [112, 321, 0] }
 team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.122
+area_land = 0.287
+spawn_dry = [0.61, 0.57]
+
+[map.fitness.ngctf]
+pass = false
+water = 13.35
+map_deaths = 0.183
+fight_kills = 107.0
+objective = 1
+failed = ["land", "water", "map_deaths", "objective", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 6.35
+map_deaths = 0.258
+fight_kills = 47.5
+objective = 8
+failed = ["land", "water", "map_deaths", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 46.5
+map_deaths = 0.0
+fight_kills = 95.0
+objective = 4
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 6.4
+map_deaths = 0.024
+fight_kills = 203.0
+objective = 6
+failed = ["land", "water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 3.95
+map_deaths = 0.115
+fight_kills = 57.5
+objective = 4
+failed = ["land", "water", "spawn"]

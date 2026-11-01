@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [107, 270, 53], end = [147, 278, 53] }
 team2 = { start = [377, 196, 48], end = [392, 234, 56] }
+
+[map.fitness]
+land = 1.0
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.011
+fight_kills = 174.5
+objective = 6
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.013
+fight_kills = 113.0
+objective = 4
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.013
+fight_kills = 353.0
+objective = 0
+failed = ["objective"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.017
+fight_kills = 348.0
+objective = 0
+failed = ["objective"]
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.019
+fight_kills = 77.0
+objective = 6
+failed = []

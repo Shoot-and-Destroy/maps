@@ -1,5 +1,5 @@
 [map]
-modes = ["ngctf", "ctf", "zombie"]
+modes = ["ngctf", "ctf", "koth", "tc"]
 author = "Buffet_of_Lies"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [48, 191, 0], end = [112, 321, 0] }
 team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.994
+area_land = 0.985
+spawn_dry = [0.99, 0.99]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.042
+fight_kills = 161.0
+objective = 7
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.15
+fight_kills = 79.5
+objective = 2
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.125
+fight_kills = 125.5
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.214
+fight_kills = 158.0
+objective = 20
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.05
+fight_kills = 47.5
+objective = 2
+failed = ["objective"]

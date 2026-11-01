@@ -11,9 +11,9 @@
    "Clock_Town_arena.vxl"
   ],
   "modes": [
-   "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -28,8 +28,8 @@
    "SeaBed_Lab.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -68,11 +68,7 @@
    "Spiral.toml",
    "Spiral.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1306,
@@ -87,6 +83,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -100,11 +98,7 @@
    "CubeMaze.toml",
    "CubeMaze.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1304,
@@ -119,6 +113,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -132,11 +128,7 @@
    "LA_beach.toml",
    "LA_beach.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1302,
@@ -167,6 +159,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -184,6 +178,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -224,11 +220,7 @@
    "FL_War_Map_112022_to_042023.txt",
    "FL_War_Map_112022_to_042023.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1296,
@@ -241,11 +233,7 @@
    "MAZE_v7.txt",
    "MAZE_v7.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1295,
@@ -260,6 +248,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -276,6 +266,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -303,11 +295,7 @@
    "Dokdo_Korea2.txt",
    "Dokdo_Korea2.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1291,
@@ -320,10 +308,7 @@
    "Dokdo_Korea_1291.txt",
    "Dokdo_Korea_1291.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1290,
@@ -338,6 +323,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -354,6 +341,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -369,9 +358,7 @@
    "Cheonggyecheon_Stream.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "koth"
   ]
  },
  {
@@ -387,8 +374,7 @@
   ],
   "modes": [
    "ngctf",
-   "ctf",
-   "zombie"
+   "ctf"
   ]
  },
  {
@@ -403,8 +389,7 @@
    "SeoulMetro.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -464,6 +449,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -478,9 +465,7 @@
    "Sky_Pinpoint.txt",
    "Sky_Pinpoint.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1280,
@@ -493,11 +478,7 @@
    "Big_Pine_Tree.txt",
    "Big_Pine_Tree.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1279,
@@ -509,11 +490,7 @@
    "Border_Hallway.toml",
    "Border_Hallway.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1278,
@@ -526,9 +503,7 @@
    "HellCanyon.txt",
    "HellCanyon.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1277,
@@ -541,9 +516,7 @@
    "Battlefield_2142.txt",
    "Battlefield_2142.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1276,
@@ -583,8 +556,9 @@
    "Pyramid_Town.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -600,8 +574,8 @@
    "Industrial_Zone.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -619,6 +593,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -636,6 +612,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -651,6 +629,8 @@
    "Dark_Arena.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -667,6 +647,7 @@
    "Rush_Challenge.vxl"
   ],
   "modes": [
+   "koth",
    "arena"
   ]
  },
@@ -681,11 +662,7 @@
    "Battlecity.txt",
    "Battlecity.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1267,
@@ -698,9 +675,8 @@
    "Yoba.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -714,11 +690,7 @@
    "Flood_Waters.txt",
    "Flood_Waters.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1265,
@@ -732,8 +704,8 @@
    "Sand_Castles.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
    "zombie"
   ]
  },
@@ -747,11 +719,7 @@
    "Hallweeb_WIP.toml",
    "Hallweeb_WIP.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1263,
@@ -766,6 +734,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -782,6 +752,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -795,9 +767,7 @@
    "Forest_River.toml",
    "Forest_River.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1260,
@@ -809,9 +779,7 @@
    "Failway.toml",
    "Failway.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1259,
@@ -826,6 +794,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -839,11 +809,7 @@
    "Island_passage.toml",
    "Island_passage.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1257,
@@ -882,7 +848,13 @@
    "plainPoint.txt",
    "plainPoint.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 1254,
@@ -895,11 +867,7 @@
    "Good_Bye.txt",
    "Good_Bye.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1253,
@@ -938,7 +906,12 @@
    "waterfrontv2.txt",
    "waterfrontv2.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc"
+  ]
  },
  {
   "id": 1250,
@@ -951,9 +924,7 @@
    "Volcano_Islands.txt",
    "Volcano_Islands.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1249,
@@ -982,6 +953,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -997,6 +970,8 @@
    "Town_Arena_1247.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -1043,8 +1018,8 @@
    "Six_Houses_1244.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -1086,11 +1061,7 @@
    "Platpoint.txt",
    "Platpoint.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1240,
@@ -1118,11 +1089,7 @@
    "Pinway.txt",
    "Pinway.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1238,
@@ -1153,6 +1120,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -1197,7 +1166,13 @@
    "normandie_race.txt",
    "normandie_race.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 1233,
@@ -1241,8 +1216,7 @@
    "Neo-Tokyo_1231.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -1274,6 +1248,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -1303,8 +1279,8 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -1334,6 +1310,7 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
    "zombie"
   ]
  },
@@ -1348,9 +1325,7 @@
    "MeleeMill.txt",
    "MeleeMill.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1223,
@@ -1363,9 +1338,7 @@
    "MeleeGreece.txt",
    "MeleeGreece.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1222,
@@ -1450,8 +1423,9 @@
    "Lost_Valley_v2_-_arena.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -1468,8 +1442,7 @@
    "Lost_Valley_1216.vxl"
   ],
   "modes": [
-   "ctf",
-   "zombie"
+   "tc"
   ]
  },
  {
@@ -1483,7 +1456,13 @@
    "leaguemirrored.txt",
    "leaguemirrored.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 1214,
@@ -1552,8 +1531,8 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -1567,9 +1546,7 @@
    "Ice_Break_1209.txt",
    "Ice_Break_1209.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1208,
@@ -1597,11 +1574,7 @@
    "Hallpoint.txt",
    "Hallpoint.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1206,
@@ -1615,8 +1588,9 @@
    "Gridwar.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -1647,6 +1621,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -1677,10 +1653,7 @@
    "facebattlearena.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -1844,11 +1817,7 @@
    "countrycourse.txt",
    "countrycourse.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1190,
@@ -1861,10 +1830,7 @@
    "cloudfall.txt",
    "cloudfall.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1189,
@@ -1877,9 +1843,7 @@
    "CheckerJump.txt",
    "CheckerJump.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1188,
@@ -1923,7 +1887,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -1938,8 +1903,7 @@
    "bridgeyard.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
+   "koth",
    "zombie"
   ]
  },
@@ -1985,6 +1949,8 @@
    "Beaulieu_Abbey_Zombie.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -2060,6 +2026,7 @@
    "avinsides.vxl"
   ],
   "modes": [
+   "koth",
    "arena"
   ]
  },
@@ -2118,8 +2085,9 @@
    "alamoarena.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -2179,8 +2147,7 @@
    "1river2forts.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
+   "koth",
    "arena",
    "zombie"
   ]
@@ -2212,8 +2179,8 @@
    "Moon_Island.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -2231,6 +2198,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -2246,8 +2215,7 @@
    "bridge_arena.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -2261,9 +2229,7 @@
    "Vietnam_1970.txt",
    "Vietnam_1970.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1163,
@@ -2276,9 +2242,7 @@
    "Sea_Life.txt",
    "Sea_Life.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1162,
@@ -2291,9 +2255,7 @@
    "Ocean_Traffic.txt",
    "Ocean_Traffic.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1161,
@@ -2319,9 +2281,7 @@
    "Froot_Loops.txt",
    "Froot_Loops.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1159,
@@ -2334,9 +2294,7 @@
    "Bikini_Atoll_1159.txt",
    "Bikini_Atoll_1159.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1158,
@@ -2375,11 +2333,7 @@
    "Whatever.txt",
    "Whatever.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1155,
@@ -2392,11 +2346,7 @@
    "Urban_Assault.txt",
    "Urban_Assault.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1154,
@@ -2409,9 +2359,7 @@
    "UFO_Crash.txt",
    "UFO_Crash.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1153,
@@ -2424,9 +2372,7 @@
    "Himalaya.txt",
    "Himalaya.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1152,
@@ -2439,11 +2385,7 @@
    "Ha_Long_Bay_1152.txt",
    "Ha_Long_Bay_1152.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1151,
@@ -2456,11 +2398,7 @@
    "Ha_Long_Bay_1151.txt",
    "Ha_Long_Bay_1151.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1150,
@@ -2473,11 +2411,7 @@
    "Drift_Ice_2.txt",
    "Drift_Ice_2.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1149,
@@ -2493,6 +2427,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -2507,9 +2443,7 @@
    "Beach_Resort.txt",
    "Beach_Resort.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1147,
@@ -2538,6 +2472,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -2552,7 +2488,12 @@
    "trench_island.txt",
    "trench_island.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 1144,
@@ -2580,11 +2521,7 @@
    "Storage_Island.txt",
    "Storage_Island.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1142,
@@ -2610,7 +2547,10 @@
    "shanghai.txt",
    "shanghai.vxl"
   ],
-  "modes": []
+  "modes": [
+   "koth",
+   "zombie"
+  ]
  },
  {
   "id": 1140,
@@ -2623,7 +2563,13 @@
    "plain_crossing.txt",
    "plain_crossing.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 1139,
@@ -2637,9 +2583,7 @@
    "Pinch.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "ctf"
   ]
  },
  {
@@ -2654,9 +2598,7 @@
    "Island_Fallout.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "ctf"
   ]
  },
  {
@@ -2670,11 +2612,7 @@
    "Hallsplit.txt",
    "Hallsplit.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1136,
@@ -2687,11 +2625,7 @@
    "Hallgen.txt",
    "Hallgen.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1135,
@@ -2704,7 +2638,11 @@
    "starwarslava.txt",
    "starwarslava.vxl"
   ],
-  "modes": []
+  "modes": [
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 1134,
@@ -2717,11 +2655,7 @@
    "Stare.txt",
    "Stare.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1133,
@@ -2747,7 +2681,13 @@
    "hoth.txt",
    "hoth.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 1131,
@@ -2776,6 +2716,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -2790,9 +2732,7 @@
    "EasyDIE.txt",
    "EasyDIE.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1128,
@@ -2808,6 +2748,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -2825,7 +2767,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -2839,11 +2782,7 @@
    "Chileway.txt",
    "Chileway.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1125,
@@ -2858,8 +2797,7 @@
   ],
   "modes": [
    "ngctf",
-   "ctf",
-   "zombie"
+   "ctf"
   ]
  },
  {
@@ -2874,7 +2812,8 @@
    "Tri_Points.vxl"
   ],
   "modes": [
-   "zombie"
+   "ctf",
+   "koth"
   ]
  },
  {
@@ -2889,9 +2828,9 @@
    "Treehill.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -2905,11 +2844,7 @@
    "Treasure_Island.txt",
    "Treasure_Island.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1121,
@@ -2922,9 +2857,7 @@
    "Tarawa.txt",
    "Tarawa.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1120,
@@ -2940,6 +2873,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -2957,7 +2892,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -2971,7 +2907,12 @@
    "octagon.txt",
    "octagon.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc"
+  ]
  },
  {
   "id": 1117,
@@ -2985,9 +2926,7 @@
    "Mini_Hills.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "ctf"
   ]
  },
  {
@@ -3002,9 +2941,8 @@
    "Honeycomb.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -3019,6 +2957,7 @@
    "Four_way.vxl"
   ],
   "modes": [
+   "koth",
    "arena"
   ]
  },
@@ -3033,11 +2972,7 @@
    "Crossing.txt",
    "Crossing.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1113,
@@ -3050,11 +2985,7 @@
    "Tideway.txt",
    "Tideway.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1112,
@@ -3068,6 +2999,8 @@
    "CoDshipment.vxl"
   ],
   "modes": [
+   "ctf",
+   "tc",
    "arena"
   ]
  },
@@ -3083,8 +3016,8 @@
    "Royal_Parade_Night.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -3115,6 +3048,7 @@
    "2Fort_Arena.vxl"
   ],
   "modes": [
+   "koth",
    "arena",
    "zombie"
   ]
@@ -3129,9 +3063,7 @@
    "War_Island.toml",
    "War_Island.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1107,
@@ -3173,11 +3105,7 @@
    "Santa_Fort.toml",
    "Santa_Fort.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1104,
@@ -3190,9 +3118,7 @@
    "Mini_Plymouth.txt",
    "Mini_Plymouth.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1103,
@@ -3207,6 +3133,7 @@
   "modes": [
    "ngctf",
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -3223,6 +3150,7 @@
   "modes": [
    "ngctf",
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -3239,6 +3167,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -3256,6 +3186,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -3270,11 +3202,7 @@
    "Aquila.txt",
    "Aquila.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1098,
@@ -3286,11 +3214,7 @@
    "Zombie_Island.toml",
    "Zombie_Island.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1097,
@@ -3318,7 +3242,9 @@
    "pincushion_1096.txt",
    "pincushion_1096.vxl"
   ],
-  "modes": []
+  "modes": [
+   "tc"
+  ]
  },
  {
   "id": 1094,
@@ -3331,9 +3257,7 @@
    "Z-Fighting.txt",
    "Z-Fighting.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1093,
@@ -3346,9 +3270,7 @@
    "ZEN_AKU.txt",
    "ZEN_AKU.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1092,
@@ -3362,6 +3284,7 @@
    "Zealot.vxl"
   ],
   "modes": [
+   "ctf",
    "arena"
   ]
  },
@@ -3377,6 +3300,7 @@
    "Zakko.vxl"
   ],
   "modes": [
+   "koth",
    "zombie"
   ]
  },
@@ -3409,6 +3333,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -3439,8 +3365,8 @@
    "Yomiti_niha_kiwotukero.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -3454,9 +3380,7 @@
    "Yin_Yang.txt",
    "Yin_Yang.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1081,
@@ -3470,8 +3394,11 @@
    "WoolCity.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -3485,9 +3412,7 @@
    "Winter_War.txt",
    "Winter_War.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1077,
@@ -3501,6 +3426,8 @@
    "winterclash.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena"
   ]
  },
@@ -3515,7 +3442,11 @@
    "win.txt",
    "win.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ctf",
+   "koth",
+   "tc"
+  ]
  },
  {
   "id": 1074,
@@ -3529,6 +3460,7 @@
    "way_war.vxl"
   ],
   "modes": [
+   "ctf",
    "arena"
   ]
  },
@@ -3546,6 +3478,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -3561,6 +3495,7 @@
    "volcano.vxl"
   ],
   "modes": [
+   "tc",
    "arena"
   ]
  },
@@ -3590,7 +3525,9 @@
    "vipisland5.txt",
    "vipisland5.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ctf"
+  ]
  },
  {
   "id": 1064,
@@ -3681,11 +3618,7 @@
    "Utopia_2.txt",
    "Utopia_2.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1048,
@@ -3713,7 +3646,13 @@
    "tripilis.txt",
    "tripilis.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 1046,
@@ -3754,8 +3693,8 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "tc",
+   "arena"
   ]
  },
  {
@@ -3770,8 +3709,8 @@
    "TwoBunkers.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -3830,6 +3769,8 @@
   ],
   "modes": [
    "ctf",
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -3846,7 +3787,10 @@
    "Tundora.vxl"
   ],
   "modes": [
+   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -3876,11 +3820,7 @@
    "Trenched.txt",
    "Trenched.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1021,
@@ -3924,6 +3864,8 @@
    "Town_Arena_1018.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -3939,11 +3881,7 @@
    "Tower_Wars.txt",
    "Tower_Wars.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1016,
@@ -3957,7 +3895,10 @@
    "totunyu.vxl"
   ],
   "modes": [
-   "arena"
+   "koth",
+   "tc",
+   "arena",
+   "zombie"
   ]
  },
  {
@@ -3971,11 +3912,7 @@
    "Tortuga_1014.txt",
    "Tortuga_1014.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1013,
@@ -3988,10 +3925,7 @@
    "Tortuga_1013.txt",
    "Tortuga_1013.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1011,
@@ -4004,11 +3938,7 @@
    "Tortuga_1011.txt",
    "Tortuga_1011.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1010,
@@ -4036,11 +3966,7 @@
    "Tortuga_1009.txt",
    "Tortuga_1009.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1008,
@@ -4054,6 +3980,8 @@
    "Toride_ctf.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4084,9 +4012,7 @@
    "Titanic_Arena.vxl"
   ],
   "modes": [
-   "ctf",
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -4100,11 +4026,7 @@
    "TITANIC.txt",
    "TITANIC.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1002,
@@ -4130,9 +4052,9 @@
    "The_Stash.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -4159,7 +4081,11 @@
    "theMall.txt",
    "theMall.vxl"
   ],
-  "modes": []
+  "modes": [
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 992,
@@ -4173,8 +4099,9 @@
    "Termina.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4192,6 +4119,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4206,7 +4135,11 @@
    "tennis.txt",
    "tennis.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ctf",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 987,
@@ -4220,8 +4153,8 @@
    "TAKOYAKI.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "ctf",
+   "arena"
   ]
  },
  {
@@ -4249,11 +4182,7 @@
    "Sword_Beach.toml",
    "Sword_Beach.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 983,
@@ -4269,6 +4198,7 @@
   "modes": [
    "ngctf",
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -4283,9 +4213,7 @@
    "Swamp_Lands.txt",
    "Swamp_Lands.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 981,
@@ -4298,11 +4226,7 @@
    "Swamp_981.txt",
    "Swamp_981.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 980,
@@ -4316,8 +4240,7 @@
    "Swamparena_980.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -4332,8 +4255,7 @@
    "Swamparena_979.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -4346,10 +4268,7 @@
    "Swamp_978.toml",
    "Swamp_978.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 974,
@@ -4377,9 +4296,7 @@
    "Swag_1_Push.txt",
    "Swag_1_Push.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 971,
@@ -4407,11 +4324,7 @@
    "Suspension.txt",
    "Suspension.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 968,
@@ -4472,6 +4385,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4489,6 +4404,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4502,7 +4419,13 @@
    "summerfields_desaturated.toml",
    "summerfields_desaturated.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 959,
@@ -4517,6 +4440,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4534,6 +4459,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -4549,9 +4476,7 @@
    "Strip.txt",
    "Strip.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 955,
@@ -4567,6 +4492,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4581,9 +4508,7 @@
    "StMathias.txt",
    "StMathias.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 951,
@@ -4596,11 +4521,7 @@
    "Stinky.txt",
    "Stinky.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 947,
@@ -4613,7 +4534,12 @@
    "standoff.txt",
    "standoff.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "zombie"
+  ]
  },
  {
   "id": 944,
@@ -4626,11 +4552,7 @@
    "Stadium.txt",
    "Stadium.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 943,
@@ -4646,6 +4568,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4660,11 +4584,7 @@
    "Spitfire.txt",
    "Spitfire.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 938,
@@ -4693,8 +4613,7 @@
    "Space_Station_936.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -4708,9 +4627,7 @@
    "Space_Station_935.txt",
    "Space_Station_935.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 925,
@@ -4723,11 +4640,7 @@
    "SOLO.txt",
    "SOLO.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 922,
@@ -4743,6 +4656,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4760,6 +4675,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4774,11 +4691,7 @@
    "Snow.txt",
    "Snow.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 919,
@@ -4792,8 +4705,9 @@
    "Sniper_Hill.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4808,7 +4722,13 @@
    "smallcourse.txt",
    "smallcourse.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 912,
@@ -4822,7 +4742,11 @@
    "smackarena.vxl"
   ],
   "modes": [
-   "arena"
+   "ctf",
+   "koth",
+   "tc",
+   "arena",
+   "zombie"
   ]
  },
  {
@@ -4838,6 +4762,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4867,9 +4793,7 @@
    "Skypush_907.txt",
    "Skypush_907.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 905,
@@ -4882,9 +4806,7 @@
    "Skypush_905.txt",
    "Skypush_905.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 904,
@@ -4910,11 +4832,7 @@
    "SkullFort.txt",
    "SkullFort.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 902,
@@ -4941,6 +4859,8 @@
    "Six_Houses_901.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -4959,6 +4879,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -4973,7 +4895,13 @@
    "sinyoujyurin2mura.txt",
    "sinyoujyurin2mura.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 896,
@@ -4986,7 +4914,13 @@
    "sinyoujyurin.txt",
    "sinyoujyurin.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 895,
@@ -4999,7 +4933,6 @@
    "Sinc.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
    "zombie"
   ]
@@ -5016,8 +4949,8 @@
    "Siberian_Summer.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
    "zombie"
   ]
  },
@@ -5032,7 +4965,11 @@
    "test.txt",
    "test.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ctf",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 892,
@@ -5045,7 +4982,13 @@
    "shigaichi4.txt",
    "shigaichi4.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 891,
@@ -5058,7 +5001,13 @@
    "shigaichi3.txt",
    "shigaichi3.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 887,
@@ -5071,9 +5020,8 @@
    "ShamRock.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
-   "zombie"
+   "tc"
   ]
  },
  {
@@ -5087,11 +5035,7 @@
    "Shaft.txt",
    "Shaft.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 883,
@@ -5105,9 +5049,7 @@
    "Serpentine.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "koth"
   ]
  },
  {
@@ -5136,11 +5078,7 @@
    "Scandinavia.txt",
    "Scandinavia.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 880,
@@ -5167,11 +5105,7 @@
    "Rust.toml",
    "Rust.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 877,
@@ -5196,11 +5130,7 @@
    "Ruins.toml",
    "Ruins.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 874,
@@ -5216,6 +5146,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -5230,11 +5162,7 @@
    "Rocket_Island.txt",
    "Rocket_Island.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 871,
@@ -5247,11 +5175,7 @@
    "Rock_Island.txt",
    "Rock_Island.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 870,
@@ -5264,11 +5188,7 @@
    "Roanapur.txt",
    "Roanapur.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 869,
@@ -5296,7 +5216,10 @@
    "rivervalley.txt",
    "rivervalley.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ctf",
+   "zombie"
+  ]
  },
  {
   "id": 867,
@@ -5310,6 +5233,8 @@
    "rigReloaded.vxl"
   ],
   "modes": [
+   "ctf",
+   "koth",
    "arena"
   ]
  },
@@ -5324,9 +5249,7 @@
    "McKrak_Island.txt",
    "McKrak_Island.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 865,
@@ -5342,7 +5265,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -5356,11 +5280,7 @@
    "Remus.txt",
    "Remus.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 863,
@@ -5399,11 +5319,7 @@
    "RAVENLOFT.txt",
    "RAVENLOFT.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 860,
@@ -5419,6 +5335,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -5433,9 +5351,7 @@
    "Castle_in_the_Sky.txt",
    "Castle_in_the_Sky.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 852,
@@ -5451,6 +5367,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -5467,6 +5385,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -5481,11 +5401,7 @@
    "Rainbow_Forest.txt",
    "Rainbow_Forest.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 847,
@@ -5511,11 +5427,7 @@
    "Pyramids.txt",
    "Pyramids.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 844,
@@ -5529,6 +5441,8 @@
    "Provence.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -5544,11 +5458,7 @@
    "PUG.txt",
    "PUG.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 841,
@@ -5562,6 +5472,8 @@
    "prisonbreak.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena"
   ]
  },
@@ -5594,6 +5506,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -5624,8 +5538,9 @@
    "Platform.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -5642,6 +5557,7 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
    "zombie"
   ]
  },
@@ -5657,8 +5573,8 @@
    "Plane_Crash_Disaster.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -5706,6 +5622,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -5720,9 +5638,7 @@
    "Pinpoint2.txt",
    "Pinpoint2.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 820,
@@ -5748,11 +5664,7 @@
    "Pinnacle_20.txt",
    "Pinnacle_20.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 817,
@@ -5778,10 +5690,7 @@
    "PinkHallway.txt",
    "PinkHallway.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 813,
@@ -5822,8 +5731,8 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -5837,11 +5746,7 @@
    "Pearl_Harbor.txt",
    "Pearl_Harbor.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 801,
@@ -5854,11 +5759,7 @@
    "Paradise.txt",
    "Paradise.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 799,
@@ -5886,9 +5787,7 @@
    "Orbit_-_Push.txt",
    "Orbit_-_Push.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 794,
@@ -5902,6 +5801,8 @@
    "OperationMetro_794.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -5917,10 +5818,7 @@
    "Olympic.txt",
    "Olympic.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 788,
@@ -5966,6 +5864,7 @@
   "modes": [
    "ngctf",
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -5981,8 +5880,9 @@
    "Oasis_779.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -5998,8 +5898,9 @@
    "Oasis_777.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6047,6 +5948,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6061,7 +5964,13 @@
    "normandie_769.txt",
    "normandie_769.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 768,
@@ -6077,6 +5986,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6091,9 +6002,7 @@
    "Nine-Eye.txt",
    "Nine-Eye.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 766,
@@ -6121,7 +6030,13 @@
    "netron.txt",
    "netron.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 764,
@@ -6134,9 +6049,7 @@
    "Nether.txt",
    "Nether.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 763,
@@ -6150,8 +6063,7 @@
    "Neo-Tokyo_763.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -6181,6 +6093,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6196,7 +6110,7 @@
    "MYST_de_POKEMON_GO.vxl"
   ],
   "modes": [
-   "zombie"
+   "koth"
   ]
  },
  {
@@ -6224,6 +6138,7 @@
   ],
   "modes": [
    "ctf",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -6242,6 +6157,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6257,9 +6174,8 @@
    "Mountain_Wars.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -6302,7 +6218,9 @@
    "minivillage.vxl"
   ],
   "modes": [
-   "arena"
+   "tc",
+   "arena",
+   "zombie"
   ]
  },
  {
@@ -6332,6 +6250,8 @@
    "minideckarena.vxl"
   ],
   "modes": [
+   "ctf",
+   "koth",
    "arena"
   ]
  },
@@ -6347,6 +6267,7 @@
    "OperationMetro_735.vxl"
   ],
   "modes": [
+   "tc",
    "zombie"
   ]
  },
@@ -6362,6 +6283,7 @@
    "OperationMetro_734.vxl"
   ],
   "modes": [
+   "tc",
    "arena",
    "zombie"
   ]
@@ -6380,6 +6302,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6395,6 +6319,7 @@
    "MeleeTbobb.vxl"
   ],
   "modes": [
+   "koth",
    "arena",
    "zombie"
   ]
@@ -6410,9 +6335,7 @@
    "MeleeCorner.txt",
    "MeleeCorner.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 725,
@@ -6425,11 +6348,7 @@
    "MeatLoaf.txt",
    "MeatLoaf.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 723,
@@ -6458,7 +6377,11 @@
    "mazearena.vxl"
   ],
   "modes": [
-   "arena"
+   "ctf",
+   "koth",
+   "tc",
+   "arena",
+   "zombie"
   ]
  },
  {
@@ -6473,7 +6396,8 @@
    "matuno_nouka.vxl"
   ],
   "modes": [
-   "arena"
+   "arena",
+   "zombie"
   ]
  },
  {
@@ -6490,7 +6414,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -6504,11 +6429,7 @@
    "Maru.txt",
    "Maru.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 716,
@@ -6524,6 +6445,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6538,11 +6461,7 @@
    "Swamp_Canyon.txt",
    "Swamp_Canyon.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 713,
@@ -6555,7 +6474,13 @@
    "maple.txt",
    "maple.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 712,
@@ -6571,6 +6496,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6586,7 +6513,8 @@
    "LowLand.vxl"
   ],
   "modes": [
-   "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6601,9 +6529,7 @@
    "Lostvalley_Push.txt",
    "Lostvalley_Push.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 705,
@@ -6617,8 +6543,7 @@
    "Lost_Valley_705.vxl"
   ],
   "modes": [
-   "ctf",
-   "zombie"
+   "tc"
   ]
  },
  {
@@ -6633,8 +6558,7 @@
    "Lost_Valley_Arena_2.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
+   "koth",
    "arena",
    "zombie"
   ]
@@ -6652,8 +6576,8 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -6667,9 +6591,7 @@
    "Lost_Islands.txt",
    "Lost_Islands.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 700,
@@ -6683,7 +6605,6 @@
    "Long_Bridge.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
    "zombie"
   ]
@@ -6701,6 +6622,8 @@
   ],
   "modes": [
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -6716,8 +6639,7 @@
    "LoneIsland.vxl"
   ],
   "modes": [
-   "ctf",
-   "zombie"
+   "koth"
   ]
  },
  {
@@ -6790,9 +6712,8 @@
    "Lattice_Bridge.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -6806,11 +6727,7 @@
    "Land_of_Cahirs.txt",
    "Land_of_Cahirs.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 686,
@@ -6823,9 +6740,7 @@
    "LAKES_of_BLOOD.txt",
    "LAKES_of_BLOOD.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 685,
@@ -6838,7 +6753,13 @@
    "kushiro.txt",
    "kushiro.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 684,
@@ -6869,6 +6790,9 @@
    "koukasita.vxl"
   ],
   "modes": [
+   "ctf",
+   "koth",
+   "tc",
    "arena"
   ]
  },
@@ -6883,9 +6807,7 @@
    "Kishimen.txt",
    "Kishimen.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 679,
@@ -6898,11 +6820,7 @@
    "KILLROY.txt",
    "KILLROY.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 677,
@@ -6916,8 +6834,7 @@
    "The_kettou_2.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -6932,8 +6849,7 @@
    "Kettou.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -6948,6 +6864,7 @@
    "Kendou.vxl"
   ],
   "modes": [
+   "ctf",
    "arena",
    "zombie"
   ]
@@ -6966,7 +6883,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -6980,9 +6898,7 @@
    "Jungle_Push.txt",
    "Jungle_Push.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 667,
@@ -6997,6 +6913,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -7037,9 +6955,7 @@
    "Joey_Rays_Bayou.txt",
    "Joey_Rays_Bayou.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 662,
@@ -7052,9 +6968,7 @@
    "Japan_662.txt",
    "Japan_662.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 661,
@@ -7067,9 +6981,7 @@
    "Japan_661.txt",
    "Japan_661.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 660,
@@ -7082,11 +6994,7 @@
    "Izcool_keep.txt",
    "Izcool_keep.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 659,
@@ -7099,11 +7007,7 @@
    "Isthmus.txt",
    "Isthmus.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 658,
@@ -7116,11 +7020,7 @@
    "IsleofWar.txt",
    "IsleofWar.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 649,
@@ -7133,9 +7033,7 @@
    "Island.txt",
    "Island.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 645,
@@ -7151,6 +7049,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -7194,6 +7094,9 @@
    "indiaarena.vxl"
   ],
   "modes": [
+   "ctf",
+   "koth",
+   "tc",
    "arena"
   ]
  },
@@ -7209,8 +7112,9 @@
    "India2013_638.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "ctf",
+   "koth",
+   "arena"
   ]
  },
  {
@@ -7238,8 +7142,7 @@
    "Independence_Day.vxl"
   ],
   "modes": [
-   "ctf",
-   "zombie"
+   "tc"
   ]
  },
  {
@@ -7294,9 +7197,7 @@
    "Iceland.txt",
    "Iceland.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 626,
@@ -7309,11 +7210,7 @@
    "Icecream_626.txt",
    "Icecream_626.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 625,
@@ -7326,11 +7223,7 @@
    "Icecream_625.txt",
    "Icecream_625.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 624,
@@ -7358,11 +7251,7 @@
    "Icecap.txt",
    "Icecap.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 622,
@@ -7375,9 +7264,7 @@
    "Ice_Break_622.txt",
    "Ice_Break_622.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 621,
@@ -7390,11 +7277,7 @@
    "Hunters_Paradise.txt",
    "Hunters_Paradise.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 620,
@@ -7407,11 +7290,7 @@
    "Huntersparadise.txt",
    "Huntersparadise.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 617,
@@ -7452,11 +7331,7 @@
    "HOMO_Assault.txt",
    "HOMO_Assault.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 612,
@@ -7470,8 +7345,7 @@
    "Holiday_Resort.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -7486,7 +7360,8 @@
    "Hokkyoku.vxl"
   ],
   "modes": [
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -7516,8 +7391,9 @@
    "Hillfort.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -7535,6 +7411,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -7567,6 +7445,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -7595,8 +7475,8 @@
    "Hexclimb.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -7612,8 +7492,8 @@
    "Hella.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -7629,8 +7509,9 @@
    "Hell.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -7645,9 +7526,7 @@
    "Helgoland.txt",
    "Helgoland.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 594,
@@ -7662,6 +7541,7 @@
   ],
   "modes": [
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -7677,9 +7557,7 @@
    "Harbor_2.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "ctf"
   ]
  },
  {
@@ -7708,11 +7586,7 @@
    "Hallway.txt",
    "Hallway.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 588,
@@ -7738,11 +7612,7 @@
    "HALLWAY_V20.txt",
    "HALLWAY_V20.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 586,
@@ -7755,7 +7625,13 @@
    "haikyo.txt",
    "haikyo.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 585,
@@ -7769,6 +7645,7 @@
    "h4.vxl"
   ],
   "modes": [
+   "tc",
    "arena"
   ]
  },
@@ -7796,11 +7673,7 @@
    "desertcourse_579.txt",
    "desertcourse_579.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 578,
@@ -7828,11 +7701,7 @@
    "Grassy-topo-land.txt",
    "Grassy-topo-land.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 571,
@@ -7861,7 +7730,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -7890,9 +7760,7 @@
    "Goon_Mountains.txt",
    "Goon_Mountains.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 567,
@@ -7905,11 +7773,7 @@
    "Goon_Maze.txt",
    "Goon_Maze.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 561,
@@ -7925,7 +7789,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -7939,11 +7804,7 @@
    "Gobi.txt",
    "Gobi.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 557,
@@ -7971,9 +7832,7 @@
    "MAZELAND_556.txt",
    "MAZELAND_556.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 555,
@@ -7985,7 +7844,13 @@
    "genmap99.toml",
    "genmap99.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 554,
@@ -7997,7 +7862,13 @@
    "genmap98.toml",
    "genmap98.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 553,
@@ -8009,7 +7880,13 @@
    "genmap97.toml",
    "genmap97.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 552,
@@ -8021,7 +7898,13 @@
    "genmap96.toml",
    "genmap96.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 551,
@@ -8033,7 +7916,13 @@
    "genmap95.toml",
    "genmap95.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 550,
@@ -8045,7 +7934,12 @@
    "genmap94.toml",
    "genmap94.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc"
+  ]
  },
  {
   "id": 549,
@@ -8069,7 +7963,13 @@
    "genmap92.toml",
    "genmap92.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 547,
@@ -8081,7 +7981,13 @@
    "genmap91.toml",
    "genmap91.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 546,
@@ -8105,7 +8011,13 @@
    "genmap9.toml",
    "genmap9.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 544,
@@ -8117,7 +8029,13 @@
    "genmap89.toml",
    "genmap89.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 543,
@@ -8129,7 +8047,13 @@
    "genmap88.toml",
    "genmap88.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 542,
@@ -8189,7 +8113,11 @@
    "genmap83.toml",
    "genmap83.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ctf",
+   "koth",
+   "zombie"
+  ]
  },
  {
   "id": 537,
@@ -8201,7 +8129,13 @@
    "genmap82.toml",
    "genmap82.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 536,
@@ -8213,7 +8147,13 @@
    "genmap81.toml",
    "genmap81.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
+   "zombie"
+  ]
  },
  {
   "id": 535,
@@ -8228,6 +8168,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8244,6 +8186,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8260,6 +8204,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8273,11 +8219,7 @@
    "genmap78.toml",
    "genmap78.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 531,
@@ -8292,6 +8234,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8308,6 +8252,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8321,11 +8267,7 @@
    "genmap75.toml",
    "genmap75.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 528,
@@ -8340,6 +8282,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8356,6 +8300,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8369,11 +8315,7 @@
    "genmap72.toml",
    "genmap72.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 525,
@@ -8385,11 +8327,7 @@
    "genmap71.toml",
    "genmap71.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 524,
@@ -8404,6 +8342,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8418,8 +8358,9 @@
    "genmap7.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8436,6 +8377,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8449,11 +8392,7 @@
    "genmap68.toml",
    "genmap68.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 520,
@@ -8468,6 +8407,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8484,6 +8425,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8500,6 +8443,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8516,6 +8461,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8532,6 +8479,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8548,6 +8497,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8564,6 +8515,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8580,6 +8533,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8593,11 +8548,7 @@
    "genmap6.toml",
    "genmap6.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 511,
@@ -8612,6 +8563,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8628,6 +8581,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8644,6 +8599,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8657,11 +8614,7 @@
    "genmap56.toml",
    "genmap56.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 507,
@@ -8673,11 +8626,7 @@
    "genmap55.toml",
    "genmap55.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 506,
@@ -8689,11 +8638,7 @@
    "genmap54.toml",
    "genmap54.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 505,
@@ -8706,8 +8651,9 @@
    "genmap53.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8721,11 +8667,7 @@
    "genmap52.toml",
    "genmap52.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 503,
@@ -8737,11 +8679,7 @@
    "genmap51.toml",
    "genmap51.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 502,
@@ -8753,11 +8691,7 @@
    "genmap50.toml",
    "genmap50.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 501,
@@ -8769,11 +8703,7 @@
    "genmap5.toml",
    "genmap5.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 500,
@@ -8788,6 +8718,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8804,6 +8736,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8817,11 +8751,7 @@
    "genmap47.toml",
    "genmap47.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 497,
@@ -8833,11 +8763,7 @@
    "genmap46.toml",
    "genmap46.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 496,
@@ -8852,6 +8778,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8868,6 +8796,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8884,6 +8814,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8898,8 +8830,9 @@
    "genmap42.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8916,6 +8849,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8932,6 +8867,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8945,11 +8882,7 @@
    "genmap4.toml",
    "genmap4.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 489,
@@ -8964,6 +8897,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8980,6 +8915,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -8996,6 +8933,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9012,6 +8951,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9028,6 +8969,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9044,6 +8987,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9060,6 +9005,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9073,11 +9020,7 @@
    "genmap32.toml",
    "genmap32.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 481,
@@ -9089,11 +9032,7 @@
    "genmap31.toml",
    "genmap31.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 480,
@@ -9108,6 +9047,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9121,11 +9062,7 @@
    "genmap3.toml",
    "genmap3.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 478,
@@ -9138,9 +9075,9 @@
    "genmap29.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -9153,11 +9090,7 @@
    "genmap28.toml",
    "genmap28.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 476,
@@ -9169,9 +9102,7 @@
    "genmap27.toml",
    "genmap27.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 475,
@@ -9186,6 +9117,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9202,6 +9135,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9215,11 +9150,7 @@
    "genmap24.toml",
    "genmap24.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 472,
@@ -9231,11 +9162,7 @@
    "genmap23.toml",
    "genmap23.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 471,
@@ -9247,11 +9174,7 @@
    "genmap22.toml",
    "genmap22.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 470,
@@ -9263,11 +9186,7 @@
    "genmap21.toml",
    "genmap21.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 469,
@@ -9279,11 +9198,7 @@
    "genmap20.toml",
    "genmap20.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 468,
@@ -9298,6 +9213,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9311,11 +9228,7 @@
    "genmap19.toml",
    "genmap19.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 466,
@@ -9330,6 +9243,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9344,8 +9259,9 @@
    "genmap17.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9359,11 +9275,7 @@
    "genmap16.toml",
    "genmap16.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 463,
@@ -9375,11 +9287,7 @@
    "genmap15.toml",
    "genmap15.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 462,
@@ -9391,11 +9299,7 @@
    "genmap14.toml",
    "genmap14.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 461,
@@ -9410,6 +9314,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9426,6 +9332,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9442,6 +9350,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9458,6 +9368,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9472,7 +9384,6 @@
    "genmap122.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
    "zombie"
   ]
@@ -9487,11 +9398,7 @@
    "genmap121.toml",
    "genmap121.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 455,
@@ -9506,6 +9413,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9519,11 +9428,7 @@
    "genmap12.toml",
    "genmap12.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 453,
@@ -9538,6 +9443,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9554,6 +9461,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9570,6 +9479,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9583,11 +9494,7 @@
    "genmap116.toml",
    "genmap116.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 449,
@@ -9599,11 +9506,7 @@
    "genmap115.toml",
    "genmap115.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 448,
@@ -9615,11 +9518,7 @@
    "genmap114.toml",
    "genmap114.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 447,
@@ -9634,6 +9533,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9650,6 +9551,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9666,6 +9569,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9682,6 +9587,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9698,6 +9605,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9714,6 +9623,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9730,6 +9641,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9744,7 +9657,6 @@
    "genmap107.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
    "zombie"
   ]
@@ -9762,6 +9674,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9775,11 +9689,7 @@
    "genmap105.toml",
    "genmap105.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 437,
@@ -9791,11 +9701,7 @@
    "genmap104.toml",
    "genmap104.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 436,
@@ -9810,6 +9716,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9826,6 +9734,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9842,6 +9752,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9858,6 +9770,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9871,11 +9785,7 @@
    "genmap10.toml",
    "genmap10.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 431,
@@ -9887,9 +9797,7 @@
    "genmap1.toml",
    "genmap1.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 429,
@@ -9904,8 +9812,7 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -9920,6 +9827,7 @@
    "generator.vxl"
   ],
   "modes": [
+   "tc",
    "arena",
    "zombie"
   ]
@@ -9938,7 +9846,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -9954,6 +9863,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9970,6 +9881,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -9986,6 +9899,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10002,6 +9917,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10018,6 +9935,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10034,6 +9953,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10093,9 +10014,7 @@
    "frontier.txt",
    "frontier.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 399,
@@ -10109,7 +10028,6 @@
    "Field_399.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
    "zombie"
   ]
@@ -10126,8 +10044,8 @@
    "Field_397.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
    "zombie"
   ]
  },
@@ -10142,11 +10060,7 @@
    "FFAX_SPACE.txt",
    "FFAX_SPACE.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 395,
@@ -10159,11 +10073,7 @@
    "FFAX.txt",
    "FFAX.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 394,
@@ -10179,6 +10089,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10192,9 +10104,7 @@
    "farmMill.toml",
    "farmMill.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 387,
@@ -10235,9 +10145,7 @@
    "Faceoff.txt",
    "Faceoff.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 384,
@@ -10264,8 +10172,7 @@
    "facebattle.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10280,7 +10187,7 @@
    "Factory_Showdown.vxl"
   ],
   "modes": [
-   "zombie"
+   "tc"
   ]
  },
  {
@@ -10309,9 +10216,7 @@
    "Encampment.txt",
    "Encampment.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 377,
@@ -10324,11 +10229,7 @@
    "enanojump.txt",
    "enanojump.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 376,
@@ -10342,6 +10243,7 @@
    "enano.vxl"
   ],
   "modes": [
+   "koth",
    "arena",
    "zombie"
   ]
@@ -10372,9 +10274,7 @@
    "Egypt_373.txt",
    "Egypt_373.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 372,
@@ -10390,6 +10290,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10405,8 +10307,10 @@
    "EF5.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "ctf",
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -10421,6 +10325,9 @@
    "EF4.vxl"
   ],
   "modes": [
+   "ctf",
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -10438,8 +10345,9 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -10454,8 +10362,9 @@
    "EF2.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -10472,6 +10381,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10501,11 +10412,7 @@
    "Drift_Ice.txt",
    "Drift_Ice.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 361,
@@ -10518,11 +10425,7 @@
    "Double_KO.txt",
    "Double_KO.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 358,
@@ -10535,10 +10438,7 @@
    "Dokdo_Korea_358.txt",
    "Dokdo_Korea_358.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 356,
@@ -10550,11 +10450,7 @@
    "Deucehills.toml",
    "Deucehills.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 355,
@@ -10570,6 +10466,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10585,8 +10483,8 @@
    "Deserttown.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -10600,10 +10498,7 @@
    "Desert_Island.txt",
    "Desert_Island.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 351,
@@ -10619,6 +10514,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10636,6 +10533,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10652,6 +10551,8 @@
   ],
   "modes": [
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10667,8 +10568,7 @@
    "deepspace.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10697,11 +10597,7 @@
    "deck2.txt",
    "deck2.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 340,
@@ -10715,8 +10611,7 @@
    "Death_Valley.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10763,6 +10658,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -10778,8 +10675,7 @@
    "Penthouse_334.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10794,9 +10690,7 @@
    "Penthouse_333.vxl"
   ],
   "modes": [
-   "ctf",
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -10813,7 +10707,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -10830,7 +10725,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -10874,10 +10770,7 @@
    "CRUMB.txt",
    "CRUMB.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf"
-  ]
+  "modes": []
  },
  {
   "id": 323,
@@ -10891,8 +10784,10 @@
    "Crossover.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "ctf",
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -10936,9 +10831,7 @@
    "crossfire.txt",
    "crossfire.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 318,
@@ -10951,11 +10844,7 @@
    "Cow_Towers.txt",
    "Cow_Towers.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 316,
@@ -10968,11 +10857,7 @@
    "cord2.txt",
    "cord2.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 314,
@@ -11001,9 +10886,7 @@
    "Cloud_Smash.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "koth"
   ]
  },
  {
@@ -11017,11 +10900,7 @@
    "Clot.txt",
    "Clot.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 308,
@@ -11035,8 +10914,9 @@
    "Clock_Town_308.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -11050,9 +10930,7 @@
    "Clock_Town_307.txt",
    "Clock_Town_307.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 306,
@@ -11066,6 +10944,8 @@
    "citywar.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -11082,9 +10962,9 @@
    "city.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -11098,11 +10978,7 @@
    "chute.txt",
    "chute.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 298,
@@ -11128,11 +11004,7 @@
    "ChokePoint.txt",
    "ChokePoint.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 296,
@@ -11146,8 +11018,9 @@
    "Chinatown_296.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "ctf",
+   "koth",
+   "arena"
   ]
  },
  {
@@ -11162,8 +11035,7 @@
    "chinatown_295.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -11178,6 +11050,7 @@
    "ChessArena.vxl"
   ],
   "modes": [
+   "koth",
    "arena",
    "zombie"
   ]
@@ -11195,7 +11068,7 @@
   ],
   "modes": [
    "ctf",
-   "zombie"
+   "tc"
   ]
  },
  {
@@ -11208,9 +11081,7 @@
    "Chess_292.toml",
    "Chess_292.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 291,
@@ -11224,9 +11095,8 @@
    "Cheesus.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
-   "zombie"
+   "koth"
   ]
  },
  {
@@ -11293,6 +11163,8 @@
    "CentreSportifArena.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -11309,8 +11181,6 @@
    "Cemetery.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
    "zombie"
   ]
  },
@@ -11326,6 +11196,10 @@
    "Cavernous_2.vxl"
   ],
   "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11341,8 +11215,8 @@
    "Cavernous.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11357,11 +11231,7 @@
    "Cat039s_Eye.txt",
    "Cat039s_Eye.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 276,
@@ -11375,8 +11245,10 @@
    "Castlewars.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "ctf",
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -11393,7 +11265,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -11407,11 +11280,7 @@
    "Castle_Assault.txt",
    "Castle_Assault.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 273,
@@ -11442,6 +11311,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11470,8 +11341,6 @@
    "Cannibal_Islands.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
    "zombie"
   ]
  },
@@ -11489,6 +11358,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11506,6 +11377,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11533,9 +11406,7 @@
    "Broville.txt",
    "Broville.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 259,
@@ -11549,8 +11420,7 @@
    "brothel.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -11566,6 +11436,8 @@
    "Bridge_Wars.vxl"
   ],
   "modes": [
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11580,9 +11452,7 @@
    "Bridge_It_Is.txt",
    "Bridge_It_Is.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 256,
@@ -11596,7 +11466,6 @@
    "Bowl.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
    "zombie"
   ]
@@ -11613,8 +11482,8 @@
    "bon_odori.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -11644,6 +11513,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11659,8 +11530,8 @@
    "Blue_Resort_249.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -11675,8 +11546,9 @@
    "BloodGulch.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11709,6 +11581,7 @@
   "modes": [
    "ngctf",
    "ctf",
+   "tc",
    "zombie"
   ]
  },
@@ -11723,9 +11596,7 @@
    "Bikini_Atoll_240.txt",
    "Bikini_Atoll_240.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 239,
@@ -11739,9 +11610,7 @@
    "BigWave2.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
+   "tc"
   ]
  },
  {
@@ -11755,11 +11624,7 @@
    "big_wave.txt",
    "big_wave.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 235,
@@ -11786,11 +11651,7 @@
    "Earth_234.toml",
    "Earth_234.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 233,
@@ -11805,6 +11666,8 @@
   ],
   "modes": [
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11822,6 +11685,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11838,8 +11703,8 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -11869,9 +11734,9 @@
    "BattleOfBlockland.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -11888,6 +11753,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11904,6 +11771,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -11920,7 +11789,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -11948,8 +11818,7 @@
    "awp_indiaArena.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -12051,6 +11920,8 @@
    "avsides.vxl"
   ],
   "modes": [
+   "ctf",
+   "koth",
    "arena"
   ]
  },
@@ -12066,8 +11937,7 @@
    "avsector1.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -12098,8 +11968,8 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -12129,8 +11999,8 @@
    "avbeige2.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "tc",
+   "arena"
   ]
  },
  {
@@ -12145,6 +12015,7 @@
    "avbeige_200.vxl"
   ],
   "modes": [
+   "tc",
    "arena",
    "zombie"
   ]
@@ -12161,8 +12032,8 @@
    "avbeige_199.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "tc",
+   "arena"
   ]
  },
  {
@@ -12177,8 +12048,7 @@
    "avbeige1.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -12193,8 +12063,8 @@
    "avbeige_197.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "tc",
+   "arena"
   ]
  },
  {
@@ -12224,6 +12094,10 @@
    "Autumn_Arena.vxl"
   ],
   "modes": [
+   "ngctf",
+   "ctf",
+   "koth",
+   "tc",
    "arena",
    "zombie"
   ]
@@ -12239,11 +12113,7 @@
    "Aurora.txt",
    "Aurora.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 193,
@@ -12256,9 +12126,7 @@
    "Atlas_Novus.txt",
    "Atlas_Novus.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 190,
@@ -12271,11 +12139,7 @@
    "Assault2.txt",
    "Assault2.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 189,
@@ -12301,11 +12165,7 @@
    "Call_of_duty_array.txt",
    "Call_of_duty_array.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 187,
@@ -12319,8 +12179,7 @@
    "array_arena.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -12350,6 +12209,7 @@
    "ArenaCastle.vxl"
   ],
   "modes": [
+   "koth",
    "arena",
    "zombie"
   ]
@@ -12366,8 +12226,9 @@
    "arena3.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -12381,9 +12242,7 @@
    "Arab.txt",
    "Arab.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 178,
@@ -12397,8 +12256,7 @@
    "apa-to.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -12413,7 +12271,7 @@
    "Anticbridge.vxl"
   ],
   "modes": [
-   "zombie"
+   "tc"
   ]
  },
  {
@@ -12443,7 +12301,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -12458,8 +12317,7 @@
    "Ambassy.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -12476,6 +12334,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -12492,6 +12352,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -12509,6 +12371,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -12539,8 +12403,7 @@
    "alcatraz.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -12555,9 +12418,9 @@
    "alamo.vxl"
   ],
   "modes": [
-   "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -12586,11 +12449,7 @@
    "AcidCrackMeth.txt",
    "AcidCrackMeth.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 161,
@@ -12604,6 +12463,7 @@
    "Abordage.vxl"
   ],
   "modes": [
+   "ctf",
    "arena"
   ]
  },
@@ -12619,8 +12479,9 @@
    "abandonedstronghold.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "ctf",
+   "koth",
+   "arena"
   ]
  },
  {
@@ -12636,8 +12497,9 @@
   ],
   "modes": [
    "ctf",
-   "arena",
-   "zombie"
+   "koth",
+   "tc",
+   "arena"
   ]
  },
  {
@@ -12651,11 +12513,7 @@
    "Yarr_Island.txt",
    "Yarr_Island.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 154,
@@ -12668,10 +12526,7 @@
    "WhiteBeach.txt",
    "WhiteBeach.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 149,
@@ -12684,11 +12539,7 @@
    "VietGong.txt",
    "VietGong.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 148,
@@ -12704,7 +12555,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -12718,11 +12570,7 @@
    "TwoSides.txt",
    "TwoSides.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 135,
@@ -12735,9 +12583,7 @@
    "The_Three_Islands.txt",
    "The_Three_Islands.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 134,
@@ -12750,11 +12596,7 @@
    "Termina_Fields.txt",
    "Termina_Fields.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 133,
@@ -12769,8 +12611,7 @@
   ],
   "modes": [
    "ngctf",
-   "ctf",
-   "zombie"
+   "ctf"
   ]
  },
  {
@@ -12784,11 +12625,7 @@
    "Muddy_Island.txt",
    "Muddy_Island.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 129,
@@ -12802,8 +12639,7 @@
    "Storm.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "arena"
   ]
  },
  {
@@ -12820,6 +12656,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -12835,6 +12673,7 @@
    "SherWoodForest.vxl"
   ],
   "modes": [
+   "tc",
    "arena",
    "zombie"
   ]
@@ -12864,9 +12703,7 @@
    "Port_Factory.toml",
    "Port_Factory.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 107,
@@ -12892,7 +12729,11 @@
    "Orbix_104.txt",
    "Orbix_104.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ctf",
+   "koth",
+   "zombie"
+  ]
  },
  {
   "id": 99,
@@ -12904,10 +12745,7 @@
    "MazeOfBLOOD.toml",
    "MazeOfBLOOD.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 98,
@@ -12919,9 +12757,7 @@
    "MazeCave.toml",
    "MazeCave.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 97,
@@ -12936,6 +12772,8 @@
   ],
   "modes": [
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -12953,6 +12791,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13000,7 +12840,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -13014,11 +12855,7 @@
    "LostMore.txt",
    "LostMore.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 89,
@@ -13031,11 +12868,7 @@
    "LittleAssault.txt",
    "LittleAssault.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 86,
@@ -13049,8 +12882,8 @@
    "Jurassic_Park.vxl"
   ],
   "modes": [
-   "arena",
-   "zombie"
+   "koth",
+   "arena"
   ]
  },
  {
@@ -13090,9 +12923,7 @@
    "Inferno.txt",
    "Inferno.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 78,
@@ -13106,8 +12937,6 @@
    "Ice_Islands.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
    "zombie"
   ]
  },
@@ -13123,9 +12952,9 @@
    "Ice_Caverns.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -13142,6 +12971,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13156,9 +12987,7 @@
    "HousesofPush.txt",
    "HousesofPush.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 71,
@@ -13184,11 +13013,7 @@
    "HezeeHills.txt",
    "HezeeHills.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 69,
@@ -13201,11 +13026,7 @@
    "Heir_Kraken.txt",
    "Heir_Kraken.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 68,
@@ -13221,7 +13042,8 @@
   "modes": [
    "ngctf",
    "ctf",
-   "zombie"
+   "koth",
+   "tc"
   ]
  },
  {
@@ -13235,9 +13057,7 @@
    "MAZELAND_67.txt",
    "MAZELAND_67.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 66,
@@ -13250,11 +13070,7 @@
    "EpicForts.txt",
    "EpicForts.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 65,
@@ -13267,9 +13083,7 @@
    "EmiraTown.txt",
    "EmiraTown.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 64,
@@ -13285,6 +13099,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13302,6 +13118,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13316,7 +13134,6 @@
    "Entrench_BETA.vxl"
   ],
   "modes": [
-   "ngctf",
    "ctf",
    "zombie"
   ]
@@ -13332,11 +13149,7 @@
    "DragonsReach.txt",
    "DragonsReach.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 59,
@@ -13352,6 +13165,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13366,9 +13181,7 @@
    "DECK_17.txt",
    "DECK_17.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 56,
@@ -13384,6 +13197,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13398,11 +13213,7 @@
    "Deadlock.txt",
    "Deadlock.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 51,
@@ -13415,11 +13226,7 @@
    "Corridor.txt",
    "Corridor.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 50,
@@ -13432,11 +13239,7 @@
    "Colors.txt",
    "Colors.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 49,
@@ -13449,11 +13252,7 @@
    "Colloseum.txt",
    "Colloseum.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 45,
@@ -13466,9 +13265,7 @@
    "CastleVS.txt",
    "CastleVS.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 44,
@@ -13484,6 +13281,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13501,6 +13300,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13528,7 +13329,9 @@
    "Battle_s_Bourg.txt",
    "Battle_s_Bourg.vxl"
   ],
-  "modes": []
+  "modes": [
+   "ctf"
+  ]
  },
  {
   "id": 37,
@@ -13544,6 +13347,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13561,6 +13366,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13575,11 +13382,7 @@
    "Battlecity_beta.txt",
    "Battlecity_beta.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 32,
@@ -13595,6 +13398,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13611,6 +13416,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13626,8 +13433,6 @@
    "Arvendale.vxl"
   ],
   "modes": [
-   "ngctf",
-   "ctf",
    "zombie"
   ]
  },
@@ -13645,6 +13450,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13661,6 +13468,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13675,10 +13484,7 @@
    "The_Galaxy_Express_999.txt",
    "The_Galaxy_Express_999.vxl"
   ],
-  "modes": [
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 16,
@@ -13691,9 +13497,7 @@
    "2isles.txt",
    "2isles.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 15,
@@ -13706,9 +13510,7 @@
    "2islands.txt",
    "2islands.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 12,
@@ -13723,6 +13525,8 @@
   "modes": [
    "ngctf",
    "ctf",
+   "koth",
+   "tc",
    "zombie"
   ]
  },
@@ -13737,11 +13541,7 @@
    "2012.txt",
    "2012.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 9,
@@ -13754,9 +13554,7 @@
    "1Target_inf.txt",
    "1Target_inf.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 8,
@@ -13799,11 +13597,7 @@
    "111HalleII.txt",
    "111HalleII.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 2,
@@ -13816,9 +13610,7 @@
    "111HaIIWaYY.txt",
    "111HaIIWaYY.vxl"
   ],
-  "modes": [
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": 1,
@@ -13831,11 +13623,7 @@
    "111ButteII.txt",
    "111ButteII.vxl"
   ],
-  "modes": [
-   "ngctf",
-   "ctf",
-   "zombie"
-  ]
+  "modes": []
  },
  {
   "id": null,

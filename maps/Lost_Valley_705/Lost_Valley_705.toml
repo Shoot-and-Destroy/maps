@@ -1,5 +1,5 @@
 [map]
-modes = ["ctf", "zombie"]
+modes = ["tc"]
 author = "Serious_Sim"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,40 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [239, 212, 0], end = [285, 268, 0] }
 team2 = { start = [16, 226, 0], end = [495, 296, 0] }
+
+[map.fitness]
+land = 0.989
+area_land = 0.963
+spawn_dry = [1.0, 0.92]
+
+[map.fitness.ctf]
+pass = false
+water = 0.6
+map_deaths = 0.321
+fight_kills = 27.5
+objective = 6
+failed = ["map_deaths"]
+
+[map.fitness.koth]
+pass = false
+water = 0.55
+map_deaths = 0.309
+fight_kills = 42.5
+objective = 16
+failed = ["map_deaths"]
+
+[map.fitness.tc]
+pass = true
+water = 0.1
+map_deaths = 0.094
+fight_kills = 77.5
+objective = 16
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.067
+fight_kills = 21.0
+objective = 2
+failed = ["objective"]

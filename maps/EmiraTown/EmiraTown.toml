@@ -1,5 +1,5 @@
 [map]
-modes = ["zombie"]
+modes = []
 author = "EL92_"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,40 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [4, 4, 4], end = [4, 4, 4] }
 team2 = { start = [4, 4, 4], end = [4, 4, 4] }
+
+[map.fitness]
+land = 0.086
+area_land = 0.0
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.058
+fight_kills = 129.0
+objective = 6
+failed = ["land", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.057
+fight_kills = 198.5
+objective = 8
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.026
+fight_kills = 299.5
+objective = 2
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.03
+fight_kills = 113.5
+objective = 8
+failed = ["land", "spawn"]

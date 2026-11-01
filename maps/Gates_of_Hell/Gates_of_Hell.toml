@@ -1,5 +1,5 @@
 [map]
-modes = ["ngctf", "ctf", "zombie"]
+modes = ["ngctf", "ctf", "koth", "tc"]
 author = "Cajun Style"
 fog_color = [240, 24, 32]
 map_size = [512, 512, 64]
@@ -10,3 +10,48 @@ water_damage_per_second = 5
 [spawnpoints]
 team1 = { start = [48, 191, 0], end = [112, 321, 0] }
 team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.992
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.089
+fight_kills = 92.5
+objective = 6
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.45
+map_deaths = 0.133
+fight_kills = 36.0
+objective = 4
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.05
+map_deaths = 0.049
+fight_kills = 98.0
+objective = 12
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.1
+map_deaths = 0.151
+fight_kills = 50.5
+objective = 22
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 0.35
+map_deaths = 0.14
+fight_kills = 18.5
+objective = 2
+failed = ["fight_kills", "objective"]

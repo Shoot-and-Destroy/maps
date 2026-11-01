@@ -1,5 +1,5 @@
 [map]
-modes = ["zombie"]
+modes = []
 author = "JoJoe-Stinky AKA Jason Bonham"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [48, 191, 0], end = [112, 321, 0] }
 team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.226
+area_land = 0.563
+spawn_dry = [0.87, 0.87]
+
+[map.fitness.ngctf]
+pass = false
+water = 5.3
+map_deaths = 0.052
+fight_kills = 136.0
+objective = 2
+failed = ["land", "water"]
+
+[map.fitness.ctf]
+pass = false
+water = 2.85
+map_deaths = 0.035
+fight_kills = 69.5
+objective = 1
+failed = ["objective"]
+
+[map.fitness.koth]
+pass = false
+water = 3.8
+map_deaths = 0.051
+fight_kills = 102.5
+objective = 2
+failed = ["water", "objective"]
+
+[map.fitness.tc]
+pass = false
+water = 5.65
+map_deaths = 0.088
+fight_kills = 144.5
+objective = 6
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = false
+water = 4.5
+map_deaths = 0.063
+fight_kills = 82.0
+objective = 5
+failed = ["land", "water"]

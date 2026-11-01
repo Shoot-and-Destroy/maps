@@ -1,5 +1,5 @@
 [map]
-modes = ["ngctf", "ctf", "zombie"]
+modes = ["ngctf", "ctf"]
 author = "ilrak, phalanx, kmsi"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [208, 450, 53], end = [396, 450, 53] }
 team2 = { start = [208, 61, 53], end = [396, 61, 53] }
+
+[map.fitness]
+land = 0.425
+area_land = 0.939
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.034
+fight_kills = 140.5
+objective = 8
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.013
+fight_kills = 73.5
+objective = 8
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 3.3
+map_deaths = 0.004
+fight_kills = 112.5
+objective = 7
+failed = ["water"]
+
+[map.fitness.tc]
+pass = false
+water = 3.05
+map_deaths = 0.033
+fight_kills = 160.0
+objective = 17
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = false
+water = 3.1
+map_deaths = 0.017
+fight_kills = 57.5
+objective = 4
+failed = ["water"]

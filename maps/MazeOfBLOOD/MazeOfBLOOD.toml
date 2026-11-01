@@ -1,5 +1,5 @@
 [map]
-modes = ["ctf", "zombie"]
+modes = []
 author = "MazeOfBLOOD"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [48, 191, 0], end = [112, 321, 0] }
 team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.469
+area_land = 0.444
+spawn_dry = [0.41, 0.4]
+
+[map.fitness.ngctf]
+pass = false
+water = 44.6
+map_deaths = 0.005
+fight_kills = 110.0
+objective = 1
+failed = ["land", "water", "objective", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 34.15
+map_deaths = 0.0
+fight_kills = 77.5
+objective = 5
+failed = ["water", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 54.2
+map_deaths = 0.0
+fight_kills = 88.5
+objective = 9
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 67.4
+map_deaths = 0.013
+fight_kills = 76.0
+objective = 22
+failed = ["water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 21.6
+map_deaths = 0.033
+fight_kills = 58.0
+objective = 4
+failed = ["land", "water", "spawn"]

@@ -1,5 +1,5 @@
 [map]
-modes = ["zombie"]
+modes = []
 author = "Lostmotel"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -10,3 +10,48 @@ water_damage_per_second = 200
 [spawnpoints]
 team1 = { start = [59, 243, 0], end = [128, 320, 0] }
 team2 = { start = [384, 243, 0], end = [451, 320, 0] }
+
+[map.fitness]
+land = 0.15
+area_land = 0.461
+spawn_dry = [0.93, 0.93]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.711
+fight_kills = 54.5
+objective = 3
+failed = ["land", "map_deaths"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.544
+fight_kills = 52.0
+objective = 0
+failed = ["map_deaths", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.771
+fight_kills = 33.5
+objective = 2
+failed = ["land", "map_deaths", "objective"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.328
+fight_kills = 161.0
+objective = 2
+failed = ["map_deaths", "objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.5
+map_deaths = 0.45
+fight_kills = 88.5
+objective = 7
+failed = ["land", "map_deaths"]

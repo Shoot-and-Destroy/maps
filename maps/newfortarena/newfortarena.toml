@@ -12,3 +12,48 @@ team2 = { start = [390, 239, 47], end = [390, 239, 47] }
 [arena]
 # seed cells of the gates the round start opens (pyspades arena_gates)
 gates = [[128, 243, 47], [385, 241, 47]]
+
+[map.fitness]
+land = 0.158
+area_land = 0.817
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 9.85
+map_deaths = 0.029
+fight_kills = 185.5
+objective = 0
+failed = ["water", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 5.9
+map_deaths = 0.036
+fight_kills = 108.5
+objective = 0
+failed = ["water", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 7.55
+map_deaths = 0.016
+fight_kills = 151.5
+objective = 9
+failed = ["water"]
+
+[map.fitness.tc]
+pass = false
+water = 3.65
+map_deaths = 0.026
+fight_kills = 227.5
+objective = 5
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = false
+water = 4.75
+map_deaths = 0.017
+fight_kills = 119.0
+objective = 6
+failed = ["water"]

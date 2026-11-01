@@ -1,5 +1,5 @@
 [map]
-modes = ["ngctf", "ctf", "zombie"]
+modes = []
 author = "genmap31"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [48, 191, 0], end = [112, 321, 0] }
 team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.508
+area_land = 0.717
+spawn_dry = [1.0, 0.24]
+
+[map.fitness.ngctf]
+pass = false
+water = 4.45
+map_deaths = 0.01
+fight_kills = 155.0
+objective = 2
+failed = ["water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 2.65
+map_deaths = 0.006
+fight_kills = 84.0
+objective = 1
+failed = ["objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 3.1
+map_deaths = 0.009
+fight_kills = 111.0
+objective = 9
+failed = ["water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 2.2
+map_deaths = 0.006
+fight_kills = 178.5
+objective = 14
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.9
+map_deaths = 0.008
+fight_kills = 118.0
+objective = 6
+failed = ["spawn"]

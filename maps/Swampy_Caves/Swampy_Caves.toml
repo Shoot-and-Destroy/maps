@@ -1,5 +1,5 @@
 [map]
-modes = ["ngctf", "ctf", "zombie"]
+modes = ["ngctf", "ctf", "tc", "zombie"]
 author = "Swampy_Caves"
 fog_color = [127, 164, 111]
 map_size = [512, 512, 64]
@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [48, 191, 0], end = [112, 321, 0] }
 team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.513
+area_land = 0.999
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.55
+map_deaths = 0.035
+fight_kills = 110.0
+objective = 5
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.064
+fight_kills = 44.0
+objective = 3
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 3.15
+map_deaths = 0.006
+fight_kills = 80.5
+objective = 10
+failed = ["water"]
+
+[map.fitness.tc]
+pass = true
+water = 1.1
+map_deaths = 0.01
+fight_kills = 149.0
+objective = 11
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.45
+map_deaths = 0.004
+fight_kills = 135.5
+objective = 6
+failed = []

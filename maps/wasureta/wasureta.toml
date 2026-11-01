@@ -10,3 +10,48 @@ water_damage_per_second = 10
 [spawnpoints]
 team1 = { start = [180, 327, 53], end = [180, 327, 53] }
 team2 = { start = [318, 177, 53], end = [318, 177, 53] }
+
+[map.fitness]
+land = 0.388
+area_land = 0.096
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.019
+fight_kills = 333.0
+objective = 5
+failed = ["land", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.012
+fight_kills = 251.0
+objective = 6
+failed = ["land", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.016
+fight_kills = 276.5
+objective = 3
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.112
+fight_kills = 154.0
+objective = 4
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.047
+fight_kills = 50.5
+objective = 4
+failed = ["land", "spawn"]

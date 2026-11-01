@@ -1,5 +1,5 @@
 [map]
-modes = ["arena", "zombie"]
+modes = ["arena"]
 author = "onigiri"
 fog_color = [0, 0, 0]
 map_size = [512, 512, 64]
@@ -12,3 +12,40 @@ team2 = { start = [273, 299, 39], end = [273, 299, 39] }
 [arena]
 # seed cells of the gates the round start opens (pyspades arena_gates)
 gates = [[194, 307, 39], [271, 296, 38]]
+
+[map.fitness]
+land = 0.056
+area_land = 0.236
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 1.4
+map_deaths = 0.05
+fight_kills = 219.0
+objective = 0
+failed = ["land", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 1.45
+map_deaths = 0.059
+fight_kills = 305.5
+objective = 8
+failed = ["land"]
+
+[map.fitness.tc]
+pass = false
+water = 6.05
+map_deaths = 0.151
+fight_kills = 160.5
+objective = 2
+failed = ["land", "water", "objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 3.4
+map_deaths = 0.083
+fight_kills = 49.5
+objective = 2
+failed = ["land", "water", "objective"]

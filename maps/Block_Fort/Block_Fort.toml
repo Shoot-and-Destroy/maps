@@ -1,5 +1,5 @@
 [map]
-modes = ["ngctf", "ctf", "zombie"]
+modes = ["ngctf", "ctf", "koth", "tc", "zombie"]
 author = "Block_Fort"
 fog_color = [128, 232, 255]
 map_size = [512, 512, 64]
@@ -8,3 +8,48 @@ capture_limit = 10
 [spawnpoints]
 team1 = { start = [48, 191, 0], end = [112, 321, 0] }
 team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.86
+area_land = 0.781
+spawn_dry = [0.85, 0.88]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.013
+fight_kills = 153.0
+objective = 3
+failed = []
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.013
+fight_kills = 75.0
+objective = 1
+failed = ["objective"]
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.014
+fight_kills = 141.0
+objective = 8
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.005
+fight_kills = 99.5
+objective = 23
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.046
+fight_kills = 73.0
+objective = 7
+failed = []
