@@ -1,0 +1,63 @@
+name = 'Raindance'
+version = '1.0'
+author = 'Deucebag and SLoW'
+description = ('A remake of the classic Tribes 1 map Raindance')
+protected = ['B5', 'G4']
+fog = (110, 130, 255)
+
+# scripting
+
+import random
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from commands import say
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        # puts only the blue flag in the blue base
+        #z = team.protocol.map.get_z(109, 274)
+        return (109, 274, 13)
+    if entity_id == BLUE_BASE:
+        # puts only the blue flag in the blue base
+        #z = team.protocol.map.get_z(113, 315)
+        return (113, 315, 28)
+    if entity_id == GREEN_FLAG:
+        # puts only the green flag in the green base
+        #z = team.protocol.map.get_z(392, 306)
+        return (427, 213, 10)
+    if entity_id == GREEN_BASE:
+        # puts only the blue flag in the blue base
+        #z = team.protocol.map.get_z(408, 330)
+        return (429, 227, 28)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = ServerConnection.get_spawn_location(connection)
+        r = random.randrange(0, 5)
+        #spawn AT base
+        if r == 1:
+            return (102, 298, 30)
+        #spawn IN base
+        elif r == 2:
+            return (120, 298, 28)
+        #spawn BEHIND base
+        elif r == 3:
+            return (104, 318, 30)
+        #spawn BEHIND intel
+        elif r <= 4:
+            return (97, 273, 31)
+    if connection.team is connection.protocol.green_team:
+        x, y, z = ServerConnection.get_spawn_location(connection)
+        r = random.randrange(0, 5)
+        #spawn AT base
+        if r == 1:
+            return (427, 200, 30)
+        #spawn IN base
+        elif r == 2:
+            return (408, 200, 27)
+        #spawn BEHIND base
+        elif r == 3:
+            return (442, 230, 29)
+        #spawn BEHIND intel
+        elif r <= 4:
+            return (444, 175, 30)

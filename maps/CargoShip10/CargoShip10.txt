@@ -1,0 +1,11 @@
+name = 'CargoShip1.0'
+version = '1'
+author = 'Nuceto'
+description = ('Conversion of the map from Zula')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (323, 254, 40),
+     'arena_green_spawn' : (185, 254, 40),
+     'arena_gates': ((180, 247, 41), (328, 247, 41))
+ }

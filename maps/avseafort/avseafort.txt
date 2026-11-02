@@ -1,0 +1,17 @@
+nname = 'avseafort'
+version = '1.0'
+author = 'AVuKYI2R3'
+description = 'A sea fortress made by desert lander in the middle of the sea.'
+cap_limit = 12
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : (242, 241, 59),
+    'arena_green_spawn' : (269, 270, 59),
+    'arena_gates': ((244, 243, 58), (267, 268, 58)),
+    'team_namecolor' : True,
+      'blue_team_name' : 'Blue',
+      'blue_team_color' : (0, 255, 210),  
+      'green_team_name' : 'Pink',
+      'green_team_color' : (255, 113, 181)
+}

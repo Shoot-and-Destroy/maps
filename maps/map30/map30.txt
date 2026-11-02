@@ -1,0 +1,9 @@
+name = 'map30'
+version = '1.0'
+author = 'T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (231, 231, 20),
+     'arena_green_spawn' : (279, 279, 20),
+     'arena_gates': ((231, 231, 22),(279, 279, 22)),
+}

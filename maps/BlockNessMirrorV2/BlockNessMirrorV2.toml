@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Jagex, Reworked by Qult"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.35
+area_land = 0.743
+spawn_dry = [0.55, 0.57]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.049
+fight_kills = 146.5
+objective = 7
+failed = ["spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.046
+fight_kills = 62.5
+objective = 6
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.008
+fight_kills = 132.0
+objective = 9
+failed = ["spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.017
+fight_kills = 148.0
+objective = 24
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.05
+fight_kills = 105.5
+objective = 4
+failed = ["spawn"]

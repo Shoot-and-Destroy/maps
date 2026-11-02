@@ -1,0 +1,50 @@
+import random
+
+name = 'Alpine'
+version = '2.0'
+author = 'Influx,Dany,Marshmello'
+description = 'A snowy mountain surrounded by a lush forest with watch towers'
+
+# this allows setting up spawns inside buildings etc. even for maps where 
+# building/destruction is allowed
+
+# example spawns
+spawn_locations_blue = [
+    (105, 255, 59),
+    (90, 280, 59),
+    (119, 255, 59),
+    (74, 284, 59),
+    (71, 263, 59),
+    (102, 228, 59),
+    (141, 210, 59),
+    (117, 213, 46),
+    (67, 225, 59),
+    (74, 284, 29),
+]
+
+spawn_locations_green = [
+    (402, 282, 59),
+    (422, 266, 59),
+    (404, 241, 59),
+    (397, 227, 59),
+    (428, 242, 29),
+    (399, 265, 59),
+    (433, 289, 59),
+    (452, 297, 59),
+    (446, 267, 59),
+    (436, 297, 59),
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 2.4 # magic numbers
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        # allows spawning lower if the ground is destroyed
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

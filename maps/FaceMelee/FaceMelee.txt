@@ -1,0 +1,48 @@
+name = 'FaceMelee'
+version = '1.0'
+author = 'Dany0 and Supercool'
+description = 'Facing buildings floating bridges melee festival!'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (235, 277, 23)
+    if entity_id == GREEN_FLAG:
+        return (277, 252, 23)
+    if entity_id == BLUE_BASE:
+        return (229, 282, 23)
+    if entity_id == GREEN_BASE:
+        return (285, 252, 23)
+
+# example spawns
+spawn_locations_blue = [
+    (229, 282, 23),
+    (224, 281, 35),
+    (227, 267, 48),
+    (225, 269, 59),
+    (224, 248, 33),
+    (220, 245, 47)
+]
+
+spawn_locations_green = [
+    (285, 252, 23),
+    (292, 256, 45),
+    (292, 230, 54),
+    (287, 231, 43),
+    (290, 278, 45),
+    (286, 278, 33)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    x += 0.5
+    y += 0.5
+    return x, y, z
+

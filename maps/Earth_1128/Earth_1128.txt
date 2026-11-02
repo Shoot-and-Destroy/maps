@@ -1,0 +1,4 @@
+name = 'Earth'
+version = '1.0'
+author = 'Sample'
+description = 'Earth :)'

@@ -1,0 +1,37 @@
+from pyspades.constants import *
+import random
+
+name = 'FaceOffP'
+version = '1.0'
+author = 'izzy'
+description = 'Map with dimensional gates.'
+extensions = {
+    'babel' : True, 
+    'respawn_time' : 5,
+    'water_damage': 100,
+    'teleports': [
+        ((92, 149, 37), 2, [(418, 145, 39), (418, 153, 39), (420, 145, 39), (420, 153, 39)]), #-y
+        ((419, 149, 37), 2, [(91, 145, 39), (93, 145, 39), (91, 153, 39), (93, 153, 39)]), #-y
+        ((92, 362, 37), 2, [(418, 358, 39), (420, 358, 39), (418, 366, 39), (420, 366, 39)]), #-bb
+        ((419, 362, 37), 2, [(91, 358, 39), (93, 358, 39), (91, 366, 39), (93, 366, 39)])  #-bb
+    ],
+'no_build_zones': [
+        ((92, 149, 37), 8, 0), #-y
+        ((419, 149, 37), 8, 0), #-y
+        ((92, 362, 37), 8, 0), #-bb
+        ((419, 362, 37), 8, 0) #-bb
+    ]
+}
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(162, 192)
+        y = random.randrange(226, 286)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(320, 350)
+        y = random.randrange(226, 286)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)

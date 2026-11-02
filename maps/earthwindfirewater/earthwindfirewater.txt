@@ -1,0 +1,6 @@
+name = 'earthwindfirewater'
+version = '1.0'
+author = 'tyoook'
+description = ('4 terrains, recovered')
+extensions = { 'water_damage' : 100, 'base_locations' : [(128, 128), (384, 128), (384, 384),
+                        (128, 384)] }

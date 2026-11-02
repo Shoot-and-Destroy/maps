@@ -1,0 +1,11 @@
+name = 'totunyu'
+version = '1.0'
+author = 'vippei'
+description = 'sourou map'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((238,187,54),(245,228,29)),
+     'arena_green_spawns' : ((267,230,43),(233,232,49),(232,231,55)),
+     'arena_gates': ((243,187,55),(244,224,29),(263,229,42),(235,235,49),(235,235,54))
+ }

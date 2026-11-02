@@ -1,0 +1,12 @@
+name = "EF5"
+version = '1.0'
+author = 'vip'
+
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (264,287,51),
+     'arena_green_spawn' : (375,289,51),
+     'arena_gates': ((261,287,48) , (379,289,48))
+ }
+

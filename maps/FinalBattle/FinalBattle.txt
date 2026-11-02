@@ -1,0 +1,52 @@
+from pyspades.constants import *
+from pyspades.server import ServerProtocol
+import sys
+import random
+
+
+# --- METADATA ---
+name = 'FinalBattle'
+version = '2.2'
+author = 'Qult--- (Atelsa)'
+description = 'FinalBattle (Refactored)'
+fog = (255, 225, 147)
+cap_limit = 7
+
+# --- ZONES CONFIGURATION ---
+# (x1, x2, y1, y2, z1, z2)
+PROTECTED_ZONES = [
+    (176, 203, 242, 269, 13, 64),
+    (227, 254, 210, 237, 13, 64),
+    (308, 335, 242, 269, 13, 64),
+    (258, 285, 274, 301, 13, 64)
+]
+
+extensions = { 
+    'water_damage': 100,
+    'no_build_zones': PROTECTED_ZONES,
+    'no_destroy_zones': PROTECTED_ZONES
+}
+
+# --- SPAWN LOGIC ---
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(176, 204)
+        y = random.randrange(240, 271)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(307, 336)
+        y = random.randrange(240, 271)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_BASE:
+        return (253, 211, team.protocol.map.get_z(253, 211))
+    if entity_id == GREEN_BASE:
+        return (259, 300, team.protocol.map.get_z(259, 300))
+    return (0,0,0)
+
+# --- APPLY SCRIPT ---
+def apply_script(protocol, connection, config):
+    return universal_utility.apply_script(protocol, connection, config)

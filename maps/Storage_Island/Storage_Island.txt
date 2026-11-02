@@ -1,0 +1,4 @@
+name = 'Storage Island'
+version = '1.0'
+author = 'Jdrew'
+description = 'An island map with a bunch of storge units and a few docks'

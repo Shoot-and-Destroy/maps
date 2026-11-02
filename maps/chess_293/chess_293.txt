@@ -1,0 +1,77 @@
+name = 'chess'
+version = '1.0'
+author = 'Dany0'
+description = 'Chess, have fun!'
+extensions = { 'water_damage' : 200}
+
+
+
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+
+intel_locations_green = [ (301, 276), (301, 293), (292, 302), (301, 235), (301, 219), (292, 211) ]
+
+spawn_locations_green = [ (316, 198), (313, 211), (316, 226), (313, 249), (313, 268), (318, 281), (313, 297),
+ (317, 314), (307, 301), (297, 297), (288, 301), (289, 285), (296, 277), (304, 276), (304, 286), (303, 230),
+ (297, 226), (297, 211), (289, 218), (290, 234), (307, 219), (296, 225), (295, 293) ]
+
+base_locations_green =  [ (309, 256) ]
+
+intel_locations_blue =  [ (209, 276), (209, 293), (218, 302), (209, 235), (209, 219), (218, 211) ]
+
+spawn_locations_blue =  [ (194, 198), (197, 211), (194, 226), (197, 249), (197, 268), (192, 281), (197, 297),
+ (193, 314), (203, 301), (213, 297), (222, 301), (221, 285), (214, 277), (206, 276), (206, 286), (207, 230),
+ (213, 226), (213, 211), (221, 218), (220, 234), (203, 219), (214, 225), (215, 293) ]
+
+base_locations_blue =   [ (201, 256) ]
+
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x, y = choice(intel_locations_blue)
+        return (x, y, team.protocol.map.get_z(x, y))
+
+    if entity_id == BLUE_BASE:
+        x, y = choice(base_locations_blue)
+        return (x, y, team.protocol.map.get_z(x, y))
+
+    if entity_id == GREEN_FLAG:
+        x, y = choice(intel_locations_green)
+        return (x, y, team.protocol.map.get_z(x, y))
+
+    if entity_id == GREEN_BASE:
+        x, y = choice(base_locations_green)
+        return (x, y, team.protocol.map.get_z(x, y))
+
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        return x, y, connection.protocol.map.get_z(x, y)
+
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        return x, y, connection.protocol.map.get_z(x, y)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

@@ -1,0 +1,9 @@
+from pyspades.constants import *
+import random
+
+name = 'TempleOfHephaistos'
+version = '1.0'
+author = 'Hunterone9'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/greek-temple-of-hephaistos-assassin-s-creed-odyssey/

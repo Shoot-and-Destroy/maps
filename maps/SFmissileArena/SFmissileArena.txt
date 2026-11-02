@@ -1,0 +1,13 @@
+name = 'SFmissileArena'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Special Force copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (205, 305, 51),
+     'arena_green_spawn' : (325, 220, 51),
+     'arena_gates': ((208,302,46),(322,223,46))
+ }

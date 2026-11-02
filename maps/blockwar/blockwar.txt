@@ -1,0 +1,28 @@
+name = 'blockwar'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Block War'
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (291, 259, 54)
+    if entity_id == BLUE_FLAG:
+        return (230, 256, 54)
+    if entity_id == GREEN_BASE:
+        return (383, 249, 52)
+    if entity_id == BLUE_BASE:
+        return (129, 264, 52)
+        
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(365,379)
+        gy = random.randrange(205, 304)
+        return (gx, gy, 52)
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(130,151)
+        by = random.randrange(213,308)
+        return (bx, by, 52)

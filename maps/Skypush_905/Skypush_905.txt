@@ -1,0 +1,16 @@
+name = 'Skypush'
+version = '2.2'
+author = 'Lostmotel'
+
+extensions = {
+'push': True,
+'push_spawn_range' : 8,
+'push_blue_spawn' : (209, 38, 5),
+'push_blue_cp' : (295, 484, 32),
+'push_green_spawn' : (302, 38, 5),
+'push_green_cp' : (210, 487, 34),
+'water_damage' : 100,
+
+
+
+ }

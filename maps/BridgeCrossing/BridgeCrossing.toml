@@ -1,0 +1,55 @@
+[map]
+modes = ["koth", "tc"]
+author = "BridgeCrossing"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.612
+area_land = 0.729
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 7.75
+map_deaths = 0.421
+fight_kills = 40.5
+objective = 1
+failed = ["water", "map_deaths", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.613
+fight_kills = 44.5
+objective = 0
+failed = ["map_deaths", "objective"]
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.211
+fight_kills = 110.0
+objective = 10
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.2
+map_deaths = 0.059
+fight_kills = 215.0
+objective = 7
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 18.5
+map_deaths = 0.013
+fight_kills = 77.5
+objective = 6
+failed = ["water"]

@@ -1,0 +1,47 @@
+name = 'Vsratsk'
+version = '1.0'
+author = 'Alpha and Y@streb'
+fog = (41, 43, 68)
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(275, 277)
+        y = random.randrange(201, 203)
+        z = 13
+        return (x,y,z)
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(265, 293)
+        y = random.randrange(191, 223)
+        z = 0
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(323, 325)
+        y = random.randrange(334, 336)
+        z = 55
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(321, 342)
+        y = random.randrange(309, 338)
+        z = 0
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(295, 306)
+        y = random.randrange(198, 218)
+        z = connection.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(321, 342)
+        y = random.randrange(309, 338)
+        z = connection.protocol.map.get_z(x, y)
+        return (x, y, z)

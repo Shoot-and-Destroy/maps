@@ -1,0 +1,6 @@
+name = '1riveralmost2night'
+
+fog = (0, 0, 0)
+
+
+aloha=True

@@ -1,0 +1,49 @@
+[map]
+modes = []
+author = "sushi_anago"
+fog_color = [256, 256, 256]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 200
+
+[spawnpoints]
+team1 = { start = [2, 2, 2], end = [2, 2, 2] }
+team2 = { start = [3, 3, 3], end = [3, 3, 3] }
+
+[map.fitness]
+land = 0.012
+area_land = 0.0
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ctf]
+pass = false
+water = 3.85
+map_deaths = 0.751
+fight_kills = 477.5
+objective = 0
+failed = ["land", "map_deaths", "objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 3.85
+map_deaths = 0.75
+fight_kills = 479.5
+objective = 0
+failed = ["land", "water", "map_deaths", "objective", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 2.0
+map_deaths = 0.796
+fight_kills = 309.5
+objective = 1
+failed = ["land", "map_deaths", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.25
+map_deaths = 0.49
+fight_kills = 64.0
+objective = 4
+failed = ["land", "map_deaths", "spawn"]

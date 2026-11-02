@@ -1,0 +1,12 @@
+name = 'Office Wars'
+version = '1.0'
+author = 'komerad123'
+description = 'Arenafied by izzy'
+cap_limit = 5
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : (254, 306, 13),
+    'arena_green_spawn' : (275, 296, 60),
+    'arena_gates': ((256, 307, 11), (274, 299, 59))
+}

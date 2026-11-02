@@ -1,0 +1,18 @@
+name = 'Suspension'
+
+version = '1.0'
+
+author = 'Influx'
+
+description = ('Push map where teams must repair a destroyed suspension bridge',
+'to reach  the main island')
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (55, 211, 43),
+'push_blue_cp' : (413, 256, 13),
+'push_green_spawn' : (55, 300, 43),
+'push_green_cp' : (413, 251, 13),
+'water_damage' : 100,
+'user_blocks_only' : True
+  }

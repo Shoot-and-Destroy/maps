@@ -1,0 +1,13 @@
+name = 'ShootingRangeWhite'
+version = '1'
+author = 'Darion'
+description = ('from the ground arena long ranged map based on CS 1.6 1v1 maps')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (258, 218, 58),
+     'arena_green_spawn' : (258, 289, 58),
+     'arena_gates': ((262,215,59), (255,290,59))
+ } 
+
+aloha=True

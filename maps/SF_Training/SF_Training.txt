@@ -1,0 +1,5 @@
+name = 'BridgeCrossing'
+version = '1.0'
+author = 'Frogssily'
+description = ('It is the secret place where they train special forces for infiltration missions.')
+extensions = { 'water_damage' : 20 }

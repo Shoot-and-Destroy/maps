@@ -1,0 +1,14 @@
+name = "BSrush"
+version = '1.0'
+author = 'T0M'
+description = 'Black Squad copy map'
+
+fog = (32, 32, 64)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (251,315,59),
+     'arena_green_spawn' : (259,196,59),
+     'arena_gates': ((252,190,57),(258,307,57)),
+     'water_damage' : 100
+ }

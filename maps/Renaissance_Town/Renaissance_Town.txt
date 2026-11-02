@@ -1,0 +1,4 @@
+name = 'Renaissance Town'
+version = '1.0'
+author = 'Yourself'
+description = 'Fight for control of an island town and its magnificant cathedral.'

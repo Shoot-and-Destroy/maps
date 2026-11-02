@@ -1,0 +1,69 @@
+name = 'Saturn'
+version = '1.0.1'
+author = 'Ashy'
+fog = (0, 0, 0)
+extensions = {
+	'arena': True,
+	'arena_blue_spawn': (192, 256, 28),
+	'arena_green_spawn': (320, 256, 28),
+	'water_damage': 100,
+}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+import random
+
+# Intel / base location
+def get_entity_location(team, entity_id):
+	if entity_id == BLUE_FLAG:
+		return (170, 255, 1)
+	if entity_id == BLUE_BASE:
+		return (192, 256, 1)
+	if entity_id == GREEN_FLAG:
+		return (340, 255, 1)
+	if entity_id == GREEN_BASE:
+		return (320, 256, 1)
+
+# Set spawn position
+#             x1,  y1,  x2,  y2
+BLUE_RECT  = (185, 240, 195, 272)
+GREEN_RECT = (317, 240, 327, 272)
+def get_spawn_location(connection):
+	# get_random_location with force_land is based on if there is water at the *bottom of the world*, not
+	# if there is a solid block available at any height to spawn on, so we have to make our own function.
+	if connection.team == connection.protocol.blue_team:
+		rect = BLUE_RECT
+	elif connection.team == connection.protocol.green_team:
+		rect = GREEN_RECT
+
+	x1 = rect[0]
+	y1 = rect[1]
+	x2 = rect[2]
+	y2 = rect[3]
+
+	spawning_spaces = []
+	for y in range(y1, y2):
+		for x in range(x1, x2):
+			z = connection.protocol.map.get_z(x, y)
+		 	# Don't allow spawning in water
+			if z < 63:
+				spawning_spaces.append((x, y, z))
+	return random.choice(spawning_spaces)
+
+# Unbreakable block areas
+#    x1,  y1,  z1, x2,  y2,  z2
+UNBREAKABLE_AREAS = [
+	(170, 255, 31, 170, 255, 63), # Blue intel tower
+	(340, 255, 31, 340, 255, 63), # Green intel tower
+	(191, 255, 49, 193, 257, 63), # Blue backup spawn (3x3 area, allow digging down 4 blocks)
+	(319, 255, 49, 321, 257, 63), # Green backup spawn (3x3 area, allow digging down 4 blocks)
+]
+
+def is_indestructable(self, x, y, z):
+	for area in UNBREAKABLE_AREAS:
+		if x >= area[0] and x <= area[3] and y >= area[1] and y <= area[4] and z >= area[2] and z <= area[5]:
+			return True
+	return False
+
+# TODO TC intel should spawn on moons
+# def get_cp_entities(self):

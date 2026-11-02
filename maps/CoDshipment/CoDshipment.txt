@@ -1,0 +1,10 @@
+name="CoDshipment"
+version="1.0"
+author="T0M"
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : (230, 229, 58),
+    'arena_green_spawn' : (279, 281, 58),
+    'arena_gates': ((232, 231, 55), (277, 279, 55))
+}

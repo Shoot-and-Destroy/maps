@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Xenon (a.k.a. Cumco)"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.875
+area_land = 0.695
+spawn_dry = [0.56, 0.54]
+
+[map.fitness.ngctf]
+pass = false
+water = 3.85
+map_deaths = 0.048
+fight_kills = 60.0
+objective = 447
+failed = ["water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 2.0
+map_deaths = 0.089
+fight_kills = 41.0
+objective = 344
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 16.7
+map_deaths = 0.039
+fight_kills = 184.0
+objective = 10
+failed = ["water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 2.45
+map_deaths = 0.661
+fight_kills = 39.5
+objective = 9
+failed = ["map_deaths", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 26.95
+map_deaths = 0.028
+fight_kills = 51.5
+objective = 5
+failed = ["water", "spawn"]

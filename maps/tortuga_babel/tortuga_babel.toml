@@ -1,0 +1,55 @@
+[map]
+modes = ["babel"]
+author = "tortuga_babel"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.368
+area_land = 0.708
+spawn_dry = [0.75, 0.72]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.65
+map_deaths = 0.074
+fight_kills = 99.5
+objective = 3
+failed = ["spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.15
+map_deaths = 0.125
+fight_kills = 49.0
+objective = 2
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.088
+fight_kills = 119.5
+objective = 8
+failed = ["spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.134
+fight_kills = 155.0
+objective = 13
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 2.25
+map_deaths = 0.053
+fight_kills = 36.0
+objective = 2
+failed = ["water", "objective", "spawn"]

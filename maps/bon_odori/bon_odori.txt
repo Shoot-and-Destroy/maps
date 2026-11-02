@@ -1,0 +1,14 @@
+name = "bon odori"
+version = '1.0'
+author = 'onigiri'
+description = 'odoreya orere !'
+
+fog = (0, 0, 0)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ((135,246,43)),
+     'arena_green_spawn' : ((367,246,43)),
+     'arena_gates': ((137,244,40),(365,248,39)),
+
+}

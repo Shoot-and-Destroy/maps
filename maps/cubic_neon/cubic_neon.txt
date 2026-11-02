@@ -1,0 +1,6 @@
+name = 'cubic'
+version = '1.0'
+author = 'Sasquatch'
+description = ('Square mounds, square trees, square people')
+
+aloha=True

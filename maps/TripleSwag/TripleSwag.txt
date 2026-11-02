@@ -1,0 +1,4 @@
+name = 'Triple Swag'
+version = '1.1'
+author = 'Lostmotel, Reworked by Qult'
+# https://hosting.dgd.cx/map-search?query=swag&file=Swag.vxl&source=allmaps#iso

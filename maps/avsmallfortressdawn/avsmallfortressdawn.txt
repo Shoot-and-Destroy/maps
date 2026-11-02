@@ -1,0 +1,16 @@
+name = 'avsmallfortressdawn'
+version = '2.5'
+author = 'AVuKY & Mile'
+description = 'Balanced, Glitch proofed, Shaded B)'
+cap_limit = 7
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : (247, 256, 57),
+    'arena_green_spawn' : (286, 243, 56),
+    'arena_gates': ((250, 256, 58), (283, 243, 57))
+}
+
+fog = (80, 160, 180)
+
+aloha=True

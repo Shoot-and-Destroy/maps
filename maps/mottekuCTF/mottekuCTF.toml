@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "koth", "tc", "arena"]
+author = "mottekuCTF"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [128, 285, 56], end = [128, 285, 56] }
+team2 = { start = [381, 298, 56], end = [381, 298, 56] }
+
+[map.fitness]
+land = 0.16
+area_land = 0.818
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 2.95
+map_deaths = 0.05
+fight_kills = 218.5
+objective = 3
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 1.8
+map_deaths = 0.072
+fight_kills = 160.0
+objective = 4
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.1
+map_deaths = 0.024
+fight_kills = 221.5
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.157
+fight_kills = 277.0
+objective = 6
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 8.05
+map_deaths = 0.078
+fight_kills = 94.0
+objective = 6
+failed = ["water"]

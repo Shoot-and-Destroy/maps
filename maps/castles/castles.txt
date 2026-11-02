@@ -1,0 +1,29 @@
+name = 'castles'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Castles'
+extensions = {'water_damage':50}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (235, 208, 47)
+    if entity_id == BLUE_FLAG:
+        return (124, 223, 47)
+    if entity_id == GREEN_BASE:
+        return (317, 173, 28)
+    if entity_id == BLUE_BASE:
+        return (36, 215, 37)
+        
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(258,319)
+        gy = random.randrange(209,236)
+        return (gx, gy, 28)
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(37,96)
+        by = random.randrange(177,253)
+        return (bx, by, 37)

@@ -1,0 +1,2 @@
+author = "Dr. Morphman"
+description = "an experiment of mine converting a map from a N64 game that experiment failed mostly due to the inability to convert colors and the maps height limits this map is shaped like a tube (hey one of you mappers should try creating a tube-like map similiar to that) it looks quite interesting imo i'd be extremely impressed if someone is able to tell where this is from"

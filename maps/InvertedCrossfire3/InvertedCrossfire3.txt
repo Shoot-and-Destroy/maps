@@ -1,0 +1,4 @@
+name = 'Inverted Crossfire 3'
+version = '1.0'
+author = 'Lostmotel, Reworked by Qult'
+# https://aos.party/view/322

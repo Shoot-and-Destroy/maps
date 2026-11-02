@@ -1,0 +1,52 @@
+name = 'LowLand'
+version = '1.0'
+author = 'tGM/helpers'
+description = 'A big hill with a fortress on top, a large INF map'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(256, 256)
+        return (256, 256, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z (256, 233)
+        return (256, 233, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(36, 292)
+        return (36, 292, z)
+
+spawn_locations_green = [
+    	(87, 363),
+    	(141, 459),
+    	(266, 462),
+    	(381, 417),
+    	(451, 336),
+    	(449, 212),
+    	(406, 99),
+    	(332, 90),
+    	(246, 68),
+    	(145, 70),
+    	(96, 120),
+    	(74, 188),
+    	(49, 265)
+]
+
+spawn_locations_blue = [
+    	(235, 280),
+    	(235, 231),
+    	(276, 231),
+    	(276, 280)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+	x, y = choice(spawn_locations_green)
+	z = connection.protocol.map.get_z(x, y)
+	return x, y, z
+    if connection.team is connection.protocol.blue_team:
+	x, y = choice(spawn_locations_blue)
+	z = connection.protocol.map.get_z(x, y)
+	return x, y, z

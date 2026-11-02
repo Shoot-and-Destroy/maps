@@ -1,0 +1,11 @@
+name = 'Quintu Atlas Novus'
+version = '1.0'
+author = 'Lostmotel, Reworked by Qult'
+# https://hosting.dgd.cx/map-search?query=atlas&file=Atlas+Novus.vxl&source=allmaps#iso
+
+
+
+		
+		
+		
+		

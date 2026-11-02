@@ -1,0 +1,61 @@
+[map]
+modes = ["arena"]
+author = "Sasquatch"
+fog_color = [0, 0, 0]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 25
+
+[spawnpoints]
+team1 = { start = [140, 238, 30], end = [140, 238, 30] }
+team2 = { start = [373, 238, 30], end = [373, 238, 30] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[145, 232, 32], [143, 245, 32], [370, 245, 32], [368, 232, 32]]
+
+[map.fitness]
+land = 0.048
+area_land = 0.466
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 1.75
+map_deaths = 0.795
+fight_kills = 45.0
+objective = 0
+failed = ["land", "map_deaths", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.49
+fight_kills = 49.0
+objective = 1
+failed = ["map_deaths", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.214
+fight_kills = 114.0
+objective = 4
+failed = ["land"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.162
+fight_kills = 176.0
+objective = 2
+failed = ["objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 1.05
+map_deaths = 0.134
+fight_kills = 100.0
+objective = 5
+failed = ["land"]

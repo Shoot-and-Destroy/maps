@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "valleyforgesaved"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.969
+area_land = 0.991
+spawn_dry = [0.98, 0.98]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.217
+fight_kills = 36.0
+objective = 1
+failed = ["map_deaths", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.583
+fight_kills = 7.5
+objective = 1
+failed = ["map_deaths", "fight_kills", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.354
+fight_kills = 26.5
+objective = 6
+failed = ["map_deaths"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.299
+fight_kills = 37.5
+objective = 15
+failed = ["map_deaths"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.116
+fight_kills = 19.0
+objective = 4
+failed = ["fight_kills"]

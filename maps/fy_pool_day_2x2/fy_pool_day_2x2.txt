@@ -1,0 +1,15 @@
+name = 'fy_pool_day_2x2'
+version = '1.0'
+author = 'MegaStar.'
+description = ('Conversion of the map from CS')
+
+extensions = {
+
+     'arena': True,
+     'arena_blue_spawn' : (284, 253, 55),
+     'arena_green_spawn' : (227, 252, 55),
+     'arena_gates' : ((286, 261, 53), (225, 245, 53)),
+     'water_damage' : 100,
+
+
+}

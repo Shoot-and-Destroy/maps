@@ -1,0 +1,32 @@
+AREA = (156, 190, 354, 322) 
+PAD = 18
+WIDTH = 18
+BLUE_RECT = (AREA[0] + PAD, AREA[1] + PAD, AREA[0] + PAD + WIDTH, AREA[3] - PAD)
+GREEN_RECT = (AREA[2] - PAD - WIDTH, AREA[1] + PAD, AREA[2] - PAD, AREA[3] - PAD)
+HALF_X = AREA[0] + (AREA[2] - AREA[0]) / 2
+HALF_Y = AREA[1] + (AREA[3] - AREA[1]) / 2
+GOAL = (7, 22, 40)
+
+name = 'smallcourse'
+version = '1.0'
+author = 'jojoe'
+area = AREA
+ball = (HALF_X, HALF_Y, 40)
+blue_goal = (
+    AREA[0] - GOAL[0], HALF_Y - GOAL[1] / 2, GOAL[2],
+    AREA[0], HALF_Y + GOAL[1] / 2, 64)
+green_goal = (
+    AREA[2], HALF_Y - GOAL[1] / 2, GOAL[2],
+    AREA[2] + GOAL[0], HALF_Y + GOAL[1] / 2, 64)
+penalty_areas = [
+    (AREA[0], AREA[1] + 43, AREA[0] + 12, AREA[3] - 43),
+    (AREA[2] - 12, AREA[1] + 43, AREA[2], AREA[3] - 43)]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)
+
+def get_entity_location(team, entity_id):
+    return 511, 511, 0

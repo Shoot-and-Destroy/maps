@@ -1,0 +1,11 @@
+name = 'Abordage'
+version = '1'
+author = 'Heracles4, Da Law, Sinful, Stealthbomber, Serious_Sim'
+description = ('Epic pirate ships battle ! DO NOT TRY TO SWIM. SHARKS EVERYWHERE.')
+extensions = {
+     
+     'arena_blue_spawn' : (247, 293, 56),
+     'arena_green_spawn' : (281, 229, 56),
+     'arena_gates': ((281, 232, 54), (246, 287, 54)),
+     'water_damage' : 200
+ }

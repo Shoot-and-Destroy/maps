@@ -1,0 +1,9 @@
+name = 'Triple Royal Parade'
+version = '0.9'
+author = 'Bradley, Reworked by Qult'
+description = 'courtesy of Sauerkraut.'
+extensions = { 'water_damage' : 2 }
+# https://hosting.dgd.cx/map-search?query=royal&file=royalparade.vxl&source=allmaps#iso
+
+
+aloha=True

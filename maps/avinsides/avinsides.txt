@@ -1,0 +1,11 @@
+name = 'avinsides'
+version = '1.0'
+author = 'AVuKYI2R3'
+description = '06/03/13'
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : (219, 255, 59),
+    'arena_green_spawn' : (292, 256, 59),
+    'arena_gates': ((222, 259, 59), (289, 252, 59))
+}

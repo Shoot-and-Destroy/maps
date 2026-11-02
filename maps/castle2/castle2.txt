@@ -1,0 +1,8 @@
+name = 'castle'
+version = '1.0'
+author = 'Danke'
+extensions = {
+     'water_damage' : 100,
+ } 
+
+aloha=True

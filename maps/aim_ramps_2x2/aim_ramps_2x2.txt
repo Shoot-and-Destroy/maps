@@ -1,0 +1,16 @@
+name = 'Aim_Ramps_2x2'
+
+version = '1.0'
+
+author = 'Keviin'
+
+extensions = {
+
+     'arena': True,
+     'arena_blue_spawn' : (268, 242, 20),
+     'arena_green_spawn' : (205, 242, 20),
+     'arena_gates' : ((265, 242, 20), (208, 242, 21)),
+     'water_damage' : 100
+
+
+}

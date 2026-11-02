@@ -1,0 +1,151 @@
+from pyspades.constants import *
+from pyspades.server import ServerProtocol
+import sys
+import os
+import random
+
+MAP_BLOCKS = set()
+# --- IMPORT UNIVERSAL UTILITY ---
+UTILITY_PATH = 'c:\\Gemini\\utility script\\working scripts example'
+if UTILITY_PATH not in sys.path:
+    sys.path.append(UTILITY_PATH)
+
+try:
+    import universal_utility
+except ImportError:
+    try:
+        sys.path.append('../working scripts example')
+        import universal_utility
+    except ImportError:
+        print("Error: Could not import universal_utility")
+        # Fallback dummy classes to prevent crash
+        class universal_utility:
+            def apply_script(p, c, cfg): return p, c
+
+# --- MAP METADATA ---
+name = 'Climb'
+version = '3.9'
+author = 'Qult---(Atelsa)'
+description = 'Rock climbing tournament (Screenshot Logic Implemented)'
+cap_limit = 7
+
+# --- CONFIGURATION ---
+extensions = {
+    'babel': True,
+    'water_damage': 34,
+    'respawn_time': 12.0,
+    'grenade_damage_multiplier': 0.15,
+    'no_build_zones': [
+        (0, 512, 0, 176),
+        (0, 512, 336, 512),
+        (238, 275, 192, 320),
+        (184, 229, 224, 288, 58, 61),
+        (284, 328, 224, 288, 58, 61)
+    ]
+}
+
+# --- GLOBAL STORAGE (From Screenshot) ---
+# Используем set() вместо [] для производительности, но логика та же
+
+
+# --- STANDARD MAP LOGIC ---
+def get_spawn_location(connection):
+    attempt = 0
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(223, 228)
+        y = random.randrange(225, 287)
+    elif connection.team is connection.protocol.team_2:
+        x = random.randrange(285, 290)
+        y = random.randrange(225, 287)
+    else:
+        return (256, 256, 60)
+
+    while attempt < 30:
+        z = connection.protocol.map.get_z(x, y, 61)
+        if z in (63, 62):
+            return (x, y, z)
+        attempt += 1
+    
+    return (x, y, connection.protocol.map.get_z(x, y, 61))
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_BASE:
+        x, y = 219, 280
+    elif entity_id == GREEN_BASE:
+        x, y = 295, 232
+    else:
+        return (0, 0, 0)
+    z = team.protocol.map.get_z(x, y)
+    return (x, y, z)
+
+# --- SCRIPT LOGIC ---
+
+def on_map_change(self, map):
+    global MAP_BLOCKS
+    # Re-initialize as a SET, not a list
+    MAP_BLOCKS = set()
+    for x in range(512):
+        for y in range(512):
+            for z in range(64):
+                if self.map.get_solid(x,y,z):
+                    # Using .add() is cleaner for sets
+                    MAP_BLOCKS.add((x,y,z))
+
+def is_indestructable(self, x, y, z):
+    global MAP_BLOCKS
+    # This check is now O(1) - Instant
+    if (x,y,z) in MAP_BLOCKS:
+        return True
+    return False
+
+
+
+def apply_script(protocol, connection, config):
+    # Получаем базовые классы от Universal Utility
+    UProtocol, UConnection = universal_utility.apply_script(protocol, connection, config)
+
+    # В Connection ничего менять не нужно, вся защита в Protocol
+    class ClimbConnection(UConnection):
+        pass
+
+    class ClimbProtocol(UProtocol):
+        # 1. ЛОГИКА СО СКРИНШОТА: Сканирование карты
+        def on_map_change(self, map):
+            global MAP_BLOCKS
+            MAP_BLOCKS.clear()
+            
+            # Проходим по всем координатам (как на скрине)
+            for x in range(512):
+                for y in range(512):
+                    for z in range(64):
+                        if map.get_solid(x, y, z):
+                            MAP_BLOCKS.add((x, y, z))
+            
+            print(f"[Climb+] Protection active. {len(MAP_BLOCKS)} blocks indexed.")
+            # Важно: вызываем super, чтобы сработал Universal Utility (стены и прочее)
+            return super(ClimbProtocol, self).on_map_change(map)
+
+        # 2. ЛОГИКА СО СКРИНШОТА: Проверка на неразрушимость
+        def is_indestructable(self, x, y, z):
+            global MAP_BLOCKS
+            
+            # Если блок в списке изначальных - ВОЗВРАЩАЕМ TRUE (защищено)
+            if (x, y, z) in MAP_BLOCKS:
+                return True
+                
+            # Если не в списке, спрашиваем Universal Utility (там проверки зон и стен)
+            return super(ClimbProtocol, self).is_indestructable(x, y, z)
+
+    # --- HOTFIX (Для работы без перезагрузки сервера) ---
+    # Если скрипт загрузился на лету, on_map_change не вызовется сам.
+    # Вызываем сканирование вручную.
+    if hasattr(protocol, 'map') and protocol.map and not MAP_BLOCKS:
+        print("[Climb+] Late load detected. Scanning map blocks manually...")
+        for x in range(512):
+            for y in range(512):
+                for z in range(64):
+                    if protocol.map.get_solid(x, y, z):
+                        MAP_BLOCKS.add((x, y, z))
+        print(f"[Climb+] Done. {len(MAP_BLOCKS)} blocks protected.")
+
+    return ClimbProtocol, ClimbConnection

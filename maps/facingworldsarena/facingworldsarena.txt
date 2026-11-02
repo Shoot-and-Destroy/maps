@@ -1,0 +1,13 @@
+name = 'facingworldsarena'
+version = '1.2'
+author = 'Kaprekar.'
+description = ('Modified by AVuKY. A remake of the classic Facing Worlds map from Unreal Tournament.')
+cap_limit = 7
+fog = (30, 30, 30)
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (190, 257, 53),
+     'arena_green_spawn' : (321, 257, 53),
+     'arena_gates': ((323, 247, 53), (188, 264, 53))
+}

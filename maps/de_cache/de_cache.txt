@@ -1,0 +1,12 @@
+name = 'de_cache'
+version = '2.0'
+author = 'Keviin, DarkS'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (274,411,59),
+     'arena_green_spawn' : (304,225,59),
+     'arena_gates' : ((280, 410, 58), (303, 230, 59)),
+     'water_damage' : 100
+ }
+
+aloha=True

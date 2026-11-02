@@ -1,0 +1,16 @@
+name = 'Cs_speedrun'
+
+version = '1.0'
+
+author = 'Keviin'
+
+extensions = {
+
+     'arena': True,
+     'arena_blue_spawn' : (193, 223, 58),
+     'arena_green_spawn' : (258, 224, 58),
+     'arena_gates' : ((199, 224, 59), (251, 224, 59)),
+     'water_damage' : 100
+
+
+}

@@ -1,0 +1,56 @@
+author="Xenon"
+description="Well this could also fit to the 4-teams game mode!"
+name = "Island Jackway"
+
+from random import randint
+from pyspades.constants import *
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        if randint(0,1) == 0:
+            x = randint(70,121)
+            y = randint(230, 281)
+            z = team.protocol.map.get_z(x,y)
+        else:
+            x = randint(230, 280)
+            y = randint(70, 120)
+            z = team.protocol.map.get_z(x,y)
+        return (x,y,z)
+    if entity_id == BLUE_BASE:
+        return (95.5,255.5, team.protocol.map.get_z(95.5, 255.5))
+    if entity_id == GREEN_FLAG:
+        if randint(0,1) == 0:
+            x = randint(390,441)
+            y = randint(230, 281)
+            z = team.protocol.map.get_z(x,y)
+        else:
+            x = randint(230, 280)
+            y = randint(390, 441)
+            z = team.protocol.map.get_z(x,y)
+        return (x,y,z)
+    if entity_id == GREEN_BASE:
+        return (415.5,255.5, team.protocol.map.get_z(415.5,255.5))
+
+
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        if randint(0,1) == 0:
+            x = randint(70,121)
+            y = randint(230, 281)
+            z = connection.protocol.map.get_z(x,y)
+        else:
+            x = randint(230, 280)
+            y = randint(70, 120)
+            z = connection.protocol.map.get_z(x,y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        if randint(0,1) == 0:
+            x = randint(390,441)
+            y = randint(230, 281)
+            z = connection.protocol.map.get_z(x,y)
+        else:
+            x = randint(230, 280)
+            y = randint(390, 441)
+            z = connection.protocol.map.get_z(x,y)
+        return x, y, z

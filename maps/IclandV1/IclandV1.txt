@@ -1,0 +1,5 @@
+name = 'Icland'
+version = '1.0'
+author = 'Fistashka3'
+description = 'minecraft map'
+# https://www.planetminecraft.com/project/dead-island-6906781/

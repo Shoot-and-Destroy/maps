@@ -1,0 +1,13 @@
+name = 'frontier'
+version = '1.0'
+author = 'Jdrew'
+description = 'A western style push map'
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (180, 487, 58),
+'push_blue_cp' : (313, 154, 49),
+'push_green_spawn' : (329, 488, 48),
+'push_green_cp' : (211, 158, 42),
+'water_damage' : 100
+  }

@@ -1,0 +1,11 @@
+name = 'Gen city'
+version = '1.0'
+author = 'lecom'
+description = ('Randomly generated city')
+
+import random
+
+def get_spawn_location(self):
+    x = random.randint(0, 511)
+    y = random.randint(0, 511)
+    return (x, y, self.protocol.map.get_height(x, y))

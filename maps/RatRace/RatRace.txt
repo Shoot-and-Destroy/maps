@@ -1,0 +1,54 @@
+AREA = (58, 153, 452, 356)
+PAD = 5
+WIDTH = 40
+BLUE_RECT = (AREA[0] + PAD, AREA[1] + PAD, AREA[0] + PAD + WIDTH, AREA[3] - PAD)
+GREEN_RECT = (AREA[2] - PAD - WIDTH, AREA[1] + PAD, AREA[2] - PAD, AREA[3] - PAD)
+HALF_X = AREA[0] + (AREA[2] - AREA[0]) / 2
+HALF_Y = AREA[1] + (AREA[3] - AREA[1]) / 2
+GOAL = (8, 32, 40)
+ 
+name = 'RatRace'
+version = '1.0'
+author = 'jojoe & learn_more'
+area = AREA
+ball = (HALF_X, HALF_Y, 40)
+
+extensions = {
+	'minefields' : [
+		{
+			'border' : 1,
+			'left' : 58,
+			'top' : 153,
+			'right' : 452,
+			'bottom' : 356,
+		}
+	]
+}
+
+minefield_required_version = 1.6	# we need atleast version 1.0 of the minefield script!!!
+def on_map_change(self, map):
+	minefield_ver = getattr(self, 'minefield_version', 0)
+	if minefield_ver < minefield_required_version:
+		msg = 'WARNING, THIS MAP NEEDS ATLEAST VERSION {0} OF THE MINEFIELD EXTENSION'.format(minefield_required_version)
+		self.send_chat( msg, irc = True )
+		print msg
+		print 'Get it at: https://github.com/learn-more/pysnip/blob/master/scripts/minefield.py'
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)
+ 
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (394, 238, 39)
+    if entity_id == BLUE_FLAG:
+        return (120, 270, 39)
+    if entity_id == GREEN_BASE:
+        return (394, 271, 39)
+    if entity_id == BLUE_BASE:
+        return (120, 239, 39)

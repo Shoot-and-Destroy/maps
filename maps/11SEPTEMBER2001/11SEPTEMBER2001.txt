@@ -1,0 +1,12 @@
+name = '11September2001'
+version = '1.0'
+author = 'Ananas'
+description = 'Prost'
+cap_limit = 4
+extensions = {
+    'arena': True,
+    'arena_blue_spawn': (304, 265, 15.7),
+    'arena_green_spawn': (199, 256, 15.7),
+    'arena_gates': ((297, 267, 16), (203, 256, 16)),
+    'water_damage': 100
+}

@@ -1,0 +1,4 @@
+name = 'Storm Fort'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders, Reworked by Qult'
+description = 'SuperCool Storm Fort'

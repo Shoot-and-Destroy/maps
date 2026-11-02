@@ -1,0 +1,6 @@
+name = 'PAdesert'
+version = '1.0'
+author = 'Fat Idiot'
+extensions = {
+     'babel' : True
+}

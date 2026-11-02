@@ -1,0 +1,13 @@
+name = '10 years aloha.pk'
+version = '1.0'
+author = 'DarioN'
+description = 'Happy birthday aloha.pk'
+fog = (35, 45, 50)
+extensions = {
+    'glow_enabled': True,
+    'glow_global_multiplier': (255, 255, 255),
+    'stored_colors': {}
+}
+
+
+aloha=True

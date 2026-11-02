@@ -1,0 +1,15 @@
+name = 'Bikini Atoll'
+version = '1.0'
+author = 'IAmYourFriend'
+description = ('Push map based on the atomic bomb testing on the Bikini Atoll in 1946.')
+fog = (127, 231, 254)
+
+extensions = {
+'push': True,
+'push_spawn_range' : 3,
+'push_blue_spawn' : (170, 347, 45),
+'push_blue_cp' : (209, 101, 45),
+'push_green_spawn' : (327, 347, 45),
+'push_green_cp' : (288, 101, 45),
+'water_damage' : 100
+}

@@ -1,0 +1,49 @@
+name = 'BattleOfBlockland'
+version = '1.0'
+author = 'Rocky/tGM'
+description = ('Map made with helpers')
+
+
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+
+spawn_locations_green = [
+	(384, 315),
+	(379, 335),
+	(401, 316)
+]
+
+spawn_locations_blue = [
+	(166, 11),
+	(183, 22),
+	(251, 28),
+	(277, 5), 
+	(275, 28),
+	(281, 39),
+	(164, 30),
+	(168, 36)
+]
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(222, 2)
+        return (222, 2, z)
+    if entity_id == BLUE_BASE:
+	z = team.protocol.map.get_z(223, 29)
+	return (223, 29, z)
+    if entity_id == GREEN_BASE:
+	z = team.protocol.map.get_z(258, 231)
+	return (258, 231, z)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+	x, y = choice(spawn_locations_green)
+	z = connection.protocol.map.get_z(x, y)
+	return (x, y, z)
+    if connection.team is connection.protocol.blue_team:
+	x, y = choice(spawn_locations_blue)
+	z = connection.protocol.map.get_z(x, y)
+	return (x, y, z)

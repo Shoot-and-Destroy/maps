@@ -1,0 +1,8 @@
+name = 'Poozle'
+version = '1.2'
+author = 'Fucknut and Lostmotel'
+description = ('bunch of puzzle pieces')
+extensions = { 'water_damage' : 10,'babel' : True}
+
+
+aloha=True

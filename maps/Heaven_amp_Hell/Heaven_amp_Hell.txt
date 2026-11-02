@@ -1,0 +1,4 @@
+name = 'Heaven & Hell'
+version = '1.0'
+author = 'Yourself'
+description = 'A double level map connected by staircases.'

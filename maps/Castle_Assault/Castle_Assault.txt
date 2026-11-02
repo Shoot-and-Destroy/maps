@@ -1,0 +1,35 @@
+name = 'Castle Assault'
+version = '1.0'
+author = 'TheGrandmaster'
+description = 'First map for the Infiltration gamemode, made by tGM, ' \
+    '[Animus]ExiTed, SolRaK and CptCrow'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(49, 265)
+        return (49, 265, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(36, 265)
+        return (36, 265, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(332, 266)
+        return (332, 266, z)
+
+spawn_locations = [
+    (35, 288),
+    (72, 281),
+    (72, 249),
+    (36, 242),
+    (38, 281),
+    (33, 250)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+	x, y = choice(spawn_locations)
+	z = connection.protocol.map.get_z(x, y)
+	return x, y, z

@@ -1,0 +1,16 @@
+name = 'Aim_P2000_2x2'
+
+version = '1.0'
+
+author = 'Keviin, DarkS'
+
+extensions = {
+
+     'arena': True,
+     'arena_blue_spawn' : (191, 262, 20),
+     'arena_green_spawn' : (257, 263, 20),
+     'arena_gates' : ((194, 264, 21), (254, 264, 20)),
+     'water_damage' : 100
+
+
+}

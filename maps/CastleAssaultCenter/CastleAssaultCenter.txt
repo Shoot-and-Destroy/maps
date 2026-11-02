@@ -1,0 +1,3 @@
+name = 'SpawnCamping Kingdom'
+version = '1.0'
+author = 'TheGrandmaster, Reworked by Qult'

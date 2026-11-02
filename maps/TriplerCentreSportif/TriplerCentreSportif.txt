@@ -1,0 +1,4 @@
+name = 'TriplerCentreSportif'
+version = '1.1'
+author = 'witch007, Reworked by Qult'
+# https://hosting.dgd.cx/map-search?query=sportif&file=CentreSportifArena.vxl&source=allmaps#iso

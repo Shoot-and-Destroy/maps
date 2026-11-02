@@ -1,0 +1,12 @@
+name = "EF2"
+version = '1.0'
+author = 'vip'
+fog = (0, 0, 0)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (258,91,46),
+     'arena_green_spawn' : (382,101,46),
+     'arena_gates': ((262,94,43) , (378,98,43))
+ }
+

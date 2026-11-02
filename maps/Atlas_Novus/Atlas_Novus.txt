@@ -1,0 +1,74 @@
+name = 'Atlas Novus'
+version = '1.0'
+author = 'Lostmotel'
+extensions = { 'water_damage' : 200}
+
+
+
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+
+intel_locations_green = [ (404, 295), (392, 275), (399, 249), (377, 262) ]
+
+spawn_locations_green = [ (451, 314), (445, 291), (441, 259), (423, 256), (414, 277), (414, 305), (401, 320),
+ (392, 303), (384, 278), (395, 243), (385, 308), (431, 270) ]
+
+base_locations_green =  [ (401, 320) ]
+
+intel_locations_blue =  [ (106, 295), (118, 275), (111, 249), (137, 262) ]
+
+spawn_locations_blue =  [ (59, 314), (65, 291), (69, 259), (87, 256), (96, 277), (96, 305), (109, 320),
+ (118, 303), (128, 278), (117, 243), (125, 308), (79, 270) ]
+
+base_locations_blue =   [ (109, 320) ]
+
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x, y = choice(intel_locations_blue)
+        return (x, y, team.protocol.map.get_z(x, y))
+
+    if entity_id == BLUE_BASE:
+        x, y = choice(base_locations_blue)
+        return (x, y, team.protocol.map.get_z(x, y))
+
+    if entity_id == GREEN_FLAG:
+        x, y = choice(intel_locations_green)
+        return (x, y, team.protocol.map.get_z(x, y))
+
+    if entity_id == GREEN_BASE:
+        x, y = choice(base_locations_green)
+        return (x, y, team.protocol.map.get_z(x, y))
+
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        return x, y, connection.protocol.map.get_z(x, y)
+
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        return x, y, connection.protocol.map.get_z(x, y)
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

@@ -1,0 +1,26 @@
+from pyspades.constants import *
+import random
+
+name = "Myst Mirror"
+version = '1.0'
+author = 'onigiri, Reworked by Qult'
+
+
+
+
+def get_spawn_location(connection):
+    # --- КОМАНДА 1 (Синие) ---
+    if connection.team is connection.protocol.team_1:
+        # X: 169-174, Y: 238-277
+        x = random.randrange(118-10, 118-10)
+        y = random.randrange(256-10, 256+10)
+        
+    # --- КОМАНДА 2 (Зеленые) ---
+    elif connection.team is connection.protocol.team_2:
+        # X: 350-356, Y: 243-280
+        x = random.randrange(394-10, 394+10)
+        y = random.randrange(256-10, 256+10)
+        
+    # Наблюдатели
+    else:
+        return (256, 256, 60)

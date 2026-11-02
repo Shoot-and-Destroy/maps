@@ -1,0 +1,1 @@
+name = 'SFtrain'version = '1.0'author = 'T0M'description = 'SpecialForce map'extensions = {     'arena': True,     'arena_blue_spawn' : (289,181,54),     'arena_green_spawn' : (255,344,54),     'arena_gates' : ((286,178,48),(252,341,48)) }

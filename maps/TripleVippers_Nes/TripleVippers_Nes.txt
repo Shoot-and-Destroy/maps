@@ -1,0 +1,10 @@
+﻿name = "Triple Vipper's Babel (NES)"
+version = '1.0'
+author = 'Japanese Vippers: onigiri, T0M, engawa, JohnVIP, Falcon, Smi, tatuem, kabocha, vippei, chin, avip, USAMIMI, Reworked by Qult'
+fog = (192, 192, 192)
+extensions = {
+	'babel' : True, 
+	'heavens_color' : (240, 240, 240, 255)
+}
+# https://hosting.dgd.cx/map-search?query=vippers&file=vippers_nes.vxl&source=allmaps#iso
+aloha=True

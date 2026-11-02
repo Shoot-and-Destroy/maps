@@ -1,0 +1,68 @@
+from pyspades.constants import *
+import random
+
+name = 'CupPushP'
+version = '1.1'
+author = 'Qult---(Atelsa)'
+description = 'The map with spatial gates reproduces the push mini-game mode.'
+extensions = {
+    'babel' : True, 
+    'respawn_time' : 3,
+    'water_damage': 100,
+    'grenade_damage' : 0.15,
+    'teleports': [
+        ((23, 256, 58), 5, [(364, 324, 41), (364, 330, 41), (306, 182, 29), (306, 188, 29)]), #BigPP
+        ((488, 256, 58), 5, [(204, 324, 29), (204, 330, 29), (146, 182, 41), (146, 188, 41)]), #BigYP
+        ((306, 185, 29), 2, [(364, 324, 41), (364, 330, 41)]), #+p
+        ((364, 327, 41), 2, [(306, 182, 29), (306, 188, 29)]), #+p
+        ((146, 185, 41), 2, [(204, 324, 29), (204, 330, 29)]), #+y
+        ((204, 327, 29), 2, [(146, 182, 41), (146, 188, 41)])  #+y
+    ],
+'no_build_zones': [
+        ((23, 256, 58), 17, 0), #BigPP
+        ((488, 256, 58), 17, 0), #BigYP
+        ((306, 185, 29), 5, 0), #+p
+        ((364, 327, 41), 5, 0), #+p
+        ((146, 185, 29), 5, 0), #+y
+        ((204, 327, 41), 5, 0), #+y
+        ((129, 246, 61), 4, 9),  #pylon
+        ((147, 267, 61), 4, 18),  #pylon
+        ((179, 256, 61), 10, 26),  #pylon
+        ((214, 256, 61), 5, 40),  #pylon
+        ((231, 256, 61), 1, 47),  #pylon
+        ((255, 256, 61), 15, 38),  #pylon
+        ((381, 266, 61), 4, 9),  #pylon
+        ((363, 245, 61), 4, 18),  #pylon
+        ((332, 256, 61), 10, 26),  #pylon
+        ((296, 256, 61), 5, 40),  #pylon
+        ((279, 256, 61), 1, 47)  #pylon
+    ]
+}
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(79, 89)
+        y = random.randrange(235, 277)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(425, 435)
+        y = random.randrange(235, 277)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = 85
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 425
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)

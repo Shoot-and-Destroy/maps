@@ -1,0 +1,4 @@
+name = 'Shaft'
+version = '1.0'
+author = 'JoJoe-Stinky AKA Jason Bonham Alii3D.com'
+description = 'Fortress fun, with a mineshaft, and a hole'

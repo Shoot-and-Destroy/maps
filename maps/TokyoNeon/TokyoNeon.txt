@@ -1,0 +1,30 @@
+
+
+from pyspades.constants import *
+import random
+
+name = 'TokyoNeon'
+version = '1.0'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+fog = (135,130,165)
+
+
+def get_spawn_location(connection):
+    # Команда 1 (Синие)
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(144, 148)
+        y = random.randrange(226, 310)
+        
+    # Команда 2 (Зеленые)
+    elif connection.team is connection.protocol.team_2:
+        x = random.randrange(362, 366)
+        y = random.randrange(208, 289)
+        
+    else:
+        return (256, 256, 0)
+
+    # Спавн на поверхности
+    z = connection.protocol.map.get_z(x, y)
+    
+    return (x, y, z)

@@ -1,0 +1,25 @@
+name = 'nuketown_tall'
+
+version = '1.0'
+
+author = 'T0M'
+
+fog = (127, 255, 255)
+
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x2 = random.randrange(256,291)
+        y2 = random.randrange(186,205)
+        z2 = connection.protocol.map.get_z(x2, y2)
+        return (x2, y2, z2)
+    if connection.team is connection.protocol.green_team:
+        x3 = random.randrange(258,289)
+        y3 = random.randrange(302,316)
+        z3 = connection.protocol.map.get_z(x3, y3)
+        return (x3, y3, z3)

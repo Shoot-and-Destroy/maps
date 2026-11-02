@@ -1,0 +1,53 @@
+from pyspades.constants import *
+import random
+
+name = 'DividedThrone night'
+version = '1.0'
+author = 'Qult---(Atelsa)'
+description = 'Map for classic Babel'
+extensions = {
+    'babel' : True
+}
+
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        where=int(random.randrange(1,3))
+        if where == 1:        
+            x = random.randrange(110, 124)
+            y = random.randrange(245, 267)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+        if where == 2:
+            x = random.randrange(148, 175)
+            y = random.randrange(211, 267)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        where=int(random.randrange(1,3))
+        if where == 1:
+            x = random.randrange(387, 401)
+            y = random.randrange(245, 267)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+        if where == 2:
+            x = random.randrange(337, 364)
+            y = random.randrange(211, 301)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = 117
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 394
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)

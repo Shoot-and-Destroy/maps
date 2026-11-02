@@ -1,0 +1,16 @@
+name = 'Push Template'
+version = '1.0'
+author = ''
+description = "Water blocks can still be replaced afterwards"
+
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (210, 407, 1),
+'push_blue_cp' : (210, 88, 1),
+'push_blue_build_area' : (160, 140, 240, 480),
+'push_green_spawn' : (300, 407, 1),
+'push_green_cp' : (300, 88, 1),
+'push_green_build_area' : (270, 140, 348, 480),
+'water_damage' : 100
+}

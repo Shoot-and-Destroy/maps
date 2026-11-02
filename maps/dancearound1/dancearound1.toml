@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "dancearound1"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.219
+area_land = 0.396
+spawn_dry = [0.61, 0.61]
+
+[map.fitness.ngctf]
+pass = false
+water = 13.8
+map_deaths = 0.019
+fight_kills = 204.0
+objective = 7
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 5.85
+map_deaths = 0.0
+fight_kills = 139.0
+objective = 14
+failed = ["water", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 7.9
+map_deaths = 0.002
+fight_kills = 227.5
+objective = 7
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 3.95
+map_deaths = 0.008
+fight_kills = 262.0
+objective = 12
+failed = ["land", "water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 21.2
+map_deaths = 0.022
+fight_kills = 109.5
+objective = 9
+failed = ["land", "water", "spawn"]

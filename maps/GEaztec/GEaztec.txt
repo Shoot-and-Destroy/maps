@@ -1,0 +1,1 @@
+name = 'GEaztec'version = '1.0'author = 'T0M'description = 'GoldenEye map'fog = (160, 110, 64)extensions = {     'arena': True,     'arena_blue_spawn' : (180,278,35),     'arena_green_spawn' : (354,258,30),     'arena_gates' : ((177,275,31),(348,256,28)),     'water_damage' : 100 }

@@ -1,0 +1,18 @@
+name = 'Swag 2 Push'
+version = '1.0'
+author = 'Lostmotel'
+description = "Mirrored by Rakete"
+fog = (44, 25, 0)
+
+extensions = {
+'push': True,
+'push_spawn_range' : 3,
+'push_blue_spawn' : (68, 191, 35),
+'push_blue_cp' : (428, 231, 52),
+'push_green_spawn' : (68, 321, 35),
+'push_green_cp' : (428, 281, 52),
+'push_blue_build_area' : (0, 128, 511, 255),
+'push_green_build_area' : (0, 256, 511, 384),
+'water_damage' : 100,
+
+ }

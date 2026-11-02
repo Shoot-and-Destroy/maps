@@ -1,0 +1,4 @@
+name = 'Mini Hills'
+version = '1.0'
+author = 'Kuma'
+description = ('An island with mini hills')

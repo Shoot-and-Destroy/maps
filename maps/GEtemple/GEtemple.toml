@@ -1,0 +1,49 @@
+[map]
+modes = ["tc", "zombie"]
+author = "T0M"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [206, 282, 53], end = [235, 283, 58] }
+team2 = { start = [282, 258, 56], end = [284, 288, 56] }
+
+[map.fitness]
+land = 1.0
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.076
+fight_kills = 269.0
+objective = 0
+failed = ["objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.052
+fight_kills = 339.0
+objective = 0
+failed = ["objective"]
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.035
+fight_kills = 136.0
+objective = 68
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.029
+fight_kills = 84.0
+objective = 8
+failed = []

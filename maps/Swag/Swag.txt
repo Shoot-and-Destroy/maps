@@ -1,0 +1,7 @@
+name = 'Swag'
+version = '1.1'
+author = 'Lostmotel'
+extensions = { 
+'boundary_damage' : {'left' : 1, 'right' : 510, 'top' : 64, 'bottom' : 448, 'damage': 5},
+'heavens_color' : (255, 255, 160, 255),
+'babel' : True }

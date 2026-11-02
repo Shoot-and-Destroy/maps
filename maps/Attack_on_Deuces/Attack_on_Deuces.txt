@@ -1,0 +1,5 @@
+name = 'Attack on Deuces'
+
+version = '1.0'
+
+author = 'Jdrew'

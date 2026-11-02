@@ -1,0 +1,13 @@
+name = 'Crossover'
+version = '1.0'
+author = 'DiscipLe'
+description = 'Rocky.'
+fog = (186, 220, 224)
+cap_limit = 10
+extensions = {
+     'arena': True,
+     'arena_green_spawns' : ((292, 253, 56),),
+     'arena_blue_spawns' : ((219, 253, 56),),
+     'arena_gates' : ((289, 255, 55), (221, 252, 54)),
+     'water_damage' : 100
+}                     

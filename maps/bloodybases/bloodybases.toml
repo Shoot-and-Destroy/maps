@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "zombie"]
+author = "bloodybases"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.935
+area_land = 0.942
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 5.8
+map_deaths = 0.002
+fight_kills = 207.0
+objective = 4
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 3.2
+map_deaths = 0.004
+fight_kills = 117.0
+objective = 3
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 4.95
+map_deaths = 0.003
+fight_kills = 172.5
+objective = 10
+failed = ["water"]
+
+[map.fitness.tc]
+pass = false
+water = 5.4
+map_deaths = 0.005
+fight_kills = 205.5
+objective = 37
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = true
+water = 1.85
+map_deaths = 0.012
+fight_kills = 128.0
+objective = 9
+failed = []

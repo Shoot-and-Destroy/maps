@@ -1,0 +1,4 @@
+name = 'Hiesville'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+

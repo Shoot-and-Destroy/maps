@@ -1,0 +1,32 @@
+name = 'INFIN'
+version = '1.0'
+author = 'Danke'
+extensions = { 
+	'water_damage' : 5,
+	'babel' : True, 
+}
+
+BLUE_RECT = ( 84,229,119,282)
+GREEN_RECT = ( 392,229,427,282)
+
+import random
+def get_spawn_location(connection):
+	br1 = BLUE_RECT
+	gr1 = GREEN_RECT
+	if connection.team is connection.protocol.blue_team:
+		return connection.protocol.get_random_location(True, br1)
+	elif connection.team is connection.protocol.green_team:
+		return connection.protocol.get_random_location(True, gr1)
+		
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (410,256, 60)
+	if entity_id == BLUE_BASE:
+		return (102,256,60)		
+
+
+aloha=True

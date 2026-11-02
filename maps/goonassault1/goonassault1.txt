@@ -1,0 +1,8 @@
+name = 'goonassault1'
+version = ''
+author = ''
+description = ('')
+extensions = {
+     
+     'water_damage' : 10
+ }

@@ -1,0 +1,55 @@
+[map]
+modes = ["babel"]
+author = "Onek, TheGrandmaster, Reworked by Qult"
+fog_color = [157, 234, 254]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.29
+area_land = 0.66
+spawn_dry = [0.85, 0.85]
+
+[map.fitness.ngctf]
+pass = false
+water = 2.6
+map_deaths = 0.078
+fight_kills = 106.0
+objective = 4
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 0.5
+map_deaths = 0.074
+fight_kills = 56.0
+objective = 5
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 1.55
+map_deaths = 0.025
+fight_kills = 96.5
+objective = 7
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 1.0
+map_deaths = 0.059
+fight_kills = 142.5
+objective = 10
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.55
+map_deaths = 0.051
+fight_kills = 94.0
+objective = 5
+failed = []

@@ -1,0 +1,12 @@
+name = 'de_vertigo'
+version = '1.0'
+author = 'Keviin, Nuceto, SilveR, Steve.'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (207, 219, 28),
+     'arena_green_spawn' : (206, 275, 39),
+     'arena_gates': ((211, 224, 28), (210, 270, 39)),
+     'water_damage' : 100
+ }
+
+aloha=True

@@ -1,0 +1,42 @@
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(119, 120)
+        y = random.randrange(255, 256)
+        z = 60
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(394, 395)
+        y = random.randrange(255, 256)
+        z = 60
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(100, 140)
+        y = random.randrange(242, 281)
+        z = 59
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(371, 411)
+        y = random.randrange(242, 281)
+        z = 59
+        return (x, y, z)
+
+
+                    
+name = 'Triple Jungle'
+version = '1.0'
+author = 'unknown, Reworked by Qult'
+extensions = { 
+'water_damage' : 5,
+'babel' : True
+}
+
+# https://hosting.dgd.cx/map-search?query=jungle&file=Jungle.vxl&source=allmaps#iso

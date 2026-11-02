@@ -1,0 +1,10 @@
+name = 'de_nuke'
+version = '1.0'
+author = 'Danke-o'
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (382,235,44),
+     'arena_green_spawn' : (123,213,46),
+     'arena_gates': ((387,230,42),(127,217,44)),
+ }

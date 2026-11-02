@@ -1,0 +1,49 @@
+name = 'Butte'
+version = '1.0'
+author = 'Influx'
+description = ''
+
+fog = (220, 240, 220)
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(89, 155)
+        y = random.randrange(284, 367)
+        z = team.protocol.map.get_z(x,y)
+        return (x,y,z)
+
+    if entity_id == BLUE_BASE:
+        x = 129 # random.randrange(63,119)
+        y = 321 #random.randrange(224,288)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(371,408)
+        y = random.randrange(156, 209)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 386 #random.randrange(392,448)
+        y = 192 #random.randrange(224,228)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(89, 155)
+        y = random.randrange(284, 367)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(371,408)
+        y = random.randrange(156, 209)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)

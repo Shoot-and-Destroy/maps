@@ -1,0 +1,6 @@
+name = 'Neonriverforts'
+
+fog = (0, 0, 0)
+
+
+aloha=True

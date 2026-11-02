@@ -1,0 +1,16 @@
+name = 'Monumental Deuce'
+version = '1.0'
+#author = '*Sauerkraut'
+description = ('This map is for the push gamemode. Recovered')
+
+extensions = {
+'push': True,
+'push_spawn_range' : 10,
+'push_blue_spawn' : (211, 407, 59),
+'push_blue_cp' : (253, 14, 59),
+'push_blue_build_area' : (128, 0, 255, 511),
+'push_green_spawn' : (301, 407, 1),
+'push_green_cp' : (259, 14, 59),
+'push_green_build_area' : (256, 0, 511, 511),
+'water_damage' : 100
+}

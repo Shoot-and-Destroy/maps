@@ -1,0 +1,50 @@
+from pyspades.constants import *
+import random
+
+# --- MAP METADATA ---
+name = 'Volcano BabelV2'
+version = '1.1'
+author = 'RandomJack and SuperCool Builders, Reworked by Qult'
+description = 'SuperCool Volcano - Smart Z Spawn'
+extensions = {'water_damage': 34}
+fog = (185, 165, 135)
+
+# --- SPAWN LOGIC ---
+def get_spawn_location(connection):
+    # Наглядачі
+    if connection.team not in (connection.protocol.team_1, connection.protocol.team_2):
+        return (256, 256, 60)
+
+    # Команда 1 (Сині)
+    if connection.team is connection.protocol.team_1:
+        x = random.randint(102, 113)
+        y = random.randint(234, 276)
+        start_z = 47
+        
+    # Команда 2 (Зелені)
+    elif connection.team is connection.protocol.team_2:
+        x = random.randint(395, 407)
+        y = random.randint(244, 262)
+        start_z = 37
+
+    map_obj = connection.protocol.map
+
+    # --- ФАЗА 1: Пошук ДО НИЗУ (від стартової висоти до дна карти 63) ---
+    for z in range(start_z, 64):
+        if map_obj.get_solid(x, y, z):
+            # Перевіряємо, чи є над цим блоком 3 вільних (порожніх) вокселі
+            if z >= 3 and not map_obj.get_solid(x, y, z-1) and not map_obj.get_solid(x, y, z-2) and not map_obj.get_solid(x, y, z-3):
+                return (x, y, z - 1)
+
+    # --- ФАЗА 2: Пошук ДО ВЕРХУ (якщо внизу немає місця, шукаємо від стартової висоти до неба 0) ---
+    for z in range(start_z - 1, 0, -1):
+        if map_obj.get_solid(x, y, z):
+            if z >= 3 and not map_obj.get_solid(x, y, z-1) and not map_obj.get_solid(x, y, z-2) and not map_obj.get_solid(x, y, z-3):
+                return (x, y, z - 1)
+
+    # Страховочний варіант (якщо це суцільний стовп землі від неба до бедрока)
+    fallback_z = map_obj.get_z(x, y)
+    if fallback_z:
+        return (x, y, fallback_z)
+    
+    return (x, y, 60)

@@ -1,0 +1,29 @@
+name = 'hoth'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Hoth - The Empire Strikes Back'
+extensions = {'water_damage':200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (340, 205, 56)
+    if entity_id == BLUE_FLAG:
+        return (149, 200, 58)
+    if entity_id == GREEN_BASE:
+        return (454, 98, 49)
+    if entity_id == BLUE_BASE:
+        return (67, 106, 54)
+	
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+	gx = random.randrange(442,454)
+	gy = random.randrange(98,127)
+        return (gx, gy, 49)
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(67,80)
+	by = random.randrange(98,127)
+	return (bx, by, 54)

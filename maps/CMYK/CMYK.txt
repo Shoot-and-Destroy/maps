@@ -1,0 +1,9 @@
+name = 'CMYK'
+version = '1'
+author = 'Marshmello'
+description = ("2nd BUILD EMIPIRE server's map")
+
+extensions = {
+
+}
+

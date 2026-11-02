@@ -1,0 +1,3 @@
+name = 'Blopsss'
+version = '1.0'
+author = 'unknown, Reworked by Qult'

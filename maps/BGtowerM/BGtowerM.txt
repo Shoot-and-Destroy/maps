@@ -1,0 +1,16 @@
+name = 'BGtowerArena'
+
+version = '1.0'
+
+author = 'T0M'
+
+fog = (191, 127, 0)
+
+description = 'BeGone copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (272,209,59),
+     'arena_green_spawn' : (191,264,59),
+     'arena_gates': ((275,212,54),(194,261,54)),
+     'water_damage' : 200
+ }

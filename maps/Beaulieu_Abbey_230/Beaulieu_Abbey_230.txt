@@ -1,0 +1,59 @@
+name = 'Beaulieu Abbey'
+version = '1.0'
+author = 'Serious_Sim'
+description = 'Innacurate remake of a french abbey. For Infiltration mode.'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(142, 304)
+        return (142, 304, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(124, 315)
+        return (124, 315, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(410, 277)
+        return (410, 277, z)
+
+spawn_locations_blue = [
+(94, 239),
+(93, 306),
+(112, 258),
+(159, 240),
+(161, 196),
+(126, 318),
+(125, 290),
+(130, 278),
+(175, 347),
+(190, 309),
+(114, 332),
+(129, 257),
+(120, 347)
+]
+
+spawn_locations_green = [
+(417, 277),
+(418, 286),
+(417, 268),
+(432, 267),
+(433, 293),
+(438, 283),
+(405, 290),
+(455, 267),
+(454, 287),
+(402, 250)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+

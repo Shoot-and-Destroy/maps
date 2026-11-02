@@ -1,0 +1,11 @@
+name = 'Shenlong+Crossfire2'
+version = '1.1'
+author = 'Onek, TheGrandmaster, Reworked by Qult'
+description = ("Battle round isle, with thanks to <@>")
+fog = (157, 234, 254)
+extensions = { 'boundary_damage' : {'left' : 32,
+                                    'right' : 480,
+                                    'top' : 118,
+                                    'bottom' : 394,
+                                    'damage': 5 },
+               'babel' : True }

@@ -1,0 +1,45 @@
+name = 'MeleeTbobb'
+version = '1.0'
+author = 'Dany0 and Someone else'
+description = 'Military base melee carnage!'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (256, 228, 46)
+    if entity_id == GREEN_FLAG:
+        return (286, 230, 46)
+    if entity_id == BLUE_BASE:
+        return (231, 234, 57)
+    if entity_id == GREEN_BASE:
+        return (303, 248, 57)
+
+# example spawns
+spawn_locations_blue = [
+    (223, 248, 55),
+    (223, 249, 55),
+    (223, 247, 55)
+]
+
+spawn_locations_green = [
+    (292, 260, 56),
+    (292, 261, 56),
+    (292, 259, 56)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    x += 0.5
+    y += 0.5
+    return x, y, z + 2
+
+
+
+aloha=True

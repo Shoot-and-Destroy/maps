@@ -1,0 +1,24 @@
+name = 'STURM_BOOHENVALDA'
+version = '1.0'
+author = '/VG/ for anon'
+description = 'STURM PEDALNOY PARASHI '
+
+extensions = {
+     'babel' : True,
+     'water_damage' : 10
+}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(100, 260)
+        return (100, 260, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(99, 253)
+        return (99, 253, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(421, 253)
+        return (421,253, z)
+

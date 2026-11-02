@@ -1,0 +1,4 @@
+name = '2base'
+version = '1.0'
+author = 'fake_anon'
+description = '2 bases'

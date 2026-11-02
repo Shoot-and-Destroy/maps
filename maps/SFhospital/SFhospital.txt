@@ -1,0 +1,15 @@
+name = 'SFhospital'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Special Force copy map'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		return (165,178,56)
+	if connection.team is connection.protocol.green_team:
+		return (293,270,48)

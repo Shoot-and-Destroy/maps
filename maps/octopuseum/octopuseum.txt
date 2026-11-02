@@ -1,0 +1,49 @@
+author = "Dr. Morphman"
+description = "octopus + colluseum"
+
+from pyspades.constants import *
+from random import choice
+
+spawn_locations_green = [
+    	(109,206),
+    	(119, 181),
+    	(399, 183),
+    	(400, 207),
+    	(109, 321),
+    	(118, 339),
+    	(410, 324),
+    	(394, 342)
+]
+
+spawn_locations_blue = [
+    	(248, 262),
+    	(244, 268),
+    	(244, 272),
+    	(246, 278),
+    	(261, 281),
+    	(267, 276),
+	(268, 271),
+    	(264, 262),
+	(256, 258)
+]
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(64, 257)
+        return (256, 256, 55)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z (42, 257)
+        return (263, 255, 43)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(449, 255)
+        return (449, 255, z)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z

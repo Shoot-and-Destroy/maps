@@ -1,0 +1,13 @@
+name = 'Hamburg'
+version = '1.76rc10'
+author = 'Snowman Monster'
+description = ('Some map I just made by hand you know.')
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_green_spawn' : (384, 141, 56),
+'push_green_cp' : (258, 423, 46),
+'push_blue_spawn' : (135, 141, 56),
+'push_blue_cp' : (66, 15, 51),
+'water_damage' : 100
+}

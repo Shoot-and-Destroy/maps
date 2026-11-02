@@ -1,0 +1,14 @@
+name = "gotaimen"
+version = '1.0'
+author = 'onigiri'
+
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ((226,257,18)),
+     'arena_green_spawn' : ((284,256,18)),
+     'arena_gates': ((228,261,15),(286,261,15)),
+     'water_damage' : 200,
+ 
+
+}

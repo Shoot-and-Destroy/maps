@@ -1,0 +1,5 @@
+name = 'GeschleustWeg'
+version = '1.0'
+author = 'Lincent'
+description = ('Its a Geschleust Weg to pain...')
+cap_limit = 4

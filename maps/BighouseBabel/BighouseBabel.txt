@@ -1,0 +1,4 @@
+name = 'BighouseBabel'
+version = '1.0'
+author = 'Unknown, Reworked by Qult'
+# https://hosting.dgd.cx/map-search?query=bighouse&file=bighouse.vxl&source=allmaps#iso

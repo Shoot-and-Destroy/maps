@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Builders on *Sauerkraut"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.125
+area_land = 0.224
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 5.7
+map_deaths = 0.141
+fight_kills = 107.0
+objective = 3
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 3.05
+map_deaths = 0.309
+fight_kills = 42.5
+objective = 1
+failed = ["land", "map_deaths", "objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.326
+fight_kills = 72.5
+objective = 10
+failed = ["land", "map_deaths", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.2
+map_deaths = 0.066
+fight_kills = 204.5
+objective = 2
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 4.45
+map_deaths = 0.125
+fight_kills = 42.0
+objective = 2
+failed = ["land", "water", "objective", "spawn"]

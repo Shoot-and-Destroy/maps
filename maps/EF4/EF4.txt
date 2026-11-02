@@ -1,0 +1,12 @@
+name = "EF4"
+version = '1.0'
+author = 'vip'
+
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (263,198,48),
+     'arena_green_spawn' : (377,251,48),
+     'arena_gates': ((264,204,48) , (376,244,48))
+ }
+

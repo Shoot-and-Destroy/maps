@@ -1,0 +1,13 @@
+name = 'avseafort'
+version = '1.3'
+author = 'AVuKY'
+description = 'Roof Added to reduce Grenade a few balance issues fixed.'
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : (242, 242, 58),
+    'arena_green_spawn' : (269, 270, 58),
+    'arena_gates': ((241, 245, 58), (247, 241, 58), (239, 244, 56), (267, 268, 58))
+}
+
+aloha=True

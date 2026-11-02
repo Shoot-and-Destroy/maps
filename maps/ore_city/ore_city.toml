@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "zombie"]
+author = "ore_city"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 1.0
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.166
+fight_kills = 151.0
+objective = 1
+failed = ["map_deaths", "objective"]
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.184
+fight_kills = 86.5
+objective = 16
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.177
+fight_kills = 174.5
+objective = 0
+failed = ["objective"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.038
+fight_kills = 253.0
+objective = 4
+failed = ["objective"]
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.038
+fight_kills = 112.5
+objective = 10
+failed = []

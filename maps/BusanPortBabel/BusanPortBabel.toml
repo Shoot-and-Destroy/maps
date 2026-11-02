@@ -1,0 +1,57 @@
+[map]
+modes = ["babel"]
+author = "ilrak, phalanx, kmsi"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.407
+area_land = 0.909
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.75
+map_deaths = 0.065
+fight_kills = 137.0
+objective = 7
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.15
+map_deaths = 0.028
+fight_kills = 86.5
+objective = 10
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 1.45
+map_deaths = 0.145
+fight_kills = 144.5
+objective = 2
+failed = ["objective"]
+
+[map.fitness.tc]
+pass = true
+water = 0.2
+map_deaths = 0.053
+fight_kills = 189.0
+objective = 10
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 2.95
+map_deaths = 0.191
+fight_kills = 53.0
+objective = 4
+failed = ["water"]

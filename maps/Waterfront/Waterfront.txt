@@ -1,0 +1,4 @@
+name = 'Waterfront'
+version = '1.1'
+author = '[PXY]C'
+description = ('A border of mountains, with a town in the middle. There is also a river that flows into a canyon.')

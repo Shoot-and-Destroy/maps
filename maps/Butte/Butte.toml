@@ -1,0 +1,55 @@
+[map]
+modes = ["zombie"]
+author = "Influx"
+fog_color = [220, 240, 220]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 1.0
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.464
+fight_kills = 52.5
+objective = 208
+failed = ["map_deaths"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.838
+fight_kills = 12.5
+objective = 120
+failed = ["map_deaths", "fight_kills"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.853
+fight_kills = 28.5
+objective = 0
+failed = ["map_deaths", "objective"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.585
+fight_kills = 38.0
+objective = 14
+failed = ["map_deaths"]
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.055
+fight_kills = 103.0
+objective = 8
+failed = []

@@ -1,0 +1,33 @@
+name = 'Anticbridgebabelv2'
+version = '1.0'
+author = 'FAT_IDIOT'
+description = ("It's some kind of bridge with a tunnel in the roof and in the floor. I think it will encourage tunneling. Modified by Hawkan with massive help from Danke for babel goodness")
+
+extensions = { 
+	'babel' : True, 
+	'heavens_type' : 'diamond'
+}
+
+
+fog = (150, 255, 240)
+
+BLUE_RECT =  (44,222,93,291)
+GREEN_RECT =  (416,220,465,289)
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		return connection.protocol.get_random_location(True, BLUE_RECT)
+	elif connection.team is connection.protocol.green_team:
+		return connection.protocol.get_random_location(True, GREEN_RECT)	
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_BASE:
+        return (450, 254, 21)
+    if entity_id == BLUE_BASE:
+        return (58, 256, 21)
+
+
+aloha=True

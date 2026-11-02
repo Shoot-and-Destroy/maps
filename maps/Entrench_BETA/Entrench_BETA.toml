@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "zombie"]
+author = "Entrench_BETA"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.919
+area_land = 0.892
+spawn_dry = [0.83, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 5.0
+map_deaths = 0.014
+fight_kills = 182.5
+objective = 7
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 3.8
+map_deaths = 0.015
+fight_kills = 101.0
+objective = 14
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 3.25
+map_deaths = 0.014
+fight_kills = 173.5
+objective = 9
+failed = ["water"]
+
+[map.fitness.tc]
+pass = false
+water = 4.2
+map_deaths = 0.014
+fight_kills = 181.0
+objective = 30
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = true
+water = 0.65
+map_deaths = 0.008
+fight_kills = 125.5
+objective = 8
+failed = []

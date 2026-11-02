@@ -1,0 +1,14 @@
+name = 'SFdesertcampArena'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Special Force copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (306,217,58),
+     'arena_green_spawn' : (195,282,53),
+     'arena_gates': ((303,220,59),(198,279,52)),
+     'water_damage' : 100
+ }

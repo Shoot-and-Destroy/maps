@@ -1,0 +1,40 @@
+from pyspades.constants import *
+import random
+
+name = 'CallOfDutyArray'
+version = '1.2'
+author = 'onigiri'
+description = 'map miro'
+extensions = { 
+	'babel' : True,
+	'water_damage' : 10
+}
+
+
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(134, 156)
+        y = random.randrange(263, 290)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(356, 378)
+        y = random.randrange(236, 263)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = 123
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 389
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)

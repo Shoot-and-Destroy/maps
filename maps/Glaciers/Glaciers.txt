@@ -1,0 +1,3 @@
+name = "Glaciers"
+author = "Oxlot"
+description = "Yeah, glaciers. A really basic CTF map."

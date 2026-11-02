@@ -1,0 +1,7 @@
+name = 'Stare'
+
+version = '1.0'
+
+author = 'Sample'
+
+description = 'Little creative map with a bridge, cross and houses.'

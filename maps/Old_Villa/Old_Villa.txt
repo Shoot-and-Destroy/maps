@@ -1,0 +1,6 @@
+name = 'Old Villa'
+version = '1.0'
+author = 'Lelue'
+extensions = { 
+'water_damage' : 5,
+'babel' : True }

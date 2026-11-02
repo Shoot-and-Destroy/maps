@@ -1,0 +1,19 @@
+name = "SFbridge"
+version = '1.0'
+author = 'T0M'
+description = 'Special Force copy map'
+
+fog = (195, 195, 195)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (142,256,35),
+     'arena_green_spawn' : (335,318,45),
+     'arena_gates': ((146,256,35),(332,315,41)),
+     'water_damage' : 100,
+     'boundary_damage' : {'left' : 138,
+                          'right' : 381,
+                          'top' : 192,
+                          'bottom' : 384,
+                          'damage': 100 },
+ }

@@ -1,0 +1,55 @@
+[map]
+modes = ["ngctf", "ctf", "tc", "zombie"]
+author = "Blockking"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.329
+area_land = 0.804
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.13
+fight_kills = 107.5
+objective = 7
+failed = []
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.307
+fight_kills = 47.5
+objective = 1
+failed = ["map_deaths", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.183
+fight_kills = 93.5
+objective = 0
+failed = ["objective"]
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.095
+fight_kills = 124.5
+objective = 8
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.05
+map_deaths = 0.065
+fight_kills = 50.0
+objective = 3
+failed = []

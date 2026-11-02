@@ -1,0 +1,28 @@
+name = 'flytest' 
+version = '1.0' 
+author = 'penisman' 
+description = 'fly' 
+
+# script 
+from pyspades.constants import * 
+import random 
+
+def get_entity_location(team, entity_id): 
+    if entity_id == GREEN_FLAG: 
+        return (400, 224, 57) 
+    if entity_id == GREEN_BASE: 
+        return (352, 224, 57) 
+    if entity_id == BLUE_FLAG: 
+        return (73,244,57) 
+    if entity_id == BLUE_BASE: 
+        return (127, 244, 57) 
+
+def get_spawn_location(connection): 
+    if connection.team is connection.protocol.green_team: 
+        x = random.randrange(351,381) 
+        y = random.randrange(195,311) 
+        return (x, y, 57) 
+    if connection.team is connection.protocol.blue_team: 
+        x = random.randrange(127,154) 
+        y = random.randrange(198,319) 
+        return (x, y, 57) 

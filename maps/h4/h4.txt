@@ -1,0 +1,12 @@
+name = "h4"
+version = '1.0'
+author = 'someone'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (509,251,55),
+     'arena_green_spawn' : (452,194,55),
+     'arena_gates': ((508,248,55) , (452,197,55))
+ }
+
+

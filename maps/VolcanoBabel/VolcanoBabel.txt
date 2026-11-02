@@ -1,0 +1,8 @@
+name = 'Volcano Babel'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders, Reworked by Qult'
+description = 'SuperCool Volcano'
+extensions = {'water_damage':100}
+fog = (130, 60, 40)
+# https://hosting.dgd.cx/map-search?query=volcano&file=volcano.vxl&source=allmaps#iso
+

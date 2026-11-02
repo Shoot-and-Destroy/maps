@@ -1,0 +1,6 @@
+name = 'Tortuga'
+version = '1.0'
+author = 'Lostmotel'
+extensions = {
+'tow_locations' : ((106, 256),(155, 210),(208, 156),(306, 158),(258, 207),(407, 235))
+}

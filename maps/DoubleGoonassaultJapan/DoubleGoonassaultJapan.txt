@@ -1,0 +1,35 @@
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        return (137, 255, 58)
+
+    if entity_id == GREEN_BASE:
+        return (374, 255, 58)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(96, 118)
+        y = random.randrange(204, 307)
+        z = connection.protocol.map.get_z(x,y) - 2
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(393, 415)
+        y = random.randrange(204, 307)
+        z = connection.protocol.map.get_z(x,y) - 2
+        return (x, y, z)
+
+name = 'Double Goonassault Japan'
+version = '1.0'
+author = 'Lostmotel, Reworked by Qult'
+fog = (255, 210, 232)
+extensions = { 
+'water_damage' : 10,
+'babel' : True
+}
+# https://hosting.dgd.cx/map-search?query=japan&file=Goonassault+Japan.vxl&source=allmaps#iso

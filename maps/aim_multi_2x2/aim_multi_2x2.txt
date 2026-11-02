@@ -1,0 +1,16 @@
+name = 'Aim_Multi_2x2'
+
+version = '1.0'
+
+author = 'Keviin, DarkS'
+
+extensions = {
+
+     'arena': True,
+     'arena_blue_spawn' : (251, 249, 20),
+     'arena_green_spawn' : (204, 249, 20),
+     'arena_gates' : ((248, 247, 21), (207, 248, 21)),
+     'water_damage' : 100
+
+
+}

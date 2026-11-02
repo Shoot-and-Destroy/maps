@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "zombie"]
+author = "greenwood"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.91
+area_land = 0.897
+spawn_dry = [0.98, 0.97]
+
+[map.fitness.ngctf]
+pass = false
+water = 3.65
+map_deaths = 0.039
+fight_kills = 135.0
+objective = 6
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 2.3
+map_deaths = 0.038
+fight_kills = 76.0
+objective = 6
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 3.05
+map_deaths = 0.037
+fight_kills = 116.0
+objective = 9
+failed = ["water"]
+
+[map.fitness.tc]
+pass = false
+water = 3.65
+map_deaths = 0.03
+fight_kills = 180.5
+objective = 27
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = true
+water = 0.45
+map_deaths = 0.051
+fight_kills = 56.0
+objective = 3
+failed = []

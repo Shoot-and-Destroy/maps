@@ -1,0 +1,53 @@
+
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(255, 256)
+        y = random.randrange(255, 256)
+        z = 0
+        return (x,y,z)
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(116, 117)
+        y = random.randrange(261, 262)
+        z = 0
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(255, 256)
+        y = random.randrange(255, 256)
+        z = 0
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(394, 395)
+        y = random.randrange(263, 264)
+        z = 0
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(106, 118)
+        y = random.randrange(245, 274)
+        z = 58
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(392, 401)
+        y = random.randrange(244, 278)
+        z = 58
+        return (x, y, z)
+
+name = 'Mirage'
+version = '1.0'
+author = 'Lostmotel, suggestions by the aloha community'
+extensions = { 
+'water_damage' : 5,
+'babel' : True, 
+'heavens_color' : (255, 215, 130, 255)
+}

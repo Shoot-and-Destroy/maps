@@ -1,0 +1,49 @@
+[map]
+modes = ["koth"]
+author = "cuulli"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 39
+
+[spawnpoints]
+team1 = { start = [162, 216, 0], end = [186, 297, 0] }
+team2 = { start = [344, 201, 0], end = [372, 281, 0] }
+
+[map.fitness]
+land = 0.092
+area_land = 0.516
+spawn_dry = [0.83, 0.77]
+
+[map.fitness.ctf]
+pass = false
+water = 1.0
+map_deaths = 0.292
+fight_kills = 112.5
+objective = 9
+failed = ["map_deaths"]
+
+[map.fitness.koth]
+pass = true
+water = 0.25
+map_deaths = 0.037
+fight_kills = 257.0
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.004
+fight_kills = 368.5
+objective = 2
+failed = ["objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.1
+map_deaths = 0.012
+fight_kills = 254.0
+objective = 17
+failed = ["land"]

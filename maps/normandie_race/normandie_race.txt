@@ -1,0 +1,20 @@
+name = 'normandie_race'
+version = '1.0'
+author = 'Dany0'
+description = 'Short race through normandie!'
+modes = ("race", "tdm", "ctf", "tc")
+RACE_START = [(147, 26, 59, "green"),(146, 26, 59, "blue")] #x, y, z, team("any" or "green" or "blue")
+RACE_FINISH = [(273, 280, 44, "green"), (273, 280, 44, "blue")] #x, y, z, team("green" or "blue")
+RACE_CHECKPOINTS = [(244, 76, 59, None, 1), 
+					(196, 259, 58, None, 1), 
+					(243, 270, 57, None, 1), 
+					(273, 312, 61, None, 1)
+                    ]#x, y, z, powerup("double_jump","fly","telegren"), difficulty(1 - easiest/tutorial, 4 - medium, 6 - hard, 10 - secret)
+MAP_MESSAGES = { "WELCOME TO NORMANDYRACE" : (147, 26, 59, False),
+		 "MAP AND SCRIPT BY DANY0" : (196, 259, 58, False)}
+
+# script
+from pyspades.constants import *
+
+def get_entity_location(team, entity_id):
+     return (1, 1, 1)

@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "templeofdoom"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.992
+area_land = 0.991
+spawn_dry = [0.98, 0.98]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.278
+fight_kills = 28.5
+objective = 1
+failed = ["map_deaths", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.4
+fight_kills = 9.0
+objective = 2
+failed = ["map_deaths", "fight_kills"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.484
+fight_kills = 23.5
+objective = 6
+failed = ["map_deaths"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.376
+fight_kills = 29.0
+objective = 9
+failed = ["map_deaths"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.225
+fight_kills = 15.5
+objective = 4
+failed = ["fight_kills"]

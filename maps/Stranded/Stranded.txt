@@ -1,0 +1,7 @@
+name = 'Stranded'
+version = '0.5'
+author = 'Enari'
+description = 'An island With 3 plateus, good for TC'
+extensions = {
+     'water_damage' : 5
+}

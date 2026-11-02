@@ -1,0 +1,5 @@
+name = 'Ice Islands'
+version = '0.5'
+author = 'Sneakers'
+description = ('Three icy islands.  Middle island has extremely rugged terrain.  No caverns.'
+               )

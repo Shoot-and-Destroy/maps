@@ -1,0 +1,57 @@
+[map]
+modes = ["babel"]
+author = "RandomJack and SuperCool Builders, Reworked by Qult"
+fog_color = [130, 60, 40]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.256
+area_land = 0.214
+spawn_dry = [0.04, 0.08]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.05
+map_deaths = 0.146
+fight_kills = 170.0
+objective = 3
+failed = ["land", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.198
+fight_kills = 89.0
+objective = 6
+failed = ["land", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.237
+fight_kills = 138.5
+objective = 7
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.22
+fight_kills = 156.0
+objective = 7
+failed = ["land", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.1
+map_deaths = 0.168
+fight_kills = 44.5
+objective = 2
+failed = ["land", "objective", "spawn"]

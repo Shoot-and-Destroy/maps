@@ -1,0 +1,13 @@
+name = 'comercialcenter'
+version = '1.4'
+author = 'Triverion and novas'
+description = 'comercialcenter.'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (317,260,59),
+     'arena_green_spawn' : (196,317,51),
+     'arena_gates': ((203,317,52),(311,259,60)),
+     'water_damage' : 100
+}
+
+aloha=True

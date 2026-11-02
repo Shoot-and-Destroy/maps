@@ -1,0 +1,7 @@
+name = 'VietMaze'
+version = '1.0'
+author = 'Danke'
+description = ('vietnam war themed map')
+
+extensions = { 'babel' : True }
+fog = (255, 227, 139)

@@ -1,0 +1,13 @@
+name = 'de_mirage'
+version = '1.0'
+author = 'Keviin & DarkS.'
+cap_limit = 7
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (314, 214, 57),
+     'arena_green_spawn' : (182, 283, 52),
+     'arena_gates': ((308, 213, 56), (185, 283, 51)),
+     'water_damage' : 100
+ }
+
+aloha=True

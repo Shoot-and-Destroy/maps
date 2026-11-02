@@ -1,0 +1,16 @@
+name = 'Aim_Map_2x2'
+
+version = '1.0'
+
+author = 'Keviin, DarkS'
+
+extensions = {
+
+     'arena': True,
+     'arena_blue_spawn' : (253, 244, 20),
+     'arena_green_spawn' : (213, 233, 20),
+     'arena_gates' : ((250, 244, 21), (209, 232, 21)),
+     'water_damage' : 100
+
+
+}

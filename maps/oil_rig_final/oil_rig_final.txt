@@ -1,0 +1,54 @@
+from pyspades.constants import *
+import random
+
+name = 'oil_rig_final'
+version = '4.0_V1_Restored'
+author = 'Agent, Script by Qult'
+description = 'Final Oil Rigs with dense pillar grid, orange trusses, light deck, and detailed superstructures.'
+
+fog = (130, 140, 150)
+extensions = {
+    'water_damage': 1
+}
+
+# --- SPAWN CONFIGURATION ---
+spawn_radius = 3
+spawns = [
+    # Индекс 0: Team 1 (Blue) 
+    [(148, 206, 45), (148, 302, 45)],
+    # Индекс 1: Team 2 (Green) 
+    [(359, 206, 45), (359, 302, 45)]
+]
+
+# --- TENT (BASE) LOGIC ---
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_BASE:
+        # Палатка синих: ровно по центру их вышки (между двумя их спавнами)
+        return (148, 254, 45)
+        
+    elif entity_id == GREEN_BASE:
+        # Палатка зеленых: ровно по центру их вышки (между двумя их спавнами)
+        return (359, 254, 45)
+        
+    return (0, 0, 0)
+
+# --- SPAWN LOGIC ---
+def get_spawn_location(connection):
+    # Команда 1 (Синие)
+    if connection.team is connection.protocol.team_1:
+        base_x, base_y, base_z = random.choice(spawns[0])
+        
+    # Команда 2 (Зеленые)
+    elif connection.team is connection.protocol.team_2:
+        base_x, base_y, base_z = random.choice(spawns[1])
+        
+    # Наблюдатели
+    else:
+        return (256, 256, 60)
+
+    # Применяем spawn_radius (плюс/минус 3 блока от центра)
+    x = base_x + random.randint(-spawn_radius, spawn_radius)
+    y = base_y + random.randint(-spawn_radius, spawn_radius)
+    z = base_z 
+
+    return (x, y, z)

@@ -1,0 +1,11 @@
+name = 'Airport Parkour'
+version = '1.0'
+author = 'Bradley'
+description = ('Parkour in the airport.')
+
+extensions = {
+    'water_damage' : 100,
+    'parkour_start' : (4, 255, 48),
+    'parkour_end' : (415, 255, 58),
+    'parkour_checkpoints' : [(37, 255, 48), (104, 254, 44), (168, 254, 51), (282, 254, 53), (362, 254, 20)]
+}

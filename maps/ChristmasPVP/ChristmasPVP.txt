@@ -1,0 +1,9 @@
+from pyspades.constants import *
+import random
+
+name = 'Christmas PVP'
+version = '1.0'
+author = 'GTR-CODE'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/mapa-boxpvp-free/

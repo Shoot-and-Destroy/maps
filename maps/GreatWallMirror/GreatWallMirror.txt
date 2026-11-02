@@ -1,0 +1,51 @@
+
+
+from pyspades.constants import *
+import random
+
+name = 'GreatWallMirror'
+version = '1.0'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+
+def get_spawn_location(connection):
+    # --- КОМАНДА 1 (Синие) ---
+    if connection.team is connection.protocol.team_1:
+        chance = random.random() # Число от 0.0 до 1.0
+        
+        if chance < 0.20: # 20% шанс
+            # Центр 152, 288, радиус 5
+            cx, cy, rad = 152, 288, 5
+        elif chance < 0.60: # Следующие 40% (0.20 + 0.40 = 0.60)
+            # Центр 136, 228, радиус 10
+            cx, cy, rad = 136, 228, 10
+        else: # Оставшиеся 40%
+            # Центр 164, 272, радиус 5
+            cx, cy, rad = 164, 272, 5
+
+    # --- КОМАНДА 2 (Зеленые) ---
+    elif connection.team is connection.protocol.team_2:
+        chance = random.random()
+        
+        if chance < 0.20: # 20% шанс
+            # Центр 360, 228, радиус 5
+            cx, cy, rad = 360, 228, 5
+        elif chance < 0.60: # Следующие 40%
+            # Центр 376, 228, радиус 10
+            cx, cy, rad = 376, 228, 10
+        else: # Оставшиеся 40%
+            # Центр 350, 272, радиус 5
+            cx, cy, rad = 350, 272, 5
+            
+    else:
+        return (256, 256, 0)
+
+    # Генерация случайной точки в пределах радиуса
+    # Используем квадратную область (центр - радиус ... центр + радиус)
+    x = random.randrange(cx - rad, cx + rad + 1)
+    y = random.randrange(cy - rad, cy + rad + 1)
+    
+    # Спавн на поверхности
+    z = connection.protocol.map.get_z(x, y)
+    
+    return (x, y, z)

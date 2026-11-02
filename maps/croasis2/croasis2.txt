@@ -1,0 +1,8 @@
+name = 'crossfire2 + oasis'
+version = '1.0'
+author = 'TheGrandmaster + Influx'
+description = 'combination of two maps'
+extensions = { 'water_damage' : 0,
+               'babel' : True }
+
+

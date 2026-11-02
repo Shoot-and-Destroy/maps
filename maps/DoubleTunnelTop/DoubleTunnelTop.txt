@@ -1,0 +1,5 @@
+name = 'Double Tunnel Top'
+version = '1.0'
+author = 'Jdrew, Reworked by Qult'
+extensions = { 'water_damage' : 1 }
+# https://aos.party/view/1248

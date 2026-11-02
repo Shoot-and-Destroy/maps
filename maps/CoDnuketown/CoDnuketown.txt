@@ -1,0 +1,38 @@
+name = 'CoDnuketown'
+version = '1.0'
+author = 'T0M'
+extensions = {'water_damage':100}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+import random
+
+spawn_locations_blue = [
+	(176,249,61),
+	(181,266,61),
+	(191,246,61),
+	(197,258,61),
+	(200,283,61)
+]
+
+spawn_locations_green = [
+	(322,247,61),
+	(333,253,61),
+	(329,265,61),
+	(313,284,61),
+	(311,264,61)
+]
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		x, y, z = random.choice(spawn_locations_blue)
+	elif connection.team is connection.protocol.green_team:
+		x, y, z = random.choice(spawn_locations_green)
+		z -= 2.4 # magic numbers
+		x += 0.5
+		y += 0.5
+	if connection.protocol.map.get_z(x, y) <= z:
+		# allows spawning lower if the ground is destroyed
+		return x, y, z
+	else:
+		return x, y, connection.protocol.map.get_z(x, y)

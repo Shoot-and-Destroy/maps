@@ -1,0 +1,5 @@
+name = 'Hallwopolis'
+version = '1.0'
+author = 'Lincent --- Izzy'
+description = 'A narrow passage between small spawns surrounded by magnificent towers that cut the sky.'
+cap_limit = 5

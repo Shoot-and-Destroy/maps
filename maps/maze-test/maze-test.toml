@@ -1,0 +1,55 @@
+[map]
+modes = ["ngctf", "ctf", "koth", "tc"]
+author = "maze-test"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 1.0
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.026
+fight_kills = 74.5
+objective = 10
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.029
+fight_kills = 49.5
+objective = 20
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.03
+fight_kills = 64.5
+objective = 7
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.01
+fight_kills = 48.5
+objective = 48
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.0
+fight_kills = 11.5
+objective = 5
+failed = ["fight_kills"]

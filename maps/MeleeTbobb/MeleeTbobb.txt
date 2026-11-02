@@ -1,0 +1,13 @@
+name = 'MeleeTbobb'
+version = '1.0'
+author = 'Dany0 and someone else'
+description = ('Military base melee carnage!')
+cap_limit = 5
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (223, 248, 55),
+     'arena_green_spawn' : (292, 255, 55),     
+     'arena_gates': ((223, 245, 56), (292, 253, 57)),
+     'water_damage' : 100
+    
+}

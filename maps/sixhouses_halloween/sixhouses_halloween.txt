@@ -1,0 +1,14 @@
+name = 'Six Houses'
+version = '1.1'
+author = 'DiscipLe'
+description = 'Urban warfare.'
+fog = (110, 130, 160)
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (305, 278, 59),
+     'arena_green_spawn' : (213, 235, 59),
+     'arena_gates' : ((304, 280, 58), (215, 235, 58)),
+     'water_damage' : 100
+}
+
+aloha=True

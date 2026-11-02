@@ -1,0 +1,6 @@
+name = 'Double Watch Tower'
+version = '1.0'
+author = 'Jdrew, Reworked by Qult'
+description = 'A KOTH map inspired by planetside 2'
+# https://aos.party/view/1070
+

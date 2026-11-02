@@ -1,0 +1,55 @@
+[map]
+modes = ["babel"]
+author = "MegaStar"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.333
+area_land = 0.609
+spawn_dry = [0.38, 0.36]
+
+[map.fitness.ngctf]
+pass = false
+water = 3.95
+map_deaths = 0.021
+fight_kills = 117.0
+objective = 5
+failed = ["water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.35
+map_deaths = 0.009
+fight_kills = 52.5
+objective = 4
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 2.35
+map_deaths = 0.005
+fight_kills = 104.0
+objective = 8
+failed = ["spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.1
+map_deaths = 0.014
+fight_kills = 172.5
+objective = 7
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.01
+fight_kills = 96.0
+objective = 4
+failed = ["spawn"]

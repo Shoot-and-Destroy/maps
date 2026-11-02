@@ -1,0 +1,16 @@
+name = 'The Alamo'
+version = '1.1'
+author = 'Influx'
+description = ('Site of a famous battle in the War of Texan Independance'
+               'where 180 Texans were defeated by 1800 Mexicans')
+
+extensions = {
+     
+'attspawn': (10, 10, 15),
+'defspawn': (267, 242, 51),
+'east': (398, 57, 56),
+'north': (82, 236, 55),
+'west': (347, 440, 56),
+'time_limit': 400,
+'flag':(285, 212, 35)
+}

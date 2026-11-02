@@ -1,0 +1,55 @@
+[map]
+modes = ["ngctf", "ctf", "koth", "tc"]
+author = "kettous"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.956
+area_land = 0.947
+spawn_dry = [0.99, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 2.0
+map_deaths = 0.036
+fight_kills = 145.5
+objective = 5
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.65
+map_deaths = 0.042
+fight_kills = 57.0
+objective = 14
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 1.7
+map_deaths = 0.036
+fight_kills = 94.5
+objective = 11
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.65
+map_deaths = 0.061
+fight_kills = 153.0
+objective = 9
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.176
+fight_kills = 21.0
+objective = 2
+failed = ["objective"]

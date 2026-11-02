@@ -1,0 +1,5 @@
+name = 'Laval'
+version = '1.0'
+author = 'Yamaha'
+description = ('An imagined slice of the French-Canadian island.')
+fog = (244, 222, 179)

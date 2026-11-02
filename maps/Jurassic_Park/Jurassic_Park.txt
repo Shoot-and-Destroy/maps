@@ -1,0 +1,15 @@
+name = 'Jurassic Park'
+
+version = '1.0'
+
+author = 'NeuroFunk/NeuroRaptor'
+
+description = 'Modeled after the Jurassic Park movies'
+cap_limit = 5
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((180, 281, 58)),
+    'arena_green_spawn' : ((90, 227, 58)),
+    'arena_gates': ((173, 278, 54),(84, 229, 56)),
+    'cap_limit' : 8}

@@ -1,0 +1,54 @@
+import random
+
+name = 'vipisland4'
+version = '1.0'
+author = 'v'
+description = 'v.'
+
+# script
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 324, 232, 54)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 342, 228, 54)
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 154, 231, 54)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 142, 228, 54)
+
+spawn_locations_blue = [
+    (137, 238, 54),
+    (135, 251, 56),
+    (139, 214, 56),
+    (152, 225, 50),
+    (146, 239, 54)
+]
+
+spawn_locations_green = [
+    (344, 240, 54),
+    (328, 246, 55),
+    (334, 227, 54),
+    (347, 218, 56),
+    (330, 234, 46)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 2.4 # magic numbers
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        # allows spawning lower if the ground is destroyed
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

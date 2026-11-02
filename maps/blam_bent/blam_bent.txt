@@ -1,0 +1,9 @@
+name = 'blam bent'
+version = '1.0'
+author = 'original blam by JoJoe Stinky, modified by Danke'
+extensions = { 'boundary_damage' : {'left' : 32,
+                                    'right' : 480,
+                                    'top' : 128,
+                                    'bottom' : 384,
+                                    'damage': 1 },
+               'babel' : True }

@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "CrossroadsORIGINAL64"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.426
+area_land = 0.72
+spawn_dry = [0.46, 0.39]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.04
+fight_kills = 132.0
+objective = 7
+failed = ["spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.085
+fight_kills = 75.0
+objective = 9
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.025
+fight_kills = 99.5
+objective = 9
+failed = ["spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.038
+fight_kills = 176.5
+objective = 17
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.025
+fight_kills = 58.0
+objective = 2
+failed = ["objective", "spawn"]

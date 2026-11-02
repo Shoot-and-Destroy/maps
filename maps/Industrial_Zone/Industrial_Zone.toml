@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "tc", "zombie"]
+author = "*Sauerkraut Maps"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.938
+area_land = 0.829
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 4.75
+map_deaths = 0.0
+fight_kills = 184.0
+objective = 7
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 2.4
+map_deaths = 0.019
+fight_kills = 103.5
+objective = 9
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 4.35
+map_deaths = 0.017
+fight_kills = 170.5
+objective = 3
+failed = ["water"]
+
+[map.fitness.tc]
+pass = true
+water = 0.25
+map_deaths = 0.009
+fight_kills = 220.0
+objective = 32
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.006
+fight_kills = 89.0
+objective = 5
+failed = []

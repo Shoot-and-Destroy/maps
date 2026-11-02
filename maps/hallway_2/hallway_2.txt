@@ -1,0 +1,5 @@
+name = 'Hallway++'
+version = '1.0'
+author = 'Ananas'
+description = 'Super cool map'
+extensions = { 'water_damage' : 100}

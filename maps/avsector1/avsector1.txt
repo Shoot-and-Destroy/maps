@@ -1,0 +1,13 @@
+name = 'avsector1'
+version = '1.0'
+author = 'AVuKYI2R3'
+description = '04/03/13'
+fog = (30, 30, 30)
+
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : ((200, 192, 55)),
+    'arena_green_spawn' : ((313, 292, 55)),
+    'arena_gates': ((320, 288, 56),(193, 196, 56),)
+}

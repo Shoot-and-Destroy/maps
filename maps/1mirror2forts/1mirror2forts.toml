@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "koth", "tc", "zombie"]
+author = "1mirror2forts"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.943
+area_land = 0.964
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 5.85
+map_deaths = 0.037
+fight_kills = 145.0
+objective = 3
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.032
+fight_kills = 119.5
+objective = 4
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.065
+fight_kills = 122.5
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.032
+fight_kills = 182.0
+objective = 13
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.0
+fight_kills = 93.0
+objective = 5
+failed = []

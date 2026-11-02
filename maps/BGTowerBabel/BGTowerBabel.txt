@@ -1,0 +1,13 @@
+name = 'BG Tower Babel'
+
+version = '1.0'
+
+author = 'T0M, Reworked by Qult'
+
+
+description = 'BeGone copy map'
+extensions = {
+     'water_damage' : 200
+
+ }
+# https://hosting.dgd.cx/map-search?query=tower&file=BGtower.vxl&source=allmaps#iso

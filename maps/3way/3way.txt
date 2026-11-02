@@ -1,0 +1,9 @@
+name = '3way'
+version = '1.0'
+author = 'Danke-o'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (179,255,20),
+     'arena_green_spawn' : (330,255,20),
+     'arena_gates': ((331,239,24),(178,239,24)),
+ }

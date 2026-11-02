@@ -1,0 +1,5 @@
+name = "Bs Desert City"
+version = '1.0'
+author = 'T0M, Reworked by Qult'
+description = 'BlackSquad copy map'
+# https://hosting.dgd.cx/map-search?query=desert&file=BSdesertcity.vxl&source=allmaps#iso

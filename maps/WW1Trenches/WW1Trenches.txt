@@ -1,0 +1,4 @@
+name = 'WW1 Trenches'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+

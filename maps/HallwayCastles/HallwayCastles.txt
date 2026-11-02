@@ -1,0 +1,4 @@
+name = 'Hallway Castles'
+version = '1.0'
+author = 'Blender Man'
+description = 'Hallway medieval style!'

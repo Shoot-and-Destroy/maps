@@ -1,0 +1,10 @@
+name = 'map33'
+version = '1.1'
+author = 'T0M'
+description = 'Press the gray button to use the elevator'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (226, 226, 49),
+     'arena_green_spawn' : (285, 285, 49),
+     'arena_gates' : ((236, 236, 49),(275, 275, 49),(225, 236, 40),(286, 275, 40),(236, 225, 58),(275, 286, 58))
+}

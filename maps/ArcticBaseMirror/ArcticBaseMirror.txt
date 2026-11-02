@@ -1,0 +1,4 @@
+name = 'ArcticBaseMirror'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+fog = (35,55,75)

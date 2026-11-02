@@ -1,0 +1,34 @@
+name = 'bridgeme'
+version = '1.0'
+author = 'Danke'
+extensions = {
+     'babel': True,
+     'water_damage' : 100
+ }
+
+
+
+BLUE_RECT = ( 93,241, 119,270)
+GREEN_RECT = ( 392,241,418,270)
+
+import random
+def get_spawn_location(connection):
+	br1 = BLUE_RECT
+	gr1 = GREEN_RECT
+	if connection.team is connection.protocol.blue_team:
+		return connection.protocol.get_random_location(True, br1)
+	elif connection.team is connection.protocol.green_team:
+		return connection.protocol.get_random_location(True, gr1)
+		
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (404, 256, 60)
+	if entity_id == BLUE_BASE:
+		return (107,256,60)		
+
+
+aloha=True

@@ -1,0 +1,5 @@
+name = '20ThCenturyTownMirror'
+version = '1.0'
+author = 'Someone(and Dany0), Reworked by Qult'
+description = ('An MC map I had lying around, converted & stretched properly.')
+# https://aos.party/view/12

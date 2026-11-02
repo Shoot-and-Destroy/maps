@@ -1,0 +1,5 @@
+name = 'Random 4'
+version = '1.0'
+extensions = {
+     'babel' : True
+}

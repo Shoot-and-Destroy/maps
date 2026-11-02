@@ -1,0 +1,32 @@
+name = 'Cube'
+version = '1.3'
+author = 'Ananas'
+description = 'TI KAKOGO HUYA SUDA LEZESH?? HAKER 4TOLE??'
+extensions = { 'water_damage' : 100}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+import random
+ 
+def get_entity_location(team, entity_id):
+     if entity_id == BLUE_FLAG:
+         return (186, 248, 1)
+     if entity_id == GREEN_FLAG:
+         return (304, 253, 1)
+     if entity_id == BLUE_BASE:
+         return (178, 213, 1)
+     if entity_id == GREEN_BASE:
+         return (298, 214, 1)
+ 
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        x2 = random.randrange(267,310)
+        y2 = random.randrange(208,299)
+        z2 = connection.protocol.map.get_z(x2, y2)
+        return (x2, y2, z2)
+    if connection.team is connection.protocol.blue_team:
+        x3 = random.randrange(173,221)
+        y3 = random.randrange(214,298)
+        z3 = connection.protocol.map.get_z(x3, y3)
+        return (x3, y3, z3)

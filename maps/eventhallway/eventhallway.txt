@@ -1,0 +1,3 @@
+name = 'EventHallway'
+author = 'Clan :AoSu!:'
+cap_limit = 5

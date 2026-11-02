@@ -1,0 +1,7 @@
+name = 'Deadlock'
+
+version = '1.0'
+
+author = 'STRIKE-81'
+
+description = 'A map made for matches wich consists of two bases with a lake and bridge in between'

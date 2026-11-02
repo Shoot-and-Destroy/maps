@@ -1,0 +1,56 @@
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(168, 420)
+        return (168, 420, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(134, 479)
+        return (134, 479, z)
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(389, 93)
+        return (389, 93, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(399, 50)
+        return (399, 50, z)
+
+spawn_locations_blue = [
+(98, 359),
+(229, 444),
+(241, 405),
+(206, 470),
+(239, 455),
+(150, 415),
+(172, 437),
+(187, 391),
+(137, 353),
+(81, 395),
+(102, 437)
+]
+
+spawn_locations_green = [
+
+(335, 112),
+(316, 62),
+(353, 51),
+(395, 59),
+(427, 81),
+(442, 117),
+(426, 159),
+(390, 158),
+(385, 133),
+(392, 107),
+(381, 77)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z

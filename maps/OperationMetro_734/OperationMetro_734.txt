@@ -1,0 +1,14 @@
+name = 'OperationMetro'
+version = '1.1'
+author = 'Gibbs3333'
+description = ('Team R3S')
+cap_limit = 5
+extensions = {
+    'boundary_damage' : {'left' : 147, 'right' : 336, 'top' : 224, 'bottom' : 300, 'damage': 100},
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((322, 272, 55)),
+    'arena_green_spawn' : ((176, 258, 55)),
+     'arena_gates': ((178, 256, 53), (174, 257, 53), (324, 272, 53), (320, 270, 53))
+      }
+ 

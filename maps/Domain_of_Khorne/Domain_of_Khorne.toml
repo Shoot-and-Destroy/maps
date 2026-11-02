@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Domain_of_Khorne"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.086
+area_land = 0.234
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 29.35
+map_deaths = 0.014
+fight_kills = 138.0
+objective = 2
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 30.3
+map_deaths = 0.035
+fight_kills = 69.5
+objective = 2
+failed = ["land", "water", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 95.65
+map_deaths = 0.0
+fight_kills = 0.0
+objective = 0
+failed = ["land", "water", "fight_kills", "objective", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 55.1
+map_deaths = 0.037
+fight_kills = 145.0
+objective = 10
+failed = ["land", "water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 41.05
+map_deaths = 0.042
+fight_kills = 34.5
+objective = 4
+failed = ["land", "water", "spawn"]

@@ -1,0 +1,21 @@
+name = 'YobaP'
+version = '1.0'
+author = 'Index'
+
+# script
+
+from pyspades.constants import *
+import random
+
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(78, 127)
+        y = random.randrange(246, 265)
+        return (x, y, connection.protocol.map.get_z(x, y))
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(384, 433)
+        y = random.randrange(246, 265)
+        return (x, y, connection.protocol.map.get_z(x, y))
+
+

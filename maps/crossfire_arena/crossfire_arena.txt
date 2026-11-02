@@ -1,0 +1,13 @@
+name = 'crossfire arena'
+version = '1.1'
+author = 'MegaStar and MoDeR.'
+description = ('map of the game half-life.')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (235, 287, 60),
+     'arena_green_spawn' : (158, 264, 57),
+     'arena_gates' : ((242, 285, 59), (166, 264, 55)),
+     'water_damage' : 100,
+}
+
+aloha=True

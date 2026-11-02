@@ -1,0 +1,4 @@
+name = 'somme'
+version = '2.0'
+author = '[C.H]Winston'
+extensions = { 'babel' : True }

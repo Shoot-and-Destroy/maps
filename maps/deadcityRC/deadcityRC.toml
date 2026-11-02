@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "koth", "zombie"]
+author = "deadcityRC"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.915
+area_land = 0.913
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 7.75
+map_deaths = 0.059
+fight_kills = 128.0
+objective = 6
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 0.85
+map_deaths = 0.071
+fight_kills = 78.0
+objective = 6
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 2.15
+map_deaths = 0.021
+fight_kills = 115.5
+objective = 8
+failed = []
+
+[map.fitness.tc]
+pass = false
+water = 5.5
+map_deaths = 0.025
+fight_kills = 156.0
+objective = 16
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = true
+water = 0.75
+map_deaths = 0.075
+fight_kills = 80.5
+objective = 7
+failed = []

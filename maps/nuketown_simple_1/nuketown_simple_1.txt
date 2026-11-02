@@ -1,0 +1,19 @@
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG or entity_id == GREEN_FLAG: return (0,0,0)
+    if entity_id == BLUE_BASE: return (257, 187, 62)
+    if entity_id == GREEN_BASE: return (267, 317, 62)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(256,269)
+        y = random.randrange(186,188)
+        return x, y, 62
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(259,268)
+        y = random.randrange(316,318)
+        return x, y, 62
+

@@ -1,0 +1,5 @@
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (161, 245, 56),
+     'arena_green_spawn' : (128, 285, 56),
+ }

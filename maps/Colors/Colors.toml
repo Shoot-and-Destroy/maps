@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Lythrynyx"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 1.0
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.03
+fight_kills = 16.0
+objective = 1
+failed = ["fight_kills", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.167
+fight_kills = 2.5
+objective = 0
+failed = ["fight_kills", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.115
+fight_kills = 11.5
+objective = 3
+failed = ["fight_kills"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.12
+fight_kills = 11.0
+objective = 11
+failed = ["fight_kills"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.333
+fight_kills = 1.0
+objective = 6
+failed = ["map_deaths", "fight_kills"]

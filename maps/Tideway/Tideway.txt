@@ -1,0 +1,49 @@
+name = 'Tideway'
+version = '1.01'
+author = 'SeeSea and Tr0lh3x'
+description = ('Tideway: the Unofficial Sequel to Hallway. Tideway brings a revolution to the classic hallway layout. On this map you can engage either by the central tideway, the top, create tunnels inside central block or ambush by left and right flanks. There is 2 blocks next to each spawn where each team will fight for its dominance as it gives an advantage to the enemy team. Also it is possible to build up to 5 blocks on top of the map so you can create small fortifications! Supporters: Setup.py and Rakete175')
+
+# updates
+# 1.01- Proper .txt file for spawn locations and fixes on map.
+
+# scripts
+from pyspades.constants import BLUE_FLAG, BLUE_BASE, GREEN_FLAG, GREEN_BASE
+from random import randrange
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x = randrange(33, 94)
+        y = randrange(225, 286)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.green_team:
+        x = randrange(417, 478)
+        y = randrange(225, 286)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        x = randrange(33, 94)
+        y = randrange(225, 286)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == BLUE_BASE:
+        x = randrange(33, 94)
+        y = randrange(225, 286)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = randrange(417, 478)
+        y = randrange(225, 286)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = randrange(417, 478)
+        y = randrange(225, 286)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+

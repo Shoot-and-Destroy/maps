@@ -1,0 +1,10 @@
+name = 'Dark Arena'
+version = '1.0'
+author = 'Terrorist'
+description = 'Dark arena with plenty of ways to catch the enemy by surprise!'
+extensions = {
+    'arena' : True,
+    'arena_blue_spawn' : ((29, 301, 21)),
+    'arena_green_spawn' : ((89, 301, 21)),
+    'arena_gates' : ((31, 299, 20), (87, 303, 20))
+}

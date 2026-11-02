@@ -1,0 +1,9 @@
+name = 'map24'
+version = '1.0'
+author = 'T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (228, 229, 60),
+     'arena_green_spawn' : (283, 282, 60),
+     'arena_gates': ((231,229,57),(280,282,57))
+}

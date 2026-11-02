@@ -1,0 +1,113 @@
+name = 'Broken Sky'
+version = '1.1'
+author = 'TheGrandmaster'
+description = ('The sky breaks and the mountains hold a marvel. Made in March-April 2025 using a modified Tom Dobrowolski genland output in Goxel as a base, with thanks to Influx for the main trees and feedback.')
+fog = (60, 70, 80)
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+import random
+
+spawn_locations_blue = [
+    (4, 385, 4),
+    (4, 369, 4),
+    (1, 349, 4),
+    (2, 332, 4),
+    (1, 316, 2),
+    (6, 320, 4),
+    (2, 285, 9),
+    (5, 274, 12),
+    (1, 260, 12),
+    (5, 241, 13),
+    (2, 230, 12),
+    (2, 214, 16),
+    (4, 163, 8),
+    (3, 184, 16)
+]
+
+spawn_locations_green = [
+    (505, 153, 12),
+    (506, 168, 9),
+    (507, 202, 16),
+    (507, 225, 14),
+    (508, 241, 13),
+    (508, 266, 12),
+    (508, 314, 2),
+    (499, 320, 7),
+    (502, 295, 12),
+    (501, 328, 7),
+    (508, 348, 4),
+    (501, 358, 6),
+    (507, 368, 4),
+    (508, 384, 4),
+    (506, 402, 7),
+    (510, 418, 7)
+]
+
+tent_locations_blue = [
+    (28, 348),
+    (23, 297),
+    (9, 233)
+]
+tent_locations_green = [
+    (500, 385),
+    (488, 307),
+    (499, 254)
+]
+
+green_flag_village = [
+    (427, 282),
+    (440, 373)
+]
+green_flag_mountains = [
+    (444, 125),
+    (508, 248)
+]
+blue_flag_village = [
+    (80, 286),
+    (91, 368)
+]
+blue_flag_mountains = [
+    (5, 125),
+    (61, 260)
+]
+
+# one in X chance it's a mountain intel than a village one
+chance = 3
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        loc = green_flag_mountains if random.randrange(chance) == 0 else green_flag_village
+        x = random.randrange(loc[0][0], loc[1][0])
+        y = random.randrange(loc[0][1], loc[1][1])
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+    if entity_id == BLUE_FLAG:
+        loc = blue_flag_mountains if random.randrange(chance) == 0 else blue_flag_village
+        x = random.randrange(loc[0][0], loc[1][0])
+        y = random.randrange(loc[0][1], loc[1][1])
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+    if entity_id == GREEN_BASE:
+        x, y = random.choice(tent_locations_green)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+    if entity_id == BLUE_BASE:
+        x, y = random.choice(tent_locations_blue)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 2.4 # magic numbers
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        # allows spawning lower if the ground is destroyed
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "tc", "zombie"]
+author = "winterwarbeta"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.629
+area_land = 0.905
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 4.75
+map_deaths = 0.013
+fight_kills = 150.5
+objective = 8
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 0.65
+map_deaths = 0.035
+fight_kills = 82.5
+objective = 5
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 5.35
+map_deaths = 0.02
+fight_kills = 99.0
+objective = 12
+failed = ["water"]
+
+[map.fitness.tc]
+pass = true
+water = 1.1
+map_deaths = 0.022
+fight_kills = 178.5
+objective = 20
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.9
+map_deaths = 0.02
+fight_kills = 48.0
+objective = 4
+failed = []

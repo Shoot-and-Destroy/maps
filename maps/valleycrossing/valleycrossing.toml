@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "koth", "tc"]
+author = "valleycrossing"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [81, 353, 0], end = [241, 470, 0] }
+team2 = { start = [316, 51, 0], end = [442, 159, 0] }
+
+[map.fitness]
+land = 0.44
+area_land = 0.559
+spawn_dry = [0.95, 0.96]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.044
+fight_kills = 153.0
+objective = 4
+failed = ["land"]
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.04
+fight_kills = 83.0
+objective = 4
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.02
+fight_kills = 121.0
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.04
+fight_kills = 154.5
+objective = 25
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.074
+fight_kills = 81.5
+objective = 6
+failed = ["land"]

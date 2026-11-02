@@ -1,0 +1,47 @@
+[map]
+modes = ["koth", "tc", "zombie"]
+author = "tGM/helpers"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [235, 231, 0], end = [276, 280, 0] }
+team2 = { start = [49, 68, 0], end = [451, 462, 0] }
+
+[map.fitness]
+land = 0.978
+area_land = 0.973
+spawn_dry = [1.0, 0.96]
+
+[map.fitness.ctf]
+pass = false
+water = 4.5
+map_deaths = 0.014
+fight_kills = 103.5
+objective = 21
+failed = ["water"]
+
+[map.fitness.koth]
+pass = true
+water = 2.9
+map_deaths = 0.017
+fight_kills = 144.5
+objective = 16
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 1.45
+map_deaths = 0.006
+fight_kills = 231.5
+objective = 23
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.3
+map_deaths = 0.005
+fight_kills = 102.5
+objective = 6
+failed = []

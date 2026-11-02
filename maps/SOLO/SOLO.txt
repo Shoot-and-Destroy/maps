@@ -1,0 +1,4 @@
+name = 'SOLO'
+version = '1.0'
+author = 'wakaran'
+description = "sunmasen"

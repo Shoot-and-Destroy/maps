@@ -1,0 +1,7 @@
+name = 'Hallway Castles 2'
+version = '2.0'
+author = 'Supernova'
+
+#LICENSE
+#This map is AOSG (formerly AOSK) exclusive map.
+#You must be permitted by Supernova before using or modifying this map.

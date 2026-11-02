@@ -1,0 +1,10 @@
+name = 'sokkou'
+version = '2.0'
+author = 'vippei'
+description = 'soku setteki'
+extensions = {
+     'arena': True,					
+     'arena_blue_spawn' : (278,234,61),			
+     'arena_green_spawn' : (232,280,61),
+     'arena_gates': ((276,236,59), (234,278,59))
+ }

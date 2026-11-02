@@ -1,0 +1,1 @@
+name = 'map10'version = '1.0'author = 'T0M'extensions = {     'arena': True,     'arena_blue_spawn' : (229,229,58),     'arena_green_spawn' : (282,282,58),     'arena_gates': ((228,233,58),(233,228,58),(278,282,58),(282,278,58)), }

@@ -1,0 +1,4 @@
+name = 'HellCanyon'
+version = '1.0'
+author = '{RoT}ReubenMcHawk'
+description = 'A massive canyon you must find your way across.'

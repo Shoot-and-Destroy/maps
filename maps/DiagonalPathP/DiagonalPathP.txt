@@ -1,0 +1,64 @@
+from pyspades.constants import *
+import random
+
+name = 'DiagonalPathP'
+version = '1.0'
+author = 'Qult---(Atelsa)'
+description = 'Map with diagonal paths and dimensional gates'
+extensions = {
+    'babel' : True, 
+    'water_damage': 80,
+    'teleports': [
+        ((278, 74, 47), 2, [(232, 436, 49), (240, 436, 49), (232, 438, 49), (240, 438, 49)]), #+y
+        ((236, 437, 47), 2, [(274, 73, 49), (282, 73, 49), (274, 75, 49), (282, 75, 49)]), #+y
+        ((41, 310, 47), 2, [(471, 197, 49), (473, 197, 49), (471, 205, 49), (473, 205, 49)]), #-p
+        ((472, 201, 47), 2, [(40, 306, 49), (42, 306, 49), (40, 314, 49), (42, 314, 49)]), #-p
+        ((504, 504, 22), 2, [(7, 4, 22), (7, 10, 22)]), #+mg
+        ((7, 7, 22), 2, [(504, 501, 22), (504, 507, 22)]), #+mg
+        ((7, 504, 22), 2, [(504, 4, 22), (504, 10, 22)]), #+mbb
+        ((504, 7, 22), 2, [(7, 501, 22), (7, 507, 22)])  #+mbb
+    ],
+'no_build_zones': [
+        ((278, 74, 47), 8, 0), #+y
+        ((236, 437, 47), 8, 0), #+y
+        ((41, 310, 47), 8, 0), #-p
+        ((472, 201, 47), 8, 0), #-p
+        ((504, 504, 22), 5, 0), #+mg
+        ((7, 7, 22), 5, 0),  #+mg
+        ((7, 504, 22), 5, 0), #+mbb
+        ((504, 7, 22), 5, 0) #+mbb
+    ],
+"team_1_zones": [[(219, 234), (201, 252), (154, 205), (172, 187)]],
+"team_2_zones": [[(359, 306), (341, 324), (312, 259), (294, 277)]],
+"red_tower_x_construction_zone" : (0, 91),
+"blue_tower_x_construction_zone" : (420, 511)
+}
+
+
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(150, 168)
+        y = random.randrange(183, 201)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(345, 363)
+        y = random.randrange(310, 328)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = 159
+        y = 192
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 354
+        y = 319
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)

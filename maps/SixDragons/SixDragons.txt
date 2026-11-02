@@ -1,0 +1,40 @@
+
+
+from pyspades.constants import *
+import random
+
+name = 'SixDragons'
+version = '1.0'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+
+def get_spawn_location(connection):
+    # Команда 1 (Синие)
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(154, 175)
+        y = random.randrange(334, 341)
+        
+    # Команда 2 (Зеленые)
+    elif connection.team is connection.protocol.team_2:
+        x = random.randrange(337, 358)
+        y = random.randrange(171, 178)
+        
+    else:
+        return (256, 256, 0)
+
+    # Спавн на поверхности
+    z = connection.protocol.map.get_z(x, y)
+    return (x, y, z)
+
+def get_entity_location(team, entity_id):
+    # Палатка команды 1
+    if entity_id == BLUE_BASE:
+        x, y = 145, 337
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    # Палатка команды 2
+    if entity_id == GREEN_BASE:
+        x, y = 366, 174
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)

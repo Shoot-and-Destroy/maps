@@ -1,0 +1,7 @@
+name = 'Triple Spitfire'
+version = '1.0'
+author = 'Lostmotel, Reworked by Qult'
+extensions = {
+     'water_damage' : 5
+}
+# https://hosting.dgd.cx/map-search?query=spit&file=Spitfire.vxl&source=allmaps#iso

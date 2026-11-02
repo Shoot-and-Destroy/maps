@@ -1,0 +1,34 @@
+name = 'Blue Resort for Babel'
+version = '1.0'
+author = 'Danke'
+extensions = {
+     'babel': True,
+     'water_damage' : 100
+ }
+
+
+
+BLUE_RECT = [( 89,245, 115, 278),(113,213,154,225)]
+GREEN_RECT = [( 395,245,423,278),(357,213,401,225)]
+
+import random
+def get_spawn_location(connection):
+	br1 = random.choice(BLUE_RECT)
+	gr1 = random.choice(GREEN_RECT)
+	if connection.team is connection.protocol.blue_team:
+		return connection.protocol.get_random_location(True, br1)
+	elif connection.team is connection.protocol.green_team:
+		return connection.protocol.get_random_location(True, gr1)
+		
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (413, 253, 49)
+	if entity_id == BLUE_BASE:
+		return (99,253,49)		
+
+
+aloha=True

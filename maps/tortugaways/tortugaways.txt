@@ -1,0 +1,2 @@
+author = "Dr. Morphman"
+description = "tortuga + 3ways. It really plays like the regular tortuga with the only difference that its easier to spot enemies from afar, hiding works also well"

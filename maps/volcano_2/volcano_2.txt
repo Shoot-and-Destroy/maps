@@ -1,0 +1,29 @@
+name = 'volcano'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Volcano'
+extensions = {'water_damage':25}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (382, 305, 38)
+    if entity_id == GREEN_FLAG:
+        return (382, 308, 38)
+    if entity_id == BLUE_BASE:
+        return (370, 141, 45)
+    if entity_id == GREEN_BASE:
+        return (391, 455, 35)
+        
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(355, 414)
+        by = random.randrange(132, 156)
+        return (bx, by, 38)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(369, 397)
+        gy = random.randrange(442, 460)
+        return (gx, gy, 28)

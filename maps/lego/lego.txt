@@ -1,0 +1,4 @@
+name = 'lego'
+version = '1.0'
+author = 'sgt.kartoschka'
+description = ('a map made out of lego bricks, two kingdoms connected by a bridge')

@@ -1,0 +1,12 @@
+name = 'awp_india_black'
+version = '1.0'
+author = 'Keviin, Naruto, Chapa & Ember'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (252, 211, 59),
+     'arena_green_spawn' : (252, 323, 59),
+     'arena_gates' : ((260, 219, 59), (260, 315, 59)),
+     'water_damage' : 100
+}
+
+aloha=True

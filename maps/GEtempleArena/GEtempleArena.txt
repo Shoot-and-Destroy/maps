@@ -1,0 +1,14 @@
+name = 'GEtempleArena'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Golden Eye copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((235,283,51),(206,282,56)),
+     'arena_green_spawns' : ((284,258,53),(282,288,53)),
+     'arena_gates' : ((232,280,49),(208,284,54),(281,255,51),(279,285,51)),
+     'water_damage' : 100
+ }

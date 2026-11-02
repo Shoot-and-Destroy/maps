@@ -1,0 +1,57 @@
+[map]
+modes = ["ctf", "koth", "tc", "zombie"]
+author = "kawa"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [169, 223, 57], end = [170, 296, 57] }
+team2 = { start = [376, 219, 57], end = [384, 296, 57] }
+
+[map.fitness]
+land = 0.863
+area_land = 0.771
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.2
+map_deaths = 0.287
+fight_kills = 202.0
+objective = 13
+failed = ["map_deaths"]
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.104
+fight_kills = 146.0
+objective = 25
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.122
+fight_kills = 215.5
+objective = 12
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.115
+fight_kills = 230.0
+objective = 14
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.15
+map_deaths = 0.107
+fight_kills = 88.0
+objective = 7
+failed = []

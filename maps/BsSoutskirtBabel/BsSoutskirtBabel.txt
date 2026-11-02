@@ -1,0 +1,10 @@
+name = "Bs Soutskirt Babel"
+version = '1.0'
+author = 'T0M, Reworked by Qult'
+description = 'BlackSquad copy map'
+
+extensions = {
+     'water_damage' : 100
+
+ }
+# https://hosting.dgd.cx/map-search?query=sout&file=BSoutskirt.vxl&source=allmaps#iso

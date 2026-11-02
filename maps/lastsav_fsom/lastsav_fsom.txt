@@ -1,0 +1,6 @@
+name = 'ClassigGen'
+version = '1.0'
+author = 'Tom Dobrowolski'
+description = ('Classic generated maps')
+
+aloha=True

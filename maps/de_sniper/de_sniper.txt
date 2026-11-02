@@ -1,0 +1,16 @@
+name = 'De_sniper'
+
+version = '1.0'
+
+author = 'Keviin, Henrique'
+
+extensions = {
+
+     'arena': True,
+     'arena_blue_spawn' : (238, 256, 47),
+     'arena_green_spawn' : (198, 328, 47),
+     'arena_gates' : ((203, 324, 49), (235, 261, 49)),
+     'water_damage' : 100
+
+
+}

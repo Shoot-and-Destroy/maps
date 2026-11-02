@@ -1,0 +1,6 @@
+name = 'Hallpoint3'
+author = 'Supernova'
+
+#LICENSE
+#This map is AOSG (formerly AOSK) exclusive map.
+#You need permission from Supernova if you want to use or modify this map.

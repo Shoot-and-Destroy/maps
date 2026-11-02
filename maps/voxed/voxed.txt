@@ -1,0 +1,9 @@
+name = 'Voxed'
+version = '1.0'
+author = 'Ken Silverman and Ben Aksoy maybe'
+description = "Why did noone get the idea to just use the default map of the voxed editor as aos map lol. Insane amount of efforts done by Rakete lol"
+fog = (0, 0, 0)
+
+#extensions = { 
+#'boundary_damage' : {'left' : 64, 'right' : 448, 'top' : 153, 'bottom' : 342, 'damage': 1}
+#}

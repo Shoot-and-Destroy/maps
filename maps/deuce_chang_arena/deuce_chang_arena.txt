@@ -1,0 +1,13 @@
+name = 'deuce_chang_arena'
+author = 'engawa'
+version = '1.0'
+description = 'arena de asobu'
+fog = (256, 256, 256)
+extensions = { 'water_damage' : 999}
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (194,256,61),
+     'arena_green_spawn' : (317,256,61),
+     'arena_gates': ((210,256,60),(302,256,60)),
+}

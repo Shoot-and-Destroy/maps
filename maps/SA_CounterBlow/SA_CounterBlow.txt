@@ -1,0 +1,15 @@
+name = "SA_CounterBlow"
+
+version = '1.0'
+
+author = 'SuddenAttack-team and copied by JohnVIP'
+
+description = 'SuddenAttack copy map'
+
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (161,256,59),
+     'arena_green_spawn' : (349,257,59),
+     'arena_gates': ((158,253,56),(346,254,56))
+ }

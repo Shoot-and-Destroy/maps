@@ -1,0 +1,29 @@
+name = 'icebridge'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Ice Bridge'
+extensions = {'water_damage':100}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (344, 275, 11)
+    if entity_id == GREEN_FLAG:
+        return (353, 249, 11)
+    if entity_id == BLUE_BASE:
+        return (209, 256, 48)
+    if entity_id == GREEN_BASE:
+        return (497, 269, 40)
+	
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+	bx = random.randrange(196,209)
+	by = random.randrange(257,268)
+        return (bx, by, 48)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(486,497)
+	gy = random.randrange(255,269)
+	return (gx, gy, 40)

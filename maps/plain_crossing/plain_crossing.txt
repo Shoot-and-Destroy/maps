@@ -1,0 +1,6 @@
+name = 'plain crossing'
+version = '1.2'
+author = 'Jdrew'
+description = 'My first try at terrain, I think it went well
+'
+extensions = {'KOTH':(274,213,16)}

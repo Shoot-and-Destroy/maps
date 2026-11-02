@@ -1,0 +1,14 @@
+name = 'Crossfire 2+3'
+version = '1.0'
+author = 'TheGrandmaster and Lostmotel'
+extensions = {'boundary_damage' : {
+'left' : 74, 
+'right' : 436, 
+'top' : 120, 
+'bottom' : 394, 
+'damage': 1},
+'babel' : True }
+
+
+
+aloha=True

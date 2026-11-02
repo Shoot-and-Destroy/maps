@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "HotIsland"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.063
+area_land = 0.175
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.025
+fight_kills = 268.5
+objective = 0
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.048
+fight_kills = 130.0
+objective = 0
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 1.35
+map_deaths = 0.032
+fight_kills = 230.0
+objective = 9
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.15
+map_deaths = 0.02
+fight_kills = 365.5
+objective = 2
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.017
+fight_kills = 208.0
+objective = 13
+failed = ["land", "spawn"]

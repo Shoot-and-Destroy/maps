@@ -1,0 +1,15 @@
+name = 'BasketballCoat'
+version = '1.0'
+author = 'TakagariSyunhei'
+description = 'The basketball coat'
+
+
+#script
+from pyspades.server import ServerConnection
+from pyspades.constants import*
+
+def get_entity_location(team, entity_id):
+  if entity_id == BLUE_BASE:
+    return(0, 511 , 62)
+  if entity_id == GREEN_BASE:
+    return(511, 511, 62)

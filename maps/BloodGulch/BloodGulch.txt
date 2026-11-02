@@ -1,0 +1,85 @@
+name = 'BloodGulch'
+
+version = '1.2'
+
+#-Extended the kill boundary on the Blue side
+#-Added stairs on both sides to allow players to come down from cliffs
+#-Tweaked Spawn area, Intel heights, Boundary damage
+#-Changed Spawn Area to a List of Spawns to avoid spawning on cliffs
+
+author = 'MissionCo'
+
+description = 'Everyones favorite box canyon from HaloCe  now in voxel!'
+
+extensions = {'boundary_damage' : {'left' : 2,
+                                    'right' : 510,
+                                    'top' : 128,
+                                    'bottom' : 388,
+                                    'damage': 200 } }
+
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (422, 263, 50)
+    if entity_id == BLUE_FLAG:
+        return (117, 263, 48)
+    if entity_id == GREEN_BASE:
+        return (432, 262, 25)
+    if entity_id == BLUE_BASE:
+        return (106, 262, 25)
+
+import random
+
+spawn_locations_blue = [
+ (125, 270, 46),
+ (125, 255, 46),
+ (110, 255, 46),
+ (110, 270, 46),
+ (113, 266, 51),
+ (113, 259, 51),
+ (121, 260, 51),
+ (121, 265, 51),
+ (145, 236, 51),
+ (145, 178, 50),
+ (128, 295, 50),
+ (128, 231, 51),
+ (109, 235, 50),
+ (109, 250, 50),
+ (90, 226, 50),
+ (90, 254, 50)
+]
+
+spawn_locations_green = [
+ (414, 257, 46),
+ (424, 270, 46),
+ (430, 270, 46),
+ (430, 257, 46),
+ (426, 250, 51),
+ (426, 257, 51),
+ (420, 260, 51),
+ (420, 266, 51),
+ (397, 246, 51),
+ (397, 246, 51),
+ (416, 237, 51),
+ (416, 289, 50),
+ (440, 285, 50),
+ (440, 251, 49),
+ (460, 260, 49),
+ (460, 276, 49)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 2.4
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

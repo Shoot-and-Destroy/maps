@@ -1,0 +1,8 @@
+name = 'Lakeside'
+version = '1.0'
+author = '*Sauerkraut Maps'
+description = ('This map is for the survive gamemode. Recovered.')
+
+extensions = {
+    'base_locations' : [(242, 109), (243, 396), (94, 258), (394, 263)]
+}

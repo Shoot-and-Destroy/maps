@@ -1,0 +1,10 @@
+name = 'planeassault'
+version = '2.0'
+author = 'Serious_Sim'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (205,254,31),
+     'arena_green_spawn' : (302,253,25),
+     'arena_gates': ((297,253,26),(211,254,31)),
+     'water_damage' : 250
+ }

@@ -1,0 +1,15 @@
+name = 'indiaarena'
+version = '1.0'
+author = 'Dany0'
+
+cap_limit = 10
+
+description = ('India from AvA. '
+               'Tweaked by izzy')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (212, 257, 54),
+     'arena_green_spawn' : (284, 256, 54),
+     'arena_gates': ((212, 257, 50), (284, 256, 51)),
+     'water_damage' : 100
+ }

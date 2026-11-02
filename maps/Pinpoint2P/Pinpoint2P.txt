@@ -1,0 +1,16 @@
+name = 'Pinpoint2P'
+version = '1.0'
+author = 'TheGrandmaster'
+description = 'Map with dimensional gates.'
+extensions = {
+    'respawn_time' : 12,
+    'water_damage': 3,
+    'teleports': [
+        ((1, 256, 53), 2, [(509, 252, 55), (509, 260, 55), (511, 252, 55), (511, 260, 55)]), #-y
+        ((510, 256, 53), 2, [(0, 252, 55), (2, 252, 55), (0, 260, 55), (2, 260, 55)]) #-y
+    ],
+'no_build_zones': [
+        ((1, 256, 53), 8, 0), #-y
+        ((510, 256, 53), 8, 0) #-y
+    ]
+}

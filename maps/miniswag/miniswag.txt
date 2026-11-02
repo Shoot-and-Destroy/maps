@@ -1,0 +1,24 @@
+name = 'Miniswag'
+version = '1.1'
+author = 'Swag by Lostmotel, shrunk by Danke'
+extensions = { 
+'boundary_damage' : {'left' : 1, 'right' : 510, 'top' : 64, 'bottom' : 448, 'damage': 5},
+'babel' : True }
+
+BLUE_RECT =  (174,245,192,168) #x1, y1, x2, y2
+GREEN_RECT = (321,246,339,269)
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		return connection.protocol.get_random_location(True, BLUE_RECT)
+	elif connection.team is connection.protocol.green_team:
+		return connection.protocol.get_random_location(True, GREEN_RECT)
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (339, 256, team.protocol.map.get_z(339, 256))
+	if entity_id == BLUE_BASE:
+		return (174, 256, team.protocol.map.get_z(174, 256))		

@@ -1,0 +1,9 @@
+from pyspades.constants import *
+import random
+
+name = 'Malbork'
+version = '1.0'
+author = 'Lunaris777'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/malbork-castle-map-minecraft-1-21/

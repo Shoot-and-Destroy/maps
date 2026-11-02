@@ -1,0 +1,8 @@
+name = 'Holiday Resort Babel'
+version = '1.0'
+author = 'Coco, ZeroXy, IAmYourFriend & others, Reworked by Qult'
+description = 'Ingame built map of a small island resort'
+extensions = {
+     'water_damage' : 100
+ }
+# https://aos.party/view/612

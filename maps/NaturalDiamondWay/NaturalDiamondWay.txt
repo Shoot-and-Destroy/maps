@@ -1,0 +1,7 @@
+name = 'Natural DiamondWay'
+version = '1.0'
+author = 'Lincent'
+description = ('Basically the inverse of Hallpoint.')
+
+
+aloha=True

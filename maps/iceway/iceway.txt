@@ -1,0 +1,4 @@
+name = 'Iceway'
+author = 'Xenon (a.k.a. Cumco)'
+description = ('All rights belong to Xenon and AOSG (formerly AOSK)')
+cap_limit = 6

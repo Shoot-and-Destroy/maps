@@ -1,0 +1,29 @@
+name = 'darthvader'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Star Destroyer'
+# extensions = {'water_damage':100}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (340, 205, 56)
+    if entity_id == BLUE_FLAG:
+        return (149, 200, 58)
+    if entity_id == GREEN_BASE:
+        return (373, 261, 27)
+    if entity_id == BLUE_BASE:
+        return (22, 263, 27)
+        
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(362,373)
+        gy = random.randrange(242,261)
+        return (gx, gy, 27)
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(22,34)
+        by = random.randrange(248,263)
+        return (bx, by, 27)

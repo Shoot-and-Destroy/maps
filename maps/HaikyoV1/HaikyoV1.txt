@@ -1,0 +1,1 @@
+name = 'haikyo'version = '1.0'author = 'VIPPER, Reworked by Qult'description = 'The desolated city map made by VIPPER'

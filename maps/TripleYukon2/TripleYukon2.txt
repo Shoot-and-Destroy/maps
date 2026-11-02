@@ -1,0 +1,5 @@
+name = 'Triple Yukon2'
+version = '1.0'
+author = 'unknown, Reworked by Qult'
+description = 'Triple'
+# https://hosting.dgd.cx/map-search?file=yukon2.vxl&source=allmaps#iso

@@ -1,0 +1,12 @@
+name = 'avsmallfortress_z'
+version = '2.4'
+author = 'AVuKY, Danke'
+description = 'Balanced, Glitch proofed. Stretched into the Z-dimension'
+cap_limit = 15
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' :  (248, 255, 54),
+    'arena_green_spawn' : (286, 242, 52),
+    'arena_gates': ((250, 255, 54), (251, 255, 54), (251, 254, 54), (251, 254, 53), (251, 255, 53), (250, 255, 53), (251, 257, 54), (251, 256, 54), (250, 256, 54), (251, 257, 53), (251, 256, 53), (250, 256, 53), (282, 241, 52), (282, 241, 51), (283, 242, 52), (283, 243, 52), (282, 244, 51), (282, 244, 52), (283, 242, 51), (283, 243, 51))
+}

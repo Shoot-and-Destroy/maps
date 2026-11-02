@@ -1,0 +1,4 @@
+name = 'Chinatown'
+version = '1.0'
+author = 'Influx, Reworked by Qult'
+description = 'Arena map which pits the police against the Triads'

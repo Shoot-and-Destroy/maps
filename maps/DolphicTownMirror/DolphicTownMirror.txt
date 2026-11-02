@@ -1,0 +1,5 @@
+name = "Dolphic Town"
+version = '1.0'
+author = 'T0M, Reworked by Qult'
+description = 'super mario sunshine copy map'
+# https://hosting.dgd.cx/map-search?query=dolphic&file=DolphicTownFFA.vxl&source=allmaps#iso

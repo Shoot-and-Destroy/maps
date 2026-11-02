@@ -1,0 +1,11 @@
+name = 'aim_pro'
+version = '1.1'
+author = 'iSkyte'
+description = 'Map specialized in aim training (rifle) and 1v1.'
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : (272, 255, 60),
+    'arena_green_spawn' : (240, 263, 60),
+    'arena_gates': ((239, 267, 60), (270, 244, 60))
+}

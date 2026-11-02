@@ -1,0 +1,14 @@
+name = 'TripleTurv2'
+version = '1.0'
+author = 'Danke, Reworked by Qult'
+# https://aos.party/view/1249
+
+BLUE_RECT = ( 111, 209, 153, 285) 
+GREEN_RECT = ( 358, 226, 400, 302)
+
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)

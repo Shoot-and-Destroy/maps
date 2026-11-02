@@ -1,0 +1,13 @@
+name = 'fy pool day'
+version = '1'
+author = 'Darion'
+description = ('hand made replica of the popular cs map')
+extensions = {
+     'water_damage' : 0,
+     'arena': True,
+     'arena_blue_spawn' : (276, 255, 59),
+     'arena_green_spawn' : (236, 255, 59),
+     'arena_gates': ((279, 259, 59), (233, 259, 59))
+ } 
+
+aloha=True

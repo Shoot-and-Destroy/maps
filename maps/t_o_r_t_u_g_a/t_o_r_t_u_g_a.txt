@@ -1,0 +1,6 @@
+name = 't_o_r_t_u_g_a'
+version = '1.0'
+author = 'Lostmotel, modified by Danke'
+extensions = { 'boundary_damage' : {'left' : 1,'right' : 512, 'top' : 94, 'bottom' : 418, 'damage': 5 },
+               'babel' : True }
+

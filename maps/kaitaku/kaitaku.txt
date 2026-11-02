@@ -1,0 +1,4 @@
+name = 'kaitaku'
+version = '1.0'
+author = 'Many Japanese'
+

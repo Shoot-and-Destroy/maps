@@ -1,0 +1,16 @@
+name = 'Zigzag'
+version = '1.1'
+author = 'Ananas'
+description = ' '
+
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (220, 435, 30),
+'push_blue_cp' : (210, 14, 47),
+'push_green_spawn' : (295, 435, 30),
+'push_green_cp' : (310, 14, 47),
+'water_damage' : 100
+  }
+
+

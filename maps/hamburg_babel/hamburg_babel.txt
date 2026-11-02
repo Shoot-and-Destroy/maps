@@ -1,0 +1,11 @@
+name = 'Hamburg'
+version = '2.45'
+author = 'Golem Warrior'
+description = ('Some map I just stole from a guy who made this push map by hand you know.')
+extensions = { 
+'water_damage' : 100,
+'babel' : True }
+
+
+
+aloha=True

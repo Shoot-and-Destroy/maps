@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "islandskirmish"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.238
+area_land = 0.582
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 16.3
+map_deaths = 0.037
+fight_kills = 105.0
+objective = 2
+failed = ["land", "water", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 12.9
+map_deaths = 0.009
+fight_kills = 55.0
+objective = 3
+failed = ["water"]
+
+[map.fitness.koth]
+pass = false
+water = 16.6
+map_deaths = 0.042
+fight_kills = 79.5
+objective = 9
+failed = ["water"]
+
+[map.fitness.tc]
+pass = false
+water = 21.2
+map_deaths = 0.012
+fight_kills = 125.5
+objective = 11
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = false
+water = 2.55
+map_deaths = 0.0
+fight_kills = 136.0
+objective = 8
+failed = ["land", "water"]

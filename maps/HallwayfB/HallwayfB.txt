@@ -1,0 +1,4 @@
+name = 'Hallway'
+version = '1.1'
+author = 'Lincent --- Izzy'
+description = ('Showcases Izzy"s narrow view of reality.')

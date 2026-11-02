@@ -1,0 +1,11 @@
+name = 'awp_indiaArena'
+version = '1.0'
+author = 'Dany0'
+description = 'A minifun classic arena optimized!'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (213,247,59),
+     'arena_green_spawn' : (298,265,59),
+     'arena_gates': ((298,263,58),(213,249,58)),
+     'water_damage' : 250
+ }

@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "koth", "tc", "zombie"]
+author = "Sasquatch"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.966
+area_land = 0.984
+spawn_dry = [0.99, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.159
+fight_kills = 114.0
+objective = 4
+failed = ["map_deaths"]
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.14
+fight_kills = 52.0
+objective = 3
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.05
+map_deaths = 0.149
+fight_kills = 88.5
+objective = 6
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.076
+fight_kills = 121.0
+objective = 31
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.04
+fight_kills = 72.0
+objective = 3
+failed = []

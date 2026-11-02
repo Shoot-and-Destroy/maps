@@ -1,0 +1,4 @@
+name = 'EASTERN EUROPE'
+version = '1.0'
+author = 'CowNorris'
+description = 'A small part of the world. Eastern Europe.'

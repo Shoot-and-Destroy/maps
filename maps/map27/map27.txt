@@ -1,0 +1,14 @@
+name = 'map27'
+version = '1.1'
+author = 'T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (231, 231, 30),
+     'arena_green_spawn' : (280, 280, 30),
+     'arena_gates': ((235,231,30),(231,235,30),(276,280,30),(280,276,30)),
+     'boundary_damage' : {'left' : 223,
+                          'right' : 288,
+                          'top' : 223,
+                          'bottom' : 288,
+                          'damage': 25 }
+}

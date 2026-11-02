@@ -1,0 +1,44 @@
+from pyspades.constants import *
+import random
+name="Titanic CTF"
+author="Serious Mapping, Buffet_of_Lies, Serious_Sim, NestoFlo, rotated by BrziDragan"
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(157, 199)
+        y = random.randrange(245, 269)
+        z = team.protocol.map.get_z(x,y)
+        return (x,y,z)
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(170, 181)
+        y = random.randrange(245, 269)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(316, 363)
+        y = random.randrange(244, 269)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(335, 349)
+        y = random.randrange(224, 269)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(171, 198)
+        y = random.randrange(245, 269)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(316, 340)
+        y = random.randrange(244, 269)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)

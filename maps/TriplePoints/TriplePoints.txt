@@ -1,0 +1,5 @@
+name = "TriplePoints"
+version = '1.0'
+author = 'Unknown, Reworked by Qult'
+description = 'duplicated map'
+# https://hosting.dgd.cx/map-search?query=points&file=points.vxl&source=allmaps#iso

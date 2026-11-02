@@ -1,0 +1,4 @@
+name = 'castlesandshit'
+version = '1.0'
+author = 'Fat Idiot, Reworked by Qult'
+# https://hosting.dgd.cx/map-search?query=castle&file=castlesandshit.vxl&source=allmaps#iso

@@ -1,0 +1,49 @@
+[map]
+modes = []
+author = "crossfire"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [226, 246, 51], end = [260, 282, 61] }
+team2 = { start = [239, 160, 59], end = [271, 223, 61] }
+
+[map.fitness]
+land = 0.297
+area_land = 0.243
+spawn_dry = [0.74, 0.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.125
+fight_kills = 544.0
+objective = 1
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.065
+fight_kills = 753.5
+objective = 12
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.041
+fight_kills = 485.5
+objective = 2
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.014
+fight_kills = 179.5
+objective = 13
+failed = ["land", "spawn"]

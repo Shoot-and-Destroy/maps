@@ -1,0 +1,27 @@
+name = "BSrush"
+version = '1.0'
+author = 'T0M'
+description = 'Black Squad copy map'
+
+fog = (32, 32, 64)
+
+extensions = {
+     'water_damage' : 110
+ }
+
+import random
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection): 
+	if connection.team is connection.protocol.blue_team: 
+		x1 = random.randrange(246,258) 
+		y1 = random.randrange(308,320) 
+		z1 = 61
+		return (x1, y1, z1) 
+	if connection.team is connection.protocol.green_team: 
+		x2 = random.randrange(252,264) 
+		y2 = random.randrange(191,203) 
+		z2 = 61
+		return (x2, y2, z2) 

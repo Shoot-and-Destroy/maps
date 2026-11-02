@@ -1,0 +1,29 @@
+from random import randint
+
+name        = 'Level 18'
+version     = '1.0'
+description = 'Truchet - two tilings, only one of them is real'
+fog         = (46, 74, 92)
+SPAWN       = (223, 251)
+
+extensions = {
+	'base_locations': [
+		(292, 143),
+		(149, 291),
+		(348, 239),
+		(243, 341),
+		(399, 133),
+		(229, 197),
+		(336, 323),
+		(286, 263)
+	],
+    'players_spawn_start' : SPAWN
+}
+
+def get_spawn_location(player):
+	x1, y1 = SPAWN
+
+	x = randint(x1, x1 + 9)
+	y = randint(y1, y1 + 9)
+
+	return (x, y, player.protocol.map.get_z(x, y))

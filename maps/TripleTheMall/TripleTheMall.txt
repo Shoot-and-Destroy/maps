@@ -1,0 +1,7 @@
+name = 'TripleTheMall'
+version = '1.0'
+author = 'andr3w, Reworked by Qult'
+description = 'Battle for the capitol'
+extensions = { 'water_damage' : 25}
+
+# https://aos.party/view/997

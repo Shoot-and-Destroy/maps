@@ -1,0 +1,10 @@
+name = 'map34'
+version = '1.0'
+author = 'T0M'
+description = 'To warp when you pass through the gate to the color area of'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (238, 238, 44),
+     'arena_green_spawn' : (272, 272, 44),
+     'arena_gates' : ((240, 240, 42),(270, 270, 42))
+}

@@ -1,0 +1,35 @@
+﻿## GENERATED WITH BLOCKMAN2D v0.2.5.0
+name = 'Beta_battlecity'
+version = '0.75'
+author = 'Big Boss'
+description = ''
+extensions = { 'water_damage' : 100 }
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+import random
+ 
+def get_entity_location(team, entity_id):
+     if entity_id == BLUE_FLAG:
+         return (113, 258, 15)
+     if entity_id == GREEN_FLAG:
+         return (351, 261, 15)
+     if entity_id == BLUE_BASE:
+         return (113, 246, 15)
+     if entity_id == GREEN_BASE:
+         return (350, 245, 15)
+ 
+SPAWN_RECTANGLES = [[(348,359,189,320)], [(116,128,189,319)]]
+ 
+def get_spawn_location(connection):
+     if SPAWN_RECTANGLES is not None:
+         if connection.team is connection.protocol.green_team:
+             x1, x2, y1, y2 = random.choice(SPAWN_RECTANGLES[0])
+         elif connection.team is connection.protocol.blue_team:
+             x1, x2, y1, y2 = random.choice(SPAWN_RECTANGLES[1])
+         x, y = random.randint(x1,x2), random.randint(y1,y2)
+         z = connection.protocol.map.get_z(x, y)
+     if x is not None and y is not None and z is not None:
+         return ServerConnection.set_location_safe(connection, (x, y, z))
+     else:
+         return ServerConnection.get_spawn_location(connection)

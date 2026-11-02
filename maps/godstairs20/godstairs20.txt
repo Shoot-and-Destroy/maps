@@ -1,0 +1,55 @@
+
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(255, 256)
+        y = random.randrange(255, 256)
+        z = 0
+        return (x,y,z)
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(119, 120)
+        y = random.randrange(255, 256)
+        z = 60
+        return (x, 227, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(255, 256)
+        y = random.randrange(255, 256)
+        z = 0
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(394, 395)
+        y = random.randrange(255, 256)
+        z = 60
+        return (x, 227, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(96, 119)
+        y = random.randrange(203, 251)
+        z = connection.protocol.map.get_z(x,y)-1
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(393, 416)
+        y = random.randrange(203, 251)
+        z = connection.protocol.map.get_z(x,y)-1
+        return (x, y, z)
+
+name = 'godstairs2.0'
+version = '2.0'
+author = 'israelleelll'
+extensions = { 
+'water_damage' : 10,
+'babel' : True
+}
+
+
+aloha=True

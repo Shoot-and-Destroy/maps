@@ -1,0 +1,9 @@
+from pyspades.constants import *
+import random
+
+name = 'Sunleaf Valley'
+version = '1.0'
+author = '3skr'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/sunleaf-valley/

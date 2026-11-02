@@ -1,0 +1,4 @@
+name = 'Pancakes VS Waffles'
+version = '1.0'
+author = 'Kaprekar'
+description = 'Settle the argument pancakes vs waffles in battle.'

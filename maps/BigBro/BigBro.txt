@@ -1,0 +1,5 @@
+name = 'BigBro'
+version = '1.0'
+author = 'Ananas'
+description = 'Spasibo mame i Vladu'
+extensions = { 'water_damage' : 100 }

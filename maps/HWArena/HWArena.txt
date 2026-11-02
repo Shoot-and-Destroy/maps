@@ -1,0 +1,11 @@
+name = 'Hallway Arena'
+version = '1.0'
+author = 'kiki and Mr.Torch | Metafile done by Shywolf91'
+description = ('Arena map made in Hallway')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawns' : ((99,256,61), (98,256,61), (99,255,54), (98,255,54)),
+     'arena_green_spawns' : ((92,254,60), (94,255,60), (92,255,54), (92,254,54)),
+     'arena_gates': ((87,252,57), (87,252,53), (104,252,57), (104,259,51))
+ }

@@ -1,0 +1,6 @@
+name = 'Triple City'
+version = '1.0'
+author = 'Sasquatch, Reworked by Qult'
+description = ('A trip of doomed monster appetizers.')
+fog = (200, 150, 100)
+# https://aos.party/view/303

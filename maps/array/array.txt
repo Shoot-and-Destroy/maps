@@ -1,0 +1,26 @@
+name = "array"
+version = '1.0'
+author = 'ONIGIRI'
+
+extensions = {
+     'water_damage' : 110,
+     'blue_team_color' : (225, 225, 255),
+     'green_team_color' : (225, 255, 225)
+ }
+
+import random
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection): 
+	if connection.team is connection.protocol.blue_team: 
+		x1 = random.randrange(138,160) 
+		y1 = random.randrange(262,294) 
+		z1 = connection.protocol.map.get_z(x1, y1)
+		return (x1, y1, z1) 
+	if connection.team is connection.protocol.green_team: 
+		x2 = random.randrange(331,354) 
+		y2 = random.randrange(154,178) 
+		z2 = connection.protocol.map.get_z(x2, y2)
+		return (x2, y2, z2) 

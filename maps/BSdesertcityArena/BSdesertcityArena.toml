@@ -1,0 +1,61 @@
+[map]
+modes = ["ngctf", "ctf", "koth", "tc", "arena"]
+author = "T0M"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 110
+
+[spawnpoints]
+team1 = { start = [207, 344, 54], end = [207, 344, 54] }
+team2 = { start = [304, 168, 54], end = [304, 168, 54] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[204, 341, 49], [301, 165, 49]]
+
+[map.fitness]
+land = 0.143
+area_land = 0.846
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.045
+fight_kills = 224.5
+objective = 3
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.03
+fight_kills = 144.0
+objective = 5
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.027
+fight_kills = 213.0
+objective = 7
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.12
+fight_kills = 248.5
+objective = 5
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 0.05
+map_deaths = 0.211
+fight_kills = 30.0
+objective = 2
+failed = ["objective"]

@@ -1,0 +1,4 @@
+name = 'Arab'
+version = '1.0'
+author = 'Dany0'
+description = 'Conversion from a sketchup model. Yourself will maybe make a better version.'

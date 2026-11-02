@@ -1,0 +1,11 @@
+name = 'dust2_csgo_2x2'
+version = '2.0'
+author = 'Keviin, TrollPT, Darks, Henrique'
+description = ('Conversion of the map from CS GO')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (237, 307, 56),
+     'arena_green_spawn' : (273, 183, 48),
+     'arena_gates': ((236, 304, 56), (269, 178, 48)),
+     'water_damage' : 100
+ }

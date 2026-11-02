@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Alan Harper"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.313
+area_land = 0.72
+spawn_dry = [0.61, 0.64]
+
+[map.fitness.ngctf]
+pass = false
+water = 3.0
+map_deaths = 0.108
+fight_kills = 140.0
+objective = 8
+failed = ["water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 2.85
+map_deaths = 0.201
+fight_kills = 67.5
+objective = 5
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 3.5
+map_deaths = 0.171
+fight_kills = 136.0
+objective = 10
+failed = ["water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 3.85
+map_deaths = 0.132
+fight_kills = 154.5
+objective = 13
+failed = ["water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 5.8
+map_deaths = 0.028
+fight_kills = 34.5
+objective = 2
+failed = ["water", "objective", "spawn"]

@@ -1,0 +1,5 @@
+name = 'City of Chicago Mirror'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+fog = (73,84,108)
+

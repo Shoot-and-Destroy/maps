@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Qult"
+fog_color = [255, 225, 147]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.995
+area_land = 0.985
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 1.6
+map_deaths = 0.452
+fight_kills = 25.5
+objective = 5
+failed = ["map_deaths", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.85
+map_deaths = 0.513
+fight_kills = 29.0
+objective = 0
+failed = ["map_deaths", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 1.4
+map_deaths = 0.479
+fight_kills = 68.0
+objective = 9
+failed = ["map_deaths"]
+
+[map.fitness.tc]
+pass = false
+water = 2.2
+map_deaths = 0.298
+fight_kills = 86.0
+objective = 2
+failed = ["map_deaths", "objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 1.8
+map_deaths = 0.231
+fight_kills = 30.0
+objective = 2
+failed = ["objective"]

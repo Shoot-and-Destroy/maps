@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "zombie"]
+author = "poltica"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.863
+area_land = 0.863
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 7.65
+map_deaths = 0.013
+fight_kills = 197.0
+objective = 7
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 1.75
+map_deaths = 0.02
+fight_kills = 123.0
+objective = 7
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 4.35
+map_deaths = 0.016
+fight_kills = 183.0
+objective = 10
+failed = ["water"]
+
+[map.fitness.tc]
+pass = false
+water = 3.95
+map_deaths = 0.01
+fight_kills = 249.5
+objective = 8
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = true
+water = 1.7
+map_deaths = 0.021
+fight_kills = 70.0
+objective = 7
+failed = []

@@ -1,0 +1,15 @@
+name = 'Upside Down'
+version = '1.0'
+author = '*Sauerkraut Factory'
+description = ('Push map but upside down. Recovered')
+fog = (40, 30, 50)
+
+extensions = {
+'push': True,
+'push_spawn_range' : 11,
+'push_blue_spawn' : (210, 482, 59),
+'push_blue_cp' : (242, 8, 59),
+'push_green_spawn' : (301, 482, 59),
+'push_green_cp' : (270, 8, 59),
+'water_damage' : 100
+}

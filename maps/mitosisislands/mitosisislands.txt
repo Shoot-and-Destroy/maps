@@ -1,0 +1,6 @@
+name = 'Mitosis Islands'
+version = '1.0'
+author = 'Kiwaka'
+description = 'map By Kiwaka, helped by the Animus team'
+extensions = { 'water_damage' : 5}
+

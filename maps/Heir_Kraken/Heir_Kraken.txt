@@ -1,0 +1,33 @@
+AREA = (109, 157, 405, 353)
+PAD = 23
+WIDTH = 20
+BLUE_RECT = (AREA[0] + PAD, AREA[1] + PAD, AREA[0] + PAD + WIDTH, AREA[3] - PAD)
+GREEN_RECT = (AREA[2] - PAD - WIDTH, AREA[1] + PAD, AREA[2] - PAD, AREA[3] - PAD)
+HALF_X = AREA[0] + (AREA[2] - AREA[0]) / 2
+HALF_Y = AREA[1] + (AREA[3] - AREA[1]) / 2
+GOAL = (8, 32, 40)
+ 
+name = 'Heir Kraken'
+version = '1.0'
+author = 'jojoe'
+area = AREA
+ball = (HALF_X, HALF_Y, 40)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)
+ 
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (310, 233, 54)
+    if entity_id == BLUE_FLAG:
+        return (200, 233, 54)
+    if entity_id == GREEN_BASE:
+        return (310, 269, 54)
+    if entity_id == BLUE_BASE:
+        return (200, 269, 54)

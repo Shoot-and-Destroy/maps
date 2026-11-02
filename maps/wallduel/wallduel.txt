@@ -1,0 +1,4 @@
+name = 'Wallduel'
+version = '1.0'
+author = 'izzy/tGM'
+description = 'Edited pinpoint for training uses.'

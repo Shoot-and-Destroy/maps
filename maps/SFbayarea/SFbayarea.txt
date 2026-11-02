@@ -1,0 +1,39 @@
+name = 'SFbayarea'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Special Force copy map'
+
+extensions = {
+     'water_damage' : 110
+}
+
+protected = [
+    'a1','a2','a3','a4','a5','a6','a7','a8',
+    'b1','b2','b3','b4','b5','b6','b7','b8',
+    'c1','c2','c3','c4','c5','c6','c7','c8',
+    'd1','d2','d3','d4','d5','d6','d7','d8',
+    'e1','e2','e3','e4','e5','e6','e7','e8',
+    'f1','f2','f3','f4','f5','f6','f7','f8',
+    'g1','g2','g3','g4','g5','g6','g7','g8',
+    'h1','h2','h3','h4','h5','h6','h7','h8'
+]
+
+import random
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection): 
+	if connection.team is connection.protocol.blue_team: 
+		x1 = random.randrange(265,277) 
+		y1 = random.randrange(266,275) 
+		z1 = connection.protocol.map.get_z(x1, y1)
+		return (x1, y1, z1) 
+	if connection.team is connection.protocol.green_team: 
+		x2 = random.randrange(314,317) 
+		y2 = random.randrange(200,209) 
+		z2 = connection.protocol.map.get_z(x2, y2)
+		return (x2, y2, z2) 

@@ -1,0 +1,3 @@
+name = 'House Of The Dead'
+version = '1.0'
+author = 'Hopdry'

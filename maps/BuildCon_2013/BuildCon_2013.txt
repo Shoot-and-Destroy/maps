@@ -1,0 +1,4 @@
+name = 'BuildCon 2013'
+version = '1.0'
+author = 'aloha.pk'
+description = ('aloha.pk BuildCon 2013 event: March 2, 2013')

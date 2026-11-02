@@ -1,0 +1,12 @@
+name = 'avsmallfortress_x'
+version = '2.4'
+author = 'AVuKY, Danke'
+description = 'Balanced, Glitch proofed. Stretched into X-dimension'
+cap_limit = 15
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' : (228, 260, 58),
+    'arena_green_spawn' : (303, 247, 57),
+    'arena_gates': ((232, 259, 59), (232, 260, 59), (233, 260, 59), (233, 259, 59), (234, 258, 59), (234, 261, 59), (296, 245, 58), (297, 245, 58), (297, 248, 58), (296, 248, 58), (298, 246, 58), (299, 246, 58), (298, 247, 58), (299, 247, 58))
+}

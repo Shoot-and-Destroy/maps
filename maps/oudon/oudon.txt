@@ -1,0 +1,12 @@
+name = "oudon"
+version = '1.0'
+author = 'oudon'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (324,226,58),
+     'arena_green_spawn' : (414,256,58),
+     'arena_gates': ((411,257,57) , (327,225,57))
+ }
+
+

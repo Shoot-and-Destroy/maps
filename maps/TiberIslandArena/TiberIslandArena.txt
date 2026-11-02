@@ -1,0 +1,15 @@
+name = 'Tiber Island'
+version = '1.0'
+author = 'T0M'
+
+cap_limit = 3
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (235, 194, 55),
+     'arena_green_spawn' : (263, 314, 55),
+     'arena_gates': ((232, 191, 51),(260, 311, 51)),
+     'circle_damage' : {'center' : (246, 251),
+                        'distance' : 96,
+                        'damage' : 15 }
+}

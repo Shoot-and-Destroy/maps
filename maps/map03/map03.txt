@@ -1,0 +1,14 @@
+name = 'map03'
+version = '1.1'
+author = 'T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((229, 229, 58),(282, 282, 58)),
+     'arena_green_spawns' : ((229, 282, 58), (282, 229, 58)),
+     'arena_gates': ((279,231,58),(280,279,58),(232,280,58),(231,232,58)),
+     'boundary_damage' : {'left' : 223,
+                          'right' : 288,
+                          'top' : 223,
+                          'bottom' : 288,
+                          'damage': 25 }
+}

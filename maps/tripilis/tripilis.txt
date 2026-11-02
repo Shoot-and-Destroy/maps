@@ -1,0 +1,18 @@
+name = 'tripilis'
+version = '1.0'
+author = 'Danko'
+# script
+from pyspades.constants import *
+import random
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(164,170)
+        y = random.randrange(225,285)
+        z = connection.team.protocol.map.get_z(x, y)
+        return (x, y, z-1)
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(343,348)
+        y = random.randrange(225,285)
+        z = connection.team.protocol.map.get_z(x, y)
+        return (x, y, z-1)

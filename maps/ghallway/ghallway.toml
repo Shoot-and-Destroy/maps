@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "lecom (combined map), Tom Dobrowolski (classicgen), izzy(hallway) "
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.567
+area_land = 0.436
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 1.4
+map_deaths = 0.019
+fight_kills = 205.0
+objective = 3
+failed = ["land", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.7
+map_deaths = 0.018
+fight_kills = 136.5
+objective = 2
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 1.85
+map_deaths = 0.006
+fight_kills = 153.0
+objective = 7
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.9
+map_deaths = 0.017
+fight_kills = 176.5
+objective = 12
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 1.6
+map_deaths = 0.004
+fight_kills = 123.5
+objective = 7
+failed = ["land", "spawn"]

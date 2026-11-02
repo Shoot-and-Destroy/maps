@@ -1,0 +1,12 @@
+name = 'abandonedstronghold'
+version = '1.0'
+author = 'EssigGurkenFred'
+description = 'a abadoned stronghold created by EGF'
+cap_limit = 10
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (281,225,48),
+     'arena_green_spawn' : (231,275,48),
+     'arena_gates': ((281,228,56), (278,224,56), (234,275,56), (231,272,56), (234,275,51), (230,278,51), (228,275,51), (230,272,51), (233,274,48), (281,222,51), (284,224,51), (281,228,51), (278,225,51), (279,226,48)),
+     'water_damage' : 10
+ }

@@ -1,0 +1,4 @@
+name = 'WoolCity Mix'
+version = '1.0'
+author = 'unknown, Reworked by Qult'
+# https://hosting.dgd.cx/map-search?query=wool&file=WoolCity.vxl&source=allmaps#iso

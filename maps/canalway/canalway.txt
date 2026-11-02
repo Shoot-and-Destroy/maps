@@ -1,0 +1,4 @@
+name = 'Canalway'
+author = 'Swole Froge'
+description = ('All rights belong to Swole Froge and AOSG (formerly AOSK)')
+cap_limit = 5

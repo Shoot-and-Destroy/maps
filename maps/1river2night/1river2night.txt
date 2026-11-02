@@ -1,0 +1,9 @@
+name = '1river2night'
+version = '1.0'
+author = 'original by Technomancer88'
+extensions = { 
+   'babel' : True, 
+   'heavens_color' : (255, 255, 255, 255)
+}
+
+fog = (0,0,0)

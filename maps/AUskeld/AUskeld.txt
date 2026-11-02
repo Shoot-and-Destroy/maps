@@ -1,0 +1,15 @@
+name = "AUskeld"
+version = '1.0'
+author = 'T0M'
+description = "Among us copy map"
+
+fog = (0,0,0)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (176,255,51),
+     'arena_green_spawn' : (341,255,51),
+     'arena_gates' : ((171,244,53),(186,253,49),(177,261,53),(336,247,53),(331,253,49),(336,262,53)),
+     'water_damage' : 100,
+     'territories' : [(201,281,53),(310,284,53),(262.5,229.5,50)]
+ }

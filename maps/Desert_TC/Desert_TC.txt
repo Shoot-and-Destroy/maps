@@ -1,0 +1,4 @@
+name = 'Desert TC'
+version = '1.0'
+author = 'W. Carrera, 111INFORMATIQUE'
+description = 'Guerre du territoire, Game_mode =tc. Si vous faites des modifs me contacter opensim@free.fr'

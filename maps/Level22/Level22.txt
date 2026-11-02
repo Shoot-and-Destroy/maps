@@ -1,0 +1,29 @@
+from random import randint
+
+name        = 'Level 22'
+version     = '1.0'
+description = 'Deep Groove - the record you can see is not the one you are in'
+fog         = (52, 34, 92)
+SPAWN       = (251, 239)
+
+extensions = {
+	'base_locations': [
+		(241, 287),
+		(279, 171),
+		(153, 234),
+		(72, 296),
+		(363, 94),
+		(318, 260),
+		(218, 122),
+		(253, 366)
+	],
+    'players_spawn_start' : SPAWN
+}
+
+def get_spawn_location(player):
+	x1, y1 = SPAWN
+
+	x = randint(x1, x1 + 9)
+	y = randint(y1, y1 + 9)
+
+	return (x, y, player.protocol.map.get_z(x, y))

@@ -1,0 +1,6 @@
+name = '8mountains'
+version = '1.0'
+author = 'MegaStar'
+extensions = { 'babel' : True }
+
+aloha=True

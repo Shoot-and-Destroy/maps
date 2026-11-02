@@ -1,0 +1,4 @@
+name = 'unova'
+version = '1.2'
+author = 'Jdrew'
+description = 'if gen was colorful..'

@@ -1,0 +1,55 @@
+[map]
+modes = ["babel"]
+author = "Japanese Vippers: onigiri, T0M, engawa, JohnVIP, Falcon, Smi, tatuem, kabocha, vippei, chin, avip, USAMIMI, Reworked by Qult"
+fog_color = [192, 192, 192]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 1.0
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.095
+fight_kills = 166.5
+objective = 10
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.191
+fight_kills = 104.0
+objective = 5
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.635
+fight_kills = 71.5
+objective = 0
+failed = ["map_deaths", "objective"]
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.149
+fight_kills = 183.0
+objective = 22
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.027
+fight_kills = 71.0
+objective = 3
+failed = []

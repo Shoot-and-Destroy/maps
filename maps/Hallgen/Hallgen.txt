@@ -1,0 +1,4 @@
+name = 'Hallgen'
+version = '1.0'
+author = 'mintoyatsu'
+fog = (192, 192, 224)

@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Marshmello"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.796
+area_land = 0.809
+spawn_dry = [1.0, 0.55]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.066
+fight_kills = 198.0
+objective = 4
+failed = ["spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.181
+fight_kills = 93.0
+objective = 8
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.477
+fight_kills = 81.0
+objective = 0
+failed = ["map_deaths", "objective", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.121
+fight_kills = 170.5
+objective = 20
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.093
+fight_kills = 34.0
+objective = 2
+failed = ["objective", "spawn"]

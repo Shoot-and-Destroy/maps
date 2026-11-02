@@ -1,0 +1,9 @@
+from pyspades.constants import *
+import random
+
+name = 'RuinsOfAltrac'
+version = '1.0'
+author = 'Quillmark'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/ruins-of-altrac/

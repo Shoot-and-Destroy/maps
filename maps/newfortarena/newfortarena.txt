@@ -1,0 +1,12 @@
+name = 'newfortarena'
+version = '1'
+author = 'JoJoe Stinky'
+extensions = { 'boundary_damage' : {'left' : 32,
+                                    'right' : 480,
+                                    'top' : 160,
+                                    'bottom' : 352,
+                                    'damage': 1 },
+               'arena': True,
+               'arena_blue_spawn' : (123, 244, 47),
+               'arena_green_spawn' : (390, 239, 47),
+               'arena_gates': ((128, 243, 47), (385, 241, 47)) }

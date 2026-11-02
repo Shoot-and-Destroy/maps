@@ -1,0 +1,52 @@
+name = 'EmiraTown'
+author = 'EL92_'
+version = '1.0'
+description = 'An arabish town in the desert'
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        x, y, z = 194, 197, 53
+        return (x, y, z)
+    if entity_id == GREEN_FLAG:
+        x, y, z = 343, 197, 53
+        return (x, y, z)
+    if entity_id == BLUE_BASE:
+        x, y, z = 198, 282, 50
+        return (x, y, z)
+    if entity_id == GREEN_BASE:
+        x, y, z = 339, 282, 50
+        return (x, y, z)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        # sets a static spawn for just the blue team, but you could use "green_team" too.
+        x=194
+        y=286
+        z=36
+        x2=194
+        y2=266
+        z2=54
+        x3=194
+        y3=266
+        z3=59
+        x4, y4, z4 = random.choice([(x,y,z),(x2,y2,z2),(x3,y3,z3)])
+        return (x4, y4, z4)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        # sets a static spawn for just the green team, but you could use "blue_team" too.
+        x=343
+        y=286
+        z=36
+        x2=343
+        y2=266
+        z2=54
+        x3=343
+        y3=266
+        z3=59
+        x4, y4, z4 = random.choice([(x,y,z),(x2,y2,z2),(x3,y3,z3)])
+        return (x4, y4, z4)

@@ -1,0 +1,5 @@
+name = 'Frog'
+version = '1.0'
+author = 'Lostmotel'
+extensions = {'boundary_damage' : {'left' : 32, 'right' : 480, 'top' : 128, 'bottom' : 385, 'damage': 5},
+'babel' : True }

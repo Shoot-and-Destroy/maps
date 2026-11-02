@@ -1,0 +1,4 @@
+name = 'Arvendale'
+version = '1.0'
+author = 'tGM'
+description = ('Map made mainly by TheGrandmaster/HeyJD')

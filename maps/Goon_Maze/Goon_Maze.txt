@@ -1,0 +1,20 @@
+name = 'Goon Maze'
+version = '1.0'
+author = 'Lostmotel'
+cap_limit = 10
+extensions = { 
+'water_damage' : 3 }
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(192, 224)
+        return (192, 224, z)
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(320, 296)
+        return (320, 296, z)
+
+

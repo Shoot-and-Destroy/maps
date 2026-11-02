@@ -1,0 +1,8 @@
+
+name = 'Double Lime Babel'
+version = '1.0'
+author = 'Lostmotel, Reworked by Qult'
+extensions = { 
+'babel' : True
+}
+# https://aos.party/view/697

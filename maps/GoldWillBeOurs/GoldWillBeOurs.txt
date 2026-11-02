@@ -1,0 +1,123 @@
+from pyspades.constants import *
+from pyspades.server import ServerProtocol
+import random
+import sys
+
+# --- IMPORT UTILITY ---
+UTILITY_PATH = 'c:\\Gemini\\utility script\\working scripts example'
+if UTILITY_PATH not in sys.path:
+    sys.path.append(UTILITY_PATH)
+
+try:
+    import universal_utility
+except ImportError:
+    try:
+        sys.path.append('../working scripts example')
+        import universal_utility
+    except ImportError:
+        print("Error: Could not import universal_utility")
+
+# --- MAP METADATA ---
+name = 'Gold Will Be Ours'
+version = '4.0'
+author = 'Qult---(Atelsa)'
+description = 'YYAAAARRR'
+
+# --- CONFIGURATION ---
+extensions = {
+    'babel': True,
+    'water_damage': 50,
+    'grenade_damage_multiplier': 0.15,
+    # Добавленные Космические Стены
+    'cosmic_walls': [
+        {
+            'center': (74, 352),
+            'axis': 'y',
+            'width': 90,
+            'height': 40,
+            'symmetry': 'mirror_x' # Это автоматически создаст вторую стену на (438, 352)
+        }
+    ]
+}
+
+# --- STANDARD MAP LOGIC ---
+def get_spawn_location(connection):
+    # 50% шанс использовать СТАРЫЙ спаун
+    if random.random() < 0.5:
+        attempt = 0
+        if connection.team is connection.protocol.team_1:
+            x = random.randrange(224, 227)
+            y = random.randrange(222, 292)
+        elif connection.team is connection.protocol.team_2:
+            x = random.randrange(284, 287)
+            y = random.randrange(220, 290)
+        else:
+            return (256, 256, 60)
+
+        # Старая логика пытается найти конкретную высоту
+        while attempt < 30:
+            z = connection.protocol.map.get_z(x, y, 61)
+            if z in (63, 62):
+                return (x, y, z)
+            attempt += 1
+        
+        return (x, y, connection.protocol.map.get_z(x, y, 61))
+
+    # 50% шанс использовать НОВЫЕ зоны (одно из 3 мест)
+    else:
+        # --- TEAM 1 (BLUE) ---
+        if connection.team is connection.protocol.team_1:
+            spot = random.randint(1, 3)
+            
+            if spot == 1:
+                # 214-218, 289-293
+                x = random.randrange(214, 219)
+                y = random.randrange(289, 294)
+            elif spot == 2:
+                # 193-201, 220-225
+                x = random.randrange(193, 202)
+                y = random.randrange(220, 226)
+            else: # spot == 3
+                # 226-230, 219-223
+                x = random.randrange(226, 231)
+                y = random.randrange(219, 224)
+
+        # --- TEAM 2 (GREEN) ---
+        elif connection.team is connection.protocol.team_2:
+            spot = random.randint(1, 3)
+            
+            if spot == 1:
+                # 293-297, 219-223
+                x = random.randrange(293, 298)
+                y = random.randrange(219, 224)
+            elif spot == 2:
+                # 312-320, 220-225
+                x = random.randrange(312, 321)
+                y = random.randrange(220, 226)
+            else: # spot == 3
+                # 281-285, 289-293
+                x = random.randrange(281, 286)
+                y = random.randrange(289, 294)
+        
+        else:
+            # Если наблюдатель или нет команды
+            return (256, 256, 60)
+
+        # Для новых зон просто берем высоту поверхности
+        z = connection.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_BASE:
+        x, y = 216, 291
+    elif entity_id == GREEN_BASE:
+        x, y = 295, 221
+    else:
+        return (0, 0, 0)
+    z = team.protocol.map.get_z(x, y)
+    return (x, y, z)
+
+# --- SCRIPT INTEGRATION ---
+def apply_script(protocol, connection, config):
+    # Запускаем универсальную утилиту, которая создаст стены и зоны
+    return universal_utility.apply_script(protocol, connection, config)

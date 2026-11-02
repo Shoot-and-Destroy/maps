@@ -1,0 +1,29 @@
+name = "DolphicTown"
+version = '1.0'
+author = 'T0M'
+description = 'super mario sunshine copy map'
+
+cap_limit = 3
+
+extensions = {
+     'arena': False,
+     'boundary_damage' : {'left' : 127,
+                          'right' : 384,
+                          'top' : 127,
+                          'bottom' : 511,
+                          'damage': 10 },
+ }
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    return (0,0,0)
+
+spawn_locations_ffa = [(256, 189, 57), (360, 221, 57), (348, 314, 52), (310, 294, 22), (285, 296, 54), (235, 270, 58), (205, 320, 57), (165, 316, 57), (191, 201, 57), (321, 188, 42), (256, 241, 54), (256, 461, 60), (177, 414, 60)]
+
+def get_spawn_location(connection):
+    x, y, z = random.choice(spawn_locations_ffa)
+    z += 3
+    return x, y, z,True
+

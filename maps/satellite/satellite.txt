@@ -1,0 +1,10 @@
+name = 'satellite'
+version = '1.0'
+author = 'Danke'
+description = ""
+extensions = { 
+   'babel' : True, 
+   'heavens_color' : (255, 255, 255, 255)
+}
+
+fog = (0,0,0)

@@ -1,0 +1,1 @@
+name = 'map01'version = '1.0'author = 'T0M'extensions = {     'arena': True,     'arena_blue_spawn' : (225,255,59),     'arena_green_spawn' : (286,256,59),     'arena_gates': ((225,255,56), (286,256,56)), }fog = (000, 000, 000)

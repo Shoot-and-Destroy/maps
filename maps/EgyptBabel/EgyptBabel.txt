@@ -1,0 +1,5 @@
+name = 'EgyptBabel'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders, Reworked by Qult'
+description = 'SuperCool Egypt'
+# https://hosting.dgd.cx/map-search?query=egy&file=Egypt.vxl&source=allmaps#iso

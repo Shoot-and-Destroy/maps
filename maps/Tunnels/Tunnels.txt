@@ -1,0 +1,13 @@
+name = 'Tunnels'
+version = '1.3'
+author = 'Lostmotel'
+description = ('A minecraft like tunnel arena.')
+cap_limit = 6
+fog = (0, 25, 50)
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (224, 258, 36),
+     'arena_green_spawn' : (281, 174, 35),
+     'arena_gates': ((226, 258, 36), (281, 175, 34)),
+     'water_damage' : 100
+ }

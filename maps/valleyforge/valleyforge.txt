@@ -1,0 +1,28 @@
+name = 'valleyforge'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Valley Forge'
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (150, 298, 11)
+    if entity_id == BLUE_FLAG:
+        return (126, 314, 11)
+    if entity_id == GREEN_BASE:
+        return (128, 396, 11)
+    if entity_id == BLUE_BASE:
+        return (96, 229, 12)
+        
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(120,136)
+        gy = random.randrange(394,403)
+        return (gx, gy, 9)
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(88,101)
+        by = random.randrange(221,236)
+        return (bx, by, 12)

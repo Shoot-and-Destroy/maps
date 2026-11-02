@@ -1,0 +1,61 @@
+name = 'Stadium'
+
+version = '3.1'
+
+author = 'Dany0'
+
+description = 'Amazing soccer stadium! I know it is big, but that only means there is a lot of room for building and exploring! Have fun.'
+
+
+
+from pyspades.constants import *
+
+from pyspades.server import ServerConnection
+
+
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+
+        z = team.protocol.map.get_z(256, 269)
+
+        return (256, 269, z)
+
+    if entity_id == GREEN_FLAG:
+
+        z = team.protocol.map.get_z(258, 269)
+
+        return (258, 269, z)
+
+    if entity_id == BLUE_BASE:
+
+        z = team.protocol.map.get_z(145, 269)
+
+        return (145, 269, z)
+
+    if entity_id == GREEN_BASE:
+
+        z = team.protocol.map.get_z(370, 269)
+
+        return (370, 269, z)
+
+
+
+def get_spawn_location(connection):
+
+    x, y, z = ServerConnection.get_spawn_location(connection)
+
+    if z < 40:
+
+        x2, y2, z2 = connection.team.get_random_location(True)
+
+	while z2 < 40:
+
+		x2, y2, z2 = connection.team.get_random_location(True)
+
+		if z2 >= 40:
+
+			return(x2, y2, z2)
+
+    return (x,y,z)

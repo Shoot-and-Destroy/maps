@@ -1,0 +1,8 @@
+name = 'The Blue House2, Korea'
+
+version = '1'
+
+author = 'kmsi, Reworked by Qult'
+
+description = "Korean President's House, Cheongwadae"
+# https://hosting.dgd.cx/map-search?query=blue&file=The+Blue+House%2C+Korea.vxl&source=allmaps#iso

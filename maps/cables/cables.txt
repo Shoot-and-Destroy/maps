@@ -1,0 +1,11 @@
+name = 'Cables'
+version = '1.0'
+author = 'Danke'
+description = ('Long cables for babel')
+extensions = { 
+	'water_damage' : 20,
+	'babel' : True
+}
+
+
+aloha=True

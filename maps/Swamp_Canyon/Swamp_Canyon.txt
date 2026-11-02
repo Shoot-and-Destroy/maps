@@ -1,0 +1,4 @@
+name = 'Swamp Canyon'
+version = '1.0'
+author = 'Somel'
+description = 'Go through the ruins across a wild swamp in search of victory.'

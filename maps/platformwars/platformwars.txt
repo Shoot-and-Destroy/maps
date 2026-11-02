@@ -1,0 +1,11 @@
+name = 'platformwars'
+version = '0.5'
+author = 'Lostmotel'
+cap_limit = 6
+extensions = {
+     'water_damage' : 10,
+     'arena': True,
+     'arena_blue_spawns' : ((231, 202, 53), (230, 275, 53)),
+     'arena_green_spawns' : ((308, 202, 53), (309, 275, 53)),
+     'arena_gates' : ((309, 205, 51), (308,272, 51), (230, 205, 51), (231, 272, 51), (229, 205, 51), (229, 272, 51))
+}

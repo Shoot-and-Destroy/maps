@@ -1,0 +1,53 @@
+[map]
+modes = ["arena"]
+author = "Tyler, Jon, NovaFlexz, AnAlien, Gates by AVuKY"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [180, 247, 53], end = [180, 247, 53] }
+team2 = { start = [293, 240, 53], end = [293, 240, 53] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[178, 250, 53], [298, 243, 53]]
+
+[map.fitness]
+land = 0.03
+area_land = 0.418
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.189
+fight_kills = 144.0
+objective = 0
+failed = ["objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.031
+fight_kills = 284.5
+objective = 8
+failed = ["land"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.444
+fight_kills = 240.0
+objective = 2
+failed = ["map_deaths", "objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.85
+map_deaths = 0.368
+fight_kills = 76.5
+objective = 5
+failed = ["land", "map_deaths"]

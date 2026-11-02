@@ -1,0 +1,55 @@
+[map]
+modes = ["ngctf", "ctf", "koth", "tc", "zombie"]
+author = "RandomJack and SuperCool Builders"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.972
+area_land = 0.943
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.024
+fight_kills = 140.0
+objective = 56
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.02
+fight_kills = 48.5
+objective = 69
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.039
+fight_kills = 134.5
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.05
+map_deaths = 0.036
+fight_kills = 174.0
+objective = 14
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.05
+map_deaths = 0.024
+fight_kills = 102.5
+objective = 6
+failed = []

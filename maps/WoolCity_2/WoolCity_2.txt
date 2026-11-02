@@ -1,0 +1,7 @@
+name = 'WoolCity'
+version = '1.0'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (335,172,45),
+     'arena_green_spawn' : (266,251,53),
+ }

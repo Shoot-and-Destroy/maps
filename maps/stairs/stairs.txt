@@ -1,0 +1,10 @@
+name = 'stairs'
+version = '1'
+author = 'thx'
+description = 'AoS VIP'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (318,217,58),
+     'arena_green_spawn' : (385,317,58),
+ }

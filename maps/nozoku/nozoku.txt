@@ -1,0 +1,12 @@
+name = "nozoku"
+version = '1.0'
+author = 'onigiri'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ( 62, 451, 55),
+     'arena_green_spawn' : ( 4, 508, 55),
+     'arena_gates': ((61,454,54) , (4,504,54)),
+     'water_damage' : 200,
+ }
+

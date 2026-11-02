@@ -1,0 +1,4 @@
+name = 'Good Bye'
+version = '1.0'
+author = 'Captin, CowNorris'
+description = 'Goodbye from Stormwind, it has been fun.'

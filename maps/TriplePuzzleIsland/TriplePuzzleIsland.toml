@@ -1,0 +1,57 @@
+[map]
+modes = ["babel"]
+author = "underwear - -, Reworked by Qult"
+fog_color = [255, 230, 180]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 5
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.426
+area_land = 0.741
+spawn_dry = [0.74, 0.74]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.2
+map_deaths = 0.071
+fight_kills = 71.5
+objective = 4
+failed = ["spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.05
+map_deaths = 0.161
+fight_kills = 39.0
+objective = 7
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.1
+map_deaths = 0.078
+fight_kills = 70.5
+objective = 8
+failed = ["spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.05
+map_deaths = 0.038
+fight_kills = 138.0
+objective = 3
+failed = ["objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.05
+map_deaths = 0.019
+fight_kills = 105.5
+objective = 4
+failed = ["spawn"]

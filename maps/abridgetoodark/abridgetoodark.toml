@@ -1,0 +1,55 @@
+[map]
+modes = ["babel"]
+author = "ei8htx & Mile"
+fog_color = [100, 80, 100]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.66
+area_land = 0.655
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 6.1
+map_deaths = 0.862
+fight_kills = 16.5
+objective = 0
+failed = ["water", "map_deaths", "fight_kills", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.85
+map_deaths = 0.938
+fight_kills = 9.5
+objective = 0
+failed = ["map_deaths", "fight_kills", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 91.25
+map_deaths = 1.0
+fight_kills = 0.0
+objective = 0
+failed = ["water", "map_deaths", "fight_kills", "objective"]
+
+[map.fitness.tc]
+pass = false
+water = 34.2
+map_deaths = 0.065
+fight_kills = 158.0
+objective = 21
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = false
+water = 5.2
+map_deaths = 0.028
+fight_kills = 88.0
+objective = 7
+failed = ["water"]

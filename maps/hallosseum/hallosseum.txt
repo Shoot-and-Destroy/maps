@@ -1,0 +1,3 @@
+name = 'hallosseum'
+version = '1.0'
+author = 'original hallway by izzy, modified by Danke'

@@ -1,0 +1,19 @@
+name = 'BGcrane'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'BeGone copy map'
+extensions = {
+     'water_damage' : 200
+ }
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection): 
+	if connection.team is connection.protocol.blue_team: 
+		return (162,184,58)
+	if connection.team is connection.protocol.green_team: 
+		return (303,319,61)

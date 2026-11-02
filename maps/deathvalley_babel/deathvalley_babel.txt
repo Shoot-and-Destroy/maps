@@ -1,0 +1,5 @@
+name = 'Death Valley'
+version = '1.0'
+author = 'Lostmotel + Rakete'
+description = "Death Valley by Lostmotel, babelified by Rakete"
+fog = (255, 210, 120)

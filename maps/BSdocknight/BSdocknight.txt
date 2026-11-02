@@ -1,0 +1,27 @@
+name = "BSdocknight"
+version = '1.0'
+author = 'T0M'
+description = 'Black Squad copy map'
+
+fog = (127, 63, 63)
+
+extensions = {
+     'water_damage' : 110
+ }
+
+import random
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection): 
+	if connection.team is connection.protocol.blue_team: 
+		x1 = random.randrange(265,279) 
+		y1 = random.randrange(319,334) 
+		z1 = 58
+		return (x1, y1, z1) 
+	if connection.team is connection.protocol.green_team: 
+		x2 = random.randrange(291,307) 
+		y2 = random.randrange(186,199) 
+		z2 = 58
+		return (x2, y2, z2) 

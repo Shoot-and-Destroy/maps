@@ -1,0 +1,43 @@
+Name = 'Swampy Caves'
+Author = 'Cajun Style'
+Version = '1.0.0'
+Description = ('Swamp and caves is a crazy combination')
+extensions = { 'boundary_damage' : {'left' : 0, 'right' : 512, 'top' : 0, 'bottom' : 512, 'damage': 100},
+               'fog': (240, 24, 32)
+}
+fog = (127, 164, 111)
+
+
+# script
+from pyspades.constants import *
+import random
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+	x = random.randrange(127,448)
+        y = random.randrange(3,90)
+        return (x, y, 62)
+    if entity_id == GREEN_FLAG:
+	x = random.randrange(192,384)
+        y = random.randrange(422,509)
+        return (x, y, 62)
+    if entity_id == BLUE_BASE:
+	x = random.randrange(127,448)
+        y = random.randrange(3,90)
+        return (x, y, 62)
+    if entity_id == GREEN_BASE:
+	x = random.randrange(192,384)
+        y = random.randrange(422, 509)
+        return (x, y, 62)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+	x = random.randrange(192,384)
+        y = random.randrange(3,96)
+        return (x, y, 62)
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(300,413)
+        y = random.randrange(416,509)
+        z1 = 59
+        return (x, y, 62)

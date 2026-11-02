@@ -1,0 +1,4 @@
+name = "YUKI_no_zangou"
+version = '1.0'
+author = 'ONIGIRI'
+

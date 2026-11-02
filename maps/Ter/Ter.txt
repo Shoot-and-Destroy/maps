@@ -1,0 +1,4 @@
+name = 'Ter'
+version = '1.0'
+author = 'Dany0'
+description = ('A gen-like terrain. But prettier and without a river. A conversion from a SketchUp model.')

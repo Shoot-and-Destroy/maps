@@ -1,0 +1,11 @@
+name = 'Parkour2'
+version = '1.0'
+author = 'tyoook'
+description = ('A map to use with the parkour gamemode.')
+
+extensions = {
+    'water_damage' : 100,
+    'parkour_start' : (2, 254.5, 55),
+    'parkour_end' : (496, 254, 49),
+    'parkour_checkpoints' : [(194, 254.5, 51), (299, 254.5, 51), (402, 254.5, 55)]
+}

@@ -1,0 +1,4 @@
+name = 'Island Fallout'
+version = '1.0'
+author = 'Jdrew'
+description = 'An island map with predestroyed buildings'

@@ -1,0 +1,12 @@
+name = "EF7"
+version = '1.0'
+author = 'vip'
+
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (266,405,51),
+     'arena_green_spawn' : (376,428,51),
+     'arena_gates': ((262,402,48) , (378,430,48))
+ }
+

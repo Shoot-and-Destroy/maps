@@ -1,0 +1,12 @@
+name = 'winterclash'
+version = '1.0'
+author = 'Dany0'
+description = 'MC and CoD mashup plus mirror. Have fun.'
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((179, 235, 58)),
+    'arena_green_spawn' : ((332, 277, 58)),
+    'arena_gates': ((328, 276, 59), (331, 272, 59), (183, 236, 59), (180, 240, 59))
+}
+    

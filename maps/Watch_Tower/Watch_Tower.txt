@@ -1,0 +1,5 @@
+name = 'Watch Tower'
+version = '1.0'
+author = 'Jdrew'
+description = 'A KOTH map inspired by planetside 2'
+

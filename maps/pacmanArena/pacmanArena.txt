@@ -1,0 +1,1 @@
+name = 'pacman'version = '1.1'author = 'T0M'description = 'Pacman map'fog = (000, 000, 000)extensions = {     'arena': True,     'arena_blue_spawns' : ((231,234,59),(231,274,59)),     'arena_green_spawns' : ((281,234,59),(281,274,59)),     'arena_gates': ((230,231,58), (230,237,58), (230,271,58), (234,273,58), (280,231,58), (280,237,58), (280,271,58), (278,273,58)), }

@@ -1,0 +1,1 @@
+name = 'shigaichi_ikasumi'version = '1.0'author = 'VIPPER'description = 'The urban map made by VIPPER'fog = (0, 0, 0)extensions = {     'arena': True,     'arena_blue_spawn' : (298,236,55),     'arena_green_spawn' : (295,250,54), }

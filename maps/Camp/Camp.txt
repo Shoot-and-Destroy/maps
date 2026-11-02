@@ -1,0 +1,5 @@
+name = 'Camp'
+version = '1.0'
+author = 'Yamaha'
+description = ('Pack your bags, your air mattress, and your spade.')
+fog = (130, 150, 140)

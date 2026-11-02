@@ -1,0 +1,1 @@
+name = 'Pumpkin Party'version = '1.0'author = 'massilia'description = 'Pumpkin Party is the map which won the Halloween Mapping Competition.'extensions = {	'water_damage' : 1}

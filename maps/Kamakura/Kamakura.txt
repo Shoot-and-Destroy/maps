@@ -1,0 +1,5 @@
+name = 'Kamakura'
+version = '1.0'
+author = 'Yamaha'
+description = ('I don't remember where exactly I modeled this after, but Japan is close enough.')
+fog = (230, 230, 250)

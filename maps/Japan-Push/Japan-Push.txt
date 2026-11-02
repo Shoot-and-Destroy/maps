@@ -1,0 +1,15 @@
+name = 'Japan'
+version = '1.1'
+author = 'Toma AwA'
+description = ("Push map based by Toma AwA. Don't have original txt")
+fog = (157, 234, 254)
+
+extensions = {
+'push': True,
+'push_spawn_range' : 4,
+'push_blue_spawn' : (226, 21, 41),
+'push_blue_cp' : (251, 415, 17),
+'push_green_spawn' : (285, 21, 41),
+'push_green_cp' : (265, 415, 17),
+'water_damage' : 100
+}

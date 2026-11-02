@@ -1,0 +1,47 @@
+[map]
+modes = ["koth", "tc", "arena", "zombie"]
+author = "thx"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [500, 230, 59], end = [500, 230, 59] }
+team2 = { start = [500, 230, 10], end = [500, 230, 10] }
+
+[map.fitness]
+land = 1.0
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.0
+fight_kills = 0.0
+objective = 1552
+failed = ["fight_kills"]
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.047
+fight_kills = 132.0
+objective = 16
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.01
+fight_kills = 245.0
+objective = 39
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.024
+fight_kills = 103.5
+objective = 8
+failed = []

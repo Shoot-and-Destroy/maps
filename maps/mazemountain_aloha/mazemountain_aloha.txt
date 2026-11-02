@@ -1,0 +1,11 @@
+name = 'MazeMountain'
+version = '2.0'
+author = 'Danke'
+description = 'A maze, a mountain'
+extensions = { 'water_damage' : 5,
+               'babel' : True }
+
+
+
+
+aloha=True

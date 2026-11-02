@@ -1,0 +1,55 @@
+[map]
+modes = ["ngctf", "ctf", "koth", "tc", "zombie"]
+author = "Lostmotel, Reworked by Qult"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.546
+area_land = 0.8
+spawn_dry = [0.87, 0.87]
+
+[map.fitness.ngctf]
+pass = true
+water = 1.4
+map_deaths = 0.061
+fight_kills = 115.5
+objective = 4
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.4
+map_deaths = 0.067
+fight_kills = 63.0
+objective = 15
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.95
+map_deaths = 0.019
+fight_kills = 126.5
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.45
+map_deaths = 0.036
+fight_kills = 161.0
+objective = 20
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.2
+map_deaths = 0.176
+fight_kills = 65.5
+objective = 5
+failed = []

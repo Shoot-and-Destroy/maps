@@ -1,0 +1,14 @@
+name = "Yomiti niha kiwotukero"
+version = '1.0'
+author = 'onigiri'
+
+description = 'owakari itadaketa darouka'
+
+fog = (0, 0, 0)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ((193,216,51)),
+     'arena_green_spawn' : ((317,296,51)),
+     'arena_gates': ((195,219,48),(315,299,48)),
+ }

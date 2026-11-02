@@ -1,0 +1,53 @@
+[map]
+modes = ["arena"]
+author = "Keviin, Naruto, Chapa & Ember"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [252, 211, 59], end = [252, 211, 59] }
+team2 = { start = [252, 323, 59], end = [252, 323, 59] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[260, 219, 59], [260, 315, 59]]
+
+[map.fitness]
+land = 0.019
+area_land = 0.162
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.054
+fight_kills = 220.0
+objective = 0
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.012
+fight_kills = 246.5
+objective = 8
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.033
+fight_kills = 465.5
+objective = 2
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.2
+map_deaths = 0.082
+fight_kills = 167.0
+objective = 10
+failed = ["land", "spawn"]

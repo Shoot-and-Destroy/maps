@@ -1,0 +1,60 @@
+name = 'Katabatic'
+version = '1.0'
+author = 'Deucebag and SLoW'
+description = ('A remake of the classic Tribes 2 map Katabatic.')
+fog = (170, 170, 170)
+
+# scripting
+
+import random
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from commands import say
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        # puts only the blue flag in the blue base
+        z = team.protocol.map.get_z(130, 123)
+        return (130, 123, z)
+    if entity_id == BLUE_BASE:
+        # puts only the blue flag in the blue base
+        z = team.protocol.map.get_z(100, 100)
+        return (130, 130, z)
+    if entity_id == GREEN_FLAG:
+        # puts only the green flag in the green base
+        z = team.protocol.map.get_z(392, 306)
+        return (392, 306, z)
+    if entity_id == GREEN_BASE:
+        # puts only the blue flag in the blue base
+        z = team.protocol.map.get_z(408, 330)
+        return (399, 306, z)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = ServerConnection.get_spawn_location(connection)
+        #spawn AT remote tower
+        if x < 33:
+            return (211, 279, 25)
+        #spawn IN base
+        elif x < 65:
+            return (130, 130, 50)
+        #spawn AT base
+        elif x < 97:
+            return (110, 110, 50)
+        #spawn IN remote tower 2
+        elif x <= 128:
+            return (226, 273, 6)
+    if connection.team is connection.protocol.green_team:
+        x, y, z = ServerConnection.get_spawn_location(connection)
+        #spawn AT remote tower
+        if x < 417:
+            return (355, 191, 28)
+        #spawn IN base
+        elif x < 449:
+            return (399, 307, 39)
+        #spawn AT base
+        elif x < 481:
+            return (408, 330, 45)
+        #spawn IN remote tower 2
+        elif x <= 512:
+            return (353, 149, 6)

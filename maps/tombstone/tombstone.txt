@@ -1,0 +1,29 @@
+name = 'tombstone'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Tombstone'
+extensions = {'water_damage':10}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (237, 257, 4)
+    if entity_id == GREEN_FLAG:
+        return (276, 257, 4)
+    if entity_id == BLUE_BASE:
+        return (245, 441, 39)
+    if entity_id == GREEN_BASE:
+        return (267, 71, 39)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(245,269)
+        by = random.randrange(430,441)
+        return (bx, by, 39)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(246,267)
+        gy = random.randrange(71,82)
+        return (gx, gy, 39)

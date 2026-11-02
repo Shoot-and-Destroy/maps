@@ -1,0 +1,4 @@
+name = "MasaiCity"
+version = '1.0'
+author = 'ONIGIRI, Reworked by Qult'
+

@@ -1,0 +1,11 @@
+name = 'ArenaCastle'
+version = '1.0'
+author = 'TSB and Komrades'
+description = 'a'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (227,298,58),
+     'arena_green_spawn' : (309,203,59),
+     'arena_gates': ((223,290,58),(305,204,60)),
+     'water_damage' : 100
+ }

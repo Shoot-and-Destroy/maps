@@ -1,0 +1,12 @@
+name = 'deepspace'
+version = '1.0'
+author = 'Sasquatch'
+description = ('Some alien docking stations and more...')
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (140, 238, 30),
+     'arena_green_spawn' : (373, 238, 30),
+     'arena_gates': ((145, 232, 32), (143, 245, 32), (370, 245, 32), (368, 232, 32)),
+     'water_damage' : 25 
+}
+fog = (000, 000, 000)

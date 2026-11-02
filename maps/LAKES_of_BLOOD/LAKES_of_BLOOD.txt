@@ -1,0 +1,30 @@
+name = 'LAKES of BLOOD'
+version = '1.0'
+author = 'Buffet of Lies'
+description = 'Map by Buffet_of_Lies for AoS'
+extensions = { 'water_damage' : 9 }
+
+# scripting
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        # puts only the blue flag in the corner
+        # you can also use GREEN_FLAG, BLUE_BASE, and GREEN_BASE as entity locations
+        z = team.protocol.map.get_z(0, 0)
+        return (0, 0, z)
+
+def get_spawn_location(connection):
+    if connection.name == 'Buffet_of_Lies':
+        # put players with the name "Buffet_of_Lies"
+        # into the sky
+        x, y, z = ServerConnection.get_spawn_location(connection)
+        return (x, y, 30)
+    #to set spawn for a specific team, do the following:
+    if connection.team is connection.protocol.blue_team:
+        #sets a static spawn for just the blue team, but you could use "green_team" too.
+        #set_location_safe tries to keep the player outside of walls.
+        x, y, z = ServerConnection.get_spawn_location(connection)
+        return ServerConnection.set_location_safe(connection, (110, 110, 50))

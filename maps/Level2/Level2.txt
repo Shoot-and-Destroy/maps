@@ -1,0 +1,30 @@
+from random import randint
+
+name        = 'Level 2'
+version     = '1.0'
+author      = 'IAmYourFriend'
+description = ''
+fog         = (168, 2, 0)
+SPAWN       = (243, 420)
+
+extensions = {
+	'base_locations': [
+		(135, 126),
+		(106, 318),
+		(258, 86),
+		(235, 193),
+		(220, 270),
+		(376, 169),
+		(351, 281),
+		(393, 352)
+	],
+    'players_spawn_start' : SPAWN
+}
+
+def get_spawn_location(player):
+	x1, y1 = SPAWN
+
+	x = randint(x1, x1 + 9)
+	y = randint(y1, y1 + 9)
+
+	return (x, y, player.protocol.map.get_z(x, y))

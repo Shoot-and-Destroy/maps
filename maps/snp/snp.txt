@@ -1,0 +1,10 @@
+name = 'snp'
+version = '1.0' 
+author = 'vippei'
+description = 'sunaipa- gokko siyou'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (253,217,58),
+     'arena_green_spawn' : (280,375,57),
+ }

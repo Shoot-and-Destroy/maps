@@ -1,0 +1,2 @@
+author = "Xenon"
+description = "A bit wider recolored hallway map. All rights belong to AOSG, formerly AOSK"

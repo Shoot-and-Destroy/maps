@@ -1,0 +1,5 @@
+name = 'OmahaTrenches'
+version = '1.0'
+author = 'unknown, Reworked by Qult'
+description = 'the map is reflected 1 times'
+# https://hosting.dgd.cx/map-search?query=Omaha&file=omaha.vxl&source=allmaps#iso

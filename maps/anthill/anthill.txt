@@ -1,0 +1,8 @@
+name = 'anthill'
+version = '1.0'
+author = 'Danke'
+description = 'itchy itchy'
+extensions = { 'water_damage' : 10,
+               'babel' : True }
+
+

@@ -1,0 +1,110 @@
+from pyspades.constants import *
+import random
+
+# --- MAP METADATA ---
+name = 'Trenches Short'
+author = 'Jagex, Reworked by Qult'
+description = 'action map'
+
+# --- SPAWN LOGIC ---
+def get_spawn_location(connection):
+    # Наглядачі (Spectators)
+    if connection.team not in (connection.protocol.team_1, connection.protocol.team_2):
+        return (256, 256, 60)
+
+    # Змінні для збереження вибраних координат
+    x, y, z = 0, 0, None
+
+    # --- КРОК 1: Вибір глобальної зони ---
+    # Генеруємо число від 0.0 до 1.0
+    r_zone = random.random()
+
+    if r_zone < 0.45:
+        # ==========================================
+        # ЗОНА 1 (45% шанс)
+        # ==========================================
+        r1 = random.random()
+        if r1 < 0.30:
+            # 30%
+            x = random.randint(228, 229)
+            y = random.randint(209, 302)
+            z = 55
+        elif r1 < 0.50: 
+            # 20% (0.30 + 0.20)
+            x = 222
+            y = random.randint(216, 295)
+            z = 51
+        elif r1 < 0.60: 
+            # 10% (0.50 + 0.10)
+            x, y, z = 214, 250, 49
+        elif r1 < 0.70: 
+            # 10% 
+            x, y, z = 214, 261, 49
+        elif r1 < 0.775: 
+            # 7.5% 
+            x, y = 219, 230
+        elif r1 < 0.850: 
+            # 7.5% 
+            x, y = 219, 220
+        elif r1 < 0.925: 
+            # 7.5% 
+            x, y = 219, 281
+        else: 
+            # 7.5% (залишок до 1.0)
+            x, y = 219, 291
+
+    elif r_zone < 0.75:
+        # ==========================================
+        # ЗОНА 2 (30% шанс) [0.45 + 0.30 = 0.75]
+        # ==========================================
+        r2 = random.random()
+        if r2 < 0.15:
+            # 15%
+            x = 215
+            y = random.randint(328, 358)
+        elif r2 < 0.30:
+            # 15%
+            x = 215
+            y = random.randint(153, 183)
+        elif r2 < 0.55:
+            # 25%
+            x = random.randint(203, 211)
+            y = random.randint(333, 352)
+        elif r2 < 0.80:
+            # 25%
+            x = random.randint(203, 211)
+            y = random.randint(159, 178)
+        elif r2 < 0.90:
+            # 10%
+            x, y = 195, 314
+        else:
+            # 10%
+            x, y = 195, 197
+
+    else:
+        # ==========================================
+        # ЗОНА 3 (25% шанс) [залишок]
+        # ==========================================
+        # Рівний шанс для кожної точки
+        zone3_points = [
+            (192, 219), (188, 236), (200, 236), (188, 275), (199, 275),
+            (191, 252), (167, 227), (167, 236), (167, 275), (167, 284)
+        ]
+        pt = random.choice(zone3_points)
+        x, y = pt[0], pt[1]
+
+
+    # --- КРОК 2: Дзеркальність для Команди 2 ---
+    # Всі розрахунки вище зроблені для синіх. 
+    # Якщо гравець зелений — дзеркалимо його координату X.
+    if connection.team is connection.protocol.team_2:
+        x = 512 - x
+
+    # --- КРОК 3: Пошук висоти (якщо не вказана жорстко) ---
+    if z is None:
+        # Шукаємо висоту поверхні у знайденій координаті
+        z = connection.protocol.map.get_z(x, y)
+        if z is None:
+            z = 60 # Запобіжник
+
+    return (x, y, z)

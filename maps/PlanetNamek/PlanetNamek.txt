@@ -1,0 +1,9 @@
+name = 'Planet Namek'
+version = '1.0'
+author = "Lostmotel"
+description = ('This map is for the survive gamemode. Recovered. UFO missing')
+# Ufo was shown in https://www.youtube.com/watch?v=WyOJxulxRe8
+fog = (185,195,200)
+extensions = {
+    'base_locations' : [(172, 291, 53), (251, 369, 58), (371, 150, 56), (269, 215, 57)]
+}

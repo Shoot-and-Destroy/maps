@@ -1,0 +1,4 @@
+name = 'Seaway'
+author = 'SwoleFroge'
+description = ('Hallway in sea style')
+cap_limit = 10

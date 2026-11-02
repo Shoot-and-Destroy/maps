@@ -1,0 +1,1 @@
+name = 'map13'version = '1.0'author = 'T0M'description = 'Mario Kart 64 copy map'extensions = {     'arena': True,     'arena_blue_spawn' : (225,225,59),     'arena_green_spawn' : (286,286,59),     'arena_gates': ((227,227,55),(284,284,55)), }

@@ -1,0 +1,16 @@
+name = 'GEcomplexArena'
+
+version = '1.1'
+
+author = 'T0M'
+
+fog = (64, 0, 0)
+
+description = 'Golden Eye copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (281,221,39),
+     'arena_green_spawn' : (234,257,39),
+     'arena_gates' : ((278,218,37),(231,254,37)),
+     'water_damage' : 100
+ }

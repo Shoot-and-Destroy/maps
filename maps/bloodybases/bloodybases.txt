@@ -1,0 +1,7 @@
+name = 'bloodybases'
+version = '1.0'
+description = ('This map is for the survive gamemode. Recovered')
+
+extensions = {
+    'base_locations' : [(293, 282, 47), (414, 212, 56), (95, 297, 56), (214, 229, 47)]
+}

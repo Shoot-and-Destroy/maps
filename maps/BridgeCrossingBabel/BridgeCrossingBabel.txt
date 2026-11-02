@@ -1,0 +1,2 @@
+name = "Bridge Crossing"
+description = "BridgeCrossing from https://github.com/soudanieldias/aos-repository/blob/main/maps/A-E/BridgeCrossing.vxl babelified by Rakete"

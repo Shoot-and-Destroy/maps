@@ -1,0 +1,9 @@
+name = 'pinpoint'
+version = '1.0'
+author = 'izzy'
+description = 'small spawns that converge into a bottleneck at the center of the map'
+extensions = { 'boundary_damage' : {'left' : 0,
+                                    'right' : 512,
+                                    'top' : 160,
+                                    'bottom' : 352,
+                                    'damage': 5 } }

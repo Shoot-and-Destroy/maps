@@ -1,0 +1,11 @@
+name = 'Carnage Hills'
+author = 'Lostmotel, skull model by JojoeStinky'
+version = '1.0'
+extensions = { 
+'boundary_damage' : {
+'left' : 57, 
+'right' : 454, 
+'top' : 155, 
+'bottom' : 355, 
+'damage': 1}
+}

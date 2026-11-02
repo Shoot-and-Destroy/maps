@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "rainbowpoint"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.063
+area_land = 0.175
+spawn_dry = [0.37, 0.35]
+
+[map.fitness.ngctf]
+pass = false
+water = 25.6
+map_deaths = 0.008
+fight_kills = 190.0
+objective = 3
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 11.4
+map_deaths = 0.007
+fight_kills = 143.0
+objective = 4
+failed = ["land", "water", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 13.95
+map_deaths = 0.006
+fight_kills = 256.0
+objective = 9
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 1.55
+map_deaths = 0.01
+fight_kills = 393.5
+objective = 4
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 1.35
+map_deaths = 0.019
+fight_kills = 210.5
+objective = 17
+failed = ["land", "spawn"]

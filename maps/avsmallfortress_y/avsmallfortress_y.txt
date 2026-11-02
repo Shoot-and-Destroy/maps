@@ -1,0 +1,12 @@
+name = 'avsmallfortress_y'
+version = '2.4'
+author = 'AVuKY, Danke'
+description = 'Balanced, Glitch proofed. Y-stretched'
+cap_limit = 15
+extensions = {
+    'water_damage' : 200,
+    'arena': True,
+    'arena_blue_spawn' :  (247, 259, 58),
+    'arena_green_spawn' : (286, 233, 57),
+    'arena_gates': ((250, 257, 59), (251, 257, 59), (250, 260, 59), (251, 260, 59), (251, 261, 59), (251, 262, 59), (251, 256, 59), (251, 255, 59), (283, 234, 58), (282, 234, 58), (283, 231, 58), (282, 231, 58), (282, 229, 58), (282, 230, 58), (282, 235, 58), (282, 236, 58))
+}

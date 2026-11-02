@@ -1,0 +1,11 @@
+name = 'nanikonomap_collection -nanicolle-'
+version = '1.0'
+fog = (256, 256, 256)
+author = 'engawa'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (215,217,61),
+     'arena_green_spawn' : (249,218,61),
+     'arena_gates': ((217,218,59), (247,217,59)),
+ }

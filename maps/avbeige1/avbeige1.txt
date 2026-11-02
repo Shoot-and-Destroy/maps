@@ -1,0 +1,11 @@
+name = 'avbeige1'
+version = '1.0'
+author = 'AVuKY'
+description = '[DM]Goldeneye Temple AV modified for Arena.'
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : (195, 265, 57),
+    'arena_green_spawn' : (294, 230, 57),
+    'arena_gates': ((202, 265, 58), (285, 230, 58))
+}

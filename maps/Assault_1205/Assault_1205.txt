@@ -1,0 +1,4 @@
+name = 'Assault'
+version = '1.0'
+author = 'Goon Haven'
+extensions = {'water_damage' : 30}

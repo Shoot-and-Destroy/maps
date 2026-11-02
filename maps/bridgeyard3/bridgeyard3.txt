@@ -1,0 +1,6 @@
+name = 'bridgeyard'
+version = '1.0'
+author = 'Danke'
+extensions = {'water_damage' : 30}
+
+aloha=True

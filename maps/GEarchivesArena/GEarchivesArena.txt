@@ -1,0 +1,14 @@
+name = 'GEarchivesArena'
+
+version = '1.0'
+
+author = 'yasakatom & T0M'
+
+description = 'The map made by yasakatom & T0M'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((230,278,61),(238,239,53)),
+     'arena_green_spawns' : ((268,278,53),(230,278,53)),
+     'arena_gates' : ((233,275,58),(265,275,52),(240,242,52),(233,275,52))
+ }

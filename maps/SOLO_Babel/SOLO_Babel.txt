@@ -1,0 +1,32 @@
+from pyspades.constants import *
+import random
+
+name = 'SOLO Babel'
+version = '1.0'
+author = 'wakaran, Reworked by Qult'
+description = "sunmasen"
+
+def get_spawn_location(connection):
+    # --- КОМАНДА 1 (Синие) ---
+    if connection.team is connection.protocol.team_1:
+        # X: 126 (-20/+10) -> 106 до 136
+        x = random.randrange(106, 137)
+        # Y: 256 (-10/+20) -> 246 до 276
+        y = random.randrange(246, 277)
+
+    # --- КОМАНДА 2 (Зеленые) ---
+    elif connection.team is connection.protocol.team_2:
+        # X: 386 (-10/+20) -> 376 до 406
+        x = random.randrange(376, 407)
+        # Y: 256 (-20/+20) -> 236 до 276
+        y = random.randrange(236, 277)
+
+    # Наблюдатели
+    else:
+        return (256, 256, 60)
+
+    # "Спавн под открытым небом"
+    # Функция get_z находит поверхность земли в данной точке X, Y
+    z = connection.protocol.map.get_z(x, y)
+
+    return (x, y, z)

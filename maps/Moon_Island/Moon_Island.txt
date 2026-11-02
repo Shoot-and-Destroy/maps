@@ -1,0 +1,4 @@
+name = 'Moon Island'
+version = '1.0'
+author = 'Booboorocks998'
+description = 'A crescent moon shape with an island in the middle.'

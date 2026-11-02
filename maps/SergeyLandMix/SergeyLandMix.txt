@@ -1,0 +1,8 @@
+name = 'Sergey Land Mix
+version = '1.0'
+author = 'Lostmotel, Reworked by Qult'
+extensions = { 
+'babel' : True, 
+'heavens_color' : (255, 255, 255, 100)
+}
+# https://hosting.dgd.cx/map-search?query=sergey&file=Sergey+Land.vxl&source=allmaps#iso

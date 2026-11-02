@@ -1,0 +1,95 @@
+from pyspades.constants import *
+import random
+
+# --- MAP METADATA ---
+name = 'Cave'
+version = '2.0'
+author = 'Cubrix Studio, Script by Qult'
+description = 'Cave Spawn & Hardcoded Ceiling Protection'
+fog = (165,205,210)
+extensions = {}
+# https://www.planetminecraft.com/project/cave-free-1kx1k/
+
+def is_indestructable(self, x, y, z):
+    # ЗОНА 1: Починається з 1, висота 2 вокселі (Z=1 та Z=2)
+    # На всю ширину та довжину карти
+    if 1 <= z <= 2:
+        return True
+        
+    # ЗОНА 2: Висота строго 7
+    # Х від 206 до 305 (100 вокселів)
+    # Y від 241 до 272 (32 вокселі)
+    if z == 7 and 206 <= x <= 305 and 241 <= y <= 272:
+        return True
+        
+    # ЗОНА 3: Захист над палатками (висота 3, радіус 1 воксель)
+    if z == 3:
+        # Над палаткою Синіх (новий ідеальний центр 118, 256) -> X(117-119), Y(255-257)
+        if 117 <= x <= 119 and 255 <= y <= 257:
+            return True
+        # Над палаткою Зелених (центр 394, 256) -> X(393-395), Y(255-257)
+        if 393 <= x <= 395 and 255 <= y <= 257:
+            return True
+            
+    return False
+
+# --- TENTS (BASES) LOGIC ---
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_BASE:
+        # Ідеально дзеркальна координата (512 - 394 = 118)
+        x, y = 118, 256
+    elif entity_id == GREEN_BASE:
+        x, y = 394, 256
+    else:
+        return (0, 0, 0)
+        
+    # Звичайний метод спавну (шукає поверхню згори вниз)
+    z = team.protocol.map.get_z(x, y)
+    return (x, y, z)
+
+# --- SPAWN LOGIC ---
+def get_spawn_location(connection):
+    # Наблюдатели
+    if connection.team is not connection.protocol.team_1 and connection.team is not connection.protocol.team_2:
+        return (256, 256, 60)
+
+    # Определяем зоны разброса X и Y (+- 15 блоков)
+    if connection.team is connection.protocol.team_1:
+        # Новий центр 118, 256 -> X(103-133), Y(242-272)
+        x_min, x_max = 103, 134
+        y_min, y_max = 242, 273
+    elif connection.team is connection.protocol.team_2:
+        # Центр 394, 256 -> X(379-409), Y(242-272)
+        x_min, x_max = 379, 410
+        y_min, y_max = 242, 273
+
+    map_obj = connection.protocol.map
+
+    # Делаем 30 попыток (для надежности), чтобы найти точку с полом
+    for _ in range(30):
+        rx = random.randrange(x_min, x_max)
+        ry = random.randrange(y_min, y_max)
+
+        # --- ИСПРАВЛЕННЫЙ АЛГОРИТМ ПЕЩЕРЫ ---
+        # Проходим от дна мира (63) вверх до самого неба (1)
+        for z in range(63, 1, -1):
+            
+            # Ищем первый твердый блок (это будет пол пещеры)
+            if map_obj.get_solid(rx, ry, z):
+                
+                # Как только нашли твердый блок, проверяем 2 блока НАД ним
+                # z-1 (уровень ног) и z-2 (уровень головы) должны быть воздухом
+                if not map_obj.get_solid(rx, ry, z - 1) and not map_obj.get_solid(rx, ry, z - 2):
+                    
+                    # Идеальное место найдено! Спавним на блок выше пола (воздух)
+                    return (rx, ry, z - 1)
+                
+                # Если над блоком нет воздуха (мы все еще глубоко в текстурах пола),
+                # цикл просто продолжит идти ВВЕРХ (z - 1) на следующей итерации, 
+                # пока не вылезет в пещеру.
+
+    # Страховочный вариант (сработает только если в этом радиусе пещеры вообще не существует, сплошной куб земли)
+    z_default = map_obj.get_z(rx, ry)
+    if z_default:
+        return (rx, ry, z_default)
+    return (rx, ry, 60)

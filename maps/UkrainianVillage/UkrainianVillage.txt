@@ -1,0 +1,6 @@
+name = 'Ukrainian Village'
+version = '1.0'
+author = 'HiBreck_'
+description = 'Exported from Minecraft'
+# https://www.planetminecraft.com/project/map-ukrainian-village-of-the-18th-century/
+protected = ['A1']

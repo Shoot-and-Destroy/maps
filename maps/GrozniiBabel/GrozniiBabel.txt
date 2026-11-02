@@ -1,0 +1,4 @@
+Name = 'Groznii'
+Author = 'LMT (Lampoviy Mapping Team), Reworked by Qult'
+Version = '0.1'
+Description = ('ChechNYA')

@@ -1,0 +1,10 @@
+name = 'map26'
+version = '1.1'
+author = 'T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (195, 316, 53),
+     'arena_green_spawn' : (316, 195, 53),
+     'arena_gates': ((195, 316, 55),(316, 195, 55)),
+     'water_damage' : 110
+}

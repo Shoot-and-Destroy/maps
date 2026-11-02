@@ -1,0 +1,13 @@
+name = "oshiro"
+version = '1.0'
+author = 'kabocha'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ( 382, 351, 59),
+     'arena_green_spawn' : ( 325, 350, 59),
+     'arena_gates': ((379,353,59) , (327,347,59))
+ }
+
+
+

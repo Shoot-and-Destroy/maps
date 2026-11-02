@@ -1,0 +1,14 @@
+name = 'Ice Break'
+version = '1.0'
+author = 'v^3'
+description = ('Chain of ice bergs broken off from the main land')
+fog = (128, 232, 255)
+extensions = {
+'push': True,
+'push_spawn_range' : 5,
+'push_blue_spawn' : (100, 354, 58),
+'push_blue_cp' : (273, 68, 54),
+'push_green_spawn' : (226, 393, 59),
+'push_green_cp' : (334, 94, 54),
+'water_damage' : 100
+}

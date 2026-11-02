@@ -1,0 +1,16 @@
+name = 'Barriere'
+version = '1.0'
+author = 'Lincent'
+description = ('A push map with 6 islands of varying size.')
+
+extensions = {
+
+'push' : True,
+'push_spawn_range' : 5,
+'push_green_spawn' : (248, 141, 61),
+'push_green_cp' : (454, 454, 59),
+'push_blue_spawn' : (251, 361, 61),
+'push_blue_cp' : (93, 51, 59),
+'water_damage' : 25
+
+}

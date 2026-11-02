@@ -1,0 +1,12 @@
+name = "horror"
+version = '1.4'
+author = 'onigiri'
+fog = (0, 0, 0)
+
+extensions = { 
+     'arena': True,
+     'arena_blue_spawn' : (313,311,56),
+     'arena_green_spawn' : (199,194,56),
+     'arena_gates': ((313,307,54) , (197,201,54)),
+     'water_damage' : 200,
+ }

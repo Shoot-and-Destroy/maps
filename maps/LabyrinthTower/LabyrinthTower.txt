@@ -1,0 +1,30 @@
+from pyspades.constants import *
+name = 'Labyrinth Tower'
+version = '0.2'
+author = 'vxlgen (made by p0nce)'
+description = ('Labyrinth generated map. Seed 2390587493')
+seed = 2390587493
+extensions = {
+  'tower_position': (210, 204, 1),
+  'tower_cells': (22, 25, 8),
+  'cell_size': (4, 4, 6),
+  'blue_base_coord': (218, 254, 56),
+  'green_base_coord': (290, 254, 56)
+}
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return (200, 254, connection.protocol.map.get_z(200, 254))
+    elif connection.team is connection.protocol.green_team:
+        return (308, 254, connection.protocol.map.get_z(308, 254))
+        
+        
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        return (218, 254, 56)
+
+    elif entity_id == GREEN_BASE:
+        return (290, 254, 56)
+    else:
+        return (255, 255, team.protocol.map.get_z(255, 255))

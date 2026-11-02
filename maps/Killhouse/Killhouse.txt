@@ -1,0 +1,11 @@
+name = 'Killhouse'
+version = '1.0'
+author = ''
+description = "fun map"
+extensions = {
+     'boundary_damage' : {'left' : 178, 'right' : 275, 'top' : 224, 'bottom' : 284, 'damage': 25},
+     'arena': True,
+     'arena_blue_spawn' : (257,272,55),
+     'arena_green_spawn' : (197,240,55),
+     'arena_gates': ((255,268,53), (197,246,53))
+ }

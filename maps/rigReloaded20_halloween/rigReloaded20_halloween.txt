@@ -1,0 +1,14 @@
+name = 'rigReloaded'
+version = '1.2'
+author = 'Serious_Sim,BuffetOfLies,Dany0,komerad123,Lauraa'
+description = ('Map modified by lauraa')
+fog = (110, 130, 160)
+extensions = {
+     'water_damage' : 250,
+     'arena': True,
+     'arena_blue_spawn' : (253, 246, 27),
+     'arena_green_spawn' : (289, 292, 42),
+     'arena_gates': ((261,246,27), (258,249,24), (246,247,27), (249,244,29),(283,292,42), (289,298,42), (295,295,42), (288,286,42))
+ } 
+
+aloha=True

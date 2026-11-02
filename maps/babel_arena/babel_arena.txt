@@ -1,0 +1,18 @@
+name = 'babel_arena'
+version = '1.0'
+author = 'Danke'
+
+
+BLUE_RECT = ( 104, 232, 134, 280)
+GREEN_RECT = ( 370, 232, 400, 280)
+
+
+extensions = { 
+'water_damage' : 10
+}
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)

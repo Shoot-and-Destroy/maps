@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "witch007, Reworked by Qult"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.276
+area_land = 0.643
+spawn_dry = [0.18, 0.18]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.0
+map_deaths = 0.046
+fight_kills = 135.5
+objective = 16
+failed = ["spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.05
+map_deaths = 0.086
+fight_kills = 96.0
+objective = 20
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.013
+fight_kills = 115.5
+objective = 9
+failed = ["spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.064
+fight_kills = 213.0
+objective = 18
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.04
+fight_kills = 71.5
+objective = 4
+failed = ["spawn"]

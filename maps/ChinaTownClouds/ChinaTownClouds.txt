@@ -1,0 +1,6 @@
+# --- MAP METADATA ---
+name = 'China Town Clouds'
+version = '2.2'
+author = 'Qult'
+description = 'Cave Spawn & Hardcoded Ceiling Protection'
+

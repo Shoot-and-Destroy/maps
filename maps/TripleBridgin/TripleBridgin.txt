@@ -1,0 +1,8 @@
+name = 'TripleBridgin'
+version = '1.0'
+author = 'Danke, Reworked by Qult'
+extensions = { 
+'water_damage' : 5,
+'babel' : True }
+# https://hosting.dgd.cx/map-search?query=brid&file=bridgin.vxl&source=allmaps#iso
+

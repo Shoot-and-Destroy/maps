@@ -1,0 +1,7 @@
+name = "Quintu Iceland"
+version = '1.0'
+author = 'onigiri, Reworked by Qult'
+extensions = { 'water_damage' : 25 }
+# https://aos.party/view/628
+
+fog = (80, 80, 80)

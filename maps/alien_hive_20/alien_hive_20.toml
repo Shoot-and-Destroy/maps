@@ -1,0 +1,55 @@
+[map]
+modes = ["zombie"]
+author = "alien_hive_20"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.578
+area_land = 0.761
+spawn_dry = [1.0, 0.87]
+
+[map.fitness.ngctf]
+pass = false
+water = 3.4
+map_deaths = 0.192
+fight_kills = 69.5
+objective = 1
+failed = ["water", "map_deaths", "objective"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.35
+map_deaths = 0.422
+fight_kills = 24.0
+objective = 2
+failed = ["map_deaths"]
+
+[map.fitness.koth]
+pass = false
+water = 2.85
+map_deaths = 0.497
+fight_kills = 41.0
+objective = 9
+failed = ["map_deaths"]
+
+[map.fitness.tc]
+pass = false
+water = 3.95
+map_deaths = 0.266
+fight_kills = 69.0
+objective = 11
+failed = ["water", "map_deaths"]
+
+[map.fitness.zombie]
+pass = true
+water = 0.3
+map_deaths = 0.038
+fight_kills = 89.0
+objective = 3
+failed = []

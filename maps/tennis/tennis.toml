@@ -1,0 +1,47 @@
+[map]
+modes = ["ctf", "tc", "zombie"]
+author = "izzy"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [4, 4, 4], end = [4, 4, 4] }
+team2 = { start = [4, 4, 4], end = [4, 4, 4] }
+
+[map.fitness]
+land = 0.97
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.183
+fight_kills = 300.5
+objective = 25
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.045
+fight_kills = 579.5
+objective = 0
+failed = ["objective"]
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.05
+fight_kills = 577.0
+objective = 47
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.05
+fight_kills = 245.5
+objective = 14
+failed = []

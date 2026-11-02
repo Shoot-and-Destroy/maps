@@ -1,0 +1,10 @@
+name = 'cs_militia'
+version = '1.0'
+author = 'Danke-o'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (341, 284, 49),
+     'arena_green_spawn' : (178,275,42),
+     'arena_gates': ((182,279,40),(337,278,45)),
+     'water_damage' : 100
+ }

@@ -1,0 +1,29 @@
+name = 'trollcave'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Troll caves'
+extensions = {'water_damage':100}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (236, 227, 9)
+    if entity_id == GREEN_FLAG:
+        return (280, 224, 24)
+    if entity_id == BLUE_BASE:
+        return (297, 224, 58)
+    if entity_id == GREEN_BASE:
+        return (215, 224, 58)
+        
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(381,400)
+        gy = random.randrange(219,234)
+        return (gx, gy, 31)
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(115,129)
+        by = random.randrange(225,238)
+        return (bx, by, 31)

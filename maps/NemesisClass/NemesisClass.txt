@@ -1,0 +1,10 @@
+from pyspades.constants import *
+import random
+
+name = 'NemesisClass'
+version = '1.0'
+author = 'guardian1200'
+description = 'Exported from Minecraft'
+extensions = { }
+fog = (7,7,7)
+# https://www.planetminecraft.com/project/nemesis-class-light-cruiser/

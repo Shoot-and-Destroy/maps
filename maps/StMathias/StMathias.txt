@@ -1,0 +1,4 @@
+name = 'St.Mathias'
+version = '1.0'
+author = 'JoJoe Stinky'
+description = ('Ultimate town battle. Thanks Mat')

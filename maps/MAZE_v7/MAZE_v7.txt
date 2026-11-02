@@ -1,0 +1,46 @@
+extensions = { 'water_damage' : 100}
+
+from pyspades.constants import *
+import random
+
+
+
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (256, 255, 56)
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(50, 100)
+        y = random.randrange(231, 279)
+        z = 25
+        return (128, 256, 59)
+
+    if entity_id == GREEN_FLAG:
+        return (256, 255, 56)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(412, 462)
+        y = random.randrange(231, 279)
+        z = 25
+        return (384, 256, 59)
+
+def get_spawn_location(connection):
+    connection.protocol.building = False
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(67, 186)
+        y = random.randrange(193, 320)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(328, 438)
+        y = random.randrange(193, 321)
+        z = connection.protocol.map.get_z(x,y)
+    
+
+        return (x, y, z)
+
+name = 'MAZEv7'
+version = '7.0'
+author = 'Desny,Ruben & Inias'

@@ -1,0 +1,12 @@
+name = 'Life'
+version = '1.0'
+author = 'Who'
+description = ('a map based on a 2D cellular automata raised on height each step with the Conway rule known as Game of Life. arenafied by izzy')
+extensions = {
+     'boundary_damage' : {'left' : 101, 'right' : 249, 'top' : 249, 'bottom' : 349, 'damage': 3},
+     'water_damage' : 33,
+     'arena': True,
+     'arena_blue_spawn' : (239, 264, 59),
+     'arena_green_spawn' : (111, 339, 59),
+     'arena_gates' : ((239, 262, 60), (111, 337, 60))
+}

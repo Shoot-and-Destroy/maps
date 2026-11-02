@@ -1,0 +1,11 @@
+name = 'avvirtual'
+version = '1.0'
+author = 'AVuKYI2R3'
+description = 'A classic styled arena map and also the first Unreal Tournament 2004 Map I made.'
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((225, 231, 53)),
+    'arena_green_spawn' : ((286, 280, 53)),
+    'arena_gates': ((222, 228, 51),(289, 283, 51))
+}

@@ -1,0 +1,26 @@
+name = 'Saturn'
+version = '1.0.1'
+author = 'Ashy'
+fog = (0, 0, 0)
+extensions = {
+	'arena': True,
+	'arena_blue_spawn': (192, 256, 28),
+	'arena_green_spawn': (320, 256, 28),
+	'arena_gates': ((198, 256, 28), (314, 256, 28)),
+	'water_damage': 100
+}
+
+# Unbreakable block areas
+#    x1,  y1,  z1, x2,  y2,  z2
+UNBREAKABLE_AREAS = [
+	(170, 255, 31, 170, 255, 63), # Blue intel tower
+	(340, 255, 31, 340, 255, 63), # Green intel tower
+	(191, 255, 49, 193, 257, 63), # Blue backup spawn (3x3 area, allow digging down 4 blocks)
+	(319, 255, 49, 321, 257, 63), # Green backup spawn (3x3 area, allow digging down 4 blocks)
+]
+
+def is_indestructable(self, x, y, z):
+	for area in UNBREAKABLE_AREAS:
+		if x >= area[0] and x <= area[3] and y >= area[1] and y <= area[4] and z >= area[2] and z <= area[5]:
+			return True
+	return False

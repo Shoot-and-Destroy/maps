@@ -1,0 +1,59 @@
+from pyspades.constants import *
+import random
+
+name = 'Nine-EyeP'
+version = '1.0'
+author = 'ei8htx'
+description = 'Map with dimensional gates.'
+extensions = {
+    'babel' : True, 
+    'respawn_time' : 6,
+    'water_damage': 50,
+    'teleports': [
+        ((169, 201, 51), 2, [(252, 175, 27), (260, 175, 27), (252, 177, 27), (260, 177, 27)]), #+y
+        ((256, 176, 25), 2, [(165, 200, 53), (173, 200, 53), (165, 202, 53), (173, 202, 53)]), #+y
+        ((256, 335, 25), 2, [(337, 309, 53), (345, 309, 53), (337, 311, 53), (345, 311, 53)]), #+p
+        ((341, 310, 51), 2, [(252, 334, 27), (260, 334, 27), (252, 336, 27), (260, 336, 27)]), #+p
+        ((65, 256, 51), 2, [(444, 252, 53), (446, 252, 53), (444, 260, 53), (446, 260, 53)]), #-g
+        ((445, 256, 51), 2, [(64, 252, 53), (64, 260, 53), (66, 252, 53), (66, 260, 53)]) #-g
+    ],
+'no_build_zones': [
+        ((169, 201, 51), 8, 0), #+y
+        ((256, 176, 25), 8, 0), #+y
+        ((256, 335, 51), 8, 0), #+p
+        ((341, 310, 25), 8, 0), #+p
+        ((65, 256, 51), 8, 0), #-g
+        ((445, 256, 51), 8, 0)  #-g
+    ],
+"team_1_zones": [[(127, 240), (127, 272), (211, 272), (211, 240)], [(256-20, 256-66), (256-20, 256-11), (256+20, 256-11), (256+20, 256-66)]],
+"team_2_zones": [[(301, 240), (301, 272), (385, 272), (385, 240)], [(256-20, 256+66), (256-20, 256+11), (256+20, 256+11), (256+20, 256+66)]]
+}
+
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(146, 174)
+        y = random.randrange(231, 280)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(336, 365)
+        y = random.randrange(231, 280)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = 122
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 389
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)

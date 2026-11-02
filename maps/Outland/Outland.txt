@@ -1,0 +1,8 @@
+{
+    "name" : "Outland",
+    "version" : "0.1",
+    "author" : "TomTom",
+    "description" : "Desolate valley overlooked by mountains",
+    
+    "indestructable_blocks" : []
+}

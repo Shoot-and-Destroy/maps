@@ -1,0 +1,42 @@
+
+
+from pyspades.constants import *
+import random
+
+name = 'TheColosseumch'
+version = '1.0'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+
+def get_spawn_location(connection):
+    # Устанавливаем центр и радиус для команд
+    if connection.team is connection.protocol.team_1:
+        cx, cy = 143, 194
+    elif connection.team is connection.protocol.team_2:
+        cx, cy = 371, 256
+    else:
+        return (256, 256, 0)
+    
+    radius = 10
+    
+    # Генерация случайной точки в пределах радиуса (квадратная зона)
+    x = random.randrange(cx - radius, cx + radius + 1)
+    y = random.randrange(cy - radius, cy + radius + 1)
+    
+    # Спавн на поверхности
+    z = connection.protocol.map.get_z(x, y)
+    
+    return (x, y, z)
+
+def get_entity_location(team, entity_id):
+    # Палатка команды 1 (центр их спавна)
+    if entity_id == BLUE_BASE:
+        x, y = 143, 194
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    # Палатка команды 2 (центр их спавна)
+    if entity_id == GREEN_BASE:
+        x, y = 371, 256
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)

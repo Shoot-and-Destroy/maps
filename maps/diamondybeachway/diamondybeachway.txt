@@ -1,0 +1,2 @@
+author = "SwoleFroge"
+description= "A fusion of diamondway and several trench-type maps"

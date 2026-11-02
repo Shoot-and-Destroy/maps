@@ -1,0 +1,98 @@
+from pyspades.constants import *
+import random
+
+# --- MAP METADATA ---
+name = 'Green Cave'
+version = '2.2'
+author = 'Qult'
+description = 'Cave Spawn & Hardcoded Ceiling Protection'
+fog = (255, 225, 147) # Обновленный туман
+extensions = {}
+
+def is_indestructable(self, x, y, z):
+    # ЗОНА 1: Починається з 1, висота 2 вокселі (Z=1 та Z=2)
+    if 1 <= z <= 2:
+        return True
+        
+    # ЗОНА 2: Висота строго 7
+    if z == 7 and 206 <= x <= 305 and 241 <= y <= 272:
+        return True
+        
+    # ЗОНА 3: Захист над палатками (висота 3, радіус 1 воксель)
+    if z == 3:
+        if 116 <= x <= 118 and 255 <= y <= 257:
+            return True
+        if 392 <= x <= 394 and 255 <= y <= 257:
+            return True
+            
+    return False
+
+# --- TENTS (BASES) LOGIC ---
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_BASE:
+        x, y = 117, 256
+    elif entity_id == GREEN_BASE:
+        x, y = 393, 256
+    else:
+        return (0, 0, 0)
+        
+    z = team.protocol.map.get_z(x, y)
+    return (x, y, z)
+
+# --- SPAWN LOGIC ---
+def get_spawn_location(connection):
+    # Наблюдатели
+    if connection.team not in (connection.protocol.team_1, connection.protocol.team_2):
+        return (256, 256, 60)
+
+    # Выбираем случайную зону (равный шанс: 1, 2 или 3)
+    zone = random.randint(1, 3)
+
+    if connection.team is connection.protocol.team_1:
+        if zone == 1:
+            x_min, x_max, y_min, y_max = 106, 130, 200, 224 # Центр 218, 212 (r=12)
+        elif zone == 2:
+            x_min, x_max, y_min, y_max = 106, 130, 288, 312 # Центр 218, 300 (r=12)
+        else:
+            x_min, x_max, y_min, y_max = 113, 123, 251, 261 # Центр 218, 256 (r=5)
+            
+    else: # team 2
+        if zone == 1:
+            x_min, x_max, y_min, y_max = 382, 406, 208, 232 # Центр 394, 220 (r=12)
+        elif zone == 2:
+            x_min, x_max, y_min, y_max = 382, 406, 280, 304 # Центр 394, 292 (r=12)
+        else:
+            x_min, x_max, y_min, y_max = 389, 399, 251, 261 # Центр 394, 256 (r=5)
+
+    map_obj = connection.protocol.map
+
+    # Делаем 50 попыток, чтобы гарантированно найти пещеру, а не застрять в текстурах
+    for _ in range(50):
+        rx = random.randint(x_min, x_max)
+        ry = random.randint(y_min, y_max)
+
+        # ПРАВИЛЬНЫЙ ПОИСК СНИЗУ-ВВЕРХ
+        # Начинаем с самого дна (63) и идем вверх до потолка (4)
+        for z in range(63, 3, -1):
+            
+            # Ищем твердый блок (пол)
+            if map_obj.get_solid(rx, ry, z):
+                feet_z = z - 1
+                torso_z = z - 2
+                head_z = z - 3
+                
+                # Проверяем, есть ли 3 свободных вокселя над полом
+                if not map_obj.get_solid(rx, ry, feet_z) and not map_obj.get_solid(rx, ry, torso_z) and not map_obj.get_solid(rx, ry, head_z):
+                    
+                    # Проверяем, чтобы ноги не были на крыше (<= 2) и не были в воде (>= 62)
+                    if 2 < feet_z < 62:
+                        return (rx, ry, feet_z)
+                        
+                    # Если высота не подошла (например, это дно океана), 
+                    # алгоритм просто игнорирует это и сканирует пещеру выше!
+
+    # Страховочный вариант, если на координатах вообще нет пещер
+    z_default = map_obj.get_z(rx, ry)
+    if z_default:
+        return (rx, ry, z_default)
+    return (rx, ry, 60)

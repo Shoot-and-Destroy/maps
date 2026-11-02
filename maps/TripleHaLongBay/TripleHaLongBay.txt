@@ -1,0 +1,5 @@
+name = 'Triple Ha Long Bay'
+version = '2.0'
+author = 'IAmYourFriend, Reworked by Qult'
+description = ('A small map themed around the Ha Long Bay area in northern Vietnam. Updated version with more ground.')
+# https://aos.party/view/1152

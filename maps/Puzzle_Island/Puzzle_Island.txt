@@ -1,0 +1,9 @@
+name = 'Puzzle Island'
+version = '1.0'
+author = 'underwear - -'
+fog = (255, 230, 180)
+extensions = {
+     'water_damage' : 5,
+'heavens_color' : (255, 255, 255, 255),
+     'babel' : True
+}

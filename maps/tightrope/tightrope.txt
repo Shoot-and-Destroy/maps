@@ -1,0 +1,8 @@
+name = 'tightrope'
+version = '1.0'
+author = 'Yourself'
+description = 'Two bases connected by 5 one block wide tightropes.'
+extensions = { 'water_damage' : 100 }
+
+
+aloha=True

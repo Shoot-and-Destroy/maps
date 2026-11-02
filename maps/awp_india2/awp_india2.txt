@@ -1,0 +1,33 @@
+name = 'awp_india'
+version = '1.0'
+author = 'Dany0'
+description = 'Someone requested this, I converted it from GreatDeathPLs MC map and added neat stuff all around, enjoy!'
+extensions = { 'water_damage' : 10}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (298, 264, 59)
+    if entity_id == BLUE_FLAG:
+        return (213, 248, 59)
+    if entity_id == GREEN_BASE:
+        return (298, 266, 59)
+    if entity_id == BLUE_BASE:
+        return (213, 246, 59)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        x2 = random.randrange(280,286)
+        y2 = random.randrange(236,273)
+        z2 = connection.protocol.map.get_z(x2, y2)
+        return (x2, y2, z2)
+    if connection.team is connection.protocol.blue_team:
+        x3 = random.randrange(226,232)
+        y3 = random.randrange(238,275)
+        z3 = connection.protocol.map.get_z(x3, y3)
+        return (x3, y3, z3)
+
+aloha=True

@@ -1,0 +1,1 @@
+name = 'map15'version = '1.0'author = 'T0M'extensions = {     'arena': True,     'arena_blue_spawn' : (227,255,6),     'arena_green_spawn' : (284,256,6),     'arena_gates': ((227,252,6),(227,259,6),(231,255,6),(284,252,6),(284,259,6),(280,255,6)),     'water_damage' : 110}

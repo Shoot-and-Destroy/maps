@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "tightrope2"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.135
+area_land = 0.22
+spawn_dry = [0.25, 0.28]
+
+[map.fitness.ngctf]
+pass = false
+water = 18.55
+map_deaths = 0.86
+fight_kills = 15.0
+objective = 0
+failed = ["land", "water", "map_deaths", "fight_kills", "objective", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.725
+fight_kills = 22.0
+objective = 3
+failed = ["land", "map_deaths", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.508
+fight_kills = 46.5
+objective = 6
+failed = ["land", "map_deaths", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.485
+fight_kills = 52.5
+objective = 8
+failed = ["land", "map_deaths", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 15.7
+map_deaths = 0.13
+fight_kills = 120.0
+objective = 12
+failed = ["land", "water", "spawn"]

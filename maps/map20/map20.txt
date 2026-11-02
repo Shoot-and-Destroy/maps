@@ -1,0 +1,9 @@
+name = 'map20'
+version = '1.0'
+author = 'T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((227, 227, 28),(283, 283, 28)),
+     'arena_green_spawns' : ((227, 283, 28), (283, 227, 28)),
+     'arena_gates': ((230,230,27),(230,280,27),(280,280,27),(280,230,27)),
+}

@@ -1,0 +1,56 @@
+name = "Castle in the Sky"
+version = '1.0'
+author = 'onigiri'
+fog = (128, 232, 255)
+extensions = { 'water_damage' : 5 }
+# script
+from pyspades.server import ServerConnection
+from pyspades.constants import *
+import random
+
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 290, 339, 11)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 287, 331, 11)
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 176, 322, 59)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 226, 403, 15)
+
+
+spawn_locations_blue = [
+    ( 237, 394, 10),
+	( 333, 392, 15),
+    ( 373, 301, 33),
+	( 317, 227, 26),
+	( 182, 321, 19),
+]
+
+spawn_locations_green = [
+    ( 286, 338, 11),
+	( 307, 323, 22),
+	( 319, 331, 28),
+	( 294, 334, 30),
+	( 268, 324, 39),
+	( 283, 354, 20),
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 0 # magic numbers
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        # allows spawning lower if the ground is destroyed
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

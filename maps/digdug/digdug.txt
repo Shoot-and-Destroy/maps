@@ -1,0 +1,7 @@
+name = "Dig Dug"
+version = "1"
+author = "thepolm3"
+description = "An underground map for all the family! Use with Dug.py"
+extensions = {
+    "digdug":[[(119,128),(253,260),(28,36)],[(386,393),(253,261),(28,36)],[(200,301),(200,301)]]
+}

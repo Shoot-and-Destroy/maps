@@ -1,0 +1,64 @@
+from pyspades.constants import *
+import random
+
+# --- MAP METADATA ---
+name = 'Cave'
+version = '2.0'
+author = 'Cubrix Studio, Script by Qult'
+description = 'Cave Spawn & Hardcoded Ceiling Protection'
+fog = (165,205,210)
+extensions = {}
+# https://www.planetminecraft.com/project/cave-free-1kx1k/
+
+def is_indestructable(self, x, y, z):
+    if (190<x<222 or 290<x<320) and 228<y<285:
+        return False
+    if 2<=z<=7:
+        return True
+    return False
+
+def get_spawn_location(connection):
+    # Наблюдатели
+    if connection.team is not connection.protocol.team_1 and connection.team is not connection.protocol.team_2:
+        return (256, 256, 60)
+
+    # Определяем зоны разброса X и Y (+- 15 блоков)
+    if connection.team is connection.protocol.team_1:
+        # Центр 138, 256 -> X(123-153), Y(241-271)
+        x_min, x_max = 123, 154
+        y_min, y_max = 241, 272
+    elif connection.team is connection.protocol.team_2:
+        # Центр 394, 256 -> X(379-409), Y(241-271)
+        x_min, x_max = 379, 410
+        y_min, y_max = 241, 272
+
+    map_obj = connection.protocol.map
+
+    # Делаем 30 попыток (для надежности), чтобы найти точку с полом
+    for _ in range(30):
+        rx = random.randrange(x_min, x_max)
+        ry = random.randrange(y_min, y_max)
+
+        # --- ИСПРАВЛЕННЫЙ АЛГОРИТМ ПЕЩЕРЫ ---
+        # Проходим от дна мира (63) вверх до самого неба (1)
+        for z in range(63, 1, -1):
+            
+            # Ищем первый твердый блок (это будет пол пещеры)
+            if map_obj.get_solid(rx, ry, z):
+                
+                # Как только нашли твердый блок, проверяем 2 блока НАД ним
+                # z-1 (уровень ног) и z-2 (уровень головы) должны быть воздухом
+                if not map_obj.get_solid(rx, ry, z - 1) and not map_obj.get_solid(rx, ry, z - 2):
+                    
+                    # Идеальное место найдено! Спавним на блок выше пола (воздух)
+                    return (rx, ry, z - 1)
+                
+                # Если над блоком нет воздуха (мы все еще глубоко в текстурах пола),
+                # цикл просто продолжит идти ВВЕРХ (z - 1) на следующей итерации, 
+                # пока не вылезет в пещеру.
+
+    # Страховочный вариант (сработает только если в этом радиусе пещеры вообще не существует, сплошной куб земли)
+    z_default = map_obj.get_z(rx, ry)
+    if z_default:
+        return (rx, ry, z_default)
+    return (rx, ry, 60)

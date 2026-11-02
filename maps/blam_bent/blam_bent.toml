@@ -1,0 +1,55 @@
+[map]
+modes = ["babel"]
+author = "original blam by JoJoe Stinky, modified by Danke"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.263
+area_land = 0.71
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 2.3
+map_deaths = 0.024
+fight_kills = 140.5
+objective = 1
+failed = ["water", "objective"]
+
+[map.fitness.ctf]
+pass = true
+water = 1.4
+map_deaths = 0.026
+fight_kills = 56.0
+objective = 5
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 1.8
+map_deaths = 0.016
+fight_kills = 93.0
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.95
+map_deaths = 0.023
+fight_kills = 173.0
+objective = 8
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 16.85
+map_deaths = 0.076
+fight_kills = 72.5
+objective = 4
+failed = ["water"]

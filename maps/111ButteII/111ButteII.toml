@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "W. Carrera, 111INFORMATIQUE"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.1
+area_land = 0.274
+spawn_dry = [0.13, 0.11]
+
+[map.fitness.ngctf]
+pass = false
+water = 2.1
+map_deaths = 0.012
+fight_kills = 79.5
+objective = 0
+failed = ["crash"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.25
+map_deaths = 0.0
+fight_kills = 32.0
+objective = 1
+failed = ["crash"]
+
+[map.fitness.koth]
+pass = false
+water = 0.2
+map_deaths = 0.027
+fight_kills = 107.5
+objective = 8
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.007
+fight_kills = 207.0
+objective = 2
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.5
+map_deaths = 0.005
+fight_kills = 197.0
+objective = 13
+failed = ["land", "spawn"]

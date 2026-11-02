@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "koth"]
+author = "isle2"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.211
+area_land = 0.586
+spawn_dry = [0.81, 0.8]
+
+[map.fitness.ngctf]
+pass = false
+water = 2.4
+map_deaths = 0.012
+fight_kills = 163.0
+objective = 3
+failed = ["land", "water"]
+
+[map.fitness.ctf]
+pass = true
+water = 1.2
+map_deaths = 0.0
+fight_kills = 78.0
+objective = 6
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 1.2
+map_deaths = 0.0
+fight_kills = 121.5
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.006
+fight_kills = 252.0
+objective = 2
+failed = ["objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.002
+fight_kills = 235.0
+objective = 13
+failed = ["land"]

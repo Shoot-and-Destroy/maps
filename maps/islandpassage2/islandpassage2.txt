@@ -1,0 +1,11 @@
+name = 'Island Passage'
+version = '1.0'
+author = 'TheGrandmaster'
+description = ('A desert island, made for 6vs6 clan-matches or less.')
+
+extensions = {
+	'water_damage': 3
+}
+
+
+aloha=True

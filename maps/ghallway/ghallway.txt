@@ -1,0 +1,40 @@
+name = 'G_Hallway'
+version = '1.0'
+author = 'lecom (combined map), Tom Dobrowolski (classicgen), izzy(hallway) '
+description = ('A mix of hallway and classicgen, seed #975175575')
+
+"""
+VSID=512
+HVSID=VSID/2
+
+def gen_script(basename, seed):
+	from pyspades.vxl import VXLData
+	from pyspades.mapmaker import generate_classic
+	import pickle
+	f=open('maps/hallway_terrainmap.vxl', 'r')
+	mapdata=pickle.load(f)
+	f.close()
+	map=VXLData()
+	genmap=generate_classic(seed)
+	for x in xrange(VSID):
+		for y in xrange(VSID):
+			map.set_point(x, y, 63, mapdata[x][y])
+	xway_range=xrange(128, VSID-128)
+	yway_range=xrange(253, 260)
+	xwater_range1=xrange(0, 128)
+	xwater_range2=xrange(VSID-128, VSID)
+	ywater_range=xrange(128, VSID-128)
+	yspawn_range=xrange(224, VSID-224)
+	xspawn_range1=xrange(64, 128)
+	xspawn_range2=xrange(VSID-128, VSID-64)
+	for x in xrange(VSID):
+		for y in xrange(VSID):
+			#sz=genmap.get_height(x, y)-1
+			sz=64-((64-(genmap.get_height(y, x)-1))*5//8)
+			if y in ywater_range and (x in xwater_range1 or x in xwater_range2):
+				sz=63
+			if y in yspawn_range and (x in xspawn_range1 or x in xspawn_range2) or (y in yway_range and x in xway_range):
+				sz=62
+			map.set_column_fast(x, y, sz, 63, 63, mapdata[x][y][2] | (mapdata[x][y][1]<<8) | (mapdata[x][y][0]<<16))
+	return map
+"""

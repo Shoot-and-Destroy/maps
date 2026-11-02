@@ -1,0 +1,4 @@
+name = 'Aquila'
+version = '1.0'
+author = 'Dany0'
+description = 'Conversion from Minecraft Aquila Timelapse! (This is the rotated version)'

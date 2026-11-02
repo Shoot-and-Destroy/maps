@@ -1,0 +1,20 @@
+name = 'Nuketown'
+version = '1.0'
+author = 'LinktersHD'
+description = 'Remake of the Call of Duty map Nuketown'
+cap_limit = 8
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (263,187,59),
+     'arena_green_spawn' : (265,317,59),
+     'arena_gates': ((267,190,59),(260,314,60)),
+     'water_damage' : 100,
+     'team_namecolor' : True,
+      'blue_team_name' : 'Blue',
+      'blue_team_color' : (0, 255, 210),  
+      'green_team_name' : 'Yellow',
+      'green_team_color' : (255 , 255, 30)
+
+
+
+ }

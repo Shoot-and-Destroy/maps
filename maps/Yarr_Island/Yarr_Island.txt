@@ -1,0 +1,28 @@
+name = 'Yarr Island'
+version = '1.0'
+author = 'JoJoe Stinky CC 2013'
+description = 'Yarr Island'
+extensions = {
+	#'water_damage' : 0,
+	'boundary_damage' : {
+		'left' : 64,
+		'top' : 64,
+		'right' : 448,
+		'bottom' : 448,
+		'damage' : 30
+	}
+}
+# script
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (336, 327, 44)
+    if entity_id == BLUE_FLAG:
+        return (175, 179, 44)
+    if entity_id == GREEN_BASE:
+        return (345, 297, 32)
+    if entity_id == BLUE_BASE:
+        return (165, 218, 41)

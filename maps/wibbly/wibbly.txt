@@ -1,0 +1,15 @@
+name = 'wibbly'
+version = '1.0'
+author = 'Danke'
+
+
+BLUE_RECT = ( 111, 213, 153, 298) 
+GREEN_RECT = ( 358, 213, 400, 298)
+
+
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)

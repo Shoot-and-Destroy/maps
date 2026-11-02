@@ -1,0 +1,4 @@
+name = 'Double Roanpapur'
+version = '1.0'
+author = 'Jdrew, Reworked by Qult'
+# https://aos.party/view/870

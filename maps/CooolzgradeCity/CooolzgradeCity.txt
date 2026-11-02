@@ -1,0 +1,5 @@
+name = "Cooolzgrade City"
+version = '1.0'
+author = 'Unknown, Reworked by Qult'
+description = 'for babel?'
+# https://hosting.dgd.cx/map-search?query=cooo&file=cooolzgrade.vxl&source=allmaps#iso

@@ -1,0 +1,15 @@
+name = 'SFbayareaArena'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Special Force copy map'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (171,246,57),
+     'arena_green_spawn' : (316,205,59),
+     'arena_gates' : ((175,246,58),(312,209,59)),
+     'water_damage' : 100
+ }

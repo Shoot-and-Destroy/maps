@@ -1,0 +1,11 @@
+name = 'Mechanical'
+version = '1.0'
+author = 'Danke'
+description = 'circular babel map'
+extensions = { 
+	'babel' : True, 
+	'heavens_color' : (250, 130, 40, 255)
+}
+
+
+aloha=True

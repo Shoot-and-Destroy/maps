@@ -1,0 +1,4 @@
+name = 'Bowl'
+version = '1.0'
+author = 'TheGrandmaster'
+description = ('A large bowl with centre island, for public servers/larger matches.')

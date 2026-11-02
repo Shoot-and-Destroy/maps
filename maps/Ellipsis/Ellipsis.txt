@@ -1,0 +1,5 @@
+name = 'Ellipsis'
+version = '0.9'
+author = 'ei8htx'
+description = ('Follow the columns')
+extensions = { 'water_damage' : 3,'babel' : True}

@@ -1,0 +1,55 @@
+[map]
+modes = ["ngctf", "ctf", "zombie"]
+author = "smashforts"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.283
+area_land = 0.683
+spawn_dry = [0.9, 0.88]
+
+[map.fitness.ngctf]
+pass = true
+water = 1.75
+map_deaths = 0.098
+fight_kills = 124.0
+objective = 7
+failed = []
+
+[map.fitness.ctf]
+pass = false
+water = 0.7
+map_deaths = 0.181
+fight_kills = 70.0
+objective = 1
+failed = ["objective"]
+
+[map.fitness.koth]
+pass = false
+water = 3.4
+map_deaths = 0.034
+fight_kills = 113.0
+objective = 8
+failed = ["water"]
+
+[map.fitness.tc]
+pass = false
+water = 2.75
+map_deaths = 0.033
+fight_kills = 206.0
+objective = 4
+failed = ["objective"]
+
+[map.fitness.zombie]
+pass = true
+water = 1.7
+map_deaths = 0.201
+fight_kills = 81.5
+objective = 6
+failed = []

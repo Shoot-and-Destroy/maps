@@ -1,0 +1,11 @@
+name = 'Crossfire 3'
+version = '1.0'
+author = 'Lostmotel'
+extensions = {'boundary_damage' : {
+'left' : 74, 
+'right' : 436, 
+'top' : 120, 
+'bottom' : 394, 
+'damage': 5},
+'heavens_color' : (190, 145, 105, 255),
+'babel' : True }

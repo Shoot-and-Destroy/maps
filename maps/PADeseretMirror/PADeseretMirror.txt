@@ -1,0 +1,7 @@
+name = 'PA Deseret Mirror'
+version = '1.0'
+author = 'Fat Idiot, Reworked by Qult'
+extensions = {
+     'babel' : True
+}
+# https://hosting.dgd.cx/map-search?file=PAdesert.vxl&source=allmaps#iso

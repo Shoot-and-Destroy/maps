@@ -1,0 +1,57 @@
+[map]
+modes = ["babel"]
+author = "Lostmotel, urr, Nope - -"
+fog_color = [25, 35, 35]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.351
+area_land = 0.825
+spawn_dry = [0.8, 0.8]
+
+[map.fitness.ngctf]
+pass = true
+water = 1.0
+map_deaths = 0.115
+fight_kills = 123.0
+objective = 5
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.55
+map_deaths = 0.125
+fight_kills = 52.5
+objective = 11
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.55
+map_deaths = 0.064
+fight_kills = 109.5
+objective = 7
+failed = []
+
+[map.fitness.tc]
+pass = false
+water = 1.0
+map_deaths = 0.068
+fight_kills = 191.5
+objective = 4
+failed = ["objective"]
+
+[map.fitness.zombie]
+pass = true
+water = 1.05
+map_deaths = 0.101
+fight_kills = 124.5
+objective = 8
+failed = []

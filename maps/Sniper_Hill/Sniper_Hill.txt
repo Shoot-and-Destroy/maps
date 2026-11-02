@@ -1,0 +1,5 @@
+name = 'Sniper Hill'
+version = '0.5'
+author = 'Sneakers'
+description = ('A cross between Snowblind and Caves'
+               )

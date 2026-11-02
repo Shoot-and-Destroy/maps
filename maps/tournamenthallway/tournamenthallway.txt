@@ -1,0 +1,3 @@
+name = 'TournamentHallway'
+author = 'Xenon (a.k.a. Cumco) & Supernova'
+description = ('All rights belong to Xenon, Supernova and AOSG (formerly AOSK)')

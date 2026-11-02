@@ -1,0 +1,5 @@
+name = 'Olympus Mons'
+version = '1.0'
+author = '[PXY]C'
+description = 'The map replicates a giant volcano on Mars.'
+extensions = { 'water_damage' : 100 }

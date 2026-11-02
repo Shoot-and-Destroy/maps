@@ -1,0 +1,17 @@
+name = 'Arc De Pinpoint'
+version = '1.0'
+author = 'izzy'
+description = 'Small spawns that converge into a bottleneck at the center of the map.'
+
+extensions = { 
+'boundary_damage' : {'left' : 58, 'right' : 454, 'top' : 218, 'bottom' : 294, 'damage': 33}
+}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (411,256, 60)
+	if entity_id == BLUE_BASE:
+		return (100,256,60)		

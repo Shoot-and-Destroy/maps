@@ -1,0 +1,5 @@
+name = 'SpookyMansion'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+fog = (20,45,50)
+

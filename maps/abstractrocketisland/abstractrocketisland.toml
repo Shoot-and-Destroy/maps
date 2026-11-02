@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Dr. Morphman"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.168
+area_land = 0.335
+spawn_dry = [0.48, 0.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 1.55
+map_deaths = 0.054
+fight_kills = 141.0
+objective = 9
+failed = ["land", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.6
+map_deaths = 0.044
+fight_kills = 86.0
+objective = 3
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 11.25
+map_deaths = 0.021
+fight_kills = 143.0
+objective = 8
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.045
+fight_kills = 284.5
+objective = 4
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.007
+fight_kills = 148.5
+objective = 9
+failed = ["land", "spawn"]

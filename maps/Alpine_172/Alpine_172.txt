@@ -1,0 +1,8 @@
+name = 'Alpine'
+version = '1.0'
+author = 'Dany0 and Influx'
+description = 'An alpine map with large mountains and thick forests. And mortars.'
+extensions = {
+'right_mortars' : [(457, 179, 52), (473, 383, 55)],
+'left_mortars' : [(53, 385, 52), (27, 164, 49)]
+}

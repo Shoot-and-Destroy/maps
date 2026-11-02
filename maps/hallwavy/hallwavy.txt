@@ -1,0 +1,4 @@
+name = 'hallwavy'
+version = '1.0'
+author = 'izzy, modified by Danke'
+description = 'A narrow passage between small spawns surrounded by colorful blocks that rise to the ceiling.'

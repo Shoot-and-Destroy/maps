@@ -1,0 +1,9 @@
+name = 'Paths'
+version = '1'
+author = 'Marshmello'
+description = ('Just paths, Great for Babel maps')
+
+extensions = {
+
+}
+

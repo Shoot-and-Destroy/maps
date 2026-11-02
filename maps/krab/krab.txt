@@ -1,0 +1,5 @@
+Name = 'KRAB'
+Author = 'Visitors of LAMPOVIY SERVACHOK'
+Version = '1.0'
+Description = ('Sort of pinpoint2')
+

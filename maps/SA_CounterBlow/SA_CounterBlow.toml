@@ -1,0 +1,53 @@
+[map]
+modes = ["arena"]
+author = "SuddenAttack-team and copied by JohnVIP"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [161, 256, 59], end = [161, 256, 59] }
+team2 = { start = [349, 257, 59], end = [349, 257, 59] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[158, 253, 56], [346, 254, 56]]
+
+[map.fitness]
+land = 0.019
+area_land = 0.273
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.515
+fight_kills = 81.0
+objective = 0
+failed = ["land", "map_deaths", "objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.069
+fight_kills = 275.0
+objective = 0
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.163
+fight_kills = 345.0
+objective = 3
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.9
+map_deaths = 0.288
+fight_kills = 158.5
+objective = 12
+failed = ["land", "map_deaths", "spawn"]

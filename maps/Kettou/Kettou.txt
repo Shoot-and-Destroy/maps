@@ -1,0 +1,14 @@
+name = "Kettou"
+version = '1.0'
+author = 'onigiri'
+
+description = 'bisidou ja!'
+
+fog = (0, 0, 0)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ((194,305,39)),
+     'arena_green_spawn' : ((273,299,39)),
+     'arena_gates': ((194,307,39),(271,296,38)),
+ }

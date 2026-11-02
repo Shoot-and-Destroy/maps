@@ -1,0 +1,5 @@
+name = 'Final_Tactical_City_v4'
+version = '4.0 Final'
+author = 'Antigravity Stage 4 Compiler'
+description = 'Features highly complex architectural houses on sand, foliage on tactical grass, and dirt road networks. CTF Symmetric.'
+fog = (225, 200, 160)

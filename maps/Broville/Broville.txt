@@ -1,0 +1,4 @@
+name = 'Broville'
+version = '1.0'
+author = 'rolleda'
+description = 'A Minecraft conversion of a gorgeous map.'

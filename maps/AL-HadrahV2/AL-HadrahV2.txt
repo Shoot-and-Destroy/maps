@@ -1,0 +1,5 @@
+name = 'AL-Hadrah'
+version = '1.0'
+author = 'Blitzoxic'
+description = 'minecraft map'
+# https://www.planetminecraft.com/project/irakian-war-map-al-hadrah/

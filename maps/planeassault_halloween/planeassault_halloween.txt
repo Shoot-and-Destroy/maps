@@ -1,0 +1,17 @@
+name = 'Plane Assault'
+version = '2.0'
+author = 'Serious_Sim'
+description = ("Plane assault v.1")
+cap_limit = 10
+fog = (110, 130, 160)
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (206,254,31),
+     'arena_green_spawn' : (302,253,26),
+     'arena_gates': ((211,254,31),(297,253,26)),
+     'water_damage' : 250
+ }
+
+
+
+aloha=True

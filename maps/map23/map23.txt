@@ -1,0 +1,10 @@
+name = 'map23'
+version = '1.0'
+author = 'T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (227, 284, 60),
+     'arena_green_spawn' : (284, 227, 60),
+     'arena_gates': ((287,224,56),(224,287,56)),
+     'water_damage' : 100
+}

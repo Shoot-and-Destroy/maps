@@ -1,0 +1,10 @@
+name = 'neon lights'
+version = '1.0'
+author = 'Lostmotel'
+fog = (0, 0, 0)
+extensions = {
+    'water_damage' : 100,
+    'parkour_start' : (66, 256, 14),
+    'parkour_end' : (429, 256, 51),
+    'parkour_checkpoints' : ((129, 256, 2), (189, 256, 26), (238, 256, 35), (280, 256, 20), (330, 256, 17))
+}

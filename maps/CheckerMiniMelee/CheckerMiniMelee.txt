@@ -1,0 +1,29 @@
+name = 'CheckerMiniMelee'
+version = '1.0'
+author = 'Dany0'
+description = 'Checker melee carnage!'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (235, 261, 46)
+    if entity_id == GREEN_FLAG:
+        return (235, 250, 46)
+    if entity_id == BLUE_BASE:
+        return (234, 283, 50)
+    if entity_id == GREEN_BASE:
+        return (234, 227, 50)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(279,286)
+        y = random.randrange(235,237)
+        return (x, y, connection.protocol.map.get_z(x, y))
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(279,286)
+        y = random.randrange(273,275)
+        return (x, y, connection.protocol.map.get_z(x, y))

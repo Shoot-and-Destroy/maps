@@ -1,0 +1,7 @@
+name = 'Rainbow Forest'
+version = '1.0'
+author = 'Lostmotel'
+fog = (255, 113, 181)
+extensions = {
+     'water_damage' : 5
+}

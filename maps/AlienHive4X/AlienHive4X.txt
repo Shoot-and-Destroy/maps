@@ -1,0 +1,5 @@
+name = 'AlienHive4X'
+version = '1.0'
+author = 'unknown, Reworked by Qult'
+description = 'the map is reflected 4 times'
+# https://hosting.dgd.cx/map-search?query=alie&file=alien_hive_2.0.vxl&source=allmaps#iso

@@ -1,0 +1,28 @@
+name = 'gunrunner'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Gun Runner'
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (259, 227, 4)
+    if entity_id == GREEN_FLAG:
+        return (259, 287, 4)
+    if entity_id == BLUE_BASE:
+        return (376, 252, 51)
+    if entity_id == GREEN_BASE:
+        return (144, 260, 54)
+    
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(386,406)
+        by = random.randrange(242,268)
+        return (bx, by, 38)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(112,130)
+        gy = random.randrange(240,270)
+        return (gx, gy, 39)

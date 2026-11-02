@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Mile, Reworked by Qult"
+fog_color = [60, 40, 75]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.357
+area_land = 0.371
+spawn_dry = [0.33, 0.34]
+
+[map.fitness.ngctf]
+pass = false
+water = 1.15
+map_deaths = 0.088
+fight_kills = 151.0
+objective = 5
+failed = ["land", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.55
+map_deaths = 0.288
+fight_kills = 65.5
+objective = 6
+failed = ["map_deaths", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 1.1
+map_deaths = 0.412
+fight_kills = 105.5
+objective = 1
+failed = ["land", "map_deaths", "objective", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 1.05
+map_deaths = 0.276
+fight_kills = 120.5
+objective = 11
+failed = ["land", "map_deaths", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 1.55
+map_deaths = 0.303
+fight_kills = 23.0
+objective = 3
+failed = ["land", "map_deaths", "spawn"]

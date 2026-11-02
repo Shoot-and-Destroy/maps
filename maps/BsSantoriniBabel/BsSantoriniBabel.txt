@@ -1,0 +1,56 @@
+from pyspades.constants import *
+import random
+
+name = "Bs Santorini Babel"
+version = '1.0'
+author = 'T0M, Reworked by Qult'
+description = 'Black Squad copy map'
+# https://hosting.dgd.cx/map-search?query=santorini&file=BSsantoriniArena.vxl&source=allmaps#iso
+
+
+fog = (63, 111, 159)
+
+def get_spawn_location(connection):
+    # --- КОМАНДА 1 (Синие) ---
+    if connection.team is connection.protocol.team_1:
+        # Выбираем одну из 3 зон с равным шансом
+        zone = random.randint(1, 3)
+        
+        if zone == 1:
+            # X: 114-121, Y: 236-261
+            x = random.randrange(114, 122)
+            y = random.randrange(236, 262)
+        elif zone == 2:
+            # X: 131-139, Y: 198-217
+            x = random.randrange(131, 140)
+            y = random.randrange(198, 218)
+        else: # zone 3
+            # X: 122-129, Y: 275-305
+            x = random.randrange(122, 130)
+            y = random.randrange(275, 306)
+
+    # --- КОМАНДА 2 (Зеленые) ---
+    elif connection.team is connection.protocol.team_2:
+        # Выбираем одну из 3 зон с равным шансом
+        zone = random.randint(1, 3)
+        
+        if zone == 1:
+            # X: 392-399, Y: 236-261
+            x = random.randrange(392, 400)
+            y = random.randrange(236, 262)
+        elif zone == 2:
+            # X: 374-382, Y: 198-217
+            x = random.randrange(374, 383)
+            y = random.randrange(198, 218)
+        else: # zone 3
+            # X: 384-391, Y: 275-305
+            x = random.randrange(384, 392)
+            y = random.randrange(275, 306)
+            
+    # --- НАБЛЮДАТЕЛИ ---
+    else:
+        return (256, 256, 60)
+
+    # Получаем высоту земли в этой точке
+    z = connection.protocol.map.get_z(x, y)
+    return (x, y, z)

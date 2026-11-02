@@ -1,0 +1,47 @@
+[map]
+modes = ["koth", "arena"]
+author = "sintatemono"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [473, 44, 56], end = [473, 44, 56] }
+team2 = { start = [456, 61, 6], end = [456, 61, 6] }
+
+[map.fitness]
+land = 0.112
+area_land = 1.0
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.0
+fight_kills = 0.0
+objective = 0
+failed = ["crash"]
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.006
+fight_kills = 81.5
+objective = 16
+failed = []
+
+[map.fitness.tc]
+pass = false
+water = 37.05
+map_deaths = 1.0
+fight_kills = 0.0
+objective = 34
+failed = ["water", "map_deaths", "fight_kills"]
+
+[map.fitness.zombie]
+pass = false
+water = 43.9
+map_deaths = 0.021
+fight_kills = 71.5
+objective = 5
+failed = ["water"]

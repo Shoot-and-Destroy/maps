@@ -1,0 +1,32 @@
+name = 'minihallway'
+version = '1.0'
+author = 'izzy, modified by Danke'
+description = 'very small hallway'
+
+
+BLUE_RECT = ( 208, 248, 223, 263) 
+GREEN_RECT = ( 288, 248, 303, 263)
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (0, 0, 1)
+    if entity_id == GREEN_FLAG:
+        return (0, 0, 1)
+    if entity_id == BLUE_BASE:
+        return (210, 256, 1)
+    if entity_id == GREEN_BASE:
+        return (301, 256, 1)
+		
+extensions = { 
+'boundary_damage' : {'left' : 192, 'right' : 319, 'top' : 192, 'bottom' : 319, 'damage': 50}
+}
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)

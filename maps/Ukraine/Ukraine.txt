@@ -1,0 +1,5 @@
+name = 'Ukraine'
+version = '1.0'
+author = 'Yamaha'
+description = ('Slava Ukraini? You decide.')
+fog = (255, 204, 204)

@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "kiso"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.37
+area_land = 0.452
+spawn_dry = [0.94, 0.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 33.2
+map_deaths = 0.0
+fight_kills = 13.5
+objective = 0
+failed = ["crash"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.0
+fight_kills = 0.0
+objective = 0
+failed = ["crash"]
+
+[map.fitness.koth]
+pass = false
+water = 0.1
+map_deaths = 0.013
+fight_kills = 549.0
+objective = 8
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.7
+map_deaths = 0.012
+fight_kills = 554.5
+objective = 39
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 28.45
+map_deaths = 0.017
+fight_kills = 172.5
+objective = 9
+failed = ["land", "water", "spawn"]

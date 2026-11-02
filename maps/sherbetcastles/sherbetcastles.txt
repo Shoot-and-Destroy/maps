@@ -1,0 +1,7 @@
+name = 'Sherbet Castles'
+version = '1.0'
+author = 'Danke'
+extensions = { 
+'babel' : True, 
+'water_damage' : 5
+}

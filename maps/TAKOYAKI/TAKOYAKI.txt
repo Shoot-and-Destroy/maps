@@ -1,0 +1,11 @@
+name = "TAKOYAKI"
+version = '1.0'
+author = 'onigiri'
+extensions = { 'water_damage' : 100 }
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (239,270,46),
+     'arena_green_spawn' : (323,354,46),
+     'arena_gates': ((241,270,45) , (321,354,45))
+ }

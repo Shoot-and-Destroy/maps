@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Blender Man"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.751
+area_land = 0.532
+spawn_dry = [0.07, 0.07]
+
+[map.fitness.ngctf]
+pass = false
+water = 2.45
+map_deaths = 0.044
+fight_kills = 150.5
+objective = 4
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.1
+map_deaths = 0.032
+fight_kills = 120.5
+objective = 1
+failed = ["objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.34
+fight_kills = 52.5
+objective = 8
+failed = ["map_deaths", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.6
+map_deaths = 0.126
+fight_kills = 110.5
+objective = 13
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 4.05
+map_deaths = 0.1
+fight_kills = 104.0
+objective = 8
+failed = ["land", "water", "spawn"]

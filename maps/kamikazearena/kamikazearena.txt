@@ -1,0 +1,18 @@
+nname = 'Kamikazearena'
+version = '1.0'
+author = 'Kamikaze'
+description = 'Arena map'
+cap_limit = 7
+extensions = {
+ 'arena': True,
+ 'arena_blue_spawn' : (256, 195, 57),
+ 'arena_green_spawn' : (256, 316, 57), 
+ 'arena_gates': ((255, 207, 57), (256, 304, 57)),
+    'team_namecolor' : True,
+      'blue_team_name' : 'Red',
+      'blue_team_color' : (255, 0, 0),  
+      'green_team_name' : 'Blue',
+      'green_team_color' : (0, 0, 255),
+ 'water_damage' : 100
+
+ }

@@ -1,0 +1,31 @@
+name = 'GEtemple'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Golden Eye copy map'
+extensions = {
+     'water_damage' : 100
+ }
+
+from pyspades.constants import *
+import random
+
+spawn_locations_blue = [
+	(235, 283, 53),
+	(206, 282, 58)
+]
+
+spawn_locations_green = [
+	(284, 258, 56),
+	(282, 288, 56)
+]
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		x, y, z = random.choice(spawn_locations_blue)
+		return (x, y, z)
+	elif connection.team is connection.protocol.green_team:
+		x, y, z = random.choice(spawn_locations_green)
+		return (x, y, z)

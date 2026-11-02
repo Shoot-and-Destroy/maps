@@ -1,0 +1,8 @@
+name = 'terminalalpha (wip)'
+version = '0.0.1'
+author = 'Dar1on'
+description = ('well, yellow')
+extensions = {
+ } 
+
+aloha=True

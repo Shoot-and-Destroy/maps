@@ -1,0 +1,14 @@
+name = 'playground'
+version = '1.0'
+author = 'Lauraa'
+description = ('1st map')
+fog = (110, 130, 160)
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (277, 283, 20),
+     'arena_green_spawn' : (242, 243, 20),
+     'arena_gates': ((272, 283, 20), (277, 278, 20), (281, 286, 15), (273, 280,15), (247,243,20), (242,248,20), (238,240,15), (246, 246, 15))
+ } 
+
+aloha=True

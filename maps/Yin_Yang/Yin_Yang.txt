@@ -1,0 +1,6 @@
+name = 'Yin Yang'
+version = '1.0'
+author = 'Lostmotel'
+fog = (20, 20, 30)
+extensions = {
+     'water_damage' : 100}

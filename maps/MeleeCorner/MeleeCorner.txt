@@ -1,0 +1,61 @@
+name = 'MeleeCorner'
+version = '1.0'
+author = 'Influx and Dany0'
+description = 'Corner melee carnage!'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (269, 342, 57)
+    if entity_id == GREEN_FLAG:
+        return (339, 274, 57)
+    if entity_id == BLUE_BASE:
+        return (256, 355, 56)
+    if entity_id == GREEN_BASE:
+        return (362, 253, 56)
+
+# example spawns
+spawn_locations_blue = [
+    (256, 355, 56),
+    (256, 354, 56),
+    (256, 353, 56),
+    (256, 352, 56),
+    (269, 341, 57),
+    (270, 341, 57),
+    (271, 341, 57),
+    (268, 341, 57),
+    (267, 341, 57),
+    (269, 340, 57),
+    (269, 339, 57),
+    (269, 342, 57),
+    (269, 343, 57)
+]
+
+spawn_locations_green = [
+    (362, 253, 56),
+    (362, 254, 56),
+    (362, 255, 56),
+    (362, 256, 56),
+    (339, 272, 57),
+    (338, 272, 57),
+    (337, 272, 57),
+    (340, 272, 57),
+    (341, 272, 57),
+    (339, 271, 57),
+    (339, 270, 57),
+    (339, 273, 57),
+    (339, 274, 57)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    x += 0.5
+    y += 0.5
+    return x, y, z + 2

@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "hallwaycanyon"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.235
+area_land = 0.592
+spawn_dry = [0.85, 0.53]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.85
+map_deaths = 0.291
+fight_kills = 62.0
+objective = 5
+failed = ["land", "map_deaths", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.7
+map_deaths = 0.36
+fight_kills = 27.5
+objective = 6
+failed = ["map_deaths", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.1
+map_deaths = 0.376
+fight_kills = 68.0
+objective = 9
+failed = ["map_deaths", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.198
+fight_kills = 160.5
+objective = 5
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.212
+fight_kills = 83.5
+objective = 7
+failed = ["land", "spawn"]

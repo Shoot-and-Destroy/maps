@@ -1,0 +1,26 @@
+import random
+
+name = 'CastleInTheSky'
+version = '1.0'
+author = 'onigiri, Reworked by Qult'
+description = 'Castle In The Sky map for babel'
+
+# Water damage set to 5
+extensions = {
+    'water_damage': 5
+}
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(128, 149)
+        y = random.randrange(244, 270)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(365, 387)
+        y = random.randrange(241, 268)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+# https://hosting.dgd.cx/map-search?query=castle&file=CastleintheSky.vxl&source=allmaps#iso

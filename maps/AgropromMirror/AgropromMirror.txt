@@ -1,0 +1,5 @@
+name = 'AgropromMirror'
+version = '1.0'
+author = 'Mik5on'
+description = 'minecraft map'
+# https://www.planetminecraft.com/project/the-map-agraprom-dungeon-created-based-on-the-game-s-t-a-l-k-e-r/

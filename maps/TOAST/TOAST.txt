@@ -1,0 +1,8 @@
+name = 'TOAST'
+version = '1.0'
+author = 'JoJoe-Stinky AKA Jason Bonham'
+description = 'Toast is the new rage-Toast is in style'
+extensions = {
+     'boundary_damage' : {'left' : 32, 'right' : 480, 'top' : 160, 'bottom' : 384, 'damage': 5},
+     'babel' : True
+}

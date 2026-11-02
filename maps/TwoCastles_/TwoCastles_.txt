@@ -1,0 +1,94 @@
+from pyspades.constants import *
+import random
+
+# --- MAP METADATA ---
+name = 'Two Castles'
+version = '1.0'
+author = 'Qult, Marshmello'
+description = 'a remake of the Gods Will Be Ours map'
+extensions = {
+    'babel': True,
+    'water_damage': 3
+}
+
+
+# --- SPAWN POINTS (TEAM 1) ---
+# Якщо Z вказано (наприклад, 61), скрипт використає його.
+# Якщо Z немає (наприклад, 204, 266), скрипт сам знайде висоту землі.
+TEAM_1_SPAWNS = [
+    (204, 266),
+    (204, 245),
+    (184, 266),
+    (184, 245),
+    (164, 266),
+    (164, 245),
+    (141, 269),
+    (234, 291, 61),
+    (240, 285),
+    (239, 292),
+    (227, 259, 55),
+    (226, 236),
+    (226, 276),
+    (224, 223, 61),
+    (228, 222),
+    (194, 217),
+    (192, 184),
+    (195, 167),
+    (206, 140),
+    (186, 307, 52),
+    (226, 355)
+]
+
+# Автоматичне дзеркальне відображення по осі X для Команди 2 (512 - X)
+TEAM_2_SPAWNS = []
+for pt in TEAM_1_SPAWNS:
+    mirrored_x = 512 - pt[0]
+    y = pt[1] # Вісь Y не чіпаємо (віддзеркалення по 1 осі)
+    if len(pt) == 3:
+        # Зберігаємо фіксовану висоту Z, якщо вона була
+        TEAM_2_SPAWNS.append((mirrored_x, y, pt[2]))
+    else:
+        TEAM_2_SPAWNS.append((mirrored_x, y))
+
+# --- TENTS (BASES) LOGIC ---
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_BASE:
+        # Палатка Команди 1
+        x, y = 193, 218
+    elif entity_id == GREEN_BASE:
+        # Дзеркальна палатка Команди 2 (512 - 193 = 319)
+        x, y = 512 - 193, 218
+    else:
+        return (0, 0, 0)
+    
+    # Автоматично ставимо палатку на землю
+    z = team.protocol.map.get_z(x, y)
+    return (x, y, z)
+
+# --- SPAWN LOGIC ---
+def get_spawn_location(connection):
+    # Вибираємо точку для Команди 1
+    if connection.team is connection.protocol.team_1:
+        pt = random.choice(TEAM_1_SPAWNS)
+        
+    # Вибираємо точку для Команди 2 (вже віддзеркалену)
+    elif connection.team is connection.protocol.team_2:
+        pt = random.choice(TEAM_2_SPAWNS)
+        
+    # Наглядачі (Spectators)
+    else:
+        return (256, 256, 60)
+
+    # Розбираємо координати
+    x, y = pt[0], pt[1]
+    
+    # Перевіряємо, чи вказана висота (Z) вручну
+    if len(pt) == 3:
+        z = pt[2]
+    else:
+        # Якщо висоти немає, шукаємо землю
+        z = connection.protocol.map.get_z(x, y)
+        if z is None:
+            z = 60
+
+    return (x, y, z)

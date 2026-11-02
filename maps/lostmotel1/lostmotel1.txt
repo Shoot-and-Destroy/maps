@@ -1,0 +1,47 @@
+extensions = { 'water_damage' : 1}
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(255, 256)
+        y = random.randrange(255, 256)
+        z = 0
+        return (x,y,z)
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(53, 54)
+        y = random.randrange(259, 260)
+        z = 0
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(255, 256)
+        y = random.randrange(255, 256)
+        z = 0
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(456, 457)
+        y = random.randrange(263, 264)
+        z = 0
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(48, 66)
+        y = random.randrange(249, 269)
+        z = 57
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(444, 463)
+        y = random.randrange(259, 280)
+        z = 57
+        return (x, y, z)
+
+
+aloha=True

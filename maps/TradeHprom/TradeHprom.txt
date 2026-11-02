@@ -1,0 +1,49 @@
+from pyspades.constants import *
+import random
+
+name = 'TradeHprom'
+version = '2.0'
+author = 'Qult, Rakete, ei8htx'
+description = 'the team is divided into 2 parts and they have to build a tower'
+extensions = { 
+	'water_damage' : 25,
+	'babel' : True, 
+"team_1_zones": [[(224, 246), (224, 179), (195, 246), (195, 179)], [(224, 265), (224, 332), (195, 265), (195, 332)]],
+"team_2_zones": [[(288, 246), (317, 179), (288, 179), (317, 246)], [(288, 265), (288, 332), (317, 265), (317, 332)]]
+}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        where=int(random.randrange(1,3))
+        if where == 1:        
+            x = random.randrange(134, 154)
+            y = random.randrange(342, 362)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+        if where == 2:
+            x = random.randrange(134, 154)
+            y = random.randrange(145, 169)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        where=int(random.randrange(1,3))
+        if where == 1:
+            x = random.randrange(357, 378)
+            y = random.randrange(342, 362)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+        if where == 2:
+            x = random.randrange(358, 378)
+            y = random.randrange(148, 168)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (256+138, 256, team.protocol.map.get_z(256+138, 256))
+	if entity_id == BLUE_BASE:
+		return (256-138, 256, team.protocol.map.get_z(256-138, 256))		

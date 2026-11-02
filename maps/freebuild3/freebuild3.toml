@@ -1,0 +1,55 @@
+[map]
+modes = ["ngctf", "ctf", "koth", "tc", "zombie"]
+author = "freebuild3"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.976
+area_land = 0.988
+spawn_dry = [1.0, 0.87]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.2
+map_deaths = 0.04
+fight_kills = 109.0
+objective = 6
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.2
+map_deaths = 0.12
+fight_kills = 44.0
+objective = 11
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.005
+fight_kills = 110.5
+objective = 8
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.048
+fight_kills = 140.0
+objective = 24
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.057
+fight_kills = 58.0
+objective = 3
+failed = []

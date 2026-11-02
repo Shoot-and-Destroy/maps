@@ -1,0 +1,26 @@
+name = 'GEcomplex'
+
+version = '1.0'
+
+author = 'T0M'
+
+fog = (64, 0, 0)
+
+description = 'Golden Eye copy map'
+extensions = {
+     'goldengun_position':(255,255,41),
+     'water_damage' : 100
+ }
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    return (0,0,0)
+
+spawn_locations_ffa = [(228, 239, 38), (226, 217, 33), (254, 224, 38), (262, 256, 38), (249, 255, 38), (265, 271, 38), (277, 251, 38), (277, 258, 43), (276, 251, 33), (240, 286, 38), (240, 259, 33), (242, 240, 38), (230, 252, 38), (266, 241, 33)]
+
+def get_spawn_location(connection):
+    x, y, z = random.choice(spawn_locations_ffa)
+    z += 3
+    return x, y, z,True

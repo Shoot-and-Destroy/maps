@@ -1,0 +1,29 @@
+name = 'MeleeNeighbors'
+version = '1.0'
+author = 'Dany0 and Supercool'
+description = 'Neighbor-o-battle!'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (255, 258, 61)
+    if entity_id == GREEN_FLAG:
+        return (256, 253, 61)
+    if entity_id == BLUE_BASE:
+        return (250, 265, 61)
+    if entity_id == GREEN_BASE:
+        return (261, 246, 61)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(268,285)
+        y = random.randrange(236,263)
+        return (x, y, connection.protocol.map.get_z(x, y))
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(226,243)
+        y = random.randrange(248,275)
+        return (x, y, connection.protocol.map.get_z(x, y))

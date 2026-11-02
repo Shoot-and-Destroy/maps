@@ -1,0 +1,36 @@
+name = 'structbabel'
+version = '1.0'
+author = 'Danke'
+extensions = { 
+	'water_damage' : 50,
+	'babel' : True, 
+	'heavens_color' : (200,200,200, 255)
+}
+
+
+fog = (30,30,30)
+
+BLUE_RECT = ( 118,246,134,263)
+GREEN_RECT = ( 376,246,392,263)
+
+import random
+def get_spawn_location(connection):
+	br1 = BLUE_RECT
+	gr1 = GREEN_RECT
+	if connection.team is connection.protocol.blue_team:
+		return connection.protocol.get_random_location(True, br1)
+	elif connection.team is connection.protocol.green_team:
+		return connection.protocol.get_random_location(True, gr1)
+		
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (383,256, 60)
+	if entity_id == BLUE_BASE:
+		return (125,256,60)		
+
+
+aloha=True

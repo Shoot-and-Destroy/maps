@@ -1,0 +1,4 @@
+name = 'Triple Kaitaku'
+version = '1.0'
+author = 'Many Japanese, Reworked by Qult'
+

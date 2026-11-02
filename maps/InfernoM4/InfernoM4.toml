@@ -1,0 +1,57 @@
+[map]
+modes = []
+author = "massilia"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 8
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.018
+area_land = 0.053
+spawn_dry = [0.11, 0.11]
+
+[map.fitness.ngctf]
+pass = false
+water = 14.35
+map_deaths = 0.488
+fight_kills = 113.0
+objective = 0
+failed = ["land", "water", "map_deaths", "objective", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 14.55
+map_deaths = 0.762
+fight_kills = 33.5
+objective = 1
+failed = ["land", "water", "map_deaths", "objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 3.65
+map_deaths = 0.109
+fight_kills = 155.0
+objective = 8
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 3.05
+map_deaths = 0.089
+fight_kills = 183.5
+objective = 7
+failed = ["land", "water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.55
+map_deaths = 0.091
+fight_kills = 100.0
+objective = 8
+failed = ["land", "spawn"]

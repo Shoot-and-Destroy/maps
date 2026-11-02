@@ -1,0 +1,6 @@
+name = 'Castlewhit_baclkhall'
+version = '1.0'
+author = 'EdCroix'
+description = 'minecraft map'
+fog = (60,160,180)
+# https://www.planetminecraft.com/project/the-custom-end-city/

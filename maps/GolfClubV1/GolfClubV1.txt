@@ -1,0 +1,9 @@
+from pyspades.constants import *
+import random
+
+name = 'GolfClub'
+version = '1.0'
+author = 'Eli_marie'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/ender-golf-japanese-gardens/

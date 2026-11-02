@@ -1,0 +1,12 @@
+name = 'Matrix Babel'
+version = '1.0'
+author = 'Unknown, modified by ei8htx'
+description = ('The red pill')
+extensions = { 
+	'babel' : True, 
+	'heavens_color' : (50, 175, 50, 255)
+}
+
+fog = (150, 255, 240)
+
+	

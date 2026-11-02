@@ -1,0 +1,4 @@
+name = 'Vsratsk Mirror'
+version = '1.0'
+author = 'Alpha and Y@streb, Reworked by Qult'
+fog = (41, 43, 68)

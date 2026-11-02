@@ -1,0 +1,33 @@
+name = 'MeleeFlankFort'
+version = '1.0'
+author = 'Dany0'
+description = 'A thing I threw up in a few minutes.'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+dif = random.choice((-192,-64,64,192))
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG or entity_id == GREEN_BASE:
+        return (250, 256 - dif, 57)
+    if entity_id == GREEN_FLAG or entity_id == BLUE_BASE:
+        return (241, 256 - dif, 53)
+
+i = 0
+def get_spawn_location(connection):
+    global i
+    diff = ((-192,-64,64,192))
+    if i == 3:
+        i = 0
+    else:
+        i += 1
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(244,251)
+        y = random.randrange(253,258) - diff[i]
+        return (x, y, connection.protocol.map.get_z(x, y, 59))
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(260,270)
+        y = random.randrange(247,264) - diff[i]
+        return (x, y, connection.protocol.map.get_z(x, y, 49))

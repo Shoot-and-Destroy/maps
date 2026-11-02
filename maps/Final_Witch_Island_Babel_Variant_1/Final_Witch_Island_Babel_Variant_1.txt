@@ -1,0 +1,5 @@
+name = 'Final_Witch_Island_Babel_Variant_1'
+version = '1.0'
+author = 'Antigravity compiler'
+description = 'Stage 5: Final assembled Witch Island. Repainted kissel water, fully populated with procedural candy and palace.'
+fog = (255, 225, 235)

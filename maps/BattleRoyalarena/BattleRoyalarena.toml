@@ -1,0 +1,51 @@
+[map]
+modes = ["arena"]
+author = "IISOD}M.Shadow, tech assist MoJo"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [19, 326, 60], end = [19, 326, 60] }
+team2 = { start = [111, 198, 60], end = [111, 198, 60] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[111, 202, 60], [19, 318, 60]]
+
+[map.fitness]
+land = 0.005
+area_land = 0.044
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.016
+fight_kills = 271.0
+objective = 0
+failed = ["land", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.029
+fight_kills = 330.5
+objective = 8
+failed = ["land"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.011
+fight_kills = 93.5
+objective = 62
+failed = ["land"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.026
+fight_kills = 111.5
+objective = 8
+failed = ["land"]

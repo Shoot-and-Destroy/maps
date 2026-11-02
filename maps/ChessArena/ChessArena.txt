@@ -1,0 +1,11 @@
+name = 'ChessArena'
+version = '1.7'
+author = 'Dany0, witch007'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (327, 256, 51),
+     'arena_green_spawn' : (183, 256, 51),
+     'arena_gates': ((330, 256, 50), (180, 256, 50))
+,
+     'water_damage' : 100
+ }

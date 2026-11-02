@@ -1,0 +1,34 @@
+name = 'Swamp'
+version = '1.0'
+author = 'TheGrandmaster'
+description = ('Map made with helpers')
+
+
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+
+spawn_locations_green = [
+	(305, 111),
+	(325, 122),
+	(266, 229),
+	(265, 225),
+	(340, 348),
+	(323, 335)
+]
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(31, 262)
+        return (31, 262, z)
+    if entity_id == GREEN_BASE:
+	z = team.protocol.map.get_z(250, 236)
+	return (250, 236, z)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+	x, y = choice(spawn_locations_green)
+	z = connection.protocol.map.get_z(x, y)
+	return (x, y, z)

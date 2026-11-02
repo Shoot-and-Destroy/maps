@@ -1,0 +1,55 @@
+[map]
+modes = ["koth", "tc", "zombie"]
+author = "Venenatus"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.698
+area_land = 0.856
+spawn_dry = [0.93, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 3.95
+map_deaths = 0.128
+fight_kills = 71.5
+objective = 4
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.05
+map_deaths = 0.116
+fight_kills = 49.5
+objective = 0
+failed = ["objective"]
+
+[map.fitness.koth]
+pass = true
+water = 1.7
+map_deaths = 0.176
+fight_kills = 68.0
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 1.2
+map_deaths = 0.084
+fight_kills = 108.5
+objective = 18
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 1.8
+map_deaths = 0.023
+fight_kills = 42.0
+objective = 3
+failed = []

@@ -1,0 +1,4 @@
+name = 'LunarBase'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+fog = (140,160,190)

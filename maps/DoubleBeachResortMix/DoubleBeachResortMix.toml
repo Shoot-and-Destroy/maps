@@ -1,0 +1,55 @@
+[map]
+modes = ["ngctf", "ctf", "koth", "tc", "zombie"]
+author = "Builders on *Sauerkraut, Reworked by Qult"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.545
+area_land = 0.908
+spawn_dry = [0.98, 0.96]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.0
+map_deaths = 0.034
+fight_kills = 158.5
+objective = 5
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.039
+fight_kills = 74.5
+objective = 15
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.033
+fight_kills = 147.5
+objective = 10
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.065
+fight_kills = 178.5
+objective = 23
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.152
+fight_kills = 28.0
+objective = 3
+failed = []

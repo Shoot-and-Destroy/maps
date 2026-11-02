@@ -1,0 +1,22 @@
+from pyspades.constants import *
+import random
+
+name = 'Futurama'
+version = '1.0'
+author = 'Alan Harper'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/futurama-hide-amp-seek-map-1-21-1/
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(131-15, 131+15)
+        y = random.randrange(287-15, 287+15)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(380-15, 380+15)
+        y = random.randrange(227-15, 227+15)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)

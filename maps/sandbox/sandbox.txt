@@ -1,0 +1,28 @@
+name = 'sandbox'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Sandbox'
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (310, 318, 45)
+    if entity_id == BLUE_FLAG:
+        return (163, 139, 46)
+    if entity_id == GREEN_BASE:
+        return (267, 412, 44)
+    if entity_id == BLUE_BASE:
+        return (261, 104, 43)
+    
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(255,277)
+        gy = random.randrange(403,418)
+        return (gx, gy, 44)
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(251,270)
+        by = random.randrange(99,113)
+        return (bx, by, 43)

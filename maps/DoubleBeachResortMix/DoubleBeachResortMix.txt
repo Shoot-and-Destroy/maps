@@ -1,0 +1,9 @@
+name = 'Double Beach Resort Mix'
+version = '1.0'
+author = 'Builders on *Sauerkraut, Reworked by Qult'
+description = ('Visit http://sauerkraut.bplaced.net for more information.')
+
+#Builders: Bradley, F176, ONIGIRI, SuicideCat648, STEVE, {P}VierEck., {P}Zefirokouz, IAmYourFriend
+#Source: https://twitter.com/1AmYF/status/1048885449324998656
+
+# https://aos.party/view/1148

@@ -1,0 +1,29 @@
+from random import randint
+
+name        = 'Level 3'
+version     = '1.0'
+author      = 'IAmYourFriend'
+description = ''
+SPAWN       = (15, 479)
+
+extensions = {
+	'base_locations': [
+		(125, 416),
+		(202, 326),
+		(251, 247),
+		(319, 197),
+		(372, 86),
+		(448, 117),
+		(411, 44),
+		(498, 11)
+	],
+    'players_spawn_start' : SPAWN
+}
+
+def get_spawn_location(player):
+	x1, y1 = SPAWN
+
+	x = randint(x1, x1 + 9)
+	y = randint(y1, y1 + 9)
+
+	return (x, y, player.protocol.map.get_z(x, y))

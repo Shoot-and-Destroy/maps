@@ -1,0 +1,55 @@
+[map]
+modes = ["tc"]
+author = "CityOfChicagoORIGINAL64"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.525
+area_land = 0.786
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 3.95
+map_deaths = 0.188
+fight_kills = 75.5
+objective = 10
+failed = ["water", "map_deaths"]
+
+[map.fitness.ctf]
+pass = false
+water = 3.95
+map_deaths = 0.255
+fight_kills = 52.5
+objective = 12
+failed = ["map_deaths"]
+
+[map.fitness.koth]
+pass = false
+water = 4.1
+map_deaths = 0.239
+fight_kills = 105.0
+objective = 4
+failed = ["water"]
+
+[map.fitness.tc]
+pass = true
+water = 1.3
+map_deaths = 0.128
+fight_kills = 149.5
+objective = 13
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 0.6
+map_deaths = 0.079
+fight_kills = 41.0
+objective = 2
+failed = ["objective"]

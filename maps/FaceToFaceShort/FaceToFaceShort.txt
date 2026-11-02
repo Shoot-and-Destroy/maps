@@ -1,0 +1,40 @@
+from pyspades.constants import *
+import random
+
+name = 'FaceToFace'
+version = '2.0'
+author = 'Qult---(Atelsa)'
+description = 'A map that breaks the mold'
+extensions = {
+    'babel' : True, 
+    'water_damage': 100
+}
+
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(174, 200)
+        y = random.randrange(243, 269)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(313, 339)
+        y = random.randrange(243, 269)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = 125
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 388
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)

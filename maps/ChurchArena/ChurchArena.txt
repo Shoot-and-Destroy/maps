@@ -1,0 +1,7 @@
+name = 'ChurchArena'
+
+version = '1.0'
+
+author = 'A White Guy and Cpt.Derp'
+
+description = 'A church-type area with a lounge'

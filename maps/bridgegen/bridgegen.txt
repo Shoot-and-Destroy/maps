@@ -1,0 +1,8 @@
+name = 'BridgeGen'
+version = '1.0'
+author = 'Danke'
+description = ('a bunch of bridges')
+extensions = { 
+	'water_damage' : 20
+}
+fog = (0,0,0)

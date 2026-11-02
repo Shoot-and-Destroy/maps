@@ -1,0 +1,7 @@
+name = 'heylookamap'
+version = '1.0'
+author = 'Danke'
+description = ""
+extensions = { 
+'water_damage' : 20
+}

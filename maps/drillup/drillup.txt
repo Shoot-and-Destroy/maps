@@ -1,0 +1,19 @@
+name = 'DrillUp'
+version = '1.0'
+author = 'Danke'
+description = ('dup')
+extensions = { 
+	'babel' : True, 
+}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (256+138, 256, team.protocol.map.get_z(392, 256))
+	if entity_id == BLUE_BASE:
+		return (256-138, 256, team.protocol.map.get_z(120, 256))		
+
+
+aloha=True

@@ -1,0 +1,15 @@
+name = 'muhosransk'
+version = '1.0'
+author = 'Al'
+description = 'Just Russian Muhosransk'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+	if entity_id == BLUE_BASE:
+		z = team.protocol.map.get_z(110, 257)
+		return (110, 257, z)
+	if entity_id == GREEN_BASE:
+		z = team.protocol.map.get_z(404, 257)
+		return (404, 257, z)

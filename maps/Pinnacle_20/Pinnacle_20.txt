@@ -1,0 +1,4 @@
+name = 'Pinnacle 2.0'
+version = '2.0'
+author = 'JoJoe Stinky AKA Jason Bonham alii3d.com/blog/ for more maps'
+description = 'Even more island carnage about to happen here'

@@ -1,0 +1,13 @@
+name = "UFJ_BANK"
+version = '1.1'
+author = 'onigiri'
+
+fog = (0, 0, 0)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (224,261,59),
+     'arena_green_spawn' : (217,268,52),
+     'arena_gates': ((231,263,56) , (217,273,49)),
+     'water_damage' : 200,
+ }

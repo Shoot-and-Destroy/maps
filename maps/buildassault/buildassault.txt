@@ -1,0 +1,5 @@
+ame = 'Build Assault'
+version = '1.0'
+author = 'Silnius'
+description = 'Will you reach the intel?'
+extensions = { 'water_damage' : 100}

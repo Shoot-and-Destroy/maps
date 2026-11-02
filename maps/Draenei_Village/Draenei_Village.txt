@@ -1,0 +1,10 @@
+from pyspades.constants import *
+import random
+
+name = 'Draenei_Village'
+version = '1.0'
+author = 'EternalDawn'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/world-of-warcrafts-draenei-village/
+

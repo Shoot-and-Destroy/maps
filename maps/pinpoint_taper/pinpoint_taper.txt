@@ -1,0 +1,6 @@
+name = 'Pinpoint Taper'
+version = '1.0'
+author = 'izzy, MuffinTastic'
+description = 'Small, elevated spawns that converge into a tapered bottleneck at the center of the map.'
+
+aloha=True

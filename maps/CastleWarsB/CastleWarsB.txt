@@ -1,0 +1,43 @@
+
+
+from pyspades.constants import *
+import random
+
+name = 'CastleWarsB'
+version = '1.0'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+
+def get_spawn_location(connection):
+    # Команда 1 (Синие)
+    if connection.team is connection.protocol.team_1:
+        # Выбираем одну из двух зон с шансом 50%
+        if random.random() < 0.5:
+            # Зона 1: 135-152, 312-331
+            x = random.randrange(135, 153)
+            y = random.randrange(312, 332)
+        else:
+            # Зона 2: 103-133, 241-271
+            x = random.randrange(103, 134)
+            y = random.randrange(241, 272)
+    
+    # Команда 2 (Зеленые)
+    elif connection.team is connection.protocol.team_2:
+        # Выбираем одну из двух зон с шансом 50%
+        if random.random() < 0.5:
+            # Зона 1: 354-371, 186-203
+            x = random.randrange(354, 372)
+            y = random.randrange(186, 204)
+        else:
+            # Зона 2: 379-409, 241-271
+            x = random.randrange(379, 410)
+            y = random.randrange(241, 272)
+            
+    else:
+        # Резервный спавн
+        return (256, 256, 0)
+
+    # Определяем высоту земли в выбранной точке (спавн под открытым небом)
+    z = connection.protocol.map.get_z(x, y)
+    
+    return (x, y, z)

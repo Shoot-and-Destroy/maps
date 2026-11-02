@@ -1,0 +1,4 @@
+name = 'Tower Wars'
+version = '1.0'
+author = 'Ug'
+description = 'Towers... so many towers.'

@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "krab"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.069
+area_land = 0.192
+spawn_dry = [0.46, 0.45]
+
+[map.fitness.ngctf]
+pass = false
+water = 11.3
+map_deaths = 0.026
+fight_kills = 165.5
+objective = 3
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 4.0
+map_deaths = 0.096
+fight_kills = 112.5
+objective = 2
+failed = ["land", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 2.1
+map_deaths = 0.007
+fight_kills = 214.5
+objective = 7
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 5.45
+map_deaths = 0.018
+fight_kills = 248.5
+objective = 2
+failed = ["land", "water", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.2
+map_deaths = 0.042
+fight_kills = 79.0
+objective = 4
+failed = ["land", "spawn"]

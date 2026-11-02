@@ -1,0 +1,14 @@
+name = 'abandoned stronghold'
+version = '1.0'
+author = 'EssigGurkenFred'
+cap_limit = 7
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (282,224,52),
+     'arena_green_spawn' : (230,276,52),
+     'arena_gates': ((229,277,53), (279,224,51)),
+     'water_damage' : 100
+ }
+
+
+aloha=True

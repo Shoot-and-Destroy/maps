@@ -1,0 +1,4 @@
+name = 'Wall'
+version = '1.0'
+author = 'Yourself'
+description = ('A wall divides the center of the map.')

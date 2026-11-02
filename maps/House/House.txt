@@ -1,0 +1,22 @@
+from pyspades.constants import *
+import random
+
+name = 'House'
+version = '1.0'
+author = 'Blockking'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/survival-factions-spawn-for-free/
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(256-138-15, 256-138+15)
+        y = random.randrange(256, 256+40)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(256+138-15, 256+138+15)
+        y = random.randrange(256-40, 256)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)

@@ -1,0 +1,3 @@
+name = 'NewHallway'
+version = '2.5'
+author = 'izzy, Alguien :V,  CookieWolf, F176, **Malee_Brocks*, Starting MS-DOS, MioCid, [Clan]Steve'

@@ -1,0 +1,4 @@
+name = 'Colors'
+version = '1.0'
+author = 'Lythrynyx'
+description = 'A TV Noise with bildramers bitmap converter.'

@@ -1,0 +1,29 @@
+name = 'downtown'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Down Town'
+
+# script
+from pyspades.constants import *
+import random
+extensions = {"boundary_damage": {"damage": 100, "top": 64, "right": 385, "bottom": 385, "left": 128}}
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (379, 229, 53)
+    if entity_id == BLUE_FLAG:
+        return (136, 220, 53)
+    if entity_id == GREEN_BASE:
+        return (366, 69, 53)
+    if entity_id == BLUE_BASE:
+        return (151, 351, 53)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(343,366)
+        gy = random.randrange(69,88)
+        return (gx, gy, 53)
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(151,173)
+        by = random.randrange(351,379)
+        return (bx, by, 53)

@@ -1,0 +1,16 @@
+name = 'fy_ice_world'
+
+version = '1.0'
+
+author = 'Keviin, Henrique.'
+
+extensions = {
+
+     'arena': True,
+     'arena_blue_spawn' : (240, 310, 56),
+     'arena_green_spawn' : (270, 262, 56),
+     'arena_gates' : ((235, 315, 56), (275, 257, 56)),
+     'water_damage' : 100
+
+
+}

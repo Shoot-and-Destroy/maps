@@ -1,0 +1,49 @@
+name = 'GElibrary'
+
+version = '1.0'
+
+author = 'yasakatom & T0M'
+
+description = 'The map made by yasakatom & T0M'
+
+protected = [
+    'a1','a2','a3','a4','a5','a6','a7','a8',
+    'b1','b2','b3','b4','b5','b6','b7','b8',
+    'c1','c2','c3','c4','c5','c6','c7','c8',
+    'd1','d2','d3','d4','d5','d6','d7','d8',
+    'e1','e2','e3','e4','e5','e6','e7','e8',
+    'f1','f2','f3','f4','f5','f6','f7','f8',
+    'g1','g2','g3','g4','g5','g6','g7','g8',
+    'h1','h2','h3','h4','h5','h6','h7','h8'
+]
+
+import random
+
+# script
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+spawn_locations_blue = [
+	(226,281,54),
+	(246,286,61)
+]
+
+spawn_locations_green = [
+	(290,296,54),
+	(296,296,61)
+]
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		x, y, z = random.choice(spawn_locations_blue)
+	elif connection.team is connection.protocol.green_team:
+		x, y, z = random.choice(spawn_locations_green)
+		z -= 2.4 # magic numbers
+		x += 0.5
+		y += 0.5
+	if connection.protocol.map.get_z(x, y) <= z:
+		# allows spawning lower if the ground is destroyed
+		return x, y, z
+	else:
+		return x, y, connection.protocol.map.get_z(x, y)

@@ -1,0 +1,13 @@
+name = "Kendou"
+version = '1.0'
+author = 'onigiri'
+
+description = 'Meeeeeeeeeeeeeeeeeeeeeeen!!'
+
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ((291,182,56)),
+     'arena_green_spawn' : ((335,180,56)),
+     'arena_gates': ((293,181,57),(333,180,57)),
+ }

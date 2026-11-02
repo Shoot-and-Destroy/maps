@@ -1,0 +1,7 @@
+name = 'StackAttack'
+version = '1.0'
+author = 'JoJoe Stinky CC 2013'
+description = 'StackAttack is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License'
+extensions = {
+     'water_damage' : 0
+}

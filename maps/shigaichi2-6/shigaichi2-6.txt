@@ -1,0 +1,7 @@
+author = 'VIPPER'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (383, 215, 40),
+     'arena_green_spawn' : (380, 228, 56),
+     'water_damage' : 101
+ }

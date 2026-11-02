@@ -1,0 +1,55 @@
+[map]
+modes = ["babel"]
+author = "JoJoe Stinky AKA Jason Bonham alii3d.com"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.157
+area_land = 0.435
+spawn_dry = [0.54, 0.52]
+
+[map.fitness.ngctf]
+pass = false
+water = 8.1
+map_deaths = 0.015
+fight_kills = 163.5
+objective = 5
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 5.3
+map_deaths = 0.01
+fight_kills = 96.0
+objective = 2
+failed = ["water", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 5.75
+map_deaths = 0.004
+fight_kills = 138.0
+objective = 8
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 4.1
+map_deaths = 0.004
+fight_kills = 223.0
+objective = 2
+failed = ["water", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 1.55
+map_deaths = 0.01
+fight_kills = 145.0
+objective = 7
+failed = ["land", "spawn"]

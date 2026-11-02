@@ -1,0 +1,29 @@
+name = 'alienhunt'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Alien Hunt'
+extensions = {'water_damage':25}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (138, 440, 59)
+    if entity_id == GREEN_FLAG:
+        return (267, 390, 39)
+    if entity_id == BLUE_BASE:
+        return (102, 356, 56)
+    if entity_id == GREEN_BASE:
+        return (352, 390, 21)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(99,107)
+        by = random.randrange(321,329)
+        return (bx, by, 49)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(401,417)
+        gy = random.randrange(387,405)
+        return (gx, gy, 21)

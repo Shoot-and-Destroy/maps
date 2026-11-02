@@ -1,0 +1,33 @@
+Name = 'Groznii'
+Author = 'LMT (Lampoviy Mapping Team)'
+Version = '0.1'
+Description = ('ChechNYA')
+extensions = {
+'boundary_damage' : {'left' : 191, 'right' : 384, 'top' : 192, 'bottom' : 324, 'damage': 25}
+}
+
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (375, 288, 58)
+    if entity_id == BLUE_FLAG:
+        return (195, 224, 58)
+    if entity_id == GREEN_BASE:
+        return (375, 224, 58)
+    if entity_id == BLUE_BASE:
+        return (195, 288, 58)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        x1 = random.randrange(371,379)
+        y1 = random.randrange(193,322)
+        z1 = connection.protocol.map.get_z(x1, y1)
+        return (x1, y1, z1)
+    if connection.team is connection.protocol.blue_team:
+        x2 = random.randrange(196,201)
+        y2 = random.randrange(193,322)
+        z2 = connection.protocol.map.get_z(x2, y2)
+        return (x2, y2, z2)

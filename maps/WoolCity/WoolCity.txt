@@ -1,0 +1,12 @@
+name = 'WoolCity'
+version = '1.0'
+author = '->B.O.B.<-,Diaspora*,AlexeyPozn,KillerCookie,Isaac,Mittgfu,Dany0'
+description = ('A little city made in Minecraft, Qubicle Constructor and Microsoft Notepad')
+fog = (24, 24, 24)
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((337, 171, 42), (339, 168, 47), (326, 174, 42)),
+     'arena_green_spawns' : ((176, 339, 48), (174, 342, 53), (187, 336, 48)),
+     'arena_gates': ((177, 339, 44), (335, 171, 38)),
+     'boundary_damage' : {'left' : 165, 'right' : 346, 'top' : 161, 'bottom' : 351, 'damage': 100}
+}

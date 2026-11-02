@@ -1,0 +1,4 @@
+name = 'waterfrontv2'
+version = '2.0babel'
+author = '[PXY]C'
+description = 'tweaked for babel by izzy'

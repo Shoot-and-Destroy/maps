@@ -1,0 +1,7 @@
+name = 'CRUMB'
+version = '1.0'
+author = 'JoJoe-Stinky AKA Jason Bonham'
+description = 'Because size DOES matter'
+extensions = {
+     'boundary_damage' : {'left' : 1, 'right' : 550, 'top' : 130, 'bottom' : 384, 'damage': 5}
+}

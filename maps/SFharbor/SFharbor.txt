@@ -1,0 +1,28 @@
+name = 'SFharbor'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Special Force copy map'
+
+extensions = {
+     'water_damage' : 100
+}
+
+import random
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection): 
+	if connection.team is connection.protocol.blue_team: 
+		x1 = random.randrange(175,180) 
+		y1 = random.randrange(252,272) 
+		z1 = connection.protocol.map.get_z(x1, y1)
+		return (x1, y1, z1) 
+	if connection.team is connection.protocol.green_team: 
+		x2 = random.randrange(356,360) 
+		y2 = random.randrange(256,274) 
+		z2 = connection.protocol.map.get_z(x2, y2)
+		return (x2, y2, z2) 

@@ -1,0 +1,29 @@
+name = 'waterworld'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Waterworld'
+extensions = {'water_damage':25}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (246, 267, 17)
+    if entity_id == GREEN_FLAG:
+        return (266, 247, 17)
+    if entity_id == BLUE_BASE:
+        return (311, 126, 57)
+    if entity_id == GREEN_BASE:
+        return (253, 345, 57)
+        
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(301,326)
+        by = random.randrange(128,141)
+        return (bx, by, 21)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(241,280)
+        gy = random.randrange(341,361)
+        return (gx, gy, 21)

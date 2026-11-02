@@ -1,0 +1,32 @@
+name = 'SA_5th'
+
+
+version = '1.0'
+
+
+author = 'SuddenAttack-team and copied by JohnVIP'
+
+description = 'SuddenAttack copy map'
+
+import random
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+spawn_locations_blue = [(280,252,48.8),(308,335,62),(182,310,61),(198,255,62)]
+
+spawn_locations_green = [(339,170,63),(298,226,56),(241,274,63),(318,238,63)]
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		x, y, z = random.choice(spawn_locations_blue)
+	elif connection.team is connection.protocol.green_team:
+		x, y, z = random.choice(spawn_locations_green)
+		z -= 2.4 # magic numbers
+		x += 0.5
+		y += 0.5
+	if connection.protocol.map.get_z(x, y) <= z:
+		# allows spawning lower if the ground is destroyed
+		return x, y, z
+	else:
+		return x, y, connection.protocol.map.get_z(x, y)

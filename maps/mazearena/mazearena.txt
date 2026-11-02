@@ -1,0 +1,12 @@
+name = 'mazearena'
+version = '1.0'
+author = 'Frostified'
+description = 'Neo-Tokyo is about to E.X.P.L.O.D.E.'
+fog = (30, 20, 10)
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (303,297,35),
+     'arena_green_spawn' : (166,226,35),
+     'arena_gates': ((299,298,37), (170,226,37))
+ }

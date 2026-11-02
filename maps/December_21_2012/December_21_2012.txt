@@ -1,0 +1,28 @@
+name = 'December 21 2012'
+version = '0.95'
+author = 'Bobby Lemain, Someone, and Dany0'
+description = 'A fresh take on 20thCenturyTown, incorporating a center-focused battle over the two remaining cures for the Doomsday Mayan Plague, and the ability to flank the opposing team by walking through the ruins of what the world once was on this tragic day.'
+
+protected = ["A1","B1","C1","A4","H4"]
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (255, 252, 60)
+    if entity_id == GREEN_FLAG:
+        return (255, 249, 60)
+    if entity_id == BLUE_BASE:
+        return (80, 256, 60)
+    if entity_id == GREEN_BASE:
+        return (430, 252, 60)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        y = random.randrange(252,253)
+        return (55, y, 61)
+    if connection.team is connection.protocol.green_team:
+        y = random.randrange(247,252)
+        return (455, y, 61)

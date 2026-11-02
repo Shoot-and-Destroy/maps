@@ -1,0 +1,13 @@
+name = 'Lostvalley Push'
+author = 'Serious_Sim'
+version = '1.0'
+extensions = {
+'push': True,
+'push_spawn_range' : 2,
+'push_blue_spawn' : (77, 314, 26),
+'push_blue_cp' : (423, 250, 13),
+'push_green_spawn' : (76, 197, 26),
+'push_green_cp' : (423, 261, 13),
+'water_damage' : 100,
+}
+fog = (60, 150, 100)

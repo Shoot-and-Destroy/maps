@@ -1,0 +1,11 @@
+name = 'HighRise'
+version = '1.0'
+author = 'Tyler, Jon, NovaFlexz, AnAlien, Gates by AVuKY'
+description = 'Rooftop mayhem!'
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((180, 247, 53)),
+    'arena_green_spawn' : ((293, 240, 53)),
+    'arena_gates': ((178, 250, 53),(298, 243, 53))
+}

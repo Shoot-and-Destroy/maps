@@ -1,0 +1,3 @@
+name = "Wallway"
+author = "SwoleFroge"
+description = "There is a giant wall separating the two teams in a hallway-like map"

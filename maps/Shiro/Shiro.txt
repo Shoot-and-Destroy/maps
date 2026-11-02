@@ -1,0 +1,4 @@
+name = "Shiro"
+version = '1.0'
+author = 'vippei'
+fog = (255, 255, 255)

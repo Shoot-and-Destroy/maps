@@ -1,0 +1,12 @@
+﻿name = "Vipper's Babel (NES)"
+version = '1.0'
+author = 'Japanese Vippers: onigiri, T0M, engawa, JohnVIP, Falcon, Smi, tatuem, kabocha, vippei, chin, avip, USAMIMI'
+fog = (192, 192, 192)
+extensions = {
+	'babel' : True, 
+	'heavens_color' : (240, 240, 240, 255)
+}
+
+
+
+aloha=True

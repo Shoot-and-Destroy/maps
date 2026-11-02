@@ -1,0 +1,11 @@
+name = 'xmasfire2'
+version = '2.1'
+author = 'TheGrandmaster + Danke'
+description = 'CrossFire2 + christmas, still with thanks to <@>'
+extensions = { 'water_damage' : 0,
+               'babel' : True }
+
+
+
+
+aloha=True

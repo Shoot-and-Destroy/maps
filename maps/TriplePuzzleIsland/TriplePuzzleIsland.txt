@@ -1,0 +1,9 @@
+name = 'Triple Puzzle Island'
+version = '1.0'
+author = 'underwear - -, Reworked by Qult'
+fog = (255, 230, 180)
+extensions = {
+     'water_damage' : 5,
+     'babel' : True
+}
+# https://hosting.dgd.cx/map-search?query=puzz&file=Puzzle+Island.vxl&source=allmaps#iso

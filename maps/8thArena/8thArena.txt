@@ -1,0 +1,15 @@
+name = '8th'
+
+version = '1.0'
+
+author = 'anal*Style, JohnVIP and T0M'
+
+description = 'SuddenAttack copy map'
+
+extensions = {
+     'water_damage' : 100,
+     'arena' : True,
+     'arena_blue_spawn' : (242, 379, 59),
+     'arena_green_spawn' : (316, 201, 59),
+     'arena_gates' : ((232,370,57),(251,375,57),(305,190,57))
+}

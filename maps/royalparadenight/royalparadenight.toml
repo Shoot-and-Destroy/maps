@@ -1,0 +1,55 @@
+[map]
+modes = ["ctf", "tc"]
+author = "Bradley & Mile"
+fog_color = [35, 45, 50]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.253
+area_land = 0.66
+spawn_dry = [0.97, 0.97]
+
+[map.fitness.ngctf]
+pass = false
+water = 2.7
+map_deaths = 0.053
+fight_kills = 143.0
+objective = 11
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = true
+water = 2.05
+map_deaths = 0.044
+fight_kills = 98.5
+objective = 4
+failed = []
+
+[map.fitness.koth]
+pass = false
+water = 0.05
+map_deaths = 0.204
+fight_kills = 113.0
+objective = 2
+failed = ["objective"]
+
+[map.fitness.tc]
+pass = true
+water = 0.0
+map_deaths = 0.041
+fight_kills = 220.0
+objective = 10
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 2.9
+map_deaths = 0.149
+fight_kills = 60.0
+objective = 5
+failed = ["water"]

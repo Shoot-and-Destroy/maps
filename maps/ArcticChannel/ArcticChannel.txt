@@ -1,0 +1,52 @@
+from pyspades.constants import *
+import random
+
+name = 'ArcticChannel'
+version = '1.0'
+author = 'Qult---(Atelsa)'
+description = 'Arctic Channel?'
+extensions = { 
+	'babel' : True,
+	'water_damage' : 3
+}
+
+team_1_spawn_points = []
+team_2_spawn_points = []
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = 256-138
+        y = 256+5
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 256+138
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+        
+        
+def get_spawn_location(connection):
+    global team_1_spawn_points
+    global team_2_spawn_points
+    if len(team_1_spawn_points) + len(team_2_spawn_points) == 0:
+        for x in range(118-15, 118+15):
+            for y in range(256-40, 256+50):
+                if connection.protocol.map.get_z(x,y) < 63:
+                    team_1_spawn_points.append((x,y))
+        for x in range(394-15, 394+15):
+            for y in range(256-40, 256+50):
+                if connection.protocol.map.get_z(x,y) < 63:
+                    team_2_spawn_points.append((x,y))
+        print("Team spawns generated")
+        
+    if connection.team is connection.protocol.blue_team:
+        x, y = random.choice(team_1_spawn_points)
+        return (x, y, connection.protocol.map.get_z(x, y))
+    elif connection.team is connection.protocol.green_team:
+        x, y = random.choice(team_2_spawn_points)
+        return (x, y, connection.protocol.map.get_z(x, y))
+
+

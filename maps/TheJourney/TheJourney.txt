@@ -1,0 +1,30 @@
+from pyspades.constants import *
+import random
+
+name = 'The Journey'
+version = '1.0'
+author = '1AmYourFriend'
+description = 'A map for the adventure game mode'
+
+def get_entity_location(team, entity_id):
+    return (0,0,0)
+        
+        
+def get_spawn_location(connection):
+    if connection.local:
+        if connection.name == "The Guide": # The Guide
+            return (144, 379, 6)
+        elif connection.name == "Manager": #Manager
+            return (0,0,0)
+        elif connection.name == "You":
+            return (341, 94, 30)
+        elif connection.name == "Demon1": #Demon 1
+            return (258, 152, 15)
+        elif connection.name == "Demon2": #Demon 2
+            return (257, 160, 15)
+    elif connection.gamestart:
+        return  (72, 383, 57)
+    else:
+        return (338, 212, 45)
+
+

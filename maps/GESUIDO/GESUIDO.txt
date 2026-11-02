@@ -1,0 +1,11 @@
+
+name = "GESUIDO"
+version = '1.0'
+author = 'onigiri'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (169,268,60),
+     'arena_green_spawn' : (268,289,60),
+     'arena_gates': ((170,264,60) , (268,287,60)),
+ }

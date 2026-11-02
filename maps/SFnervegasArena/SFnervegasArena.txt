@@ -1,0 +1,32 @@
+name = 'SFnervegasArena'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Special Force copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (169,259,58),
+     'arena_green_spawn' : (334,257,59),
+     'arena_gates' : ((173,248,55),(330,246,56)),
+     'arena_green_flag' : (250,241,59),
+     'arena_blue_base' : (169,259,58),
+     'arena_green_base' : (334,257,59),
+     'water_damage' : 100,
+ }
+
+"""
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+	if entity_id == BLUE_FLAG:
+		return (0, 0, 63)
+	if entity_id == GREEN_FLAG:
+		return (250, 241, 59)
+	if entity_id == BLUE_BASE:
+		return (169,259,58)
+	if entity_id == GREEN_BASE:
+		return (0, 0, 63)
+"""

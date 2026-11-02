@@ -1,0 +1,8 @@
+name = 'Diceorg'
+version = '1.0'
+author = 'Metalworks_Sandbox'
+description = 'converted map from minecraft'
+# https://www.planetminecraft.com/project/diceorg-minecraft-map/
+extensions = {
+    'water_damage': 100
+}

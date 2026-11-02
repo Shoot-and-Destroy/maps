@@ -1,0 +1,51 @@
+
+
+from pyspades.constants import *
+import random
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(57, 134)
+        y = random.randrange(217, 294)
+        z = team.protocol.map.get_z(x,y)
+        return (x,y,z)
+
+    if entity_id == BLUE_BASE:
+        x = 95.5
+        y = 255.5
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(377, 454)
+        y = random.randrange(217, 294)
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 415.5
+        y = 255.5
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(57, 134)
+        y = random.randrange(217, 294)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(377, 454)
+        y = random.randrange(217, 294)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+
+name = 'Jungleway'
+version = '1.0'
+author = 'Xenon (a.k.a. Cumco)'
+description = ('All rights belong to Xenon and AOSG (formerly AOSK)')

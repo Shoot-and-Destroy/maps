@@ -1,0 +1,13 @@
+name = 'crazyprison'
+version = '1.2'
+author = 'Lauraa<3 and MoDeR'
+description = ('Prison where we have locked up the most dangerous criminals! Can you survive?')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (310, 202, 36),
+     'arena_green_spawn' : (246, 258, 36),
+     'arena_gates': ((244,254,37), (310,206,37))
+ } 
+
+aloha=True

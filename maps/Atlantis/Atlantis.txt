@@ -1,0 +1,46 @@
+
+
+from pyspades.constants import *
+import random
+
+name = 'Atlantis'
+version = '1.0'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+fog = (60,160,180)
+
+def get_spawn_location(connection):
+    # Команда 1 (Синие)
+    if connection.team is connection.protocol.team_1:
+        # random.randrange(min, max) - верхняя граница не включается, поэтому +1
+        x = random.randrange(109, 117) 
+        y = random.randrange(253, 261)
+    
+    # Команда 2 (Зеленые)
+    elif connection.team is connection.protocol.team_2:
+        x = random.randrange(388, 396)
+        y = random.randrange(254, 262)
+        
+    else:
+        # На случай наблюдателей или ошибок
+        return (256, 256, 0)
+
+    # Целевая высота
+    z = 37
+    map_obj = connection.protocol.map
+
+    # Логика безопасного спавна (Anti-Stuck):
+    # Если на координатах x,y на высоте 37 твердый блок (get_solid возвращает True),
+    # мы уменьшаем Z (двигаемся вверх к небу), пока не найдем пустое место.
+    safety_attempts = 0
+    while map_obj.get_solid(x, y, z):
+        z -= 1
+        safety_attempts += 1
+        
+        # Если поднялись до самого верха (0) или проверили слишком много блоков,
+        # кидаем игрока на стандартную поверхность (get_z), чтобы не крашнуть игру.
+        if z <= 0 or safety_attempts > 40:
+            z = map_obj.get_z(x, y)
+            break
+            
+    return (x, y, z)

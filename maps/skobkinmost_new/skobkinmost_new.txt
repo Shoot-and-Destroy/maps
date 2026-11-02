@@ -1,0 +1,47 @@
+name = 'skobkinmost'
+version = '2.0'
+author = 'SKOBOCHKIN'
+extensions = {'water_damage' : 100}
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(311, 351)
+        y = random.randrange(40, 70)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(452, 507)
+        y = random.randrange(115, 225)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(156, 186)
+        y = random.randrange(340, 390)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(270, 342)
+        y = random.randrange(457, 509)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(452, 507)
+        y = random.randrange(115, 225)
+        z = connection.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(270, 342)
+        y = random.randrange(457, 509)
+        z = connection.protocol.map.get_z(x, y)
+        return (x, y, z)

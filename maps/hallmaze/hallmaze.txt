@@ -1,0 +1,4 @@
+name = 'hallmaze'
+version = '1.0'
+author = 'izzy, modified by Danke'
+description = 'A labyrinth in a hallway'

@@ -1,0 +1,49 @@
+[map]
+modes = []
+author = "onigiri"
+fog_color = [135, 77, 67]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 15
+
+[spawnpoints]
+team1 = { start = [179, 189, 51], end = [203, 247, 59] }
+team2 = { start = [282, 192, 49], end = [302, 251, 59] }
+
+[map.fitness]
+land = 0.017
+area_land = 0.166
+spawn_dry = [0.22, 0.1]
+
+[map.fitness.ctf]
+pass = false
+water = 9.2
+map_deaths = 0.526
+fight_kills = 113.0
+objective = 6
+failed = ["land", "water", "map_deaths", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 5.4
+map_deaths = 0.191
+fight_kills = 241.5
+objective = 7
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 4.4
+map_deaths = 0.162
+fight_kills = 269.0
+objective = 6
+failed = ["land", "water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 5.9
+map_deaths = 0.255
+fight_kills = 125.5
+objective = 8
+failed = ["land", "water", "map_deaths", "spawn"]

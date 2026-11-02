@@ -1,0 +1,55 @@
+[map]
+modes = ["ngctf", "ctf", "koth", "tc", "zombie"]
+author = "snid"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.328
+area_land = 0.788
+spawn_dry = [0.79, 0.79]
+
+[map.fitness.ngctf]
+pass = true
+water = 0.5
+map_deaths = 0.011
+fight_kills = 140.5
+objective = 5
+failed = []
+
+[map.fitness.ctf]
+pass = true
+water = 0.1
+map_deaths = 0.035
+fight_kills = 69.0
+objective = 6
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.35
+map_deaths = 0.016
+fight_kills = 126.0
+objective = 8
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.2
+map_deaths = 0.028
+fight_kills = 192.5
+objective = 5
+failed = []
+
+[map.fitness.zombie]
+pass = true
+water = 0.0
+map_deaths = 0.014
+fight_kills = 136.5
+objective = 6
+failed = []

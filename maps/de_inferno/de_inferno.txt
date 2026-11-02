@@ -1,0 +1,12 @@
+name = 'de_inferno'
+version = '1.0'
+author = 'Keviin, Steve, DarkS, Keylan, BlackScool'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (323, 127, 54),
+     'arena_green_spawn' : (150, 194, 59),
+     'arena_gates' : ((318, 127, 54), (150, 200, 59)),
+     'water_damage' : 100
+ }
+
+aloha=True

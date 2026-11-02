@@ -1,0 +1,14 @@
+name = 'map32'
+version = '1.0'
+author = 'T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (230, 281, 60),
+     'arena_green_spawn' : (281, 230, 60),
+     'arena_gates' : ((231, 280, 59),(229, 282, 58),(280, 231, 59),(282, 229, 58)),
+     'boundary_damage' : {'left' : 223,
+                          'right' : 288,
+                          'top' : 223,
+                          'bottom' : 288,
+                          'damage': 25 }
+}

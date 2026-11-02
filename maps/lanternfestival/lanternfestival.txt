@@ -1,0 +1,13 @@
+name = "Lantern Festival"
+version = "1"
+author = "Rakete"
+description = "My first Parkour map, idea based on the Yi Peng lantern festival"
+fog = (5,5,5)
+extensions = {
+	"water_damage"               : 0,
+	"parkour_start"              : (0.5, 256.5, 16.5),
+	"parkour_end"                : (507, 251, 28),
+	"parkour_checkpoints"        : [],
+	"parkour_3d_checkpoints"     : False,
+	"parkour_3d_checkpoints_size": (2, 512, 20),
+}

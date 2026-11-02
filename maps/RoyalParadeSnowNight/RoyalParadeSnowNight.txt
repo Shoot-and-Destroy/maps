@@ -1,0 +1,7 @@
+name = 'Royal Parade Night'
+version = '1.0'
+author = 'Bradley & Mile'
+description = 'courtesy of Sauerkraut. Powdered by microwave (c)'
+extensions = { 'water_damage' : 2 }
+
+fog = (230, 230, 250)

@@ -1,0 +1,49 @@
+[map]
+modes = ["koth", "arena"]
+author = "|CyndaquiL|"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [435, 480, 41], end = [444, 491, 41] }
+team2 = { start = [500, 480, 41], end = [508, 491, 41] }
+
+[map.fitness]
+land = 0.016
+area_land = 0.591
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.0
+fight_kills = 0.0
+objective = 0
+failed = ["crash"]
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.024
+fight_kills = 677.0
+objective = 6
+failed = []
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.022
+fight_kills = 545.5
+objective = 0
+failed = ["objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.036
+fight_kills = 40.0
+objective = 9
+failed = ["land"]

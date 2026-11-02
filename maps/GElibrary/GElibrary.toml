@@ -1,0 +1,47 @@
+[map]
+modes = ["ctf", "koth"]
+author = "yasakatom & T0M"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [226, 281, 54], end = [246, 286, 61] }
+team2 = { start = [290, 296, 54], end = [296, 296, 61] }
+
+[map.fitness]
+land = 0.027
+area_land = 0.503
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = true
+water = 0.0
+map_deaths = 0.029
+fight_kills = 318.5
+objective = 15
+failed = []
+
+[map.fitness.koth]
+pass = true
+water = 0.0
+map_deaths = 0.034
+fight_kills = 400.5
+objective = 5
+failed = []
+
+[map.fitness.tc]
+pass = false
+water = 16.5
+map_deaths = 0.024
+fight_kills = 41.5
+objective = 4
+failed = ["water", "objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 62.2
+map_deaths = 0.049
+fight_kills = 29.0
+objective = 3
+failed = ["land", "water"]

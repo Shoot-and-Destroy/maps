@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "pillars2"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.205
+area_land = 0.474
+spawn_dry = [0.15, 0.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 1.25
+map_deaths = 0.026
+fight_kills = 187.0
+objective = 10
+failed = ["land", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.2
+map_deaths = 0.036
+fight_kills = 119.0
+objective = 12
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.145
+fight_kills = 145.0
+objective = 0
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.009
+fight_kills = 315.5
+objective = 2
+failed = ["objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.05
+map_deaths = 0.065
+fight_kills = 108.5
+objective = 9
+failed = ["land", "spawn"]

@@ -1,0 +1,16 @@
+name = 'Double_Strike_2x2'
+
+version = '1.0'
+
+author = 'Keviin, DarkS'
+
+extensions = {
+
+     'arena': True,
+     'arena_blue_spawn' : (221, 254, 20),
+     'arena_green_spawn' : (270, 253, 20),
+     'arena_gates' : ((224, 251, 21), (267, 255, 20)),
+     'water_damage' : 100
+
+
+}

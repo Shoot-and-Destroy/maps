@@ -1,0 +1,12 @@
+name = "kuriaringu"
+version = '2.0'
+author = 'vippei'
+fog = (15,82,188)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (312,311,58),
+     'arena_green_spawn' : (190,189,58),
+     'arena_gates': ((311,306,59) , (194,190,59))
+ }
+

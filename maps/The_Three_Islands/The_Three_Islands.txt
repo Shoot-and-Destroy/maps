@@ -1,0 +1,5 @@
+name = 'The Three Islands'
+version = '1.0'
+author = 'Savert'
+description = ('Just three islands, for free for all')
+               

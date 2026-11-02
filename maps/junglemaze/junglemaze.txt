@@ -1,0 +1,4 @@
+name = 'Jungle Maze'
+version = '1.0'
+author = 'Danke'
+description = ('Jungle maze')

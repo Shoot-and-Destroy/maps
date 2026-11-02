@@ -1,0 +1,1 @@
+name = 'GEegyptian'version = '1.0'author = 'T0M'description = 'Golden Eye copy map'extensions = {     'arena': True,     'arena_blue_spawn' : (185,250,45),     'arena_green_spawn' : (287,284,45),     'arena_gates': ((183,244,41),(191,248,41),(276,281,41),(281,281,41),(286,281,41),(291,281,41)), }

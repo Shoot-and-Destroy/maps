@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "minideckarenav1"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.041
+area_land = 0.113
+spawn_dry = [0.0, 0.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 24.9
+map_deaths = 0.084
+fight_kills = 130.5
+objective = 5
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 21.15
+map_deaths = 0.063
+fight_kills = 82.0
+objective = 13
+failed = ["land", "water", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 15.6
+map_deaths = 0.068
+fight_kills = 109.5
+objective = 10
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 41.65
+map_deaths = 0.202
+fight_kills = 45.5
+objective = 27
+failed = ["land", "water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 67.5
+map_deaths = 0.034
+fight_kills = 56.0
+objective = 3
+failed = ["land", "water", "spawn"]

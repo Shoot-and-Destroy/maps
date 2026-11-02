@@ -1,0 +1,3 @@
+name = 'goldbeach'
+version = '1.0'
+author = '[C.H]Winston'

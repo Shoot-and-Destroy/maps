@@ -1,0 +1,5 @@
+name = 'Cow Towers'
+version = '0.5'
+author = 'Sneakers'
+description = ('Central connected tower system with low rushing areas or hallway-like chunks of blocks on the sides'
+               )

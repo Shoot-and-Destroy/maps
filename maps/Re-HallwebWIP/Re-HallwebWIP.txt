@@ -1,0 +1,4 @@
+name = 'Re-HallwebWIP'
+version = '1.0'
+author = 'Mile, Reworked by Qult'
+fog = (60, 40, 75)

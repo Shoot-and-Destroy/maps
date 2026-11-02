@@ -1,0 +1,6 @@
+name = 'Battlefarm - Winter'
+version = '1.0'
+author = 'Silnius'
+description = ('Remake of battlefarm map, made firstly by Gibbs3333. Adapted to fit Zombie game mode and winterized by Sauerkraut. Recovered')
+extensions = { 'water_damage' : 15, 'base_locations' : [(213, 144, 54), (254, 255, 34), (138, 333, 54), (249, 397, 54)] }
+

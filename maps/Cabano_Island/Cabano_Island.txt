@@ -1,0 +1,5 @@
+name = 'Cabano_Tropical_Island'
+version = '1.0'
+author = 'Venenatus'
+description = 'converted map from minecraft'
+# https://www.planetminecraft.com/project/cabano-tropical-island/

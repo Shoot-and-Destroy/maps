@@ -1,0 +1,49 @@
+import random
+
+name = 'dq1'
+version = '1.0'
+author = 'VIPPER'
+description = 'dragon quest'
+extensions = { 'water_damage' : 200}
+fog = (170, 180, 190) 
+# script
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 0,0,3)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 0,0,0)
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 0, 3,56)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(0, 0)
+        return ( 190, 192, 60)
+
+spawn_locations_blue = [
+    (184, 189, 57)
+]
+
+spawn_locations_green = [
+    (210, 214, 59)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 0 # magic numbers
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        # allows spawning lower if the ground is destroyed
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

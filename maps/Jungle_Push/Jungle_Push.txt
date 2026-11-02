@@ -1,0 +1,15 @@
+name = 'Jungle Push'
+version = '1.0'
+author = 'Lostmotel'
+fog = (100, 150, 100)
+
+extensions = {
+'push': True,
+'push_spawn_range' : 6,
+'push_blue_spawn' : (178, 468, 24),
+'push_blue_cp' : (210, 109, 8),
+'push_green_spawn' : (333, 468, 24),
+'push_green_cp' : (301, 109, 8),
+'water_damage' : 100,
+
+ }

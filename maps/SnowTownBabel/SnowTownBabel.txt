@@ -1,0 +1,4 @@
+name = 'SnowTown'
+version = '1.0'
+author = 'Unknown, Reworked by Qult'
+# https://hosting.dgd.cx/map-search?query=snowtown&file=SnowTown.vxl&source=allmaps#iso

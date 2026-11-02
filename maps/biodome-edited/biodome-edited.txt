@@ -1,0 +1,7 @@
+name = 'biodome (edited)'
+version = '1.0'
+description = ('This map is for the survive gamemode. Recovered')
+# Source of the ground surface texture: https://www.deviantart.com/fabooguy/art/Dirt-Ground-Texture-Tileable-2048x2048-441212191
+extensions = {
+    'base_locations' : [(128, 256, 59), (256, 256, 59), (384, 256, 59)]
+}

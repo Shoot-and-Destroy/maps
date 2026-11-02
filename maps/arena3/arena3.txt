@@ -1,0 +1,10 @@
+name = 'arena3'
+version = '1.0'
+author = 'Danke'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (158,256,45),
+     'arena_green_spawn' : (352,256,45),
+     'arena_gates': ((162,250,44),(348,250,44)),
+     'water_damage' : 100
+ }

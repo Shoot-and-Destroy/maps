@@ -1,0 +1,12 @@
+name = 'volcano'
+version = '1.0'
+author = 'Danke'
+description = ('what a glorious cahir. I want to snip from it.')
+fog = (40, 20, 10)
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (198, 253, 38),
+     'arena_green_spawn' : (312, 252, 38),
+     'arena_gates': ((196, 247, 40), (202, 253, 40), (315, 253, 40), (309, 253, 40))
+ } 

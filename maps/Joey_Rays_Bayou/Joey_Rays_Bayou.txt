@@ -1,0 +1,4 @@
+name = 'Joey Rays Bayou'
+version = '1.0'
+author = 'JoJoe-Stinky AKA Jason Bonham'
+description = 'Up from the the black of the mississippi mud'

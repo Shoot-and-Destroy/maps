@@ -1,0 +1,9 @@
+name = 'Chileway'
+version = '1.0'
+author = 'Mile'
+description = 'soy muy chistosito tabarnak'
+fog = (200, 180, 200)
+extensions = {
+    'glow_enabled': True,
+    'glow_stored_colors': {}
+	}

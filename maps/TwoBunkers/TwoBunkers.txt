@@ -1,0 +1,11 @@
+name = 'TwoBunkers'
+version = '1.0'
+author = '[TSB]Eddie and the [TSB] clan'
+description = ('Island of death and palm trees')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawns' : ((346, 453, 61), (347, 453, 61)),
+     'arena_green_spawns' : ((491, 452, 61), (490, 452, 61)),
+     'arena_gates' : ((344, 456, 61), (494, 454, 61))
+}

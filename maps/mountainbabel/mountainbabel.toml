@@ -1,0 +1,55 @@
+[map]
+modes = ["babel"]
+author = "mountainbabel"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.207
+area_land = 0.552
+spawn_dry = [0.48, 0.51]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.85
+map_deaths = 0.014
+fight_kills = 104.5
+objective = 5
+failed = ["land", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.5
+map_deaths = 0.018
+fight_kills = 54.0
+objective = 11
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.25
+map_deaths = 0.016
+fight_kills = 94.5
+objective = 8
+failed = ["spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.009
+fight_kills = 157.5
+objective = 5
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.043
+fight_kills = 78.5
+objective = 3
+failed = ["land", "spawn"]

@@ -1,0 +1,35 @@
+name = 'Orbix'
+version = '1.0'
+author = 'Gibbs3333'
+description = ('Team R3S')
+protected = ['D4','D5', 'E4', 'E5']
+extensions = {
+         'water_damage' : 100
+}
+# scripting
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (255, 277, 38)
+      
+    if entity_id == BLUE_BASE:
+        return (257, 300, 1)
+      
+    if entity_id == GREEN_FLAG:
+        return (256, 234, 38)
+
+    if entity_id == GREEN_BASE:
+        return (254, 211, 1)
+
+def get_spawn_location(connection):
+ 
+    if connection.team is connection.protocol.blue_team:
+        # sets a static spawn for just the blue team, but you could use "green_team" too.
+        return (250,250, 7)
+
+    if connection.team is connection.protocol.green_team:
+        # sets a static spawn for just the green team, but you could use "blue_team" too.
+        return (261, 261, 7)

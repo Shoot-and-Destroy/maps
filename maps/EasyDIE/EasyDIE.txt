@@ -1,0 +1,5 @@
+name = 'EasyDIE'
+version = '1.0'
+author = 'Sample'
+description = ('EasyDIE blah blah blah...')
+extensions = { 'water_damage' : 99 }

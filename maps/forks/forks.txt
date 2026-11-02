@@ -1,0 +1,9 @@
+name = 'forks'
+version = '1'
+author = 'JoJoe Stinky'
+extensions = { 'boundary_damage' : {'left' : 32,
+                                    'right' : 480,
+                                    'top' : 160,
+                                    'bottom' : 352,
+                                    'damage': 5 },
+                'babel' : True }

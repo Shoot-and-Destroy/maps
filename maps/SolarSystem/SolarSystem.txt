@@ -1,0 +1,71 @@
+name = 'Solar System'
+version = '1.0'
+author = 'Ashy'
+fog = (0, 0, 0)
+extensions = {
+	'arena': True,
+	'arena_blue_spawn': (180, 256, 1), # Earth
+	'arena_green_spawn': (334, 256, 1), # Mars
+	'tow_locations': (
+		(109,252),
+		(109,252),
+		(180,256),
+		(208,256),
+		(256,256),
+		(306,256),
+		(334,256),
+		(404,256),
+		(404,256),
+	),
+	'tow_use_custom_spawn_function': True,
+	'water_damage': 100,
+}
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+import random
+
+# Intel / base location
+def get_entity_location(team, entity_id):
+	if entity_id == BLUE_FLAG:
+		return (180, 256, 1) # Earth
+	if entity_id == BLUE_BASE:
+		return (109, 252, 1) # Jupiter 
+	if entity_id == GREEN_FLAG:
+		return (334, 256, 1) # Mars
+	if entity_id == GREEN_BASE:
+		return (404, 256, 1) # Saturn
+
+# Set spawn position
+#              x1,  y1,  x2,  y2
+#BLUE_RECT  = (169, 245, 191, 278) # Earth & Moon
+#GREEN_RECT = (327, 241, 345, 270) # Mars & Moons
+BLUE_RECT   = (100, 243, 118, 263) # Jupiter
+GREEN_RECT  = (395, 247, 413, 265) # Saturn
+def get_spawn_location(connection):
+	# get_random_location with force_land is based on if there is water at the *bottom of the world*, not
+	# if there is a solid block available at any height to spawn on, so we have to make our own function.
+	if connection.protocol.game_mode_name == "tow":
+		rect = (
+			int(connection.team.spawn_cp.x - 16), int(connection.team.spawn_cp.y - 16),
+			int(connection.team.spawn_cp.x + 16), int(connection.team.spawn_cp.y + 16),
+		)
+	else:
+		if connection.team == connection.protocol.blue_team:
+			rect = BLUE_RECT
+		elif connection.team == connection.protocol.green_team:
+			rect = GREEN_RECT
+	
+	x1 = rect[0]
+	y1 = rect[1]
+	x2 = rect[2]
+	y2 = rect[3]
+
+	spawning_spaces = []
+	for y in range(y1, y2):
+		for x in range(x1, x2):
+			z = connection.protocol.map.get_z(x, y)
+		 	# Don't allow spawning in water
+			if z < 63:
+				spawning_spaces.append((x, y, z))
+	return random.choice(spawning_spaces)

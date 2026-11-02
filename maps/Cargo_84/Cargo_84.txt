@@ -1,0 +1,13 @@
+name = 'Cargo_84'
+version = '1.2'
+author = 'Alconor'
+description = ('This is a medium size sand map. made from no where. ')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (250, 253, 58),
+     'arena_green_spawn' : (289, 214, 58),
+     'arena_gates': ((256,253,57), (287,219,57))
+ } 
+
+aloha=True

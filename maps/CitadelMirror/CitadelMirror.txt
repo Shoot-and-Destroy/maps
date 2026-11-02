@@ -1,0 +1,11 @@
+name = 'CitadelMirror'
+version = '1.0'
+author = 'Unknown, Reworked by Qult'
+# https://hosting.dgd.cx/map-search?query=CITADEL&file=citadel.vxl&source=allmaps#iso
+
+
+
+		
+		
+		
+		

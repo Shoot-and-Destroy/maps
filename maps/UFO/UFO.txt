@@ -1,0 +1,4 @@
+name = 'UFO'
+version = '2.0'
+author = 'Sasquatch'
+description = ('A multitude of deadly space ships, and a bloody river on the Earthly wasteland.')

@@ -1,0 +1,2 @@
+author = "SwoleFroge"
+description = "Regular hallway minus the walls that goes high up and back down again. Tunneling encouraged, as is going around the hall entirely"

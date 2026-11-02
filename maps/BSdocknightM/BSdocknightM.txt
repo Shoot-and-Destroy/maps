@@ -1,0 +1,14 @@
+name = "BSdocknight"
+version = '1.0'
+author = 'T0M'
+description = 'Black Squad copy map'
+
+fog = (127, 63, 63)
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (238,333,56),
+     'arena_green_spawn' : (206,192,56),
+     'arena_gates': ((246,327,54),(213,185,54)),
+     'water_damage' : 100
+ }

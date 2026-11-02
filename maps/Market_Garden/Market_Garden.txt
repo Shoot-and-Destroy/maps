@@ -1,0 +1,9 @@
+name = 'Market Garden'
+version = '1.0'
+author = 'Influx'
+description = ('An asymmetrical map of an assault of a large town,' 
+'complete with outlying fields and woodlands. With mortars.')
+extensions = {
+'right_mortars' : [(492,100,59), (488, 251, 59), (444, 479, 59), (483, 445, 59)],
+'left_mortars' : [(55,401,59), (68, 152, 57)]
+}

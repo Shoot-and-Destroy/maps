@@ -1,0 +1,72 @@
+name = 'Lost Valley'
+version = '1.0'
+author = 'Serious_Sim'
+description = 'Challenging for the defending team, this infiltration map takes place in a long time forgotten valley where ancient temples were used for evil rituals.'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(263, 240)
+        return (263, 240, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(255, 227)
+        return (255, 227, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(17, 252)
+        return (17, 252, z)
+
+spawn_locations_blue = [
+(279, 259),
+(278, 250),
+(278, 229),
+(277, 220),
+(251, 220),
+(249, 232),
+(246, 247),
+(252, 257),
+(255, 229),
+(267, 233),
+(269, 250),
+(256, 250),
+(240, 225),
+(239, 249),
+(249, 266),
+(275, 268),
+(285, 256),
+(273, 213),
+(285, 227),
+(251, 212)
+]
+
+spawn_locations_green = [
+(16, 259),
+(17, 245),
+(32, 291),
+(32, 282),
+(32, 226),
+(32, 232),
+(56, 260),
+(56, 240),
+(494, 257),
+(495, 250),
+(495, 264),
+(479, 231),
+(479, 240),
+(479, 296),
+(479, 285),
+(457, 244),
+(457, 266)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z

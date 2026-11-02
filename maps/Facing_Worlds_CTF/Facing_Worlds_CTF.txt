@@ -1,0 +1,35 @@
+name = 'Facing Worlds CTF'
+version = '1.1'
+author = 'Kaprekar'
+description = ('A remake of the classic Facing Worlds map from Unreal Tournament')
+fog = (30, 30, 30)
+
+extensions = {
+     'water_damage' : 20,
+}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (307, 263, 52)
+    if entity_id == BLUE_FLAG:
+        return (205, 249, 52)
+    if entity_id == GREEN_BASE:
+        return (310, 263, 52)
+    if entity_id == BLUE_BASE:
+        return (200, 249, 52)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x2 = random.randrange(186,191)
+        y2 = random.randrange(243,268)
+        z2 = 54
+        return (x2, y2, z2 - 2)
+    if connection.team is connection.protocol.green_team:
+        x3 = random.randrange(320,325)
+        y3 = random.randrange(243,268)
+        z3 = 54
+        return (x3, y3, z3 - 2)

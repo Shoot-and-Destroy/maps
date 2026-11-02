@@ -1,0 +1,86 @@
+from pyspades.constants import *
+import random
+
+name = 'LocalControlP'
+version = '1.0'
+author = 'Qult---(Atelsa)'
+description = 'Map with dimensional gates.'
+extensions = {
+    'babel' : True, 
+    'water_damage': 100,
+    'respawn_time' : 3,
+    'grenade_damage' : 0.15,
+    'teleports': [
+        ((25, 256, 53), 5, [(187, 255, 18), (284, 221, 18), (284, 290, 18)]), #BP
+        ((484, 256, 53), 5, [(324, 256, 18), (226, 221, 18), (226, 291, 18)]), #RP
+        ((329, 256, 18), 1, [(409, 256, 54)]), #R1
+        ((226, 216, 18), 1, [(409, 256, 54)]), #R2
+        ((226, 297, 18), 1, [(409, 256, 54)]), #R3
+        ((182, 256, 18), 1, [(102, 256, 54)]), #B1
+        ((284, 216, 18), 1, [(102, 256, 54)]), #B2
+        ((284, 297, 18), 1, [(102, 256, 54)])  #B3
+    ],
+'no_build_zones': [
+        ((26, 256, 53), 17, 0), #BP
+        ((485, 256, 53), 17, 0), #RP
+        ((329, 256, 18), 3, 0), #R1
+        ((226, 216, 18), 3, 0), #R2
+        ((226, 295, 18), 3, 0), #R3
+        ((182, 255, 18), 3, 0), #B1
+        ((284, 216, 18), 3, 0), #B2
+        ((284, 295, 18), 3, 0)  #B3
+    ],
+"team_1_zones": [[(188, 256-11), (188, 256+11), (209, 256+11), (209, 256-11)], [(284+11, 222), (284+11, 245), (284-11, 245), (284-11, 222)], [(284+11, 266), (284+11, 289), (284-11, 289), (284-11, 266)]],
+"team_2_zones": [[(323, 256-11), (323, 256+11), (300, 256+11), (300, 256-11)], [(226+11, 222), (226+11, 245), (226-11, 245), (226-11, 222)], [(226+11, 266), (226+11, 289), (226-11, 289), (226-11, 266)]]
+}
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = 102
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 409
+        y = 256
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        where=int(random.randrange(1,4))
+        if where == 1:        
+            x = random.randrange(185, 193)
+            y = random.randrange(251, 259)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+        if where == 2:
+            x = random.randrange(280, 288)
+            y = random.randrange(219, 227)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+        if where == 3:
+            x = random.randrange(280, 288)
+            y = random.randrange(284, 292)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        where=int(random.randrange(1,4))
+        if where == 1:
+            x = random.randrange(318, 326)
+            y = random.randrange(252, 260)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+        if where == 2:
+            x = random.randrange(222, 230)
+            y = random.randrange(219, 227)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)
+        if where == 3:
+            x = random.randrange(222, 230)
+            y = random.randrange(282, 292)
+            z = connection.protocol.map.get_z(x,y)
+            return (x, y, z)

@@ -1,0 +1,37 @@
+name = 'D-day'
+
+version = '1.0'
+
+fog = (170, 180, 190)
+extensions = { 'water_damage' : 1}
+
+# script
+from pyspades.constants import *
+import random
+
+spawn_locations_blue = [
+    (258, 305, 36),
+    (258, 315, 36),
+    (254, 363, 36),
+    (255, 376, 36)
+]
+
+spawn_locations_green = [
+    (373, 365, 61),
+    (383, 343, 61),
+    (380, 343, 61),
+    (370, 365, 61)
+]
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y, z = random.choice(spawn_locations_blue)
+    elif connection.team is connection.protocol.green_team:
+        x, y, z = random.choice(spawn_locations_green)
+    z -= 0 # magic numbers
+    x += 0.5
+    y += 0.5
+    if connection.protocol.map.get_z(x, y) <= z:
+        # allows spawning lower if the ground is destroyed
+        return x, y, z
+    else:
+        return x, y, connection.protocol.map.get_z(x, y)

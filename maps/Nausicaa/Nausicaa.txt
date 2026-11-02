@@ -1,0 +1,4 @@
+name = "Nausicaa"
+version = '1.0'
+author = 'onigiri'
+fog=(128,232,255)

@@ -1,0 +1,13 @@
+name = 'SFfactoryArena'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Special Force copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (201,251,50),
+     'arena_green_spawn' : (310,260,50),
+     'arena_gates': ((204,248,44),(307,263,44))
+ }

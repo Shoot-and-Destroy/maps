@@ -1,0 +1,76 @@
+from pyspades.constants import *
+import random
+
+name = 'Tactical Hallway low'
+version = '1.0'
+author = 'Xenon, Reworked by Qult'
+description = 'LICENSE: unknown'
+
+# --- SPAWN LOGIC ---
+def get_spawn_location(connection):
+    # Команда 1 (Синие)
+    # 95-134, 247-264, 59
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(95, 135)
+        y = random.randrange(247, 265)
+        z = 61
+        
+    # Команда 2 (Зеленые)
+    # 377-416, 247-264, 59
+    elif connection.team is connection.protocol.team_2:
+        x = random.randrange(377, 417)
+        y = random.randrange(247, 265)
+        z = 61
+        
+    # Наблюдатели
+    else:
+        return (256, 256, 60)
+    
+    return (x, y, z)
+
+# --- INDESTRUCTIBLE LOGIC ---
+
+# Глобальное множество для хранения защищенных блоков
+MAP_BLOCKS = set()
+
+def apply_script(protocol, connection, config):
+    class TacticalProtocol(protocol):
+        def on_map_change(self, map):
+            global MAP_BLOCKS
+            MAP_BLOCKS.clear()
+            
+            # Мы сканируем ТОЛЬКО нужные зоны, чтобы заполнить MAP_BLOCKS
+            # Это делает загрузку карты очень быстрой
+            
+            # Зона 1: 91-145, 243-268
+            for x in range(91, 146):
+                for y in range(243, 269):
+                    for z in range(64):
+                        if map.get_solid(x, y, z):
+                            MAP_BLOCKS.add((x, y, z))
+
+            # Зона 2: 366-420, 243-268
+            for x in range(366, 421):
+                for y in range(243, 269):
+                    for z in range(64):
+                        if map.get_solid(x, y, z):
+                            MAP_BLOCKS.add((x, y, z))
+
+            return protocol.on_map_change(self, map)
+
+    class TacticalConnection(connection):
+        # Ваша функция проверки (O(1))
+        def is_indestructable(self, x, y, z):
+            global MAP_BLOCKS
+            if (x, y, z) in MAP_BLOCKS:
+                return True
+            return False
+
+        def on_block_destroy(self, x, y, z, mode):
+            # Если блок в списке защищенных - запрещаем ломать
+            if self.is_indestructable(x, y, z):
+                return False
+                
+            return connection.on_block_destroy(self, x, y, z, mode)
+
+    return TacticalProtocol, TacticalConnection

@@ -1,0 +1,10 @@
+name = 'yasui hotel'
+version = '1.0'
+author = 'vippei'
+description = 'terorisuto wo senmetu seyo'
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((227,228,52),(243,262,17.5)),
+     'arena_green_spawns' : ((250,245,47),(250,245,40),(259,257,33)),
+     'arena_gates': ((233,228,52),(245,262,18),(247,279,33),(242,279,47),(268,247,47),(255,247,54))
+ }

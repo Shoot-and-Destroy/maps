@@ -1,0 +1,8 @@
+name = 'bridgin'
+version = '1.0'
+author = 'Danke'
+extensions = { 
+'water_damage' : 5,
+'babel' : True }
+
+aloha=True

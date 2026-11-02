@@ -1,0 +1,11 @@
+name = 'de_dust2'
+version = '1.1'
+author = 'Danke'
+description = ('Conversion of the map from CS')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' : (280, 200, 56),
+     'arena_green_spawn' : (245, 329, 46),
+     'arena_gates': ((248, 331, 46), (232, 329, 46), (280, 205, 56))
+ }

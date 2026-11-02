@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "ponyville_original"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.637
+area_land = 0.468
+spawn_dry = [0.26, 0.97]
+
+[map.fitness.ngctf]
+pass = false
+water = 1.9
+map_deaths = 0.033
+fight_kills = 162.5
+objective = 7
+failed = ["land", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.45
+map_deaths = 0.156
+fight_kills = 62.0
+objective = 19
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.25
+map_deaths = 0.085
+fight_kills = 124.0
+objective = 3
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.3
+map_deaths = 0.105
+fight_kills = 132.0
+objective = 13
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.05
+map_deaths = 0.052
+fight_kills = 63.5
+objective = 2
+failed = ["land", "objective", "spawn"]

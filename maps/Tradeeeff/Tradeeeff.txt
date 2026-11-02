@@ -1,0 +1,52 @@
+from pyspades.constants import *
+import random
+
+# --- MAP METADATA ---
+name = 'Tradeeeff'
+version = '1.0'
+author = 'Qult'
+description = 'Try a spider web'
+extensions = { 
+    'water_damage': 25,
+    'babel': True
+}
+fog = (255, 200, 120)
+
+# --- TENTS (BASES) LOGIC ---
+def get_entity_location(team, entity_id):
+    # Палатка в центре зоны спавна Команды 1
+    if entity_id == BLUE_BASE:
+        x, y = 118, 252
+    # Палатка в центре зоны спавна Команды 2
+    elif entity_id == GREEN_BASE:
+        x, y = 394, 259
+    else:
+        return (0, 0, 0)
+        
+    # Палатка всегда стоит на земле
+    z = team.protocol.map.get_z(x, y)
+    return (x, y, z)
+
+# --- SPAWN LOGIC ---
+def get_spawn_location(connection):
+    # Команда 1 (Синие)
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(102, 135)
+        y = random.randrange(236, 269)
+        
+    # Команда 2 (Зеленые)
+    elif connection.team is connection.protocol.team_2:
+        x = random.randrange(378, 411)
+        y = random.randrange(243, 276)
+        
+    # Наблюдатели
+    else:
+        return (256, 256, 60)
+
+    # Вероятность: 35% шанс высоты 51, 65% шанс высоты "под открытым небом"
+    if random.random() < 0.35:
+        z = 51
+    else:
+        z = connection.protocol.map.get_z(x, y)
+
+    return (x, y, z)

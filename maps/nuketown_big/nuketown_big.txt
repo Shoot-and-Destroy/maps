@@ -1,0 +1,35 @@
+name = 'nuketown_big'
+
+version = '1.0'
+
+author = 'T0M'
+
+fog = (127, 255, 255)
+
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x2 = random.randrange(254,329)
+        y2 = random.randrange(114,167)
+        z2 = connection.protocol.map.get_z(x2, y2)
+        return (x2, y2, z2)
+    if connection.team is connection.protocol.green_team:
+        x3 = random.randrange(260,327)
+        y3 = random.randrange(302,383)
+        z3 = connection.protocol.map.get_z(x3, y3)
+        return (x3, y3, z3)
+
+def get_entity_location(team, entity_id):
+	if entity_id == BLUE_FLAG:
+		return (0, 0, 0)
+	if entity_id == GREEN_FLAG:
+		return (0, 0, 0)
+	if entity_id == BLUE_BASE:
+		return (0, 0, 0)
+	if entity_id == GREEN_BASE:
+		return (0, 0, 0)

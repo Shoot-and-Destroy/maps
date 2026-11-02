@@ -1,0 +1,12 @@
+name = "The_kettou_2"
+version = '1.0'
+author = 'onigiri'
+
+description = 'Kulanosuke ha madaka!'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ((181,235,15)),
+     'arena_green_spawn' : ((302,236,15)),
+     'arena_gates': ((184,238,12),(300,238,12)),
+ }

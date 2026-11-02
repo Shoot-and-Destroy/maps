@@ -1,0 +1,55 @@
+[map]
+modes = ["zombie"]
+author = "Chrispin, Reworked by Qult"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.67
+area_land = 0.688
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 5.85
+map_deaths = 0.141
+fight_kills = 36.5
+objective = 4
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.1
+map_deaths = 0.77
+fight_kills = 25.5
+objective = 0
+failed = ["map_deaths", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 10.8
+map_deaths = 0.048
+fight_kills = 129.5
+objective = 9
+failed = ["water"]
+
+[map.fitness.tc]
+pass = false
+water = 4.9
+map_deaths = 0.056
+fight_kills = 186.5
+objective = 9
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = true
+water = 1.4
+map_deaths = 0.007
+fight_kills = 146.0
+objective = 9
+failed = []

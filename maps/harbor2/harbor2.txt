@@ -1,0 +1,29 @@
+name = 'harbor2'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Grand Canyon'
+# extensions = {'water_damage':100}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (3, 443, 32)
+    if entity_id == GREEN_FLAG:
+        return (460, 84, 59)
+    if entity_id == BLUE_BASE:
+        return (79, 300, 45)
+    if entity_id == GREEN_BASE:
+        return (428, 216, 46)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(85,101)
+        by = random.randrange(271,361)
+        return (bx, by, 46)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(410,423)
+        gy = random.randrange(152,245)
+        return (gx, gy, 46)

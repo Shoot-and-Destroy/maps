@@ -1,0 +1,5 @@
+name = 'Mashesswood Mirror'
+version = '1.0'
+author = 'by Serious_Sim ,Reworked by Qult'
+description = 'secret object'
+

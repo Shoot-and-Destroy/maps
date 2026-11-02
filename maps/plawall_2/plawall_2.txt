@@ -1,0 +1,23 @@
+name = 'plawall'
+version = '1.0'
+author = 'vippei'
+description = 'map miro'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+	if entity_id == BLUE_FLAG:
+		return (182, 256, 57)
+	if entity_id == GREEN_FLAG:
+		return (330, 256, 54)
+	if entity_id == BLUE_BASE:
+		return (167, 256, 57)
+	if entity_id == GREEN_BASE:
+		return (362, 252, 57)
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		return (256,215,59)
+	if connection.team is connection.protocol.green_team:
+		return (256,297,59)

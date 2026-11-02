@@ -1,0 +1,12 @@
+name = "matuno_nouka"
+version = '1.0'
+author = 'onigiri'
+
+description = 'Kulanosuke ha madaka!'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : ((198,278,53)),
+     'arena_green_spawn' : ((274,224,53)),
+     'arena_gates': ((201,275,53),(276,227,51)),
+ }

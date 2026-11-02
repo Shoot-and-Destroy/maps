@@ -1,0 +1,4 @@
+name = 'Ancient Egypt Mirror'
+author = 'Jagex, Reworked by Qult'
+description = 'Steam map adapted for alpha'
+

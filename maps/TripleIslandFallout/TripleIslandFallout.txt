@@ -1,0 +1,5 @@
+name = 'Triple Island Fallout'
+version = '1.0'
+author = 'Jdrew, Reworked by Qult'
+description = 'An island map with predestroyed buildings'
+# https://aos.party/view/1138

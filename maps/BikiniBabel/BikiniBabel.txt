@@ -1,0 +1,4 @@
+name = 'Bikini Atoll'
+version = '1.0'
+author = 'IAmYourFriend, Reworked by Qult'
+fog = (127, 231, 254)

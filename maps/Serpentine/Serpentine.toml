@@ -1,0 +1,55 @@
+[map]
+modes = ["koth"]
+author = "Ace"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.362
+area_land = 0.667
+spawn_dry = [0.89, 0.89]
+
+[map.fitness.ngctf]
+pass = false
+water = 9.75
+map_deaths = 0.019
+fight_kills = 128.5
+objective = 6
+failed = ["water"]
+
+[map.fitness.ctf]
+pass = false
+water = 10.05
+map_deaths = 0.016
+fight_kills = 63.0
+objective = 7
+failed = ["water"]
+
+[map.fitness.koth]
+pass = true
+water = 1.5
+map_deaths = 0.013
+fight_kills = 117.0
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = false
+water = 7.85
+map_deaths = 0.013
+fight_kills = 188.5
+objective = 8
+failed = ["water"]
+
+[map.fitness.zombie]
+pass = false
+water = 2.9
+map_deaths = 0.041
+fight_kills = 105.5
+objective = 7
+failed = ["water"]

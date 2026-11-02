@@ -1,0 +1,14 @@
+name = 'GEbunkerArena'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Golden Eye copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((256,288,53),(220,312,52)),
+     'arena_green_spawns' : ((288,215,55),(251,221,55)),
+     'arena_gates' : ((254,286,51),(218,309,50),(288,212,54),(248,218,53)),
+     'water_damage' : 100
+ }

@@ -1,0 +1,11 @@
+name = 'nightmare'
+version = '1'
+author = 'Danke'
+description = ('dontBskurd')
+extensions = {
+     'babel': True,
+ }
+fog = (10, 10, 10)
+
+
+aloha=True

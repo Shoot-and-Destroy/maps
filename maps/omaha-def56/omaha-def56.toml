@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "omaha-def56"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.159
+area_land = 0.27
+spawn_dry = [0.0, 0.02]
+
+[map.fitness.ngctf]
+pass = false
+water = 8.1
+map_deaths = 0.041
+fight_kills = 163.0
+objective = 7
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 7.35
+map_deaths = 0.08
+fight_kills = 86.0
+objective = 6
+failed = ["land", "water", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 4.05
+map_deaths = 0.089
+fight_kills = 56.5
+objective = 10
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 1.4
+map_deaths = 0.027
+fight_kills = 269.0
+objective = 10
+failed = ["land", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.4
+map_deaths = 0.028
+fight_kills = 120.0
+objective = 7
+failed = ["land", "spawn"]

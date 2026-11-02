@@ -1,0 +1,49 @@
+[map]
+modes = ["arena"]
+author = "shigaichi1-5"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 101
+
+[spawnpoints]
+team1 = { start = [441, 224, 56], end = [441, 224, 56] }
+team2 = { start = [335, 157, 36], end = [335, 157, 36] }
+
+[map.fitness]
+land = 0.047
+area_land = 0.528
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 1.35
+map_deaths = 0.878
+fight_kills = 199.0
+objective = 0
+failed = ["map_deaths", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 1.95
+map_deaths = 0.992
+fight_kills = 14.5
+objective = 0
+failed = ["map_deaths", "fight_kills", "objective"]
+
+[map.fitness.tc]
+pass = false
+water = 0.55
+map_deaths = 0.98
+fight_kills = 25.5
+objective = 2
+failed = ["map_deaths", "objective"]
+
+[map.fitness.zombie]
+pass = false
+water = 21.7
+map_deaths = 0.984
+fight_kills = 20.0
+objective = 37
+failed = ["land", "water", "map_deaths"]

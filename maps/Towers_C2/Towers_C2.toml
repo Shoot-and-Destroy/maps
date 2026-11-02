@@ -1,0 +1,57 @@
+[map]
+modes = []
+author = "Ug, CorellanStoma"
+fog_color = [170, 180, 240]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [149, 148, 16], end = [192, 192, 16] }
+team2 = { start = [314, 313, 16], end = [363, 364, 16] }
+
+[map.fitness]
+land = 0.082
+area_land = 0.272
+spawn_dry = [0.52, 0.44]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.05
+map_deaths = 0.444
+fight_kills = 74.5
+objective = 4
+failed = ["land", "map_deaths", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.114
+fight_kills = 82.0
+objective = 13
+failed = ["land", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.111
+fight_kills = 136.5
+objective = 9
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.078
+fight_kills = 213.5
+objective = 3
+failed = ["land", "objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.1
+map_deaths = 0.054
+fight_kills = 166.0
+objective = 8
+failed = ["land", "spawn"]

@@ -1,0 +1,14 @@
+name = 'RAF100 Push'
+version = '1.0'
+author = 'Bradley'
+description = ('Build your bridge up in the sky. Recovered')
+
+extensions = {
+'push': True,
+'push_spawn_range' : 8,
+'push_blue_spawn' : (211, 441, 30),
+'push_blue_cp' : (214, 61, 44),
+'push_green_spawn' : (300, 441, 30),
+'push_green_cp' : (297, 61, 44),
+'water_damage' : 0
+}

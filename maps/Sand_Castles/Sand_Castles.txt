@@ -1,0 +1,4 @@
+name = 'Sand Castles'
+version = '1.0'
+author = 'Danke'
+description = ('Sandy castles')

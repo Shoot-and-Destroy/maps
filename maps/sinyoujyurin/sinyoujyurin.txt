@@ -1,0 +1,5 @@
+name = "sinyoujyurin"
+version = '1.0'
+author = 'onigiri'
+fog = ( 0, 0, 0)
+extensions = { 'water_damage' : 15 }

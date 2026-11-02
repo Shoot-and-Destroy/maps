@@ -1,0 +1,27 @@
+name = 'grassSquare'
+version = '1.0'
+author = 'andr3w'
+description = 'Definitely not a grass square'
+extensions = { 'water_damage' : 25}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (175, 256, 8)
+    if entity_id == BLUE_FLAG:
+        return (335, 256, 8)
+    if entity_id == GREEN_BASE:
+        return (180, 256, 8)
+    if entity_id == BLUE_BASE:
+        return (330, 256, 8)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        y = random.randrange(262,270)
+        return (180, y, 60)
+    if connection.team is connection.protocol.blue_team:
+        y = random.randrange(262,270)
+        return (330, y, 60)

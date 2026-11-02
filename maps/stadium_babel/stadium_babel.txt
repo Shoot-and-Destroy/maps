@@ -1,0 +1,9 @@
+name = 'stadium'
+version = '3.1'
+author = 'Dany0'
+description = 'Amazing soccer stadium! I know it is big, but that only means there is a lot of room for building and exploring! Have fun.'
+extensions = { 'water_damage' : 1,
+               'babel' : True }
+
+
+aloha=True

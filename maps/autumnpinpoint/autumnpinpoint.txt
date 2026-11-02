@@ -1,0 +1,41 @@
+name = 'Autumn Pinpoint'
+version = '1.02'
+author = 'izzy, edit by Marshmello, Rakete & notaburner'
+description = 'Small spawns that converge into a bottleneck at the center of the map. Around a swamp, while we ballin on the leaves'
+fog = (255, 233, 195)
+extensions = {'water_damage': 10}
+
+
+BLUE_BASE_COORDS = (96, 256)
+RED_BASE_COORDS = (416, 256)
+SPAWN_SIZE = 20
+from pyspades.constants import *
+from random import randint
+
+def get_entity_location(connection, entity_id):
+    if entity_id == BLUE_BASE:
+        return (96, 256, connection.protocol.map.get_z(96, 256))
+    elif entity_id == GREEN_BASE:
+        return (416, 256, connection.protocol.map.get_z(416, 256))
+    else:
+        return (256, 256, connection.protocol.map.get_z(256, 256))
+
+def get_spawn_location(connection, attempts=0):
+    max_attempts = 10
+    if attempts >= max_attempts:
+        if connection.team.id == connection.protocol.blue_team.id:
+            return (118, 256, connection.protocol.map.get_z(118, 256))
+        else:
+            return (394, 256, connection.protocol.map.get_z(394, 256))
+    if connection.team.id == connection.protocol.blue_team.id:
+        base_x = BLUE_BASE_COORDS[0]
+        base_y = BLUE_BASE_COORDS[1]
+    else:
+        base_x = RED_BASE_COORDS[0]
+        base_y = RED_BASE_COORDS[1]
+    x = base_x + randint(-SPAWN_SIZE, SPAWN_SIZE)
+    y = base_y + randint(-SPAWN_SIZE, SPAWN_SIZE)
+    z = connection.protocol.map.get_z(x, y)
+    if z < 61 or z == 63:
+        return get_spawn_location(connection, attempts + 1)
+    return (x, y, z)

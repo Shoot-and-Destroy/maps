@@ -1,0 +1,9 @@
+name = 'room'
+version = '1'
+author = 'thx'
+description = 'AoS VIP'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (500,230,59),
+     'arena_green_spawn' : (500,230,10),
+ }

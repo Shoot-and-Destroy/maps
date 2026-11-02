@@ -1,0 +1,11 @@
+name = 'alienplanet'
+version = '1'
+author = 'Danke'
+description = ('test map')
+extensions = {
+     'arena': True,
+     'water_damage' : 10
+ }
+
+
+aloha=True

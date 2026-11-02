@@ -1,0 +1,11 @@
+name = 'rigReloaded'
+version = '1.0'
+author = 'Serious_Sim,BuffetOfLies,Dany0,komerad123'
+description = ("Epic oil rig! Arena optimized, Patent Pending.")
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (258,246,27),
+     'arena_green_spawn' : (289,291,42),
+     'arena_gates': ((261,246,27),(252,252,27),(246,247,27),(250,244,29),(257,249,24),(289,298,42),(283,292,42),(289,286,42),(295,295,42)),
+     'water_damage' : 250
+ }

@@ -1,0 +1,171 @@
+from pyspades.constants import *
+from pyspades.server import ServerProtocol
+from pyspades.common import make_color
+from twisted.internet import reactor
+import random
+import math
+import sys
+
+# Ensure we can import the utility script
+UTILITY_PATH = 'c:\\Gemini\\utility script\\working scripts example'
+if UTILITY_PATH not in sys.path:
+    sys.path.append(UTILITY_PATH)
+
+try:
+    import universal_utility
+except ImportError:
+    try:
+        sys.path.append('../working scripts example')
+        import universal_utility
+    except ImportError:
+        print("Error: Could not import universal_utility")
+
+# --- MAP METADATA ---
+name = 'StandoffCastle'
+version = '1.7'
+author = 'TheGrandmaster, Qult'
+description = 'BackToBack: Static Crystals (Refactored)'
+extensions = {
+    'babel' : True, 
+    'water_damage': 20,
+    'teleport_cooldown': 5.0,
+    'cosmic_walls': [
+        # Wall 1: Left Blue <-> Left Red (X-Mirror)
+        {
+            'center': (125, 160),
+            'axis': 'x',
+            'width': 200,
+            'height': 40,
+            'symmetry': 'mirror_x' 
+        },
+        # Wall 2: Right Blue <-> Right Red (X-Mirror)
+        {
+            'center': (125, 353),
+            'axis': 'x',
+            'width': 200,
+            'height': 40,
+            'symmetry': 'mirror_x'
+        }
+    ]
+}
+
+# --- LAMP/CRYSTAL CONFIGURATION ---
+LAMP_ZONES = {
+    'LeftBlue':  {'x': (28, 222),  'y': 166, 'z': (20, 60)},
+    'RightBlue': {'x': (28, 222),  'y': 346, 'z': (20, 60)},
+    'LeftRed':   {'x': (290, 484), 'y': 166, 'z': (20, 60)},
+    'RightRed':  {'x': (290, 484), 'y': 346, 'z': (20, 60)}
+}
+
+LAMPS_COUNT = 100        
+GLOW_RADIUS = 7.5        
+GLOW_INTENSITY = 1.2     
+
+CRYSTAL_PALETTE = [
+    (255, 0, 0), (0, 20, 255), (255, 220, 0), (255, 0, 220), (0, 255, 255),
+    (0, 255, 40), (255, 100, 0), (140, 0, 255), (200, 200, 220)
+]
+
+VOXEL_QUEUE = {} 
+
+# --- STANDARD MAP LOGIC (SPAWN) ---
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(110, 126)
+        y = random.randrange(248, 264)
+    elif connection.team is connection.protocol.team_2:
+        x = random.randrange(386, 402)
+        y = random.randrange(248, 264)
+    else:
+        return (256, 256, 60)
+    
+    z = connection.protocol.map.get_z(x, y)
+    return (x, y, z)
+
+# --- SCRIPT LOGIC ---
+def apply_script(protocol, connection, config):
+    # Get the universal protocol/connection first
+    UProtocol, UConnection = universal_utility.apply_script(protocol, connection, config)
+
+    # Subclass them to add Crystal logic
+    class StandoffConnection(UConnection):
+        pass # No extra connection logic needed (Teleport/NoBuild handled by Utility)
+
+    class StandoffProtocol(UProtocol):
+        def on_map_change(self, map):
+            VOXEL_QUEUE.clear()
+            for zone_name in LAMP_ZONES:
+                self.generate_zone_stars(zone_name)
+            self.loop_queue_call = reactor.callLater(0.1, self.run_queue_loop)
+            
+            # Call Universal Protocol's on_map_change to generate walls!
+            return UProtocol.on_map_change(self, map)
+
+        def run_queue_loop(self):
+            if process_glow_queue(self, self.map):
+                self.loop_queue_call = reactor.callLater(0.05, self.run_queue_loop)
+
+        def generate_zone_stars(self, zone_name):
+            conf = LAMP_ZONES[zone_name]
+            for _ in range(LAMPS_COUNT):
+                for attempt in range(10):
+                    rx = random.randint(conf['x'][0], conf['x'][1])
+                    ry = conf['y'] # Using exact Y might clip walls?
+                    rz = random.randint(conf['z'][0], conf['z'][1])
+                    if self.map.get_solid(rx, ry, rz):
+                        color = random.choice(CRYSTAL_PALETTE)
+                        VOXEL_QUEUE[(rx, ry, rz)] = color
+                        spread_light_static(rx, ry, rz, color, self.map, GLOW_RADIUS)
+                        break
+    
+    return StandoffProtocol, StandoffConnection
+
+# --- HELPER FUNCTIONS FOR CRYSTALS ---
+def process_glow_queue(protocol, map_obj):
+    if not VOXEL_QUEUE: return False
+    batch_size = 150
+    keys = list(VOXEL_QUEUE.keys())[:batch_size]
+    for pos in keys:
+        rgb = VOXEL_QUEUE.pop(pos)
+        x, y, z = pos
+        r, g, b = [min(255, max(0, int(c))) for c in rgb]
+        
+        if map_obj.get_solid(x, y, z):
+            map_obj.set_point(x, y, z, (r, g, b))
+            # Send updates (simplified)
+            # protocol.send_block_update... (omitted for brevity, visual only)
+    return True
+
+def spread_light_static(x, y, z, color, map_obj, radius):
+    # (Same implementation as original, omitted common logic for brevity? 
+    #  No, safer to include it to ensure it works.)
+    src_r, src_g, src_b = color
+    r_int = int(radius)
+    min_x, max_x = max(0, x - r_int), min(512, x + r_int + 1)
+    min_z, max_z = max(0, z - r_int), min(63, z + r_int + 1)
+    min_y, max_y = max(0, y - 1), min(512, y + 2)
+
+    for cx in range(min_x, max_x):
+        for cy in range(min_y, max_y):
+            for cz in range(min_z, max_z):
+                if not map_obj.get_solid(cx, cy, cz): continue
+                dist = math.sqrt((cx - x)**2 + (cy - y)**2 + (cz - z)**2)
+                if dist > radius: continue
+
+                if (cx, cy, cz) in VOXEL_QUEUE:
+                    cur_r, cur_g, cur_b = VOXEL_QUEUE[(cx, cy, cz)]
+                else:
+                    cur_r, cur_g, cur_b = map_obj.get_color(cx, cy, cz)
+
+                factor = (1.0 - (dist / radius)) * GLOW_INTENSITY
+                if factor <= 0: continue
+                
+                VOXEL_QUEUE[(cx, cy, cz)] = (
+                    cur_r + (src_r * factor),
+                    cur_g + (src_g * factor),
+                    cur_b + (src_b * factor)
+                )
+
+def on_map_leave(proto):
+    if hasattr(proto, 'loop_queue_call') and proto.loop_queue_call.active():
+        proto.loop_queue_call.cancel()

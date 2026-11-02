@@ -1,0 +1,17 @@
+name = 'seafort_reactor'
+version = '1.0'
+author = 'Hopquit'
+
+
+BLUE_RECT = (26, 215, 126, 300)
+GREEN_RECT = (390, 215, 485, 300)
+
+extensions = { 
+'water_damage' : 10
+}
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        return connection.protocol.get_random_location(True, BLUE_RECT)
+    elif connection.team is connection.protocol.green_team:
+        return connection.protocol.get_random_location(True, GREEN_RECT)

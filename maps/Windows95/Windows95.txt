@@ -1,0 +1,16 @@
+name = 'Windows 95'
+version = '1.0'
+author = '*Sauerkraut Factory'
+description = ('A map in the style of Windows 95. Recovered')
+
+extensions = {
+'push': True,
+'push_spawn_range' : 10,
+'push_blue_spawn' : (211, 407, 56),
+'push_blue_cp' :  (256, 85, 56),
+'push_blue_build_area' : (129, 71, 251, 511),
+'push_green_spawn' :  (302, 407, 56),
+'push_green_cp' :  (256, 85, 56),
+'push_green_build_area' : (260, 71, 382, 511),
+'water_damage' : 100
+}

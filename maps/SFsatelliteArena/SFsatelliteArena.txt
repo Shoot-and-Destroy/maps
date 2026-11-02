@@ -1,0 +1,13 @@
+name = 'SFsatelliteArena'
+
+version = '1.0'
+
+author = 'T0M'
+
+description = 'Special Force copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (195,252,42),
+     'arena_green_spawn' : (330,287,54),
+     'arena_gates': ((198,261,42),(327,293,54))
+ }

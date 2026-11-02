@@ -1,0 +1,6 @@
+name = 'goonassaultreloaded' 
+version = '9.9' 
+author = 'XXX' 
+description = 'XXX test' 
+extensions = { 'water_damage' : 49 }
+

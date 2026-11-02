@@ -1,0 +1,5 @@
+name = "GasStationMix"
+version = '1.0'
+author = 'Unknown, Reworked by Qult'
+description = 'duplicated map'
+# https://hosting.dgd.cx/map-search?query=gas&file=gas_station.vxl&source=allmaps#iso

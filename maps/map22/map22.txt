@@ -1,0 +1,11 @@
+name = 'map22'
+version = '1.2'
+author = 'T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (227, 227, 60),
+     'arena_green_spawn' : (283, 283, 60),
+     'arena_gates': ((285,281,59),(226,230,59)),
+     'water_damage' : 110
+
+}

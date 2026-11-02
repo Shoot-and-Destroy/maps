@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Close_Quarters"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.103
+area_land = 0.288
+spawn_dry = [0.24, 0.26]
+
+[map.fitness.ngctf]
+pass = false
+water = 6.45
+map_deaths = 0.06
+fight_kills = 93.5
+objective = 12
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 3.7
+map_deaths = 0.033
+fight_kills = 58.5
+objective = 15
+failed = ["land", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 3.5
+map_deaths = 0.078
+fight_kills = 106.0
+objective = 4
+failed = ["land", "water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 2.9
+map_deaths = 0.03
+fight_kills = 177.5
+objective = 8
+failed = ["land", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 3.95
+map_deaths = 0.121
+fight_kills = 29.0
+objective = 2
+failed = ["land", "water", "objective", "spawn"]

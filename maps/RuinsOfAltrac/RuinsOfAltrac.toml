@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Quillmark"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.625
+area_land = 0.556
+spawn_dry = [0.63, 0.95]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.05
+map_deaths = 0.042
+fight_kills = 147.5
+objective = 4
+failed = ["land", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.05
+map_deaths = 0.068
+fight_kills = 69.0
+objective = 4
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.1
+map_deaths = 0.059
+fight_kills = 112.5
+objective = 8
+failed = ["spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.05
+map_deaths = 0.044
+fight_kills = 153.5
+objective = 10
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.1
+map_deaths = 0.014
+fight_kills = 69.5
+objective = 4
+failed = ["land", "spawn"]

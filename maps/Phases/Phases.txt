@@ -1,0 +1,11 @@
+name = 'Phases'
+version = '1.0'
+author = 'MoonGirl, Raglee, Gracidea, Draco, Pokey, Snip'
+description = ''
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (76,263,60),
+     'arena_green_spawn' : (191,262,60),
+     'arena_gates': ((78,263,59),(189,262,59)),
+     'water_damage' : 100
+ }

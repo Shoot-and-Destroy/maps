@@ -1,0 +1,16 @@
+name = 'Hacienda Camaron'
+version = '1.0'
+author = 'Influx'
+description = ('Site of a famous battle where 65 French Foreign Legion'
+               'soldiers held off a force of 3,000 Mexicans for several hours')
+
+extensions = {
+     
+'attspawn': (10, 10, 5),
+'defspawn': (279, 273, 53),
+'east': (454, 246, 56),
+'north': (252, 72, 50),
+'west': (65, 312, 55),
+'south': (322, 451, 50),
+'flag':(268, 255, 32)
+}

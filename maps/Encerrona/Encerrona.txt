@@ -1,0 +1,14 @@
+name = 'Encerrona'
+version = '1.0'
+author = 'Lauraa & Darks'
+description = ('Map taken from Halo 2')
+fog = (108, 154, 186)
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (234, 255, 43),
+     'arena_green_spawn' : (273, 239, 36),
+     'arena_gates': ((233,261,41), (273,235,34)),
+     'water_damage' : 100
+ }
+
+aloha=True

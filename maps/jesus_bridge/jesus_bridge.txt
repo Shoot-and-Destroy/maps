@@ -1,0 +1,4 @@
+name = 'Jesus Bridge'
+version = '1.0'
+author = 'Ananas'
+extensions = {'water_damage' : 5}

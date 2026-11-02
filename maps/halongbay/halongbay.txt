@@ -1,0 +1,5 @@
+name = 'halongbay'
+version = '1.0'
+author = 'IAmYourFriend'
+aloha=True
+description = "A small map themed around the Ha Long Bay area in northern Vietnam"

@@ -1,0 +1,6 @@
+name = 'Alexandria'
+version = '1.0'
+author = 'Lostmotel'
+extensions = {'boundary_damage' : {'left' : 0, 'right' : 512, 'top' : 94, 'bottom' : 416, 'damage': 5},
+'heavens_color' : (255, 180, 50, 255),
+'babel' : True }

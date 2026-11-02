@@ -1,0 +1,13 @@
+name = "Ruins"
+version = '1.0'
+author = 'ONIGIRI'
+fog = (192, 192, 192)
+extensions = {
+	'babel' : True, 
+	'heavens_color' : (240, 240, 240, 255),
+	'water_damage' : 1
+}
+
+
+
+aloha=True

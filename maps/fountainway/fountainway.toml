@@ -1,0 +1,55 @@
+[map]
+modes = ["koth", "tc"]
+author = "Swole Froge"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.995
+area_land = 0.985
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ngctf]
+pass = false
+water = 1.1
+map_deaths = 1.0
+fight_kills = 0.0
+objective = 250
+failed = ["crash"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.5
+map_deaths = 0.0
+fight_kills = 1.5
+objective = 18
+failed = ["crash"]
+
+[map.fitness.koth]
+pass = true
+water = 0.45
+map_deaths = 0.025
+fight_kills = 137.5
+objective = 9
+failed = []
+
+[map.fitness.tc]
+pass = true
+water = 0.8
+map_deaths = 0.043
+fight_kills = 220.5
+objective = 5
+failed = []
+
+[map.fitness.zombie]
+pass = false
+water = 7.05
+map_deaths = 0.033
+fight_kills = 87.5
+objective = 5
+failed = ["water"]

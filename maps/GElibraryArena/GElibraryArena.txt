@@ -1,0 +1,14 @@
+name = 'GElibraryArena'
+
+version = '1.0'
+
+author = 'yasakatom & T0M'
+
+description = 'The map made by yasakatom & T0M'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (252,195,51),
+     'arena_green_spawn' : (260,195,51),
+     'arena_gates' : ((252,195,54),(260,195,54)),
+     'arena_spawn_change' : 0
+}

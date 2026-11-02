@@ -1,0 +1,12 @@
+name = 'avorder'
+version = '1.0'
+author = 'AVuKYI2R3'
+description = 'A classic styled arena map.'
+cap_limit = 8
+extensions = {
+    'water_damage' : 100,
+    'arena': True,
+    'arena_blue_spawn' : ((221, 282, 55)),
+    'arena_green_spawn' : ((290, 229, 55)),
+    'arena_gates': ((224, 282, 53),(287, 229, 53))
+}

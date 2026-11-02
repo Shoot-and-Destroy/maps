@@ -1,0 +1,5 @@
+name = 'Gendrys Tavern'
+version = '1.0'
+author = 'FALL Studios'
+description = 'minecraft map'
+# https://www.planetminecraft.com/project/gendry-s-tavern/

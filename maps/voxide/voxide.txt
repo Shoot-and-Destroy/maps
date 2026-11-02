@@ -1,0 +1,11 @@
+name = 'Voxide'
+version = '1'
+author = 'Rakete'
+description = ('I thought the Voxide/CryptoClover logo is a good idea for a map')
+extensions = {
+     'water_damage' : 100,
+     'arena': True,
+     'arena_blue_spawn' :  (200, 255, 22),
+     'arena_green_spawn' : (310, 255, 22),
+     'arena_gates': ((205, 250, 23),(205, 250, 21),(195, 250, 23),(195, 250, 21),(195, 260, 23),(195, 260, 21),(205, 260, 23),(205, 260, 21),(305, 250, 23),(315, 250, 23),(315, 250, 21),(315, 260, 23),(315, 260, 21),(305, 260, 23),(305, 260, 21))
+ }

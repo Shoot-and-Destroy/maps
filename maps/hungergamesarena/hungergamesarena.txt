@@ -1,0 +1,11 @@
+name = 'Hunger Games Arena'
+description = "A map based on the Hunger Games. Adapted for closer enemy distance"
+version = '1.0'
+author = '[ELITE] Camper Dumbass'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (197, 255, 50),
+     'arena_green_spawn' : (316, 255, 50),
+     'arena_gates': ((195, 255, 52),(318, 255, 52)),
+     'water_damage' : 250
+ }

@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "izzy, Alguien :V,  CookieWolf, F176, **Malee_Brocks*, Starting MS-DOS, MioCid, [Clan]Steve"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.786
+area_land = 0.605
+spawn_dry = [0.08, 0.25]
+
+[map.fitness.ngctf]
+pass = false
+water = 0.6
+map_deaths = 0.113
+fight_kills = 122.0
+objective = 9
+failed = ["spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.142
+fight_kills = 75.5
+objective = 19
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.163
+fight_kills = 77.0
+objective = 6
+failed = ["spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.15
+map_deaths = 0.059
+fight_kills = 135.5
+objective = 20
+failed = ["spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 8.0
+map_deaths = 0.073
+fight_kills = 95.0
+objective = 5
+failed = ["water", "spawn"]

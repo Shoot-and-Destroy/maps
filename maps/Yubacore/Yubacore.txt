@@ -1,0 +1,8 @@
+name = 'Yubacore'
+version = '1.1'
+author = 'Lostmotel, mill by SIMOX'
+fog = (100, 105, 115)
+extensions = {
+     'water_damage' : 1,
+     'babel' : True
+}

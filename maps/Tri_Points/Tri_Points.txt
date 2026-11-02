@@ -1,0 +1,4 @@
+name = "Tri Points"
+version = "1.0"
+author = "Kuma"
+extensions = { 'water_damage' : 50}

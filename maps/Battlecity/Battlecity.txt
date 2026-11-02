@@ -1,0 +1,7 @@
+﻿## GENERATED WITH BLOCKMAN2D v0.2.5.0
+name = 'Battlecity'
+version = '0.75'
+author = 'Big Boss'
+description = ''
+extensions = { 'water_damage' : 50 }
+

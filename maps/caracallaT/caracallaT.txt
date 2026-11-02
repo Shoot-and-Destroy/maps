@@ -1,0 +1,12 @@
+name = "caracalla"
+version = '1.0'
+author = 'T0M'
+description = "Assassin's Creed copy map"
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawns' : ((178,176,58),(277,188,60),(330,195,62)),
+     'arena_green_spawns' : ((178,335,58),(277,322,60),(330,316,62)),
+     'water_damage' : 100,
+     'water_damage_color' : ((255,255,255),)
+ }

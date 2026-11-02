@@ -1,0 +1,35 @@
+name = 'BunkerstairmeleeReverse'
+version = '1.0'
+author = 'Dany0 and Supercool'
+description = 'Thing-o-battle!'
+extensions = { 'water_damage' : 200}
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (258, 258, 45)
+    if entity_id == GREEN_FLAG:
+        return (258, 253, 45)
+    if entity_id == BLUE_BASE:
+        return (257, 192, 17)
+    if entity_id == GREEN_BASE:
+        return (258, 319, 17)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        x1 = random.randrange(313,318)
+        y1 = random.randrange(183,201)
+        x2 = random.randrange(313,318)
+        y2 = random.randrange(310,328)
+        x, y = random.choice([(x1,y1),(x2,y2)])
+        return (x, y, 6)
+    if connection.team is connection.protocol.blue_team:
+        x1 = random.randrange(197,202)
+        y1 = random.randrange(310,328)
+        x2 = random.randrange(197,202)
+        y2 = random.randrange(183,201)
+        x, y = random.choice([(x1,y1),(x2,y2)])
+        return (x, y, 6)

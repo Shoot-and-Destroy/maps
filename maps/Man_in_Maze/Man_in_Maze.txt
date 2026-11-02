@@ -1,0 +1,49 @@
+name = 'Man_in_Maze'
+version = '1.0'
+author = 'Ananas'
+description = 'Labirint koro4e'
+extensions = { 'water_damage' : 100 }
+
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(151, 169)
+        y = random.randrange(152, 170)
+        z = team.protocol.map.get_z(x, y)
+        return (x,y,z)
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(154, 169)
+        y = random.randrange(155, 170)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(361, 362)
+        y = random.randrange(362, 363)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(354, 362)
+        y = random.randrange(355, 363)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(151, 167)
+        y = random.randrange(167, 182)
+        z = connection.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(354, 362)
+        y = random.randrange(347, 350)
+        z = connection.protocol.map.get_z(x, y)
+        return (x, y, z)

@@ -1,0 +1,21 @@
+name = 'Offshore'
+version = '1.0'
+author = 'Danke'
+extensions = {
+     'water_damage' : 5,
+     'babel' : True
+}
+
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (256,256,0)
+    if entity_id == BLUE_FLAG:
+        return (256,256,0)
+    if entity_id == GREEN_BASE:
+        return (426,256,62)
+    if entity_id == BLUE_BASE:
+        return (85,256,62)

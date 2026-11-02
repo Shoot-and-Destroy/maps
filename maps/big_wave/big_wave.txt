@@ -1,0 +1,7 @@
+name = 'big wave'
+version = '1.0'
+author = 'EssigGurkenFred'
+description = ('A simple map with some trees and houses on it.')
+extensions = {
+     'water_damage' : 35
+ }

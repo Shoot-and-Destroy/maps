@@ -1,0 +1,53 @@
+[map]
+modes = ["arena"]
+author = "MoonGirl, Raglee, Gracidea, Draco, Pokey, Snip"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 100
+
+[spawnpoints]
+team1 = { start = [76, 263, 60], end = [76, 263, 60] }
+team2 = { start = [191, 262, 60], end = [191, 262, 60] }
+
+[arena]
+# seed cells of the gates the round start opens (pyspades arena_gates)
+gates = [[78, 263, 59], [189, 262, 59]]
+
+[map.fitness]
+land = 0.012
+area_land = 0.267
+spawn_dry = [1.0, 1.0]
+
+[map.fitness.ctf]
+pass = false
+water = 0.0
+map_deaths = 0.077
+fight_kills = 214.5
+objective = 0
+failed = ["land", "objective"]
+
+[map.fitness.koth]
+pass = false
+water = 0.0
+map_deaths = 0.097
+fight_kills = 308.0
+objective = 7
+failed = ["land"]
+
+[map.fitness.tc]
+pass = false
+water = 0.0
+map_deaths = 0.174
+fight_kills = 320.5
+objective = 12
+failed = ["land"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.95
+map_deaths = 0.327
+fight_kills = 157.5
+objective = 13
+failed = ["land", "map_deaths"]

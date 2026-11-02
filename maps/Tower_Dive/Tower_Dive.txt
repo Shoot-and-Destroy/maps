@@ -1,0 +1,30 @@
+name = 'Tower Dive'
+version = '1.0'
+author = 'ei8htx'
+description = ('Go up one side, down the other')
+extensions = { 
+	'babel' : True, 
+	'heavens_color' : (255, 215, 130, 255)
+}
+
+fog = (150, 240, 255)
+
+AREA = (188, 246, 312, 265,) #blue x1, both y1, green x1, both y2
+WIDTH = 12
+BLUE_RECT =  (AREA[0], AREA[1], AREA[0]+WIDTH, AREA[3]) #x1, y1, x2, y2
+GREEN_RECT = (AREA[2], AREA[1], AREA[2]+WIDTH, AREA[3])
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+
+def get_spawn_location(connection):
+	if connection.team is connection.protocol.blue_team:
+		return connection.protocol.get_random_location(True, BLUE_RECT)
+	elif connection.team is connection.protocol.green_team:
+		return connection.protocol.get_random_location(True, GREEN_RECT)
+ 
+def get_entity_location(team, entity_id):
+	if entity_id == GREEN_BASE:
+		return (256+70, 256, team.protocol.map.get_z(256+70, 256))
+	if entity_id == BLUE_BASE:
+		return (256-70, 256, team.protocol.map.get_z(256-70, 256))		

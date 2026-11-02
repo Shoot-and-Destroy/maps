@@ -1,0 +1,37 @@
+from pyspades.constants import *
+import random
+
+name = 'WarmKnot'
+version = '1.0'
+author = 'AquaLessPantsu'
+description = 'Exported from Minecraft'
+extensions = { }
+# https://www.planetminecraft.com/project/warm-knot-512x512-warzone-amp-landscape-map-1-20-1-21-bedrock-support/
+
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.team_1:
+        x = random.randrange(192-15, 192+15)
+        y = random.randrange(163-5, 163+5)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+    if connection.team is connection.protocol.team_2:
+        x = random.randrange(320-15, 320+15)
+        y = random.randrange(354-5, 354+5)
+        z = connection.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_BASE:
+        x = 192
+        y = 163
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = 320
+        y = 354
+        z = team.protocol.map.get_z(x,y)
+        return (x, y, z)

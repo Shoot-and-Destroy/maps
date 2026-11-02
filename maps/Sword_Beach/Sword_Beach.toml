@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "Sword_Beach"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.479
+area_land = 0.462
+spawn_dry = [1.0, 0.07]
+
+[map.fitness.ngctf]
+pass = false
+water = 41.3
+map_deaths = 0.038
+fight_kills = 114.0
+objective = 7
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 33.15
+map_deaths = 0.032
+fight_kills = 75.0
+objective = 7
+failed = ["water", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 51.1
+map_deaths = 0.005
+fight_kills = 91.0
+objective = 0
+failed = ["land", "water", "objective", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 63.8
+map_deaths = 0.013
+fight_kills = 118.0
+objective = 35
+failed = ["water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.0
+map_deaths = 0.0
+fight_kills = 52.5
+objective = 4
+failed = ["land", "spawn"]

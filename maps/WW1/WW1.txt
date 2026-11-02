@@ -1,0 +1,4 @@
+name = 'WW1'
+author = 'Jagex'
+description = 'Steam map adapted for alpha'
+

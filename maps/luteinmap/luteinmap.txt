@@ -1,0 +1,12 @@
+name = "luteinmap"
+version = '1.0'
+author = 'lutein'
+
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (332,171,58),
+     'arena_green_spawn' : (433,151,58),
+     'arena_gates': ((331,160,57) , (437,161,57))
+ }
+
+

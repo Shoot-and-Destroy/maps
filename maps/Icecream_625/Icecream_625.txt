@@ -1,0 +1,88 @@
+name = 'Icecream'
+version = '1.0'
+author = 'Lostmotel'
+extensions = { 
+'water_damage' : 5 }
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(101, 309)
+        return (101, 309, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(91, 230)
+        return (91, 230, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(420, 230)
+        return (420, 230, z)
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(410, 309)
+        return (410, 309, z)
+
+spawn_locations_blue = [
+(65, 277),
+(80, 289),
+(97, 297),
+(111, 281),
+(98, 262),
+(79, 270),
+(71, 247),
+(90, 241),
+(98, 226),
+(111, 212),
+(96, 206),
+(71, 222),
+(80, 258),
+(103, 264),
+(116, 258),
+(121, 241),
+(118, 275),
+(119, 307),
+(118, 334),
+(78, 248)
+
+
+]
+
+spawn_locations_green = [
+
+
+(446, 277),
+(431, 289),
+(414, 297),
+(400, 281),
+(413, 262),
+(432, 270),
+(440, 247),
+(421, 241),
+(413, 226),
+(400, 212),
+(415, 206),
+(440, 222),
+(431, 258),
+(408, 264),
+(395, 258),
+(390, 241),
+(393, 275),
+(392, 307),
+(393, 334),
+(433, 248)
+
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+
+
+
+

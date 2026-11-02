@@ -1,0 +1,28 @@
+name = 'endor'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Planet Endor the Ewok Village'
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == GREEN_FLAG:
+        return (244, 211, 60)
+    if entity_id == BLUE_FLAG:
+        return (244, 240, 60)
+    if entity_id == GREEN_BASE:
+        return (421, 290, 55)
+    if entity_id == BLUE_BASE:
+        return (11, 209, 39)
+        
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(404,427)
+        gy = random.randrange(261,291)
+        return (gx, gy, 46)
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(31,43)
+        by = random.randrange(215,222)
+        return (bx, by, 44)

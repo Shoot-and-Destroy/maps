@@ -1,0 +1,7 @@
+name = 'holes_hills'
+version = '1.0'
+author = 'izzy, modified by Danke'
+extensions = { 'babel' : True }
+
+
+aloha=True

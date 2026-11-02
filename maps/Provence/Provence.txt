@@ -1,0 +1,10 @@
+name = 'PV'
+version = '1.1'
+author = 'anal*Style'
+description = 'Sudden Attack copy map'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (305,230,53),
+     'arena_green_spawn' : (198,238,54),
+     'arena_gates': ((298,232,53), (193,265,53))
+ }

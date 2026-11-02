@@ -1,0 +1,10 @@
+name = 'de_dust2'
+version = '1.0'
+author = 'SIMOX'
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (274, 310, 58),
+     'arena_green_spawn' : (235, 180, 49),
+     'arena_gates': ((265, 304, 53), (228, 179, 45), (243, 175, 45)),
+     'water_damage' : 100
+ }

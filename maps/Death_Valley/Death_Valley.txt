@@ -1,0 +1,11 @@
+name = 'Death Valley'
+version = '1.0'
+author = 'Lostmotel'
+fog = (255, 210, 120)
+extensions = {
+     'arena': True,
+     'arena_blue_spawn' : (171, 256, 59),
+     'arena_green_spawn' : (339, 256, 59),
+     'arena_gates': ((176, 255, 59), (334, 255, 59)),
+     'water_damage' : 100
+ }

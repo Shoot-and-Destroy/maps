@@ -1,0 +1,86 @@
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(220, 250)
+        return (220, 250, z)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z(119, 250)
+        return (119, 250, z)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(395, 250)
+        return (395, 250, z)
+    if entity_id == GREEN_FLAG:
+        z = team.protocol.map.get_z(289, 250)
+        return (289, 250, z)
+
+spawn_locations_blue = [
+(148, 206),
+(148, 235),
+(147, 266),
+(154, 294),
+(128, 287),
+(125, 267),
+(128, 247),
+(124, 223),
+(114, 206),
+(99, 212),
+(89, 223),
+(106, 235),
+(117, 247),
+(96, 262),
+(89, 274),
+(100, 286),
+(119, 275)
+
+
+]
+
+spawn_locations_green = [
+
+
+(364, 206),
+(364, 235),
+(363, 266),
+(358, 294),
+(384, 287),
+(387, 267),
+(384, 247),
+(388, 223),
+(398, 206),
+(413, 212),
+(423, 223),
+(406, 235),
+(416, 247),
+(415, 262),
+(423, 274),
+(412, 286),
+(393, 275)
+
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        x, y = choice(spawn_locations_blue)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+    if connection.team is connection.protocol.green_team:
+        x, y = choice(spawn_locations_green)
+        z = connection.protocol.map.get_z(x, y)
+        return x, y, z
+
+
+
+
+
+
+name = 'Goon Mountains'
+version = '1.0'
+author = 'Lostmotel'
+cap_limit = 8
+extensions = { 
+'boundary_damage' : {'left' : 72, 'right' : 438, 'top' : 186, 'bottom' : 311, 'damage': 25},
+'water_damage' : 5 }
+

@@ -1,0 +1,2 @@
+author = "Dr. Morphman"
+description = "a combination of pinpoint and bigwave. it plays a bit like goon assault, enemies are quite easy to spot, but the map offers some cover"

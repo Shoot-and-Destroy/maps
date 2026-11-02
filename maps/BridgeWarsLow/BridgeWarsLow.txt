@@ -1,0 +1,4 @@
+name = 'Bridge Wars Low'
+version = '1.0'
+author = 'Chrispin, Reworked by Qult'
+description = 'Map by Chrispin for QFC3'

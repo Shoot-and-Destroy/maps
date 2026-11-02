@@ -1,0 +1,49 @@
+name = 'Elite_Apartaments'
+version = '1.0'
+author = 'Ananas and VLAD01'
+extensions = {
+'boundary_damage' : {'left' : 112, 'right' : 395,'top' : 113, 'bottom' : 394, 'damage': 100}
+}
+
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+
+    if entity_id == BLUE_FLAG:
+        x = random.randrange(177, 186)
+        y = random.randrange(284, 293)
+        z = team.protocol.map.get_z(x, y)
+        return (x,y,z)
+
+    if entity_id == BLUE_BASE:
+        x = random.randrange(152, 160)
+        y = random.randrange(280, 288)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if entity_id == GREEN_FLAG:
+        x = random.randrange(352, 359)
+        y = random.randrange(319, 326)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if entity_id == GREEN_BASE:
+        x = random.randrange(350, 358)
+        y = random.randrange(291, 299)
+        z = team.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+def get_spawn_location(connection):
+
+    if connection.team is connection.protocol.blue_team:
+        x = random.randrange(137, 190)
+        y = random.randrange(224, 301)
+        z = connection.protocol.map.get_z(x, y)
+        return (x, y, z)
+
+    if connection.team is connection.protocol.green_team:
+        x = random.randrange(314, 371)
+        y = random.randrange(256, 338)
+        z = connection.protocol.map.get_z(x, y)
+        return (x, y, z)

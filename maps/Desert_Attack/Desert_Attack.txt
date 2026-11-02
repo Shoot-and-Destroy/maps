@@ -1,0 +1,61 @@
+name = 'Desert Attack'
+version = '1.0'
+author = 'Savert'
+description = 'A map based on Lone Tower by Ki11aWi11'
+
+from pyspades.constants import *
+from pyspades.server import ServerConnection
+from random import choice
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        z = team.protocol.map.get_z(64, 257)
+        return (256, 256, 55)
+    if entity_id == BLUE_BASE:
+        z = team.protocol.map.get_z (42, 257)
+        return (266, 256, 56)
+    if entity_id == GREEN_BASE:
+        z = team.protocol.map.get_z(500, 256)
+        return (470, 255, z)
+
+spawn_locations_green = [
+    	(70, 446),
+	(54, 415),
+	(42, 407),
+	(53, 66),
+	(75, 30),
+	(91, 5),
+	(418, 27),
+	(410, 31),
+	(460, 92),
+	(473, 438),
+	(458, 455),
+	(450, 432)
+    	
+]
+
+spawn_locations_blue = [
+    	(245, 243),
+    	(241, 255),
+    	(249, 273),
+    	(254, 272),
+    	(273, 263),
+    	(274, 250),
+	(261, 237),
+   	(250, 238),
+    	(248, 249),
+    	(243, 258),
+    	(254, 272),
+   	(252, 270),
+    	(250, 262)
+]
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.green_team:
+	x, y = choice(spawn_locations_green)
+	z = connection.protocol.map.get_z(x, y)
+	return x, y, z
+    if connection.team is connection.protocol.blue_team:
+	x, y = choice(spawn_locations_blue)
+	z = connection.protocol.map.get_z(x, y)
+	return x, y, z

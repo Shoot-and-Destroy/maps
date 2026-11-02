@@ -1,0 +1,14 @@
+name = 'Colossus'
+version = '1.0'
+description = ('A bronze titan lies drowned in the Aegean. Carry your intel down from the cliff village, over the '
+               'aqueduct, past the rising hand and the shipwreck, up to your tent below the acropolis.')
+fog = (158, 208, 236)
+extensions = {
+'push': True,
+'push_spawn_range' : 4,
+'push_blue_spawn' : (190, 488, 47),
+'push_blue_cp' : (213, 146, 54),
+'push_green_spawn' : (321, 488, 47),
+'push_green_cp' : (298, 146, 54),
+'water_damage' : 100
+}

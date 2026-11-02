@@ -1,0 +1,7 @@
+name = 'Leaves 2'
+version = '1.0'
+author = 'Lostmotel'
+fog = (255, 220, 140)
+extensions = { 
+'water_damage' : 1,
+'babel' : True }

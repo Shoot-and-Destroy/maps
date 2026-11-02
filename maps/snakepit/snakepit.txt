@@ -1,0 +1,28 @@
+name = 'snakepit'
+version = '1.0'
+author = 'RandomJack and SuperCool Builders'
+description = 'SuperCool Snake Pit'
+
+# script
+from pyspades.constants import *
+import random
+
+def get_entity_location(team, entity_id):
+    if entity_id == BLUE_FLAG:
+        return (296, 247, 51)
+    if entity_id == GREEN_FLAG:
+        return (230, 268, 50)
+    if entity_id == BLUE_BASE:
+        return (463, 258, 24)
+    if entity_id == GREEN_BASE:
+        return (45, 258, 28)
+
+def get_spawn_location(connection):
+    if connection.team is connection.protocol.blue_team:
+        bx = random.randrange(463,472)
+        by = random.randrange(249,271)
+        return (bx, by, 22)
+    if connection.team is connection.protocol.green_team:
+        gx = random.randrange(32,49)
+        gy = random.randrange(247,273)
+        return (gx, gy, 26)

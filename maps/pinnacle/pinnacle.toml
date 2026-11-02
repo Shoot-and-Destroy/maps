@@ -1,0 +1,55 @@
+[map]
+modes = []
+author = "pinnacle"
+fog_color = [128, 232, 255]
+map_size = [512, 512, 64]
+capture_limit = 10
+
+[spawnpoints]
+team1 = { start = [48, 191, 0], end = [112, 321, 0] }
+team2 = { start = [400, 191, 0], end = [464, 321, 0] }
+
+[map.fitness]
+land = 0.168
+area_land = 0.466
+spawn_dry = [0.58, 0.57]
+
+[map.fitness.ngctf]
+pass = false
+water = 3.0
+map_deaths = 0.111
+fight_kills = 135.5
+objective = 2
+failed = ["land", "water", "spawn"]
+
+[map.fitness.ctf]
+pass = false
+water = 1.45
+map_deaths = 0.142
+fight_kills = 84.5
+objective = 4
+failed = ["spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 1.8
+map_deaths = 0.11
+fight_kills = 113.0
+objective = 10
+failed = ["land", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 0.35
+map_deaths = 0.08
+fight_kills = 195.5
+objective = 4
+failed = ["objective", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 0.2
+map_deaths = 0.039
+fight_kills = 74.5
+objective = 3
+failed = ["land", "spawn"]

@@ -1,0 +1,49 @@
+[map]
+modes = []
+author = "D-day"
+fog_color = [170, 180, 190]
+map_size = [512, 512, 64]
+capture_limit = 10
+water_damage_enabled = true
+water_damage_per_second = 1
+
+[spawnpoints]
+team1 = { start = [254, 305, 36], end = [258, 376, 36] }
+team2 = { start = [370, 343, 61], end = [383, 365, 61] }
+
+[map.fitness]
+land = 0.158
+area_land = 0.635
+spawn_dry = [1.0, 0.07]
+
+[map.fitness.ctf]
+pass = false
+water = 3.1
+map_deaths = 0.01
+fight_kills = 153.5
+objective = 0
+failed = ["objective", "spawn"]
+
+[map.fitness.koth]
+pass = false
+water = 4.7
+map_deaths = 0.027
+fight_kills = 219.5
+objective = 8
+failed = ["water", "spawn"]
+
+[map.fitness.tc]
+pass = false
+water = 3.05
+map_deaths = 0.01
+fight_kills = 310.0
+objective = 10
+failed = ["water", "spawn"]
+
+[map.fitness.zombie]
+pass = false
+water = 1.5
+map_deaths = 0.012
+fight_kills = 166.0
+objective = 11
+failed = ["spawn"]
