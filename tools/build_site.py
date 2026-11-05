@@ -9,10 +9,13 @@ preview.png into a WebP small enough to serve in a grid:
     maps/<Name>/<Name>.toml       the server's settings and [map.fitness]
     maps/<Name>/<Name>.txt        the author's pyspades script (description)
     maps/<Name>/preview.png       the isometric picture (1032 x 521)
+    maps/<Name>/top.webp          the top-down picture (512 x 512),
+                                  drawn by the game repository's
+                                  tools/make_map_topview.py from the ngmap
 
-The .ngmap files are never read: a map's geometry is not needed to describe
-it, and skipping them makes the build cheap and lets the CI check out only
-the metadata and the previews.
+The .ngmap files are never read here: a map's geometry is not needed to
+describe it, and skipping them makes the build cheap and lets the CI check
+out only the metadata and the pictures.
 
 Usage:
     python3 tools/build_site.py                 # write docs/data.json and docs/img
@@ -33,6 +36,7 @@ import concurrent.futures
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tomllib
@@ -186,6 +190,19 @@ def load_map(entry):
     if meta.get("water_damage_enabled"):
         water = {"per_second": round_number(meta.get("water_damage_per_second", 0), 1)}
 
+    # What each file weighs, so the page can say what a download costs. The
+    # sizes come from the files themselves; a map that has no top view yet
+    # simply has no "top" size.
+    sizes = {}
+    for name, path in (
+            ("ngmap", base + ".ngmap"),
+            ("toml", base + ".toml"),
+            ("txt", base + ".txt"),
+            ("preview", os.path.join(MAPS_DIR, folder, "preview.png")),
+            ("top", os.path.join(MAPS_DIR, folder, "top.webp"))):
+        if os.path.exists(path):
+            sizes[name] = os.path.getsize(path)
+
     original = script.get("name")
     item = {
         "folder": folder,
@@ -203,6 +220,8 @@ def load_map(entry):
         "capture_limit": int(meta.get("capture_limit") or 0),
         "water": water,
         "spawns": spawn_boxes,
+        "sizes": sizes,
+        "top": "top" in sizes,
         "fitness": {
             "land": round_number(meta.get("fitness", {}).get("land", 0), 3),
             "area_land": round_number(meta.get("fitness", {}).get("area_land", 0), 3),
@@ -228,6 +247,19 @@ def write_image(job):
         image = image.resize((width, height), Image.LANCZOS)
     temporary = target + ".part"
     image.save(temporary, "WEBP", quality=IMAGE_QUALITY, method=5)
+    os.replace(temporary, target)
+    return True
+
+
+def copy_image(job):
+    """A picture that is already the size the page wants (the top view is
+    drawn at 512 by tools/make_map_topview.py), copied as it is."""
+    source, target = job
+    if os.path.exists(target) and os.path.getmtime(target) >= os.path.getmtime(source):
+        return False
+    os.makedirs(os.path.dirname(target), exist_ok=True)
+    temporary = target + ".part"
+    shutil.copyfile(source, temporary)
     os.replace(temporary, target)
     return True
 
@@ -301,15 +333,32 @@ def build(out_dir, jobs):
         with concurrent.futures.ProcessPoolExecutor(max_workers=jobs) as pool:
             changed = sum(1 for done in pool.map(write_image, image_jobs, chunksize=8) if done)
 
-    # A map taken out of the repository takes its picture with it; the rest of
+    top_dir = os.path.join(out_dir, "top")
+    os.makedirs(top_dir, exist_ok=True)
+    top_jobs = [(os.path.join(MAPS_DIR, item["folder"], "top.webp"),
+                 os.path.join(top_dir, item["folder"] + ".webp"))
+                for item in maps if item.get("top")]
+    top_wanted = {os.path.basename(target) for _, target in top_jobs}
+    copied = 0
+    if jobs <= 1:
+        copied = sum(1 for job in top_jobs if copy_image(job))
+    else:
+        with concurrent.futures.ProcessPoolExecutor(max_workers=jobs) as pool:
+            copied = sum(1 for done in pool.map(copy_image, top_jobs, chunksize=16) if done)
+
+    # A map taken out of the repository takes its pictures with it; the rest of
     # docs/ (index.html, app.js, style.css) is hand written and never touched.
     removed = 0
     for name in os.listdir(os.path.join(out_dir, "img")):
         if name.endswith(".webp") and name not in wanted:
             os.remove(os.path.join(out_dir, "img", name))
             removed += 1
+    for name in os.listdir(top_dir):
+        if name.endswith(".webp") and name not in top_wanted:
+            os.remove(os.path.join(top_dir, name))
+            removed += 1
 
-    return index, fresh, changed, removed
+    return index, fresh, changed, copied, removed
 
 
 def main():
@@ -335,6 +384,11 @@ def main():
             source = os.path.join(MAPS_DIR, item["folder"], "preview.png")
             if not os.path.exists(target) or os.path.getmtime(target) < os.path.getmtime(source):
                 stale.append(item["folder"])
+            if item.get("top"):
+                target = os.path.join(out_dir, "top", item["folder"] + ".webp")
+                source = os.path.join(MAPS_DIR, item["folder"], "top.webp")
+                if not os.path.exists(target) or os.path.getmtime(target) < os.path.getmtime(source):
+                    stale.append(item["folder"] + " (top)")
         if not os.path.exists(os.path.join(out_dir, "data.json")):
             stale.append("data.json")
         if stale:
@@ -343,13 +397,13 @@ def main():
         print("up to date: %d maps" % len(maps))
         return 0
 
-    index, fresh, changed, removed = build(out_dir, args.jobs)
+    index, fresh, changed, copied, removed = build(out_dir, args.jobs)
     counts = index["counts"]
     print("maps: %d (%d playable, %d untagged)" %
           (counts["maps"], counts["playable"], counts["untagged"]))
     print("modes: %s" % ", ".join("%s %d" % (m, counts["modes"][m]) for m in MODE_ORDER))
     print("data.json: %s" % ("unchanged" if fresh else "written"))
-    print("images: %d written, %d removed" % (changed, removed))
+    print("images: %d written, %d top views copied, %d removed" % (changed, copied, removed))
     return 0
 
 

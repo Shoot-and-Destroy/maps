@@ -46,20 +46,27 @@
     const collator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
     const dateFormat = new Intl.DateTimeFormat('en', { day: 'numeric', month: 'short', year: 'numeric' });
 
+    // The picture the map's sheet is showing; the choice follows the reader
+    // from one map to the next.
+    let heroView = 'iso';
+
     const state = {
         data: null,
         maps: [],
+        families: new Map(),
         byFolder: new Map(),
         list: [],
+        totalMaps: 0,
         shown: 0,
         open: null,
         lastFocus: null,
-        view: { q: '', mode: 'playable', sort: 'name' },
+        view: { q: '', mode: 'playable', sort: 'name', group: true },
     };
 
     const $ = selector => document.querySelector(selector);
     const search = $('#search');
     const sort = $('#sort');
+    const groupBox = $('#group');
     const grid = $('#grid');
     const chips = $('#mode-chips');
     const countLine = $('#result-count');
@@ -73,10 +80,13 @@
     const dialog = $('#detail');
 
     const dImg = $('#d-img');
+    const dHero = $('#d-hero');
+    const dViews = $('#d-views');
     const dName = $('#d-name');
     const dBy = $('#d-by');
     const dModes = $('#d-modes');
     const dDesc = $('#d-desc');
+    const dDescSource = $('#d-desc-source');
     const dFacts = $('#d-facts');
     const dFit = $('#d-fit');
     const dFitBody = $('#d-fit-body');
@@ -89,9 +99,17 @@
     const dSpawnsBox = $('#d-spawns-box');
     const dLink = $('#d-link');
     const dFolder = $('#d-folder');
+    const dVariants = $('#d-variants');
+    const dVariantsBox = $('#d-variants-box');
+    const dVariantsNote = $('#d-variants-note');
 
-    const normalise = text => (text || '').normalize('NFD')
+    // A name without its accents or its case, for comparing names.
+    const fold = text => (text || '').normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+    // A search and a folded name ignore spaces and punctuation too: "Mini Deck
+    // Arena", "mini_deck_arena" and "minideckarena" are one name.
+    const key = text => fold(text).replace(/[^a-z0-9]+/g, '');
 
     /* ---- small helpers ------------------------------------------------- */
 
@@ -162,18 +180,22 @@
             // The name, the folder and the author, never the description: a
             // match on a word a description happens to use buries the map the
             // reader asked for.
-            map._search = normalise([map.name, map.folder, map.author,
+            map._search = key([map.name, map.folder, map.author,
                 map.original_name].join(' '));
             map._kills = Math.max(0, ...Object.values(map.fitness.modes).map(mode => mode.kills || 0));
             map._area = map.fitness.area_land || 0;
             state.byFolder.set(map.folder, map);
         }
+        buildFamilies();
 
         readURL();
         buildChips();
+        buildLegend();
         showStats();
+        $('#year').textContent = String(new Date().getFullYear());
         search.value = state.view.q;
         sort.value = state.view.sort;
+        groupBox.checked = state.view.group;
 
         render();
         syncFromHash();
@@ -214,6 +236,48 @@
         build.textContent = 'Index built' + commit + '.';
     }
 
+    /* ---- the maps that share a name ------------------------------------- */
+
+    // The archive keeps every upload: a v1 and a v2, a Halloween retexture, an
+    // arena edit, the same file sent twice. They are different folders, so
+    // they are kept apart, but a reader looking for "Mini Deck Arena" wants
+    // one card, not three. The family key is the name without its case,
+    // accents, spaces or punctuation.
+    function buildFamilies() {
+        for (const map of state.maps) {
+            const family = key(map.name) || 'folder:' + fold(map.folder);
+            map._family = family;
+            if (!state.families.has(family)) state.families.set(family, []);
+            state.families.get(family).push(map);
+        }
+        for (const members of state.families.values()) {
+            members.sort(familyOrder);
+            for (const member of members) member._members = members;
+        }
+    }
+
+    // Which upload faces a folded card: one that plays a mode, then the name
+    // that reads as one a person wrote rather than a file name, then the
+    // earliest upload (its id is aos.party's, ascending), then the one with
+    // the most modes, then the shortest folder.
+    function familyOrder(a, b) {
+        const tagged = (b.modes.length > 0 ? 1 : 0) - (a.modes.length > 0 ? 1 : 0);
+        if (tagged) return tagged;
+        const pretty = aesthetics(b.name) - aesthetics(a.name);
+        if (pretty) return pretty;
+        const ida = typeof a.id === 'number' ? a.id : Infinity;
+        const idb = typeof b.id === 'number' ? b.id : Infinity;
+        if (ida !== idb) return ida - idb;
+        const modes = b.modes.length - a.modes.length;
+        if (modes) return modes;
+        if (a.folder.length !== b.folder.length) return a.folder.length - b.folder.length;
+        return collator.compare(a.folder, b.folder);
+    }
+
+    function aesthetics(name) {
+        return (/\s/.test(name || '') ? 2 : 0) + (/[A-Z]/.test(name || '') ? 1 : 0);
+    }
+
     /* ---- URL state ------------------------------------------------------ */
 
     function readURL() {
@@ -226,6 +290,7 @@
             state.view.sort = sortValue;
         }
         state.view.q = (params.get('q') || '').slice(0, 120);
+        state.view.group = params.get('group') !== '0';
     }
 
     function syncURL() {
@@ -233,6 +298,7 @@
         if (state.view.q) params.set('q', state.view.q);
         if (state.view.mode !== 'playable') params.set('mode', state.view.mode);
         if (state.view.sort !== 'name') params.set('sort', state.view.sort);
+        if (!state.view.group) params.set('group', '0');
         const query = params.toString();
         const url = location.pathname + (query ? '?' + query : '') + location.hash;
         history.replaceState(null, '', url);
@@ -277,33 +343,85 @@
         chips.replaceChildren(fragment);
     }
 
+    // Sorting is by the map a card shows, except the modes, fights and land,
+    // which a family can only gain from its other uploads.
+    // The sidebar's list of the modes, with the colours the chips and the
+    // tags use: it says what each one plays like.
+    function buildLegend() {
+        const legend = $('#legend');
+        const fragment = document.createDocumentFragment();
+        for (const mode of MODES) {
+            const item = element('li', 'm-' + mode.id);
+            const text = element('div');
+            text.append(element('b', null, mode.label), element('small', null, mode.desc));
+            item.append(element('i'), text);
+            fragment.append(item);
+        }
+        legend.replaceChildren(fragment);
+    }
+
     const SORTS = {
-        name: (a, b) => collator.compare(a.name, b.name) || collator.compare(a.folder, b.folder),
-        author: (a, b) => collator.compare(a.author || '\uffff', b.author || '\uffff')
+        name: (a, b) => collator.compare(a.map.name, b.map.name)
+            || collator.compare(a.map.folder, b.map.folder),
+        author: (a, b) => collator.compare(a.map.author || '\uffff', b.map.author || '\uffff')
             || SORTS.name(a, b),
-        modes: (a, b) => b.modes.length - a.modes.length || SORTS.name(a, b),
-        fights: (a, b) => b._kills - a._kills || SORTS.name(a, b),
-        land: (a, b) => b._area - a._area || SORTS.name(a, b),
+        modes: (a, b) => b.modeCount - a.modeCount || SORTS.name(a, b),
+        fights: (a, b) => b.kills - a.kills || SORTS.name(a, b),
+        land: (a, b) => b.area - a.area || SORTS.name(a, b),
     };
+
+    function matchesMode(map, mode) {
+        if (mode === 'all') return true;
+        if (mode === 'playable') return map.modes.length > 0;
+        if (mode === 'untagged') return map.modes.length === 0;
+        return map.modes.includes(mode);
+    }
+
+    function queryWords() {
+        return fold(state.view.q).split(/\s+/)
+            .map(word => word.replace(/[^a-z0-9]+/g, ''))
+            .filter(Boolean);
+    }
+
+    function entryOf(members, candidates) {
+        return {
+            map: candidates[0],
+            members,
+            // How many maps of the family the filter and the search keep.
+            count: candidates.length,
+            modeCount: Math.max(...members.map(map => map.modes.length)),
+            kills: Math.max(...members.map(map => map._kills || 0)),
+            area: Math.max(...members.map(map => map._area || 0)),
+        };
+    }
 
     function filtered() {
         const mode = state.view.mode;
-        const words = normalise(state.view.q).split(/\s+/).filter(Boolean);
-        const list = state.maps.filter(map => {
-            if (mode === 'playable' && map.modes.length === 0) return false;
-            if (mode === 'untagged' && map.modes.length > 0) return false;
-            if (mode !== 'all' && mode !== 'playable' && mode !== 'untagged'
-                && !map.modes.includes(mode)) return false;
-            if (words.length && !words.every(word => map._search.includes(word))) return false;
-            return true;
-        });
-        return list.sort(SORTS[state.view.sort]);
+        const words = queryWords();
+        // The switch on: one card a name. Off: one card a folder.
+        const groups = state.view.group
+            ? Array.from(state.families.values())
+            : state.maps.map(map => [map]);
+        const entries = [];
+        for (const members of groups) {
+            const matching = words.length
+                ? members.filter(map => words.every(word => map._search.includes(word)))
+                : members;
+            if (!matching.length) continue;
+            // The search can land on one upload of a family and the mode on
+            // another; the card is then the best upload that answers both.
+            const candidates = matching.filter(map => matchesMode(map, mode));
+            if (!candidates.length) continue;
+            entries.push(entryOf(members, candidates));
+        }
+        return entries.sort(SORTS[state.view.sort]);
     }
 
     /* ---- results -------------------------------------------------------- */
 
     function render() {
         state.list = filtered();
+        state.totalMaps = state.list.reduce((total, entry) => total + entry.count, 0);
         state.shown = 0;
         grid.replaceChildren();
         empty.hidden = state.list.length > 0;
@@ -329,19 +447,29 @@
     }
 
     function renderCount() {
-        const total = state.list.length;
+        const names = state.list.length;
+        const maps = state.totalMaps;
         const mode = state.view.mode;
         let rest;
-        if (mode === 'all') rest = total === 1 ? ' map' : ' maps';
-        else if (mode === 'playable') rest = total === 1 ? ' map plays a mode' : ' maps play a mode';
-        else if (mode === 'untagged') rest = total === 1 ? ' map has no mode tag' : ' maps have no mode tag';
-        else rest = total === 1
+        if (mode === 'all') rest = maps === 1 ? ' map' : ' maps';
+        else if (mode === 'playable') rest = maps === 1 ? ' map plays a mode' : ' maps play a mode';
+        else if (mode === 'untagged') rest = maps === 1 ? ' map has no mode tag' : ' maps have no mode tag';
+        else rest = maps === 1
             ? ' map for ' + MODE[mode].label
             : ' maps for ' + MODE[mode].label;
         if (state.view.q) rest += ' matching \u201c' + state.view.q + '\u201d';
 
-        countLine.replaceChildren(element('b', null, number.format(total)),
-            document.createTextNode(rest));
+        countLine.replaceChildren();
+        // A folded list counts the names it shows and the folders behind them.
+        if (state.view.group && names !== maps) {
+            countLine.append(
+                element('b', null, number.format(names)),
+                document.createTextNode(names === 1 ? ' name \u00b7 ' : ' names \u00b7 '),
+                element('b', null, number.format(maps)));
+        } else {
+            countLine.append(element('b', null, number.format(maps)));
+        }
+        countLine.append(document.createTextNode(rest));
     }
 
     function appendChunk() {
@@ -351,13 +479,14 @@
             return;
         }
         const fragment = document.createDocumentFragment();
-        for (const map of slice) fragment.append(card(map));
+        for (const entry of slice) fragment.append(card(entry));
         grid.append(fragment);
         state.shown += slice.length;
         moreBtn.hidden = state.shown >= state.list.length;
     }
 
-    function card(map) {
+    function card(entry) {
+        const map = entry.map;
         const link = element('a', 'card');
         link.href = '#/' + encodeURIComponent(map.folder);
         link.dataset.folder = map.folder;
@@ -365,7 +494,10 @@
             + (map.author ? ' by ' + map.author : '')
             + ' \u2014 ' + (map.modes.length
                 ? map.modes.map(mode => MODE[mode].label).join(', ')
-                : 'no mode tag'));
+                : 'no mode tag')
+            + (entry.members.length > 1
+                ? ' \u2014 one of ' + entry.members.length + ' maps with this name'
+                : ''));
 
         const image = document.createElement('img');
         image.src = 'img/' + encodeURIComponent(map.folder) + '.webp';
@@ -377,6 +509,12 @@
 
         const picture = element('div', 'card-img');
         picture.append(image);
+        if (entry.members.length > 1) {
+            const badge = element('span', 'card-badge', entry.members.length + ' maps');
+            badge.title = entry.members.length + ' maps share this name: '
+                + entry.members.map(member => member.folder).join(', ');
+            picture.append(badge);
+        }
 
         const name = element('h3', 'card-name', map.name);
         name.title = map.name;
@@ -423,12 +561,14 @@
             document.body.classList.add('locked');
         } else {
             fillSheet(map);
+            // A variant chosen from the sheet's list starts at its top again.
+            const body = dialog.querySelector('.detail-body');
+            if (body) body.scrollTop = 0;
         }
     }
 
     function fillSheet(map) {
-        dImg.src = 'img/' + encodeURIComponent(map.folder) + '.webp';
-        dImg.alt = 'Isometric picture of ' + map.name;
+        fillViews(map);
         dName.textContent = map.name;
 
         dModes.replaceChildren();
@@ -459,14 +599,21 @@
         if (map.description) {
             dDesc.textContent = map.description;
             dDesc.classList.remove('empty-desc');
+            dDescSource.hidden = true;
         } else {
-            dDesc.textContent = 'This map\u2019s script carries no description.';
-            dDesc.classList.add('empty-desc');
+            // No words from the author: a factual line from what the
+            // repository knows of the map, said as such under it.
+            dDesc.textContent = generatedDescription(map);
+            dDesc.classList.remove('empty-desc');
+            dDescSource.hidden = false;
+            dDescSource.textContent = 'The map\u2019s script carries no description; this one is'
+                + ' written from the map\u2019s measurements.';
         }
 
         dFolder.textContent = map.folder;
         dFolder.title = 'Copy the folder name';
 
+        fillVariants(map);
         fillFacts(map);
         fillFitness(map);
         fillDownloads(map);
@@ -479,6 +626,135 @@
             location.origin + location.pathname + location.search + '#/' + encodeURIComponent(map.folder),
             dLink);
         dFolder.onclick = () => copyText(map.folder, dFolder);
+    }
+
+    /* ---- the map's sheet: pictures and words ---------------------------- */
+
+    function fillViews(map) {
+        const hasTop = Boolean(map.top);
+        dViews.hidden = !hasTop;
+        const top = hasTop && heroView === 'top';
+        dImg.src = (top ? 'top/' : 'img/') + encodeURIComponent(map.folder) + '.webp';
+        dImg.alt = (top ? 'Top-down picture of ' : 'Isometric picture of ') + map.name;
+        dImg.width = top ? 512 : 800;
+        dImg.height = top ? 512 : 404;
+        dHero.classList.toggle('top', top);
+        for (const button of dViews.querySelectorAll('button')) {
+            button.setAttribute('aria-pressed',
+                String(button.dataset.view === (top ? 'top' : 'iso')));
+        }
+    }
+
+    function joinList(items) {
+        if (items.length <= 1) return items.join('');
+        return items.slice(0, -1).join(', ') + ' and ' + items[items.length - 1];
+    }
+
+    // A map whose script says nothing about itself still has things worth
+    // reading: what it is, where its spawns are and how its bots played it.
+    function generatedDescription(map) {
+        const parts = [];
+        const size = map.size && map.size.length === 3
+            ? map.size[0] + ' \u00d7 ' + map.size[1] + ' blocks'
+            : 'An Ace of Spades map';
+        parts.push(size + (map.author ? ', by ' + map.author : '') + '.');
+        if (map.modes.length) {
+            parts.push('Tagged for ' + joinList(map.modes.map(mode => MODE[mode].label)) + '.');
+        } else {
+            parts.push('No mode tag yet, so a server will not pick it by mode.');
+        }
+
+        const fitness = map.fitness || {};
+        if (typeof fitness.area_land === 'number') {
+            let land = percent(fitness.area_land) + ' of its play area is land';
+            if (typeof fitness.land === 'number') {
+                land += ' (' + percent(fitness.land) + ' of the whole map)';
+            }
+            parts.push(land + '.');
+        }
+
+        const spawns = spawnSummary(map);
+        if (spawns) parts.push(spawns);
+
+        const fight = bestFight(map);
+        if (fight) {
+            parts.push('In a bot match its bots make ' + fight.kills + ' kills a match in '
+                + fight.label + '.');
+        }
+        if (map.water) {
+            parts.push('Its water hurts ' + map.water.per_second + ' hp a second.');
+        }
+        return parts.join(' ');
+    }
+
+    function spawnSummary(map) {
+        const boxes = map.spawns || [];
+        if (!boxes[0] || !boxes[1]) return '';
+        const centre = box => [(box[0][0] + box[1][0]) / 2, (box[0][1] + box[1][1]) / 2];
+        const a = centre(boxes[0]);
+        const b = centre(boxes[1]);
+        const distance = Math.round(Math.hypot(a[0] - b[0], a[1] - b[1]));
+        let text = 'Its two spawns are ' + distance + ' blocks apart';
+        const dry = map.fitness && map.fitness.spawn_dry;
+        if (Array.isArray(dry) && dry.length === 2) {
+            if (Math.min(...dry) >= 0.999) text += ' and both dry';
+            else text += ' and dry on ' + percent(dry[0]) + ' and ' + percent(dry[1])
+                + ' of their columns';
+        }
+        return text + '.';
+    }
+
+    function bestFight(map) {
+        const measured = map.fitness && map.fitness.modes;
+        if (!measured) return null;
+        let best = null;
+        for (const mode of (map.modes.length ? map.modes : ORDER)) {
+            const figures = measured[mode];
+            if (!figures || !figures.kills) continue;
+            if (!best || figures.kills > best.kills) {
+                best = { kills: figures.kills, label: MODE[mode].label };
+            }
+        }
+        return best;
+    }
+
+    // Every upload of this map's name, so a reader can tell the v1 from the
+    // Halloween retexture from the arena edit, and pick the folder to copy.
+    function fillVariants(map) {
+        const members = map._members || [map];
+        dVariantsBox.hidden = members.length < 2;
+        if (members.length < 2) {
+            dVariants.replaceChildren();
+            return;
+        }
+        dVariantsNote.textContent = members.length
+            + ' maps share this name. Each is a folder of its own, and the folder is what a'
+            + ' server names: open one for its own settings, fitness and files.';
+
+        const fragment = document.createDocumentFragment();
+        for (const member of members) {
+            const link = element('a', 'variant' + (member === map ? ' current' : ''));
+            link.href = '#/' + encodeURIComponent(member.folder);
+            if (member === map) link.setAttribute('aria-current', 'true');
+
+            const image = document.createElement('img');
+            image.src = 'img/' + encodeURIComponent(member.folder) + '.webp';
+            image.alt = '';
+            image.loading = 'lazy';
+            image.width = 74;
+            image.height = 38;
+
+            const text = element('div', 'variant-text');
+            text.append(
+                element('b', null, member.folder),
+                element('small', null, (member.author || 'Author unknown')
+                    + ' \u00b7 ' + (member.modes.length
+                        ? member.modes.map(mode => MODE[mode].short).join(', ')
+                        : 'no mode tag')));
+            link.append(image, text);
+            fragment.append(link);
+        }
+        dVariants.replaceChildren(fragment);
     }
 
     function fact(label, value, sub, valueClass) {
@@ -613,20 +889,32 @@
         dFit.closest('.table-wrap').hidden = !measured.length;
     }
 
+    function fileSize(value) {
+        if (!Number.isFinite(value) || value <= 0) return '';
+        if (value < 1024) return value + ' B';
+        if (value < 1024 * 1024) {
+            return (value / 1024).toFixed(value < 10 * 1024 ? 1 : 0) + ' KB';
+        }
+        return (value / (1024 * 1024)).toFixed(2) + ' MB';
+    }
+
     function fillDownloads(map) {
         const folder = encodeURIComponent(map.folder);
-        const base = 'https://raw.githubusercontent.com/ngspades/maps/main/maps/'
-            + folder + '/' + folder;
+        const raw = 'https://raw.githubusercontent.com/ngspades/maps/main/maps/' + folder + '/';
+        const sizes = map.sizes || {};
         const files = [
-            { name: 'The map', ext: '.ngmap', href: base + '.ngmap' },
-            { name: 'Server settings', ext: '.toml', href: base + '.toml' },
+            { name: 'The map', ext: '.ngmap', href: raw + folder + '.ngmap', size: sizes.ngmap },
+            { name: 'Server settings', ext: '.toml', href: raw + folder + '.toml', size: sizes.toml },
         ];
         if (map.has_txt !== false) {
-            files.push({ name: 'Map script', ext: '.txt', href: base + '.txt' });
+            files.push({ name: 'Map script', ext: '.txt', href: raw + folder + '.txt',
+                size: sizes.txt });
         }
-        files.push({ name: 'The picture', ext: '.png',
-            href: 'https://raw.githubusercontent.com/ngspades/maps/main/maps/'
-                + folder + '/preview.png' });
+        files.push({ name: 'Isometric picture', ext: '.png', href: raw + 'preview.png',
+            size: sizes.preview });
+        if (map.top) {
+            files.push({ name: 'Top view', ext: '.webp', href: raw + 'top.webp', size: sizes.top });
+        }
 
         dDownloads.replaceChildren();
         for (const file of files) {
@@ -634,7 +922,9 @@
             link.href = file.href;
             link.target = '_blank';
             link.rel = 'noopener';
-            link.append(element('b', null, file.name), element('span', null, file.ext));
+            const measured = fileSize(file.size);
+            link.append(element('b', null, file.name),
+                element('span', null, file.ext + (measured ? ' \u00b7 ' + measured : '')));
             dDownloads.append(link);
         }
     }
@@ -726,10 +1016,22 @@
     });
 
     $('#random').addEventListener('click', () => {
-        const pool = state.list.length ? state.list : state.maps;
-        if (!pool.length) return;
-        const map = pool[Math.floor(Math.random() * pool.length)];
-        location.hash = '#/' + encodeURIComponent(map.folder);
+        if (!state.list.length) return;
+        const entry = state.list[Math.floor(Math.random() * state.list.length)];
+        location.hash = '#/' + encodeURIComponent(entry.map.folder);
+    });
+
+    groupBox.addEventListener('change', () => {
+        state.view.group = groupBox.checked;
+        render();
+    });
+
+    dViews.addEventListener('click', event => {
+        const button = event.target.closest('button[data-view]');
+        if (!button) return;
+        heroView = button.dataset.view;
+        const map = state.open ? state.byFolder.get(state.open) : null;
+        if (map) fillViews(map);
     });
 
     moreBtn.addEventListener('click', appendChunk);
