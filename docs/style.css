@@ -19,14 +19,6 @@
     font-style: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: "Bungee";
-    src: url("assets/fonts/bungee-latin.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
 :root {
     color-scheme: dark;
 
@@ -54,7 +46,6 @@
 
     --font-sans: "Dosis", "Segoe UI", system-ui, sans-serif;
     --font-stencil: "Allerta Stencil", "Dosis", sans-serif;
-    --font-logo: "Bungee", "Allerta Stencil", sans-serif;
     --font-mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
 
     --width: 1000px;
@@ -87,9 +78,8 @@ a:hover { color: var(--lime); text-decoration: underline; }
 .detail-desc a,
 .detail-by a,
 .note a,
-.site-foot a,
-.widget-note a,
-.hero-lead a,
+.app-foot a,
+.app-lead a,
 .empty a {
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -135,227 +125,105 @@ code {
     border: 0;
 }
 
-/* ---- the shell, the header and the footer ----------------------------- */
+/* ---- the app frame, its compact head and its foot --------------------- */
 
-.shell {
-    max-width: var(--width);
+.app {
+    max-width: 1280px;
     margin: 10px auto;
     border: 1px solid var(--gold);
     background: #000 url("assets/camo-dark.jpg") center top / 510px repeat;
 }
 
-@media (max-width: 1004px) {
-    .shell { margin: 0; border-left: 0; border-right: 0; }
+@media (max-width: 1284px) {
+    .app { margin: 0; border-left: 0; border-right: 0; }
 }
 
-.site-head { padding-top: 16px; }
-
-.logo {
-    display: flex;
-    justify-content: center;
-    padding: 0 16px 12px;
-    text-decoration: none;
-}
-.logo:hover { text-decoration: none; }
-.logo img {
-    width: 256px;
-    height: auto;
-    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .7));
-}
-@media (min-width: 640px) {
-    .site-head { padding-top: 24px; }
-    .logo img { width: 320px; }
-}
-
-.site-nav {
-    border-bottom: 2px solid var(--dark-red);
-    padding: 0 8px;
-}
-.site-nav ul {
+.app-head {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.site-nav a {
-    display: block;
-    border: 2px solid var(--dark-red);
-    border-bottom: 0;
-    background: var(--black-50);
-    color: var(--gold);
-    font-family: var(--font-stencil);
-    font-size: 16px;
-    padding: 4px 8px;
-    text-decoration: none;
-}
-.site-nav a:hover,
-.site-nav a[aria-current="page"] {
-    background: rgba(139, 0, 0, .6);
-    color: var(--gold);
-    text-decoration: none;
-}
-@media (min-width: 640px) {
-    .site-nav a { font-size: 20px; padding: 6px 12px; }
+    align-items: center;
+    gap: 16px 20px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--gold-40);
 }
 
-.shell-body {
-    display: grid;
-    gap: 16px;
-    padding: 12px;
-    grid-template-columns: minmax(0, 1fr);
+.brand { flex: none; display: block; }
+.brand img {
+    width: 132px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .7));
 }
-@media (min-width: 900px) {
-    .shell-body { grid-template-columns: minmax(0, 1fr) 260px; }
+
+.app-title { flex: 1 1 340px; min-width: 240px; }
+.app-title h1 {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 500;
+    color: var(--gold);
 }
+.app-lead {
+    margin: 6px 0 0;
+    max-width: 80ch;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(204, 204, 204, .85);
+}
+.app-stats {
+    margin: 8px 0 0;
+    font-size: 12.5px;
+    color: rgba(204, 204, 204, .7);
+    font-variant-numeric: tabular-nums;
+}
+.app-stats b { color: var(--gold); font-weight: 600; }
+
+.app-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-family: var(--font-stencil);
+    font-size: 14px;
+}
+.app-links a { color: var(--gold); }
+.app-links a:hover { color: var(--lime); }
 
 main {
     display: flex;
     flex-direction: column;
     gap: 16px;
     min-width: 0;
+    padding: 14px 20px 20px;
 }
 
-.sidebar {
+.app-foot {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    min-width: 0;
-}
-
-.site-foot {
-    display: grid;
-    gap: 4px;
-    padding: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6px 18px;
+    padding: 10px 20px;
     border-top: 1px solid var(--gold-40);
-    font-size: 14px;
-    text-align: center;
-}
-@media (min-width: 640px) {
-    .site-foot { grid-template-columns: repeat(3, 1fr); text-align: left; }
-    .site-foot p:nth-child(2) { text-align: center; }
-    .site-foot p:nth-child(3) { text-align: right; }
-}
-
-/* ---- panels and widgets ----------------------------------------------- */
-
-.panel,
-.widget {
-    border: 1px solid var(--gold);
-    background: #000 url("assets/camo-desat.jpg") center top / 512px repeat;
-}
-
-.panel { padding: 16px; }
-.widget { padding: 12px; }
-
-.widget h2 {
-    margin: 0 0 12px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--gold);
-}
-
-.widget-note {
-    margin: 8px 0 0;
-    text-align: center;
-    font-size: 12.5px;
-    line-height: 1.5;
-    color: rgba(204, 204, 204, .8);
-}
-.widget-note code { font-size: 11px; }
-
-.widget-links {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    gap: 6px;
-    font-size: 15px;
-}
-
-/* The download widget of the game's site: a green arrow and Bungee type. */
-.download {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    color: var(--blood);
-    text-decoration: none;
-}
-.download:hover { text-decoration: none; color: var(--lime); }
-.download-arrow {
-    width: 64px;
-    height: auto;
-    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .8));
-    transition: transform .15s;
-}
-.download:hover .download-arrow { transform: translateY(3px); }
-.download span {
-    margin-top: 4px;
-    font-family: var(--font-logo);
-    font-size: 18px;
-    color: currentColor;
-    text-shadow: 2px 2px 0 #000;
-}
-.download:hover span { color: var(--lime); }
-
-.legend {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: grid;
-    gap: 7px;
-    font-size: 13.5px;
-}
-.legend li {
-    display: grid;
-    grid-template-columns: 9px 1fr;
-    gap: 8px;
-    align-items: start;
-}
-.legend i {
-    width: 9px;
-    height: 9px;
-    margin-top: 5px;
-    background: var(--m);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .8);
-}
-.legend b { display: block; color: var(--ink); font-weight: 600; line-height: 1.2; }
-.legend small { display: block; color: rgba(204, 204, 204, .65); font-size: 12px; }
-
-/* ---- the hero --------------------------------------------------------- */
-
-.hero { padding: 16px; }
-
-.hero h1 {
-    margin: 0;
-    font-size: 32px;
-    line-height: 1.1;
-    font-weight: 500;
-    color: var(--gold);
-}
-@media (min-width: 640px) {
-    .hero { padding: 20px; }
-    .hero h1 { font-size: 36px; }
-}
-
-.hero-lead {
-    margin: 12px 0 0;
-    max-width: 68ch;
-    font-size: 16px;
-    line-height: 1.55;
-}
-
-.hero-stats {
-    margin: 14px 0 0;
     font-size: 13px;
     color: rgba(204, 204, 204, .8);
-    font-variant-numeric: tabular-nums;
 }
-.hero-stats b { color: var(--gold); font-weight: 600; }
+.app-foot p { margin: 0; }
+
+/* ---- panels ----------------------------------------------------------- */
+
+.panel {
+    border: 1px solid var(--gold);
+    background: #000 url("assets/camo-desat.jpg") center top / 512px repeat;
+    padding: 16px;
+}
+
+@media (max-width: 760px) {
+    .app-head { padding: 12px 14px; gap: 12px; }
+    .brand img { width: 96px; }
+    .app-title h1 { font-size: 24px; }
+    .app-lead { font-size: 13.5px; }
+    .app-links { font-size: 13px; gap: 10px; }
+    main { padding: 12px 14px 16px; }
+    .app-foot { padding: 10px 14px; }
+}
 
 /* ---- filters ---------------------------------------------------------- */
 
@@ -380,8 +248,8 @@ main {
     position: relative;
     display: flex;
     align-items: center;
-    flex: 1 1 100%;
-    min-width: 0;
+    flex: 1 1 320px;
+    min-width: 220px;
 }
 
 .search-icon {
@@ -1053,8 +921,8 @@ details pre {
 
 @media (max-width: 760px) {
     .panel { padding: 12px; }
-    .hero h1 { font-size: 28px; }
 
+    .search { flex-basis: 100%; }
     .search kbd { display: none; }
     .sort { flex: 1 1 110px; }
     .sort > span { display: none; }
@@ -1113,8 +981,7 @@ details pre {
 
 @media (max-width: 420px) {
     .grid { grid-template-columns: 1fr; }
-    .site-nav { padding: 0 6px; }
-    .site-nav a { font-size: 15px; padding: 3px 7px; }
+    .app-links { font-size: 12.5px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

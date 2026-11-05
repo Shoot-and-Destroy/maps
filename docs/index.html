@@ -20,168 +20,109 @@
 <body>
 <a class="skip" href="#grid">Skip to the maps</a>
 
-<div class="shell">
-    <header class="site-head">
-        <a class="logo" href="./" aria-label="Shoot and Destroy maps home">
+<div class="app">
+    <header class="app-head">
+        <a class="brand" href="./" aria-label="Shoot and Destroy maps home">
             <picture>
                 <source srcset="assets/logo.webp" type="image/webp">
                 <img src="assets/logo.png" alt="Shoot and Destroy" width="779" height="523">
             </picture>
         </a>
-        <nav class="site-nav" aria-label="Main">
-            <ul>
-                <li><a href="./" aria-current="page">Map browser</a></li>
-                <li><a href="https://ngspades.obex.pw/play/">Play</a></li>
-                <li><a href="https://ngspades.obex.pw/news/">News</a></li>
-                <li><a href="https://ngspades.obex.pw/guide/">Guide</a></li>
-                <li><a href="https://github.com/ngspades/maps">GitHub</a></li>
-            </ul>
+        <div class="app-title">
+            <h1>Map browser</h1>
+            <p class="app-lead">
+                Every Ace of Spades map ready for a Shoot and Destroy server. Filter by mode or
+                search by name, author or folder; open a map for its pictures, settings, the
+                fitness its bots measured and its downloads.
+            </p>
+            <p class="app-stats" id="stats">Loading the maps…</p>
+        </div>
+        <nav class="app-links" aria-label="Elsewhere">
+            <a href="https://github.com/ngspades/maps">Maps repository</a>
+            <a href="https://github.com/ngspades/maps/issues">Report a map</a>
+            <a href="https://ngspades.obex.pw">The game</a>
         </nav>
     </header>
 
-    <div class="shell-body">
-        <main>
-            <section class="panel hero">
-                <h1>Map browser</h1>
-                <p class="hero-lead">
-                    Every Ace of Spades map ready for a Shoot and Destroy server. Filter by the
-                    mode you want to play, search by name, author or folder, and open a map for
-                    its isometric and top views, its settings, the fitness its bots measured and
-                    its downloads. Maps that share a name are one card: open it for the uploads
-                    behind it.
-                </p>
-                <p class="hero-stats" id="stats">Loading the maps…</p>
-            </section>
-
-            <section class="panel controls" aria-label="Filters and sorting">
-                <div class="search-row">
-                    <label class="search">
-                        <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true">
-                            <circle cx="8.5" cy="8.5" r="5.5"></circle>
-                            <path d="M13 13l4.5 4.5"></path>
-                        </svg>
-                        <input id="search" type="search" placeholder="Search a map, author or folder…"
-                               autocomplete="off" spellcheck="false" aria-label="Search maps">
-                        <kbd>/</kbd>
-                    </label>
-                    <label class="sort">
-                        <span>Sort</span>
-                        <select id="sort" aria-label="Sort the maps">
-                            <option value="name">Name</option>
-                            <option value="author">Author</option>
-                            <option value="modes">Most modes</option>
-                            <option value="fights">Most fights</option>
-                            <option value="land">Largest play area</option>
-                        </select>
-                    </label>
-                    <label class="toggle" title="Fold the maps that share a name into one card, with the uploads listed on the map's sheet">
-                        <input type="checkbox" id="group" checked>
-                        <span>Group names</span>
-                    </label>
-                    <button id="random" class="btn" type="button">Random</button>
-                </div>
-                <div class="chips" id="mode-chips" role="group" aria-label="Filter by mode"></div>
-            </section>
-
-            <section class="results" aria-label="Maps">
-                <h2 class="sr-only">Maps</h2>
-                <div class="results-line">
-                    <p id="result-count" aria-live="polite"></p>
-                    <button id="clear" class="link" type="button" hidden>Clear filters</button>
-                </div>
-                <div id="grid" class="grid" tabindex="-1"></div>
-                <noscript><p class="empty">The map browser needs JavaScript: the index is read in the page.</p></noscript>
-                <div id="empty" class="empty" hidden>
-                    <h2>No map found</h2>
-                    <p>Try another name, or another mode.</p>
-                    <button id="empty-clear" class="btn" type="button">Show every map</button>
-                </div>
-                <div id="more" class="more"><button id="more-btn" class="btn" type="button" hidden>Show more maps</button></div>
-            </section>
-
-            <section class="panel about">
-                <h2>How a mode tag is earned</h2>
-                <p>
-                    A map is tagged for a mode in its <code>.toml</code>, and that tag is what a
-                    server reads when it picks a map. Most tags come from a match: the server
-                    played the map alone with 16 bots for ten game minutes, twice, and the map
-                    earned the mode when its land, the bots' time in the water, the deaths the map
-                    caused, the fights and the mode's objective all passed that mode's limits. The
-                    figures are on each map's page.
-                </p>
-                <p>
-                    A few tags are the map's own: Babel and Arena come from the map's script or
-                    name, and a map named for the zombies is the zombies' whatever its match made
-                    of it. A map the next gen CTF plays is a classic CTF map too.
-                    <a href="https://github.com/ngspades/maps#which-modes-a-map-plays">Read the details</a>.
-                </p>
-                <h2>A map has several uploads</h2>
-                <p>
-                    The archive keeps every upload of a map: a first version and a second one, a
-                    Halloween retexture, an arena edit beside the flag map, the same map sent to
-                    aos.party twice, or once there and once to the map search. Each is a folder of
-                    its own, because a server names one, so they are separate downloads. The
-                    browser puts the maps that share a name in one card with a count: open it for
-                    each upload, its modes and its files. The switch above the results shows every
-                    folder on its own.
-                </p>
-            </section>
-        </main>
-
-        <aside class="sidebar">
-            <section class="widget">
-                <h2>Play Shoot and Destroy</h2>
-                <a class="download" href="https://ngspades.obex.pw/play/">
-                    <svg class="download-arrow" viewBox="0 0 80 96" aria-hidden="true">
-                        <defs>
-                            <linearGradient id="dl-green" x1="0" x2="0" y1="0" y2="1">
-                                <stop offset="0" stop-color="#b6ff5c"/>
-                                <stop offset="0.5" stop-color="#4fd11a"/>
-                                <stop offset="1" stop-color="#1f7a06"/>
-                            </linearGradient>
-                        </defs>
-                        <path d="M24 4h32v40h20L40 92 4 44h20z" fill="url(#dl-green)"
-                              stroke="#0d3d02" stroke-width="3" stroke-linejoin="round"/>
-                        <path d="M30 10h8v36h-8z" fill="#fff" opacity="0.35"/>
+    <main>
+        <section class="panel controls" aria-label="Filters and sorting">
+            <div class="search-row">
+                <label class="search">
+                    <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true">
+                        <circle cx="8.5" cy="8.5" r="5.5"></circle>
+                        <path d="M13 13l4.5 4.5"></path>
                     </svg>
-                    <span>Download</span>
-                </a>
-                <p class="widget-note">Linux · macOS · Windows · Flatpak</p>
-            </section>
+                    <input id="search" type="search" placeholder="Search a map, author or folder…"
+                           autocomplete="off" spellcheck="false" aria-label="Search maps">
+                    <kbd>/</kbd>
+                </label>
+                <label class="sort">
+                    <span>Sort</span>
+                    <select id="sort" aria-label="Sort the maps">
+                        <option value="name">Name</option>
+                        <option value="author">Author</option>
+                        <option value="modes">Most modes</option>
+                        <option value="fights">Most fights</option>
+                        <option value="land">Largest play area</option>
+                    </select>
+                </label>
+                <label class="toggle" title="Fold the maps that share a name into one card, with the uploads listed on the map's sheet">
+                    <input type="checkbox" id="group" checked>
+                    <span>Group names</span>
+                </label>
+                <button id="random" class="btn" type="button">Random</button>
+            </div>
+            <div class="chips" id="mode-chips" role="group" aria-label="Filter by mode"></div>
+        </section>
 
-            <section class="widget">
-                <h2>Modes</h2>
-                <ul class="legend" id="legend"></ul>
-            </section>
+        <section class="results" aria-label="Maps">
+            <h2 class="sr-only">Maps</h2>
+            <div class="results-line">
+                <p id="result-count" aria-live="polite"></p>
+                <button id="clear" class="link" type="button" hidden>Clear filters</button>
+            </div>
+            <div id="grid" class="grid" tabindex="-1"></div>
+            <noscript><p class="empty">The map browser needs JavaScript: the index is read in the page.</p></noscript>
+            <div id="empty" class="empty" hidden>
+                <h2>No map found</h2>
+                <p>Try another name, or another mode.</p>
+                <button id="empty-clear" class="btn" type="button">Show every map</button>
+            </div>
+            <div id="more" class="more"><button id="more-btn" class="btn" type="button" hidden>Show more maps</button></div>
+        </section>
 
-            <section class="widget">
-                <h2>Links</h2>
-                <ul class="widget-links">
-                    <li><a href="https://github.com/ngspades/maps">Map repository</a></li>
-                    <li><a href="https://github.com/ngspades/maps/issues">Report a map</a></li>
-                    <li><a href="https://ngspades.obex.pw">The game's site</a></li>
-                    <li><a href="https://aos.party">aos.party</a></li>
-                </ul>
-            </section>
+        <section class="panel about">
+            <h2>How a mode tag is earned</h2>
+            <p>
+                A map is tagged for a mode in its <code>.toml</code>, and that tag is what a server
+                reads when it picks a map. Most tags come from a match: the server played the map
+                alone with 16 bots for ten game minutes, twice, and the map earned the mode when
+                its land, the bots' time in the water, the deaths the map caused, the fights and
+                the mode's objective all passed that mode's limits. The figures are on each map's
+                page.
+            </p>
+            <p>
+                A few tags are the map's own: Babel and Arena come from the map's script or name,
+                and a map named for the zombies is the zombies' whatever its match made of it. A
+                map the next gen CTF plays is a classic CTF map too.
+                <a href="https://github.com/ngspades/maps#which-modes-a-map-plays">Read the details</a>.
+            </p>
+            <h2>A map has several uploads</h2>
+            <p>
+                The archive keeps every upload of a map: a first version and a second one, a
+                Halloween retexture, an arena edit beside the flag map, the same map sent to
+                aos.party twice, or once there and once to the map search. Each is a folder of its
+                own, because a server names one, so they are separate downloads. The browser puts
+                the maps that share a name in one card with a count: open it for each upload, its
+                modes and its files. The switch above the results shows every folder on its own.
+            </p>
+        </section>
+    </main>
 
-            <section class="widget">
-                <h2>About the archive</h2>
-                <p class="widget-note">
-                    Maps from aos.party and the hosting.dgd.cx map search. Each map belongs to its
-                    author, named on its page and in the map's own script. Nothing here is ours
-                    but the <code>.toml</code> files, the pictures and the index.
-                </p>
-            </section>
-        </aside>
-    </div>
-
-    <footer class="site-foot">
-        <p>© <span id="year">2026</span> Shoot and Destroy · GPLv3</p>
-        <p>
-            <a href="https://github.com/ngspades/maps">Source on GitHub</a> ·
-            <a href="https://github.com/ngspades/maps/issues">Issues</a> ·
-            <a href="https://ngspades.obex.pw">The game</a>
-        </p>
+    <footer class="app-foot">
+        <p>© <span id="year">2026</span> Shoot and Destroy · GPLv3 · maps from
+            <a href="https://aos.party">aos.party</a> and the
+            <a href="https://hosting.dgd.cx/map-search">hosting.dgd.cx map search</a></p>
         <p id="build"></p>
     </footer>
 </div>

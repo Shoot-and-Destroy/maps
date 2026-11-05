@@ -190,7 +190,6 @@
 
         readURL();
         buildChips();
-        buildLegend();
         showStats();
         $('#year').textContent = String(new Date().getFullYear());
         search.value = state.view.q;
@@ -345,21 +344,6 @@
 
     // Sorting is by the map a card shows, except the modes, fights and land,
     // which a family can only gain from its other uploads.
-    // The sidebar's list of the modes, with the colours the chips and the
-    // tags use: it says what each one plays like.
-    function buildLegend() {
-        const legend = $('#legend');
-        const fragment = document.createDocumentFragment();
-        for (const mode of MODES) {
-            const item = element('li', 'm-' + mode.id);
-            const text = element('div');
-            text.append(element('b', null, mode.label), element('small', null, mode.desc));
-            item.append(element('i'), text);
-            fragment.append(item);
-        }
-        legend.replaceChildren(fragment);
-    }
-
     const SORTS = {
         name: (a, b) => collator.compare(a.map.name, b.map.name)
             || collator.compare(a.map.folder, b.map.folder),
