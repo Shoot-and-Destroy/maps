@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Map browser — Shoot and Destroy</title>
+<meta name="description" content="Browse every Ace of Spades map ready for a Shoot and Destroy server: filter by mode, search by name or author, and open a map for its bot-measured fitness, settings and downloads.">
+<meta property="og:title" content="Map browser — Shoot and Destroy">
+<meta property="og:description" content="Every Ace of Spades map ready for a Shoot and Destroy server, filterable by mode and searchable by name.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ngspades.github.io/maps/assets/icon.png">
+<meta property="og:url" content="https://ngspades.github.io/maps/">
+<meta name="theme-color" content="#0f151a">
+<link rel="canonical" href="https://ngspades.github.io/maps/">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#grid">Skip to the maps</a>
+
+<header class="topbar">
+    <a class="brand" href="./">
+        <img class="brand-icon" src="assets/icon.png" width="34" height="34" alt="">
+        <span class="brand-text">
+            <strong>SHOOT <i>AND</i> DESTROY</strong>
+            <span>Map browser</span>
+        </span>
+    </a>
+    <nav class="topbar-links" aria-label="Elsewhere">
+        <a href="https://github.com/ngspades/maps">Maps repository</a>
+        <a href="https://ngspades.obex.pw">The game</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>Map browser</h1>
+        <p class="hero-lead">
+            Every Ace of Spades map ready for a Shoot and Destroy server. Filter by the
+            mode you want to play, search by name, author or folder, and open a map for its
+            settings, the fitness its bots measured and its downloads.
+        </p>
+        <p class="hero-stats" id="stats">Loading the maps…</p>
+    </section>
+
+    <section class="controls" aria-label="Filters and sorting">
+        <div class="search-row">
+            <label class="search">
+                <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true">
+                    <circle cx="8.5" cy="8.5" r="5.5"></circle>
+                    <path d="M13 13l4.5 4.5"></path>
+                </svg>
+                <input id="search" type="search" placeholder="Search a map, author or folder…"
+                       autocomplete="off" spellcheck="false" aria-label="Search maps">
+                <kbd>/</kbd>
+            </label>
+            <label class="sort">
+                <span>Sort</span>
+                <select id="sort" aria-label="Sort the maps">
+                    <option value="name">Name</option>
+                    <option value="author">Author</option>
+                    <option value="modes">Most modes</option>
+                    <option value="fights">Most fights</option>
+                    <option value="land">Largest play area</option>
+                </select>
+            </label>
+            <button id="random" class="btn" type="button">Random map</button>
+        </div>
+        <div class="chips" id="mode-chips" role="group" aria-label="Filter by mode"></div>
+    </section>
+
+    <section class="results" aria-label="Maps">
+        <h2 class="sr-only">Maps</h2>
+        <div class="results-line">
+            <p id="result-count" aria-live="polite"></p>
+            <button id="clear" class="link" type="button" hidden>Clear filters</button>
+        </div>
+        <div id="grid" class="grid" tabindex="-1"></div>
+        <noscript><p class="empty">The map browser needs JavaScript: the index is read in the page.</p></noscript>
+        <div id="empty" class="empty" hidden>
+            <h2>No map found</h2>
+            <p>Try another name, or another mode.</p>
+            <button id="empty-clear" class="btn" type="button">Show every map</button>
+        </div>
+        <div id="more" class="more"><button id="more-btn" class="btn" type="button" hidden>Show more maps</button></div>
+    </section>
+
+    <section class="about">
+        <h2>How a mode tag is earned</h2>
+        <p>
+            A map is tagged for a mode in its <code>.toml</code>, and that tag is what a server
+            reads when it picks a map. Most tags come from a match: the server played the map
+            alone with 16 bots for ten game minutes, twice, and the map earned the mode when its
+            land, the bots' time in the water, the deaths the map caused, the fights and the
+            mode's objective all passed that mode's limits. The figures are on each map's page.
+        </p>
+        <p>
+            A few tags are the map's own: Babel and Arena come from the map's script or name,
+            and a map named for the zombies is the zombies' whatever its match made of it.
+            A map the next gen CTF plays is a classic CTF map too.
+            <a href="https://github.com/ngspades/maps#which-modes-a-map-plays">Read the details</a>.
+        </p>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>
+        Maps from <a href="https://aos.party">aos.party</a> and the
+        <a href="https://hosting.dgd.cx/map-search">hosting.dgd.cx map search</a>. Each map
+        belongs to its author, named on its page and in the map's own script.
+    </p>
+    <p>
+        <a href="https://github.com/ngspades/maps">Repository</a> ·
+        <a href="https://github.com/ngspades/maps/issues">Report a problem</a> ·
+        <a href="https://ngspades.obex.pw">Shoot and Destroy</a> ·
+        <span id="build"></span>
+    </p>
+</footer>
+
+<dialog id="detail" class="detail" aria-labelledby="d-name">
+    <article class="detail-card">
+        <button id="d-close" class="detail-close" type="button" aria-label="Close the map">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"></path></svg>
+        </button>
+        <div class="detail-hero">
+            <img id="d-img" alt="" width="800" height="404">
+            <div class="detail-hero-scrim"></div>
+            <div class="detail-hero-text">
+                <div id="d-modes" class="tags"></div>
+                <h2 id="d-name"></h2>
+                <p id="d-by" class="detail-by"></p>
+            </div>
+        </div>
+        <div class="detail-body">
+            <p id="d-desc" class="detail-desc"></p>
+            <div class="detail-actions">
+                <button id="d-link" class="btn ghost" type="button">Copy link</button>
+                <button id="d-folder" class="btn ghost mono" type="button" title="Copy the folder name"></button>
+            </div>
+
+            <h3>The map</h3>
+            <dl id="d-facts" class="facts"></dl>
+
+            <h3>How it plays</h3>
+            <p id="d-fit-note" class="note"></p>
+            <div class="table-wrap">
+                <table id="d-fit" class="fit">
+                    <thead>
+                        <tr>
+                            <th scope="col">Mode</th>
+                            <th scope="col" title="Tagged in the repository: what a server reads">Tagged</th>
+                            <th scope="col">Measured</th>
+                            <th scope="col" data-tip="The share of the bots found in the water">Water</th>
+                            <th scope="col" data-tip="The share of deaths caused by the map itself: falls and drowning">Map deaths</th>
+                            <th scope="col" data-tip="Kills of one team by the other a match">Fight kills</th>
+                            <th scope="col" id="d-fit-objective">Objective</th>
+                        </tr>
+                    </thead>
+                    <tbody id="d-fit-body"></tbody>
+                </table>
+            </div>
+            <p id="d-fit-legend" class="note"></p>
+            <ul id="d-why" class="why"></ul>
+
+            <h3>Download</h3>
+            <div id="d-downloads" class="downloads"></div>
+            <p class="note">
+                A server that names a map it does not have downloads it from this repository at
+                start-up, so a folder here is all a match needs.
+            </p>
+            <details class="install">
+                <summary>Install on a server</summary>
+                <pre id="d-install"></pre>
+            </details>
+            <details id="d-spawns-box">
+                <summary>Spawn areas</summary>
+                <div id="d-spawns"></div>
+            </details>
+        </div>
+    </article>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>
